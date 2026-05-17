@@ -117,7 +117,7 @@ def render_index(files):
 <body>
   <main>
     <h1>건강운동관리사 데일리 퀴즈</h1>
-    <p>아이폰에서는 카톡 첨부파일 미리보기보다 Safari 웹 링크로 여는 방식이 안정적입니다.</p>
+    <p>유소영님의 합격을 기원합니다.</p>
     <ul>
       {''.join(items)}
     </ul>

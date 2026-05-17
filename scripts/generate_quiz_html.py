@@ -192,10 +192,33 @@ def render_html(quiz):
 
     .question {{
       margin: 0 0 20px;
-      white-space: pre-line;
       font-size: 21px;
       line-height: 1.45;
       font-weight: 760;
+    }}
+
+    .q-line {{
+      margin: 0 0 7px;
+    }}
+
+    .q-line:last-child {{
+      margin-bottom: 0;
+    }}
+
+    .q-label {{
+      margin-top: 10px;
+      color: var(--accent-strong);
+      font-weight: 900;
+    }}
+
+    .q-hang {{
+      padding-left: 1.65em;
+      text-indent: -1.65em;
+    }}
+
+    .q-dot {{
+      padding-left: 1em;
+      text-indent: -1em;
     }}
 
     .choices {{
@@ -204,6 +227,10 @@ def render_html(quiz):
     }}
 
     .choice {{
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      align-items: start;
+      gap: 8px;
       width: 100%;
       min-height: 58px;
       padding: 15px 14px;
@@ -240,13 +267,16 @@ def render_html(quiz):
       justify-content: center;
       width: 26px;
       height: 26px;
-      margin-right: 8px;
       border-radius: 50%;
       background: #eef2ed;
       color: var(--muted);
       font-size: 13px;
       font-weight: 800;
-      vertical-align: top;
+    }}
+
+    .choice-text {{
+      min-width: 0;
+      padding-top: 1px;
     }}
 
     .choice.correct {{
@@ -619,7 +649,7 @@ def render_html(quiz):
             <div class="q-count">Q${{index + 1}}</div>
             <div class="topic">${{q.year}} · ${{q.topic}}</div>
           </div>
-          <p class="question">${{escapeHtml(q.question)}}</p>
+          <div class="question">${{questionMarkup(q.question)}}</div>
           <div class="choices">
             ${{q.choices.map((choice, choiceIndex) => choiceMarkup(q, index, choice, choiceIndex)).join('')}}
           </div>
@@ -674,9 +704,36 @@ def render_html(quiz):
 
       return `
         <button class="${{classes}}" type="button" data-question="${{questionIndex}}" data-choice="${{choiceIndex}}" ${{disabled}}>
-          <span class="choice-prefix">${{circled[choiceIndex]}}</span>${{escapeHtml(choice)}}
+          <span class="choice-prefix">${{circled[choiceIndex]}}</span><span class="choice-text">${{escapeHtml(choice)}}</span>
         </button>
       `;
+    }}
+
+    function normalizeQuestionText(text) {{
+      return String(text)
+        .replaceAll('&lt;', '<')
+        .replaceAll('&gt;', '>')
+        .replace(/<보기>\\s*\\./g, '<보기>')
+        .replace(/<그림>\\s*\\./g, '<그림>')
+        .replace(/<표>\\s*\\./g, '<표>');
+    }}
+
+    function questionMarkup(text) {{
+      return normalizeQuestionText(text)
+        .split('\\n')
+        .map(line => {{
+          const trimmed = line.trim();
+          if (!trimmed) return '<div class="q-line"></div>';
+          return `<div class="${{questionLineClass(trimmed)}}">${{escapeHtml(trimmed)}}</div>`;
+        }})
+        .join('');
+    }}
+
+    function questionLineClass(line) {{
+      if (line === '<보기>' || line === '<그림>' || line === '<표>') return 'q-line q-label';
+      if (/^[㉠㉡㉢㉣㉤]/.test(line)) return 'q-line q-hang';
+      if (/^[∙•·▪□]/.test(line)) return 'q-line q-dot';
+      return 'q-line';
     }}
 
     function feedbackMarkup(q, index) {{
