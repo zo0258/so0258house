@@ -1,0 +1,321 @@
+#!/usr/bin/env python3
+import argparse
+import json
+import random
+import subprocess
+import sys
+from collections import Counter, defaultdict
+from datetime import date, datetime, timedelta
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+POLICY_PATH = ROOT / "config" / "daily-selection-policy.json"
+QUESTION_BANK_DIR = ROOT / "data" / "question-bank"
+QUIZ_DIR = ROOT / "data" / "quizzes"
+ATTEMPTS_PATH = ROOT / "results" / "attempts.jsonl"
+
+
+def read_json(path):
+    with path.open("r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+def read_jsonl(path):
+    if not path.exists():
+        return []
+    items = []
+    with path.open("r", encoding="utf-8") as file:
+        for line_no, line in enumerate(file, start=1):
+            if not line.strip():
+                continue
+            try:
+                items.append(json.loads(line))
+            except json.JSONDecodeError as error:
+                raise ValueError(f"{path}:{line_no} JSONL 파싱 실패: {error}") from error
+    return items
+
+
+def write_json(path, payload):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def parse_date(value):
+    return datetime.strptime(value, "%Y-%m-%d").date()
+
+
+def normalize_stem(text):
+    return "".join(str(text).split()).lower()
+
+
+def load_bank(bank_dir):
+    bank = []
+    seen = set()
+    for path in sorted(bank_dir.glob("*.jsonl")):
+        for item in read_jsonl(path):
+            question_id = item["id"]
+            if question_id in seen:
+                raise ValueError(f"문제은행 중복 questionId: {question_id}")
+            seen.add(question_id)
+            item["_bankFile"] = str(path.relative_to(ROOT))
+            item["_normalizedStem"] = normalize_stem(item["question"])
+            bank.append(item)
+    return bank
+
+
+def load_attempts(path):
+    return read_jsonl(path)
+
+
+def load_delivered_quizzes(quiz_dir, target_date):
+    delivered = []
+    for path in sorted(quiz_dir.glob("*-daily.json")):
+        quiz = read_json(path)
+        if quiz.get("date") == target_date.isoformat():
+            continue
+        try:
+            quiz_date = parse_date(quiz["date"])
+        except (KeyError, ValueError):
+            continue
+        delivered.append((quiz_date, quiz))
+    return delivered
+
+
+def recent_history(delivered, target_date, policy):
+    dedupe = policy["deduplication"]
+    exact_cutoff = target_date - timedelta(days=dedupe["exactQuestionCooldownDays"])
+    topic_cutoff = target_date - timedelta(days=dedupe["sameTopicCooldownDays"])
+    recent_ids = set()
+    recent_topics = set()
+    recent_stems = set()
+
+    for quiz_date, quiz in delivered:
+        if not (exact_cutoff <= quiz_date < target_date):
+            continue
+        for question in quiz.get("questions", []):
+            recent_ids.add(question["id"])
+            recent_stems.add(normalize_stem(question["question"]))
+            if topic_cutoff <= quiz_date < target_date:
+                recent_topics.add(question["topic"])
+    return recent_ids, recent_topics, recent_stems
+
+
+def weak_signals(attempts, target_date, policy):
+    recent_cutoff = target_date - timedelta(days=policy["recentWrongWindowDays"])
+    topic_counter = Counter()
+    subject_counter = Counter()
+    review_topics = Counter()
+
+    for attempt in attempts:
+        attempt_date_text = attempt.get("date")
+        if not attempt_date_text:
+            continue
+        try:
+            attempt_date = parse_date(attempt_date_text)
+        except ValueError:
+            continue
+        if not (recent_cutoff <= attempt_date < target_date):
+            continue
+        subject = attempt.get("subject", "미분류")
+        for wrong in attempt.get("wrong", []):
+            topic = wrong.get("topic")
+            if topic:
+                topic_counter[topic] += 1
+            subject_counter[subject] += 1
+        for review in attempt.get("review", []):
+            topic = review.get("topic")
+            if topic:
+                review_topics[topic] += 1
+
+    return topic_counter, subject_counter, review_topics
+
+
+def difficulty_penalty(question, selected, policy):
+    target_mix = policy["qualityGuards"]["difficultyMix"]
+    selected_counts = Counter(q.get("difficulty", 3) for q in selected)
+    difficulty = int(question.get("difficulty", 3))
+    if difficulty <= 2:
+        bucket = "easy"
+    elif difficulty == 3:
+        bucket = "medium"
+    else:
+        bucket = "hard"
+    if selected_counts[difficulty] >= target_mix.get(bucket, 99):
+        return 8
+    return 0
+
+
+def score_candidate(question, selected, subject_targets, topic_counter, subject_counter, review_topics, rng, policy):
+    subject_counts = Counter(q["subject"] for q in selected)
+    topic_counts = Counter(q["topic"] for q in selected)
+    answer_counts = Counter(q["answerIndex"] for q in selected)
+    score = 0
+
+    subject_need = subject_targets.get(question["subject"], 0) - subject_counts[question["subject"]]
+    score += max(subject_need, 0) * 20
+    score += min(subject_counter[question["subject"]], policy["maxExtraQuestionsPerWeakSubject"]) * 10
+    score += min(topic_counter[question["topic"]], 3) * 18
+    score += min(review_topics[question["topic"]], 2) * 12
+    score += int(question.get("difficulty", 3)) * 2
+    if question.get("wrongRateBasis"):
+        score += 3
+
+    score -= topic_counts[question["topic"]] * 25
+    score -= answer_counts[question["answerIndex"]] * 4
+    score -= difficulty_penalty(question, selected, policy)
+    score += rng.random()
+    return score
+
+
+def can_add(question, selected, policy, allow_partial):
+    dedupe = policy["deduplication"]
+    guards = policy["qualityGuards"]
+    subject_counts = Counter(q["subject"] for q in selected)
+    topic_counts = Counter(q["topic"] for q in selected)
+    answer_counts = Counter(int(q["answerIndex"]) for q in selected)
+
+    if any(question["id"] == q["id"] for q in selected):
+        return False
+    if any(question["_normalizedStem"] == q["_normalizedStem"] for q in selected):
+        return False
+    if subject_counts[question["subject"]] >= dedupe["maxSameSubjectPerDay"] and not allow_partial:
+        return False
+    if topic_counts[question["topic"]] >= dedupe["maxSameTopicPerDay"] and not allow_partial:
+        return False
+    if answer_counts[int(question["answerIndex"])] >= guards["answerBalance"]["maxSameAnswerCount"] and not allow_partial:
+        return False
+    return True
+
+
+def select_questions(bank, policy, attempts, delivered, target_date, count, allow_partial):
+    rng = random.Random(target_date.isoformat())
+    subject_targets = dict(policy["defaultSubjectAllocation"])
+    recent_ids, recent_topics, recent_stems = recent_history(delivered, target_date, policy)
+    topic_counter, subject_counter, review_topics = weak_signals(attempts, target_date, policy)
+
+    strict_pool = [
+        q for q in bank
+        if q["id"] not in recent_ids
+        and q["_normalizedStem"] not in recent_stems
+        and (allow_partial or q["topic"] not in recent_topics or topic_counter[q["topic"]] >= policy["repeatWrongTopicThreshold"])
+    ]
+    if allow_partial and not strict_pool:
+        strict_pool = [q for q in bank if q["id"] not in recent_ids and q["_normalizedStem"] not in recent_stems]
+    if allow_partial and not strict_pool:
+        strict_pool = list(bank)
+
+    selected = []
+    required_subjects = set(subject_targets)
+
+    for subject in required_subjects:
+        if len(selected) >= count:
+            break
+        subject_pool = [q for q in strict_pool if q["subject"] == subject and can_add(q, selected, policy, allow_partial)]
+        if not subject_pool:
+            continue
+        subject_pool.sort(key=lambda q: score_candidate(q, selected, subject_targets, topic_counter, subject_counter, review_topics, rng, policy), reverse=True)
+        selected.append(subject_pool[0])
+
+    while len(selected) < count:
+        candidates = [q for q in strict_pool if can_add(q, selected, policy, allow_partial)]
+        if not candidates:
+            if allow_partial:
+                break
+            raise RuntimeError("정책을 만족하는 후보가 부족합니다. 문제은행을 보강해야 합니다.")
+        candidates.sort(key=lambda q: score_candidate(q, selected, subject_targets, topic_counter, subject_counter, review_topics, rng, policy), reverse=True)
+        selected.append(candidates[0])
+
+    missing_subjects = sorted(required_subjects - {q["subject"] for q in selected})
+    if missing_subjects and not allow_partial:
+        raise RuntimeError(f"8과목 최소 1문항 조건을 만족하지 못했습니다: {', '.join(missing_subjects)}")
+    if len(selected) != count and not allow_partial:
+        raise RuntimeError(f"요청 문항 수를 채우지 못했습니다: {len(selected)} / {count}")
+
+    rng.shuffle(selected)
+    for question in selected:
+        question.pop("_bankFile", None)
+        question.pop("_normalizedStem", None)
+    return selected, missing_subjects
+
+
+def build_quiz(questions, target_date, allow_partial, missing_subjects):
+    subjects = Counter(q["subject"] for q in questions)
+    subject_text = "전과목" if len(subjects) > 1 else (next(iter(subjects)) if subjects else "미분류")
+    round_text = f"시험 임박 전과목 {len(questions)}문항"
+    if allow_partial:
+        round_text = "부분 문제은행 점검용"
+    source_years = sorted({str(q.get("year", "")) for q in questions if q.get("year")})
+    quiz = {
+        "quizId": f"{target_date.isoformat()}-daily-all-subjects",
+        "date": target_date.isoformat(),
+        "title": "건강운동관리사 데일리 퀴즈",
+        "subject": subject_text,
+        "round": round_text,
+        "timeLimitMinutes": max(8, len(questions) * 1),
+        "sourceSummary": f"{', '.join(source_years)}년 검증 문제은행 기반",
+        "generationNote": "allow-partial 모드로 생성되어 과목 배분이 완전하지 않습니다." if allow_partial else "정책 기반 자동 생성",
+        "missingSubjects": missing_subjects,
+        "questions": questions,
+    }
+    return quiz
+
+
+def run_script(script_name, *args):
+    command = [sys.executable, str(ROOT / "scripts" / script_name), *map(str, args)]
+    return subprocess.run(command, cwd=ROOT, text=True, capture_output=True)
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Generate a daily all-subject quiz JSON and optional mobile HTML.")
+    parser.add_argument("--date", default=date.today().isoformat(), help="Quiz date, YYYY-MM-DD.")
+    parser.add_argument("--count", type=int, help="Question count. Defaults to policy dailyQuestionCount.")
+    parser.add_argument("--policy", type=Path, default=POLICY_PATH)
+    parser.add_argument("--bank-dir", type=Path, default=QUESTION_BANK_DIR)
+    parser.add_argument("--attempts", type=Path, default=ATTEMPTS_PATH)
+    parser.add_argument("--output", type=Path, help="Output quiz JSON path.")
+    parser.add_argument("--html", action="store_true", help="Also generate the mobile HTML delivery file.")
+    parser.add_argument("--allow-partial", action="store_true", help="Generate with the available verified bank even if full policy is not yet satisfiable.")
+    parser.add_argument("--skip-validation", action="store_true", help="Skip policy validation after generation.")
+    args = parser.parse_args()
+
+    target_date = parse_date(args.date)
+    policy_path = args.policy if args.policy.is_absolute() else ROOT / args.policy
+    bank_dir = args.bank_dir if args.bank_dir.is_absolute() else ROOT / args.bank_dir
+    attempts_path = args.attempts if args.attempts.is_absolute() else ROOT / args.attempts
+    output_path = args.output or QUIZ_DIR / f"{target_date.isoformat()}-daily.json"
+    output_path = output_path if output_path.is_absolute() else ROOT / output_path
+
+    policy = read_json(policy_path)
+    count = args.count or int(policy["dailyQuestionCount"])
+    bank = load_bank(bank_dir)
+    if not bank:
+        raise SystemExit(f"문제은행이 비어 있습니다: {bank_dir}")
+
+    attempts = load_attempts(attempts_path)
+    delivered = load_delivered_quizzes(QUIZ_DIR, target_date)
+    try:
+        questions, missing_subjects = select_questions(bank, policy, attempts, delivered, target_date, count, args.allow_partial)
+    except RuntimeError as error:
+        raise SystemExit(f"생성 중단: {error}") from error
+    quiz = build_quiz(questions, target_date, args.allow_partial, missing_subjects)
+    write_json(output_path, quiz)
+    print(output_path)
+
+    if not args.skip_validation and not args.allow_partial:
+        result = run_script("validate_quiz_policy.py", output_path)
+        sys.stdout.write(result.stdout)
+        sys.stderr.write(result.stderr)
+        if result.returncode != 0:
+            raise SystemExit(result.returncode)
+
+    if args.html:
+        result = run_script("generate_quiz_html.py", output_path)
+        sys.stdout.write(result.stdout)
+        sys.stderr.write(result.stderr)
+        if result.returncode != 0:
+            raise SystemExit(result.returncode)
+
+
+if __name__ == "__main__":
+    main()

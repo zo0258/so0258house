@@ -1,0 +1,300 @@
+{
+  "quizId": "2026-05-19-daily-all-subjects",
+  "date": "2026-05-19",
+  "title": "건강운동관리사 데일리 퀴즈",
+  "subject": "전과목",
+  "round": "시험 임박 전과목 10문항",
+  "timeLimitMinutes": 10,
+  "sourceSummary": "2023년 검증 문제은행 기반",
+  "generationNote": "정책 기반 자동 생성",
+  "missingSubjects": [],
+  "questions": [
+    {
+      "id": "2023-1A-71-03",
+      "year": 2023,
+      "subject": "건강·체력평가",
+      "topic": "체력 검사",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "체력 검사 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "체력 검사를 계획하고 관리하기 위한 방법으로 옳지 않은 것은?",
+      "choices": [
+        "검사 결과를 설명할 때는 전문적인 용어보다 일반적인 용어를 사용한다.",
+        "검사의 타당성, 신뢰성, 객관성을 확보하기 위해 노력한다.",
+        "검사해야 할 체력요소와 체력 검사의 목적을 파악한다. ④ 검사는 공개적으로 실시하고 결과를 공유한다.",
+        "검사는 공개적으로 실시하고 결과를 공유한다."
+      ],
+      "answerIndex": 3,
+      "explanation": "최종정답 기준 정답은 ④입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 3,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 71
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-1A-72-13",
+      "year": 2023,
+      "subject": "운동처방론",
+      "topic": "ACSM이 권고하",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "ACSM이 권고하 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 ACSM(11판)이 권고하는 우울증 환자를 위한 운동처방 시\n고려사항으로 옳은 것으로만 모두 고른 것은?\n<보기>.\n㉠ 유산소운동은 심리요법이나 약물요법만큼 우울 증상을 감소시킬\n수 있다.\n㉡ 운동은 강도와 상관없이 우울 증상을 완화하는 데 도움이 된다.\n㉢ 운동은 즉각적으로 감정 상태에 영향을 미쳐서 우울 증상을\n일시적으로 완화할 수 있다.\n㉣ 운동이 공황장애가 있는 환자에게 공황발작과 유사한 생리적\n변화를 유발할 수 있지만, 정상적인 반응이므로 이를 충분히\n설명해야 한다.",
+      "choices": [
+        "㉠",
+        "㉠, ㉡",
+        "㉠, ㉡, ㉢ ④ ㉠, ㉡, ㉢, ㉣",
+        "㉠, ㉡, ㉢, ㉣"
+      ],
+      "answerIndex": 3,
+      "explanation": "최종정답 기준 정답은 ④입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 13,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 72
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-1A-exphys-06",
+      "year": 2023,
+      "subject": "운동생리학",
+      "topic": "RAAS",
+      "type": "개념구분",
+      "difficulty": 4,
+      "trap": "레닌, ACE, 알도스테론의 생성 위치와 작용 순서를 섞는 함정",
+      "question": "레닌-안지오텐신-알도스테론 시스템에 대한 설명으로 옳은 것은?",
+      "choices": [
+        "안지오텐신 II는 혈관을 수축시켜 혈압을 높인다.",
+        "안지오텐신 전환효소(ACE)는 안지오텐신 II를 안지오텐신 I로 바꾼다.",
+        "부신 속질에서 분비된 알도스테론은 신장에서 Na+ 재흡수를 증가시킨다.",
+        "간에서 생성된 레닌은 안지오텐신 I을 안지오텐시노겐으로 바꾼다."
+      ],
+      "answerIndex": 0,
+      "explanation": "RAAS에서는 안지오텐신 II가 강력한 혈관수축 작용을 해 혈압을 높인다. ACE는 I을 II로 전환하고, 알도스테론은 부신겉질에서 분비된다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 6
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "data/quizzes/2026-05-18-daily.json"
+    },
+    {
+      "id": "2023-2A-77-05",
+      "year": 2023,
+      "subject": "스포츠심리학",
+      "topic": "지도행동 바스",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "지도행동 바스 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>의 지도행동 중 바스(Bass)의 변혁적리더십(transformational\nleadership)에 해당하는 것으로만 모두 고른 것은?\n<보기>.\n㉠ 운동프로그램을 창의적으로 구성할 수 있도록 새로운 지식을\n제공한다.\n㉡ 목표달성에 따른 포상금 지급 계획을 명확히 제시한다.\n㉢ 개인의 목표와 필요사항을 조사하여 운동프로그램에 반영한다.",
+      "choices": [
+        "㉠, ㉡",
+        "㉠, ㉢",
+        "㉡, ㉢ ④ ㉠, ㉡, ㉢",
+        "㉠, ㉡, ㉢"
+      ],
+      "answerIndex": 1,
+      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 5,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 77
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-2A-75-15",
+      "year": 2023,
+      "subject": "기능해부학",
+      "topic": "오목위팔 관절",
+      "type": "개념구분",
+      "difficulty": 4,
+      "trap": "오목위팔 관절 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "오목위팔(glenohumeral, GH) 관절에서 관절주머니의 위쪽 구조들\n(superior capsular structures, SCS)과 중력(gravity, G)의 힘 벡터 결합은\n관절오목에 대해 압박력(comprehension force, CF)을 발생시켜 GH 관절의\n수동적 안정성을 높인다. 이때 SCS에 해당하지 않는 것은?",
+      "choices": [
+        "가시위근(supraspinatus)",
+        "관절주머니인대(capsular ligament)",
+        "위팔가로인대(transverse humeral ligament) ④ 부리위팔인대(coracohumeral ligament)",
+        "부리위팔인대(coracohumeral ligament)"
+      ],
+      "answerIndex": 2,
+      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 15,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 75
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-2A-76-20",
+      "year": 2023,
+      "subject": "병태생리학",
+      "topic": "파킨슨병 특징",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "파킨슨병 특징 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "파킨슨병에 대한 특징으로 옳은 것으로만 고른 것은?\n<보기>.\n㉠ 운동과 약물요법 및 수술적 치료로 완치된다.\n㉡ 중뇌의 흑색질로부터 도파민의 과도한 생성과 관련 있다.\n㉢ Hoehn 및 Yahr의 5단계 중 1~2단계까지는 자세불안정성이\n없는 것이 특징이다.\n㉣ 주요증상으로움직임이느리고톱니바퀴강직(cogwheel rigidity)과\n떨림이 특징이다.",
+      "choices": [
+        "㉠, ㉡",
+        "㉠, ㉣",
+        "㉡, ㉢ ④ ㉢, ㉣ 건강운동관리사 필기시험 2교시 A형 9면",
+        "㉢, ㉣ 건강운동관리사 필기시험 2교시 A형 9면"
+      ],
+      "answerIndex": 3,
+      "explanation": "최종정답 기준 정답은 ④입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 20,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 76
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-1A-70-03",
+      "year": 2023,
+      "subject": "운동생리학",
+      "topic": "고온 노출",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "고온 노출 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "고온 노출 시 항상성(homeostasis) 유지를 위한 반응은?",
+      "choices": [
+        "대사율 증가",
+        "부교감신경 활성 증가",
+        "티록신(thyroxine) 분비 증가 ④ 갑상선 자극호르몬(TSH) 분비 증가",
+        "갑상선 자극호르몬(TSH) 분비 증가"
+      ],
+      "answerIndex": 1,
+      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 3,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 70
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-2A-74-16",
+      "year": 2023,
+      "subject": "운동상해",
+      "topic": "설명하 특수검사로",
+      "type": "개념구분",
+      "difficulty": 4,
+      "trap": "설명하 특수검사로 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 설명하는 특수검사(special test)로 옳은 것은?\n<보기>.\n∙ 반달연골(meniscus) 파열을 알아보기 위한 검사이다.\n∙ 검사자는 대상자 앞에서 넘어지지 않도록 잡아준다.\n∙ 대상자는 무릎을 5°와 20°로 구부려 정강뼈 위의 넙다리뼈를\n안쪽과 가쪽으로 회전시킨다.",
+      "choices": [
+        "테살리(Thessaly) 검사",
+        "크로스오버(crossover) 검사",
+        "어플리 압박(Apley compression) 검사 ④ 바깥굽이/안쪽굽이 부하(valgus/varus stress) 검사 대상자 검사자 건강운동관리사 필기시험 2교시 A형 3면",
+        "바깥굽이/안쪽굽이 부하(valgus/varus stress) 검사 대상자 검사자 건강운동관리사 필기시험 2교시 A형 3면"
+      ],
+      "answerIndex": 0,
+      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 16,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 74
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-1A-71-07",
+      "year": 2023,
+      "subject": "건강·체력평가",
+      "topic": "국민체력100 노인",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "국민체력100 노인 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>의 ‘국민체력100’ 노인 체력 검사 측정 방법 중 옳은 것으로만\n모두 고른 것은?\n<보기>.\n측정요인 검사 항목 측정방법\n㉠ 유연성\n의자에앉았다가\n일어서기\n등을 곧게 펴고, 양 발은 바닥에\n붙인상태로양팔은손목에서교차\n(20초 동안 측정)\n㉡\n보행 및\n동적\n평형성\n의자에앉아\n3m표적\n돌아오기\n의자에서 일어나 가능한 빠르게\n걸어고깔을돌아의자에다시앉기\n(0.1초 단위로 측정)\n㉢ 협응력 8자보행검사\n오른쪽 뒤에 있는 고깔을 안에서\n바깥쪽으로돌아의자에앉고, 다시\n일어나왼쪽뒤에있는고깔을안에서\n바깥쪽으로 돌아와 앉는 것을\n두 번 반복(0.1초 단위로 측정)\n㉣ 근지구력 2분제자리걷기\n무릎을 올려야 하는 최소 높이를\n지정하고 실시(2분 동안 한발 걸을\n때마다 1회 계수)",
+      "choices": [
+        "㉠, ㉡",
+        "㉠, ㉢",
+        "㉡, ㉢ ④ ㉢, ㉣",
+        "㉢, ㉣"
+      ],
+      "answerIndex": 2,
+      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 7,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 71
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-1A-73-07",
+      "year": 2023,
+      "subject": "운동부하검사",
+      "topic": "미국심장협회 제시한",
+      "type": "보기조합",
+      "difficulty": 4,
+      "trap": "미국심장협회 제시한 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 미국심장협회(AHA)가 제시한 증상-제한 최대운동검사의\n상대적인 중단기준이 옳은 것으로만 모두 고른 것은?\n<보기>.\n㉠ 가슴통증의 증가\n㉡ 관류부족으로 인한 창백증\n㉢ 다리경련이나 절뚝거림 증상\n㉣ 중추신경계 이상 증상으로 인한 운동실조",
+      "choices": [
+        "㉠, ㉡",
+        "㉠, ㉢",
+        "㉡, ㉣ ④ ㉢, ㉣",
+        "㉢, ㉣"
+      ],
+      "answerIndex": 1,
+      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 7,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 73
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    }
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "source": "KSPO 체육지도자 자격검정 및 연수 - 필기시험 문제ㆍ정답",
+  "list_url": "https://sqms.kspo.or.kr/exam/wrQnaList.kspo",
+  "downloaded_at": "2026-05-18T01:28:57+0900",
+  "items": [
+    {
+      "year": 2025,
+      "kind": "final_answer",
+      "view_id": "7763",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3514546",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3514546",
+          "path": "materials/raw/kspo/2025/final_answer/2025년 건강운동관리사 필기시험 최종 정답.pdf",
+          "bytes": 62690
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2025,
+      "kind": "draft_answer",
+      "view_id": "7742",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3513099",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3513099",
+          "path": "materials/raw/kspo/2025/draft_answer/2025 건강운동관리사 필기시험 정답가안.pdf",
+          "bytes": 62730
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2025,
+      "kind": "questions",
+      "view_id": "7741",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3513097",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3513097",
+          "path": "materials/raw/kspo/2025/questions/탑재용(2400dpi)_2025 건강운동관리사 필기시험 1교시.pdf",
+          "bytes": 17018908
+        },
+        {
+          "file_id": "3513098",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3513098",
+          "path": "materials/raw/kspo/2025/questions/탑재용(2400dpi)_2025 건강운동관리사 필기시험 2교시.pdf",
+          "bytes": 14590695
+        }
+      ],
+      "file_count": 2
+    },
+    {
+      "year": 2024,
+      "kind": "final_answer",
+      "view_id": "7550",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3437875",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3437875",
+          "path": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "bytes": 106634
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2024,
+      "kind": "draft_answer",
+      "view_id": "7539",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3438460",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3438460",
+          "path": "materials/raw/kspo/2024/draft_answer/2024 건강운동관리사 정답가안.pdf",
+          "bytes": 173936
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2024,
+      "kind": "questions",
+      "view_id": "7538",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3437516",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3437516",
+          "path": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf",
+          "bytes": 1743636
+        },
+        {
+          "file_id": "3437517",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3437517",
+          "path": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 B형.pdf",
+          "bytes": 1743841
+        },
+        {
+          "file_id": "3437518",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3437518",
+          "path": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+          "bytes": 929872
+        },
+        {
+          "file_id": "3437519",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3437519",
+          "path": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 B형.pdf",
+          "bytes": 930038
+        }
+      ],
+      "file_count": 4
+    },
+    {
+      "year": 2023,
+      "kind": "final_answer",
+      "view_id": "7250",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3353184",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3353184",
+          "path": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "bytes": 106781
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2023,
+      "kind": "draft_answer",
+      "view_id": "7217",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3351895",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3351895",
+          "path": "materials/raw/kspo/2023/draft_answer/2023 건강운동관리사 필기시험 정답가안.pdf",
+          "bytes": 173830
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2023,
+      "kind": "questions",
+      "view_id": "7216",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3352731",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3352731",
+          "path": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+          "bytes": 1175519
+        },
+        {
+          "file_id": "3352732",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3352732",
+          "path": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 B형kspo.pdf",
+          "bytes": 1175780
+        },
+        {
+          "file_id": "3352733",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3352733",
+          "path": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+          "bytes": 901964
+        },
+        {
+          "file_id": "3352734",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3352734",
+          "path": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 B형kspo.pdf",
+          "bytes": 902515
+        }
+      ],
+      "file_count": 4
+    },
+    {
+      "year": 2022,
+      "kind": "final_answer",
+      "view_id": "7027",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3356294",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3356294",
+          "path": "materials/raw/kspo/2022/final_answer/2022 건강운동관리사 필기시험 최종정답(게시).pdf",
+          "bytes": 240464
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2022,
+      "kind": "draft_answer",
+      "view_id": "6982",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3276402",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3276402",
+          "path": "materials/raw/kspo/2022/draft_answer/2022 건강운동관리사 필기시험 정답가안.pdf",
+          "bytes": 107234
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2022,
+      "kind": "questions",
+      "view_id": "6981",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3357305",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3357305",
+          "path": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 1교시 A형(게시).pdf",
+          "bytes": 912305
+        },
+        {
+          "file_id": "3357306",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3357306",
+          "path": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 1교시 B형(게시).pdf",
+          "bytes": 908918
+        },
+        {
+          "file_id": "3357307",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3357307",
+          "path": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 2교시 A형(게시).pdf",
+          "bytes": 1028075
+        },
+        {
+          "file_id": "3357308",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3357308",
+          "path": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 2교시 B형(게시).pdf",
+          "bytes": 1023855
+        }
+      ],
+      "file_count": 4
+    },
+    {
+      "year": 2021,
+      "kind": "final_answer",
+      "view_id": "6619",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574722",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574722",
+          "path": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+          "bytes": 140448
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2021,
+      "kind": "questions",
+      "view_id": "6623",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3357293",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3357293",
+          "path": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 1교시 A형(게시).pdf",
+          "bytes": 868638
+        },
+        {
+          "file_id": "3357294",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3357294",
+          "path": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 1교시 B형(게시).pdf",
+          "bytes": 880881
+        },
+        {
+          "file_id": "3357295",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3357295",
+          "path": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 2교시 A형(게시).pdf",
+          "bytes": 859785
+        },
+        {
+          "file_id": "3357296",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3357296",
+          "path": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 2교시 B형(게시).pdf",
+          "bytes": 856583
+        }
+      ],
+      "file_count": 4
+    },
+    {
+      "year": 2021,
+      "kind": "draft_answer",
+      "view_id": "6625",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574728",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574728",
+          "path": "materials/raw/kspo/2021/draft_answer/2021년 건강운동관리사 정답가안.pdf",
+          "bytes": 166848
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2020,
+      "kind": "final_answer",
+      "view_id": "6620",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574723",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574723",
+          "path": "materials/raw/kspo/2020/final_answer/2020건강운동관리사 필기시험 최종정답.pdf",
+          "bytes": 102400
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2020,
+      "kind": "questions_and_draft_answer",
+      "view_id": "6618",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "3356284",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3356284",
+          "path": "materials/raw/kspo/2020/questions_and_draft_answer/2020건강운동관리사 필기시험 1교시_A형.pdf",
+          "bytes": 1274091
+        },
+        {
+          "file_id": "3356285",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3356285",
+          "path": "materials/raw/kspo/2020/questions_and_draft_answer/2020건강운동관리사 필기시험 1교시_B형.pdf",
+          "bytes": 1277262
+        },
+        {
+          "file_id": "3356286",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3356286",
+          "path": "materials/raw/kspo/2020/questions_and_draft_answer/2020건강운동관리사 필기시험 2교시_A형.pdf",
+          "bytes": 1068955
+        },
+        {
+          "file_id": "3356287",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=3356287",
+          "path": "materials/raw/kspo/2020/questions_and_draft_answer/2020건강운동관리사 필기시험 2교시_B형.pdf",
+          "bytes": 1068076
+        },
+        {
+          "file_id": "2574721",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574721",
+          "path": "materials/raw/kspo/2020/questions_and_draft_answer/2020건강운동관리사 필기시험 정답가안.pdf",
+          "bytes": 766992
+        }
+      ],
+      "file_count": 5
+    },
+    {
+      "year": 2019,
+      "kind": "final_answer",
+      "view_id": "6604",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574707",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574707",
+          "path": "materials/raw/kspo/2019/final_answer/2019년 건강운동관리사 필기시험 최종답안.pdf",
+          "bytes": 71856
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2019,
+      "kind": "questions_and_draft_answer",
+      "view_id": "6603",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574748",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574748",
+          "path": "materials/raw/kspo/2019/questions_and_draft_answer/2019건강운동관리사 필기시험 1교시_A형.pdf",
+          "bytes": 684000
+        },
+        {
+          "file_id": "2574782",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574782",
+          "path": "materials/raw/kspo/2019/questions_and_draft_answer/2019건강운동관리사 필기시험 1교시_B형.pdf",
+          "bytes": 683952
+        },
+        {
+          "file_id": "2574804",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574804",
+          "path": "materials/raw/kspo/2019/questions_and_draft_answer/2019건강운동관리사 필기시험 2교시_A형.pdf",
+          "bytes": 733600
+        },
+        {
+          "file_id": "2574824",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574824",
+          "path": "materials/raw/kspo/2019/questions_and_draft_answer/2019건강운동관리사 필기시험 2교시_B형.pdf",
+          "bytes": 733952
+        },
+        {
+          "file_id": "2574706",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574706",
+          "path": "materials/raw/kspo/2019/questions_and_draft_answer/2019년 건강운동관리사 필기시험 정답가안.pdf",
+          "bytes": 145344
+        }
+      ],
+      "file_count": 5
+    }
+  ]
+}
