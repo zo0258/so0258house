@@ -20,7 +20,7 @@ def parse_result(text):
         raise ValueError("결과 블록을 찾지 못했습니다.")
 
     body = text.split(start, 1)[1].split(end, 1)[0].strip()
-    attempt = {"wrong": [], "review": []}
+    attempt = {"wrong": [], "review": [], "unanswered": []}
     for raw_line in body.splitlines():
         line = raw_line.strip()
         if not line:
@@ -47,11 +47,22 @@ def parse_result(text):
                 review_item[key] = value
             attempt["review"].append(review_item)
             continue
+        if line.startswith("unanswered="):
+            payload = line.removeprefix("unanswered=")
+            parts = payload.split("|")
+            unanswered_item = {"questionId": parts[0]}
+            for part in parts[1:]:
+                if "=" not in part:
+                    continue
+                key, value = part.split("=", 1)
+                unanswered_item[key] = value
+            attempt["unanswered"].append(unanswered_item)
+            continue
         if "=" in line:
             key, value = line.split("=", 1)
             attempt[key] = value
 
-    for number_key in ("score", "total", "answered"):
+    for number_key in ("score", "total", "answered", "unansweredCount"):
         if number_key in attempt:
             attempt[number_key] = int(attempt[number_key])
 
@@ -82,6 +93,7 @@ def render_wrong_note(attempts):
     question_counter = Counter()
     reason_counter = Counter()
     review_counter = Counter()
+    unanswered_counter = Counter()
     total_score = 0
     total_questions = 0
 
@@ -104,6 +116,9 @@ def render_wrong_note(attempts):
             topic = review.get("topic", "미분류")
             review_counter[topic] += 1
             recent_review.append((attempt.get("date", ""), subject, topic, review))
+        for unanswered in attempt.get("unanswered", []):
+            topic = unanswered.get("topic", "미분류")
+            unanswered_counter[topic] += 1
 
     accuracy = (total_score / total_questions * 100) if total_questions else 0
     lines = [
@@ -154,6 +169,13 @@ def render_wrong_note(attempts):
             lines.append(f"- {date} | {subject} | {topic} | {review.get('questionId')}")
     else:
         lines.append("- 아직 표시된 다시 볼 문제가 없습니다.")
+
+    lines += ["", "## 미응답 주의 영역", ""]
+    if unanswered_counter:
+        for topic, count in unanswered_counter.most_common(10):
+            lines.append(f"- {topic}: {count}회")
+    else:
+        lines.append("- 아직 누적 미응답이 없습니다.")
 
     lines += [
         "",

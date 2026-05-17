@@ -70,6 +70,8 @@ def load_bank(bank_dir):
             seen.add(question_id)
             if has_extraction_artifact(item):
                 continue
+            if not item.get("wrongRateBasis"):
+                continue
             item["_bankFile"] = str(path.relative_to(ROOT))
             item["_normalizedStem"] = normalize_stem(item["question"])
             bank.append(item)
@@ -244,11 +246,27 @@ def select_questions(bank, policy, attempts, delivered, target_date, count, allo
     if len(selected) != count and not allow_partial:
         raise RuntimeError(f"요청 문항 수를 채우지 못했습니다: {len(selected)} / {count}")
 
-    rng.shuffle(selected)
+    selected = order_for_exam_flow(selected)
     for question in selected:
         question.pop("_bankFile", None)
         question.pop("_normalizedStem", None)
     return selected, missing_subjects
+
+
+def order_for_exam_flow(questions):
+    def flow_key(question):
+        difficulty = int(question.get("difficulty", 3))
+        qtype = question.get("type", "")
+        text_len = len(question.get("question", ""))
+        if difficulty <= 3 and qtype in {"개념구분", "부정형"} and text_len < 180:
+            bucket = 0
+        elif difficulty >= 5 or qtype in {"계산", "보기조합"}:
+            bucket = 2
+        else:
+            bucket = 1
+        return (bucket, difficulty, text_len, question["subject"], question["id"])
+
+    return sorted(questions, key=flow_key)
 
 
 def build_quiz(questions, target_date, allow_partial, missing_subjects):

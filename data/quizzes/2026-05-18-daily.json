@@ -10,6 +10,64 @@
   "missingSubjects": [],
   "questions": [
     {
+      "id": "2023-2A-75-04",
+      "year": 2023,
+      "subject": "기능해부학",
+      "topic": "운동역학적 변인에",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "운동역학적 변인에 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "운동역학적(kinetics) 변인(variable)에 해당하는 것은?",
+      "choices": [
+        "충격량(impulse)",
+        "각속도(angular velocity)",
+        "관절가동범위(joint range of motion)",
+        "한걸음 길이(stride length)"
+      ],
+      "answerIndex": 0,
+      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 4,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 75
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-1A-73-12",
+      "year": 2023,
+      "subject": "운동부하검사",
+      "topic": "말초동맥질환자 운동부하검사",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "말초동맥질환자 운동부하검사 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "말초동맥질환자의 운동부하검사에서 발목위팔압력지수(ankle brachial\npressure index: ABI)에 관한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "안정 시＞0.9이면 정상으로 분류한다.",
+        "발목과 위팔의 평균동맥압 비율을 의미한다.",
+        "위팔의 혈압은 양팔 중 높은 쪽을 기준으로 한다.",
+        "안정 시에 비해 운동 직후＞20% 감소하면 말초동맥질환을 의심할 수 있다."
+      ],
+      "answerIndex": 1,
+      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 12,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 73
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
       "id": "2023-1A-71-15",
       "year": 2023,
       "subject": "건강·체력평가",
@@ -65,84 +123,84 @@
       "bankSource": "data/quizzes/2026-05-18-daily.json"
     },
     {
-      "id": "2023-1A-71-01",
+      "id": "2023-1A-70-13",
       "year": 2023,
-      "subject": "건강·체력평가",
-      "topic": "체력 검사",
-      "type": "부정형",
-      "difficulty": 3,
-      "trap": "체력 검사 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "체력 검사 시 검사자가 고려해야 할 사항으로 옳지 않은 것은?",
+      "subject": "운동생리학",
+      "topic": "정보 이용하여",
+      "type": "계산",
+      "difficulty": 4,
+      "trap": "정보 이용하여 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>의 정보를 이용하여 추정한 안정 시 분당 산소섭취량(mL/분)은?\n<보기>.\n∙ 나이: 20세 ∙ 성별: 남성\n∙ 체중: 60 kg ∙ 심박수: 60 회/분\n∙ 1회 박출량: 100 mL/회 ∙ 동정맥산소차: 50 mL/L",
       "choices": [
-        "검사 대상자의 병력",
-        "검사 대상자의 참여 동의",
-        "검사 대상자의 자기 효능감",
-        "검사 대상자의 안정 시 심박수"
+        "300",
+        "360",
+        "500",
+        "600"
       ],
-      "answerIndex": 2,
-      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "answerIndex": 0,
+      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
         "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
         "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 1,
+        "questionNo": 13,
         "session": 1,
         "form": "A",
-        "subjectCode": 71
+        "subjectCode": 70
       },
       "wrongRateBasis": "고오답 추정",
       "verified": true,
       "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
     },
     {
-      "id": "2023-2A-75-12",
+      "id": "2023-2A-74-06",
       "year": 2023,
-      "subject": "기능해부학",
-      "topic": "등척성 운동",
-      "type": "개념구분",
-      "difficulty": 3,
-      "trap": "등척성 운동 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "<그림>과 같은 등척성 운동에서 위팔두갈래근(biceps brachii)에서\n발생하는 힘(F)의 크기는?",
+      "subject": "운동상해",
+      "topic": "발목인대 평가하",
+      "type": "보기조합",
+      "difficulty": 4,
+      "trap": "발목인대 평가하 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 발목인대를 평가하는 특수검사(special test)로 옳은\n것으로만 모두 고른 것은?\n<보기>.\n㉠ 호만(Homan’s) 검사\n㉡ 클레이거(Kleiger’s) 검사\n㉢ 목말뼈 경사(talar tilt) 검사\n㉣ 충격(bump) 검사",
       "choices": [
-        "600 N",
-        "650 N",
-        "700 N",
-        "750 N"
+        "㉠, ㉢",
+        "㉠, ㉣",
+        "㉡, ㉢",
+        "㉡, ㉣"
+      ],
+      "answerIndex": 2,
+      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 6,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 74
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-2A-77-13",
+      "year": 2023,
+      "subject": "스포츠심리학",
+      "topic": "용어 설명이",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "용어 설명이 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>의 용어에 대한 설명이 옳은 것으로만 모두 고른 것은?\n<보기>.\n㉠ 전체반응시간: 운동시간과 일치\n㉡ 개방운동기술: 안정된 환경에서 수행하는 운동 기술\n㉢ 속도-정확성 상쇄: 운동 속도 증가에 따른 운동 정확성 감소 현상\n㉣ 슈미츠(Schmidt)의 일반화된 운동프로그램의 매개변수: 환경\n요구에 따라 움직임의 형태를 조절하는데 관여",
+      "choices": [
+        "㉠, ㉡",
+        "㉠, ㉣",
+        "㉡, ㉢",
+        "㉢, ㉣"
       ],
       "answerIndex": 3,
       "explanation": "최종정답 기준 정답은 ④입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
         "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
         "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 12,
-        "session": 2,
-        "form": "A",
-        "subjectCode": 75
-      },
-      "wrongRateBasis": "고오답 추정",
-      "verified": true,
-      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
-    },
-    {
-      "id": "2023-2A-77-05",
-      "year": 2023,
-      "subject": "스포츠심리학",
-      "topic": "지도행동 바스",
-      "type": "보기조합",
-      "difficulty": 5,
-      "trap": "지도행동 바스 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "<보기>의 지도행동 중 바스(Bass)의 변혁적리더십(transformational\nleadership)에 해당하는 것으로만 모두 고른 것은?\n<보기>.\n㉠ 운동프로그램을 창의적으로 구성할 수 있도록 새로운 지식을\n제공한다.\n㉡ 목표달성에 따른 포상금 지급 계획을 명확히 제시한다.\n㉢ 개인의 목표와 필요사항을 조사하여 운동프로그램에 반영한다.",
-      "choices": [
-        "㉠, ㉡",
-        "㉠, ㉢",
-        "㉡, ㉢",
-        "㉠, ㉡, ㉢"
-      ],
-      "answerIndex": 1,
-      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
-      "source": {
-        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
-        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 5,
+        "questionNo": 13,
         "session": 2,
         "form": "A",
         "subjectCode": 77
@@ -152,26 +210,26 @@
       "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
     },
     {
-      "id": "2023-2A-76-08",
+      "id": "2023-2A-76-11",
       "year": 2023,
       "subject": "병태생리학",
-      "topic": "알츠하이머병 설명",
-      "type": "개념구분",
-      "difficulty": 4,
-      "trap": "알츠하이머병 설명 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "<보기>에서 알츠하이머병(Alzheimer’s disease)에 대한 설명으로 옳지\n않은 것으로만 고른 것은?\n<보기>.\n㉠ 아세틸콜린 전달을 감소시키는 약물은 한시적으로 도움이 된다.\n㉡ 베타 아밀로이드(β-amyloid)는 뇌에 침착되어 뇌 세포를 파괴\n시킨다.\n㉢ 흑색질(substantia nigra)의 신경계 소실과 도파민성 뉴런의\n손상이 나타난다.\n㉣ 뇌 세포의 골격 유지에 중요한 타우 단백질(tau protein)의\n염증반응도 관련이 있다.\n㉤ 인지기능 손상 시 신경섬유다발(neurofibrillary tangle)과 노인성\n플라크(senile plaque)가 현저하게 줄어든다.",
+      "topic": "급성관상동맥증후군 설명",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "급성관상동맥증후군 설명 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 급성관상동맥증후군(acute coronary syndrome)에 대한\n설명으로 옳은 것으로만 고른 것은?\n<보기>.\n㉠ 흉통은 운동시 발생하지만 안정을 취하면 사라진다.\n㉡ 관상동맥의 경화반(plaque) 파열 및 혈전과 관련 있다.\n㉢ 관상동맥의 혈전이 아닌 연축(spasm)에 의해 발생한다.\n㉣ cTnI와 cTnT의 비정상적인 증가와 ST 분절 상승이 발생할 수\n있다.",
       "choices": [
-        "㉠, ㉡, ㉣",
-        "㉠, ㉢, ㉤",
-        "㉡, ㉢, ㉣",
-        "㉡, ㉣, ㉤"
+        "㉠, ㉡",
+        "㉠, ㉢",
+        "㉡, ㉢",
+        "㉡, ㉣"
       ],
-      "answerIndex": 1,
-      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "answerIndex": 3,
+      "explanation": "최종정답 기준 정답은 ④입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
         "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
         "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 8,
+        "questionNo": 11,
         "session": 2,
         "form": "A",
         "subjectCode": 76
@@ -181,14 +239,43 @@
       "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
     },
     {
-      "id": "2023-1A-72-14",
+      "id": "2023-1A-71-05",
+      "year": 2023,
+      "subject": "건강·체력평가",
+      "topic": "미국심장협회 제시한",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "미국심장협회 제시한 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>의 미국심장협회(AHA, ACSM 11판 기준)가 제시한 최대운동\n검사의 절대적 금기사항이 옳은 것으로만 모두 고른 것은?\n<보기>.\n㉠ 급성대동맥박리\n㉡ 진행 중인 불안정 협심증\n㉢ 협조 능력이 제한되는 정신장애\n㉣ 증상을 동반한 중증 대동맥판협착\n㉤ 혈역학적 요인을 동반한 조절되지 않는 심장부정맥\n㉥ 안정 시의 수축기 혈압 200 mmHg 이상 또는 이완기 혈압\n110 mmHg 이상",
+      "choices": [
+        "㉠, ㉡, ㉢, ㉣",
+        "㉠, ㉡, ㉣, ㉤",
+        "㉡, ㉢, ㉣, ㉤",
+        "㉢, ㉣, ㉤, ㉥"
+      ],
+      "answerIndex": 1,
+      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 5,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 71
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-1A-72-05",
       "year": 2023,
       "subject": "운동처방론",
       "topic": "ACSM이 권고하",
       "type": "보기조합",
       "difficulty": 5,
       "trap": "ACSM이 권고하 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "<보기>에서 ACSM(11판)이 권고하는 관절염 환자를 위한 운동처방에\n대한 설명으로 옳은 것으로만 모두 고른 것은?\n<보기>.\n㉠ 특별한 통증과 기능적 제한이 없으면 일반적으로 건강한 성인의\n운동처방과 유사하다.\n㉡ 유연성 운동은 환부 관절에 집중하면서 모든 주요 관절에\n적용한다.\n㉢ 저항운동은 국소적･전신적 개선을 통해 만성통증을 감소시킬 수\n있다.\n㉣ 체중부하 운동은 관절의 손상과 통증을 악화시킬 수 있으므로\n권고하지 않는다.",
+      "question": "<보기>에서 ACSM(11판)이 권고하는 유산소운동에 대한 설명으로\n옳은 것으로만 모두 고른 것은?\n<보기>.\n㉠ 노인: 30~60분/일, ≥5일/주, 운동자각도 5~6(10점 척도)의\n중강도 운동을 권장한다.\n㉡ 청소년: ≥60분/일, 7일/주, 중강도에서 고강도의 스포츠를\n포함한 신체활동을 권장한다.\n㉢ 임산부: ≥20~30분/일, 3~7일/주, 저강도에서 중강도의 운동을\n권장한다.\n㉣ 성인: 건강증진을 위한 최소 걸음 수는 10,000보/일이다.",
       "choices": [
         "㉠",
         "㉠, ㉡",
@@ -200,97 +287,10 @@
       "source": {
         "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
         "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 14,
+        "questionNo": 5,
         "session": 1,
         "form": "A",
         "subjectCode": 72
-      },
-      "wrongRateBasis": "고오답 추정",
-      "verified": true,
-      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
-    },
-    {
-      "id": "2023-2A-74-04",
-      "year": 2023,
-      "subject": "운동상해",
-      "topic": "몰턴신경종 검사",
-      "type": "보기조합",
-      "difficulty": 5,
-      "trap": "몰턴신경종 검사 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "<보기>에서 몰턴신경종(Morton’s neuroma) 검사에 대한 설명으로 옳은\n것으로만 모두 고른 것은?\n<보기>.\n㉠ 뒤정강신경(posterior tibial nerve)을 두드리면 그 부위부터\n원위부로 저림 증세가 나타난다.\n㉡ 발을 잡고 발허리뼈(metatarsals)의 머리 부분에 가로쪽 압력\n(squeezing)을 가한다.\n㉢ 양성 반응은 발목굴증후군(tarsal tunnel syndrome)의 지표가 된다.\n㉣ 양성 반응은 발허리통증(metatarsalgia)의 지표가 된다.",
-      "choices": [
-        "㉠, ㉢",
-        "㉠, ㉣",
-        "㉡, ㉢",
-        "㉡, ㉣"
-      ],
-      "answerIndex": 3,
-      "explanation": "최종정답 기준 정답은 ④입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
-      "source": {
-        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
-        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 4,
-        "session": 2,
-        "form": "A",
-        "subjectCode": 74
-      },
-      "wrongRateBasis": "고오답 추정",
-      "verified": true,
-      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
-    },
-    {
-      "id": "2023-1A-70-10",
-      "year": 2023,
-      "subject": "운동생리학",
-      "topic": "하루 동안",
-      "type": "보기조합",
-      "difficulty": 5,
-      "trap": "하루 동안 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "<그림>은 하루 동안 정상인의 췌장에서 분비되는 A 호르몬 변화를\n나타낸 것이다. <보기>에서 A 호르몬에 대한 설명으로 옳은 것으로만\n모두 고른 것은?\n<보기>.\n㉠ 혈중 아미노산, 에피네프린, 인크레틴(incretin) 농도의 영향을\n받는다.\n㉡ 당원분해(glycogenolysis)를 촉진한다.\n㉢ A의 표적기관 중 하나는 간이다.",
-      "choices": [
-        "㉠, ㉡",
-        "㉡, ㉢",
-        "㉠, ㉢",
-        "㉠, ㉡, ㉢"
-      ],
-      "answerIndex": 2,
-      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
-      "source": {
-        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
-        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 10,
-        "session": 1,
-        "form": "A",
-        "subjectCode": 70
-      },
-      "wrongRateBasis": "고오답 추정",
-      "verified": true,
-      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
-    },
-    {
-      "id": "2023-1A-73-06",
-      "year": 2023,
-      "subject": "운동부하검사",
-      "topic": "ACSM 제시한",
-      "type": "부정형",
-      "difficulty": 3,
-      "trap": "ACSM 제시한 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "ACSM(11판)에서 제시한 운동부하검사 시 관찰 변인과 검사 중단의\n설명으로 옳지 않은 것은?",
-      "choices": [
-        "연령이 증가함에 따라 최대심박수와 수축기혈압은 감소하게 된다.",
-        "폐질환자의 경우 저산소혈증의 증후와 동맥산소포화도(SpO2)가 ≤80%인 경우 검사를 종료해야 한다.",
-        "심전도는 검사 전 누운 자세에서 시작하여 운동 종료 후에도 회복기 6분까지 계속 기록한다.",
-        "협심증, 호흡곤란을 평가하기 위한 표준화된 4점 척도 중에 ≥3점은 검사를 중단해야 한다."
-      ],
-      "answerIndex": 0,
-      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
-      "source": {
-        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
-        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 6,
-        "session": 1,
-        "form": "A",
-        "subjectCode": 73
       },
       "wrongRateBasis": "고오답 추정",
       "verified": true,

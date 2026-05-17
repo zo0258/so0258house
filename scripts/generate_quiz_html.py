@@ -42,6 +42,7 @@ def render_html(quiz):
       --accent: #2f6b4f;
       --accent-strong: #234d39;
       --accent-soft: #e5f1ea;
+      --accent-wash: #f1f7f3;
       --danger: #b64032;
       --danger-soft: #f8e8e5;
       --ok: #287a4b;
@@ -193,12 +194,12 @@ def render_html(quiz):
     .question {{
       margin: 0 0 20px;
       font-size: 20px;
-      line-height: 1.48;
+      line-height: 1.56;
       font-weight: 760;
     }}
 
     .q-line {{
-      margin: 0 0 7px;
+      margin: 0 0 8px;
     }}
 
     .q-line:last-child {{
@@ -209,6 +210,27 @@ def render_html(quiz):
       margin-top: 10px;
       color: var(--accent-strong);
       font-weight: 900;
+    }}
+
+    .q-block {{
+      margin: 14px 0 16px;
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(47, 107, 79, .22);
+      border-radius: var(--radius);
+      background: var(--accent-wash);
+    }}
+
+    .q-block .q-label {{
+      margin: 0 0 10px;
+      font-size: 16px;
+    }}
+
+    .q-block .q-line {{
+      margin-bottom: 10px;
+    }}
+
+    .q-block .q-line:last-child {{
+      margin-bottom: 0;
     }}
 
     .q-hang {{
@@ -299,7 +321,7 @@ def render_html(quiz):
       margin-top: 18px;
       padding: 15px;
       border-radius: var(--radius);
-      background: #f7f8f5;
+      background: linear-gradient(180deg, #fbfcfa, #f6f8f5);
       border: 1px solid var(--line);
     }}
 
@@ -318,22 +340,34 @@ def render_html(quiz):
 
     .explanation {{
       display: none;
-      margin: 8px 0 0;
-      color: #2c352f;
-      font-size: 15px;
-      white-space: pre-line;
+      gap: 9px;
+      margin: 10px 0 0;
     }}
 
     .explanation.visible {{
-      display: block;
+      display: grid;
     }}
 
-    .trap {{
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
+    .ex-row {{
+      display: grid;
+      gap: 4px;
+      padding: 10px 11px;
+      border: 1px solid rgba(23, 32, 26, .08);
+      border-radius: var(--radius);
+      background: #fff;
+    }}
+
+    .ex-row strong {{
+      color: var(--accent-strong);
+      font-size: 13px;
+      font-weight: 900;
+    }}
+
+    .ex-row span {{
+      color: #2c352f;
       font-size: 14px;
+      line-height: 1.62;
+      white-space: pre-line;
     }}
 
     .review-tools {{
@@ -492,7 +526,7 @@ def render_html(quiz):
 
     .summary-grid {{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 8px;
       margin: 16px 0;
     }}
@@ -514,6 +548,10 @@ def render_html(quiz):
       margin-top: 4px;
       font-size: 20px;
       font-weight: 900;
+    }}
+
+    .summary-value.warn {{
+      color: var(--warn);
     }}
 
     .wrong-list {{
@@ -571,6 +609,10 @@ def render_html(quiz):
     @media (max-width: 420px) {{
       .question {{
         font-size: 18px;
+      }}
+
+      .summary-grid {{
+        grid-template-columns: repeat(2, 1fr);
       }}
 
       .actions {{
@@ -640,6 +682,16 @@ def render_html(quiz):
 
     function answeredCount() {{
       return state.answers.filter(value => value !== null).length;
+    }}
+
+    function unansweredIndexes() {{
+      return state.answers
+        .map((value, index) => value === null ? index : null)
+        .filter(value => value !== null);
+    }}
+
+    function unansweredCount() {{
+      return unansweredIndexes().length;
     }}
 
     function renderQuiz() {{
@@ -750,14 +802,37 @@ def render_html(quiz):
     }}
 
     function questionMarkup(text) {{
-      return normalizeQuestionText(text)
-        .split('\\n')
-        .map(line => {{
-          const trimmed = line.trim();
-          if (!trimmed) return '<div class="q-line"></div>';
-          return `<div class="${{questionLineClass(trimmed)}}">${{escapeHtml(trimmed)}}</div>`;
-        }})
-        .join('');
+      const lines = normalizeQuestionText(text).split('\\n').map(line => line.trim()).filter(Boolean);
+      const parts = [];
+      let blockLines = [];
+
+      lines.forEach(line => {{
+        if (isSectionLabel(line)) {{
+          if (blockLines.length) parts.push(renderQuestionBlock(blockLines));
+          blockLines = [line];
+          return;
+        }}
+        if (blockLines.length && isListStart(line)) {{
+          blockLines.push(line);
+          return;
+        }}
+        if (blockLines.length) {{
+          parts.push(renderQuestionBlock(blockLines));
+          blockLines = [];
+        }}
+        parts.push(renderQuestionLine(line));
+      }});
+
+      if (blockLines.length) parts.push(renderQuestionBlock(blockLines));
+      return parts.join('');
+    }}
+
+    function renderQuestionBlock(lines) {{
+      return `<div class="q-block">${{lines.map(line => renderQuestionLine(line)).join('')}}</div>`;
+    }}
+
+    function renderQuestionLine(line) {{
+      return `<div class="${{questionLineClass(line)}}">${{escapeHtml(line)}}</div>`;
     }}
 
     function questionLineClass(line) {{
@@ -772,10 +847,14 @@ def render_html(quiz):
       if (selected === null) return '';
       const ok = selected === q.answerIndex;
       const title = ok ? '정답입니다' : `오답입니다 · 정답 ${{circled[q.answerIndex]}}`;
+      const reviewPoint = `${{q.topic}} 기준을 다시 확인하고, 같은 표현이 다른 보기로 바뀌어도 핵심어를 먼저 찾기`;
       return `
         <p class="feedback-title ${{ok ? 'ok' : 'bad'}}">${{title}}</p>
-        <p class="explanation ${{state.explanationOpen[index] ? 'visible' : ''}}">${{escapeHtml(q.explanation)}}</p>
-        <div class="trap">오답 포인트: ${{escapeHtml(q.trap)}}</div>
+        <div class="explanation ${{state.explanationOpen[index] ? 'visible' : ''}}">
+          <div class="ex-row"><strong>정답 기준</strong><span>${{escapeHtml(q.explanation)}}</span></div>
+          <div class="ex-row"><strong>오답 포인트</strong><span>${{escapeHtml(q.trap || '보기의 표현 차이보다 핵심 기준을 먼저 확인해야 합니다.')}}</span></div>
+          <div class="ex-row"><strong>다음에 볼 포인트</strong><span>${{escapeHtml(reviewPoint)}}</span></div>
+        </div>
         <div class="review-tools">
           <button class="bookmark-toggle ${{state.bookmarked[index] ? 'active' : ''}}" type="button" data-question="${{index}}">
             ${{state.bookmarked[index] ? '다시 볼 문제로 표시됨' : '다시 볼 문제로 표시'}}
@@ -803,17 +882,20 @@ def render_html(quiz):
     function renderResult() {{
       const wrong = quiz.questions
         .map((q, index) => ({{ q, index, selected: state.answers[index] }}))
-        .filter(item => item.selected !== item.q.answerIndex);
+        .filter(item => item.selected !== null && item.selected !== item.q.answerIndex);
+      const unanswered = quiz.questions
+        .map((q, index) => ({{ q, index, selected: state.answers[index] }}))
+        .filter(item => item.selected === null);
       const total = quiz.questions.length;
       const currentScore = score();
       const reviewItems = buildReviewItems(wrong);
-      const resultText = buildResultText(wrong, reviewItems, currentScore, total);
-      const message = buildEncouragement(currentScore, total, wrong.length);
+      const resultText = buildResultText(wrong, unanswered, reviewItems, currentScore, total);
+      const message = buildEncouragement(currentScore, total, wrong.length, unanswered.length);
 
       resultView.innerHTML = `
         <div class="result-hero">
           <div class="result-score">${{currentScore}}/${{total}}</div>
-          <div class="result-sub">${{quiz.subject}} · ${{wrong.length === 0 ? '오답 없음' : `오답 ${{wrong.length}}개`}}</div>
+          <div class="result-sub">${{quiz.subject}} · 오답 ${{wrong.length}}개 · 미응답 ${{unanswered.length}}개</div>
         </div>
         <section class="result-message">
           <h2>${{escapeHtml(message.title)}}</h2>
@@ -823,6 +905,7 @@ def render_html(quiz):
           <div class="summary-item"><div class="summary-label">풀이</div><div class="summary-value">${{answeredCount()}}</div></div>
           <div class="summary-item"><div class="summary-label">정답</div><div class="summary-value">${{currentScore}}</div></div>
           <div class="summary-item"><div class="summary-label">오답</div><div class="summary-value">${{wrong.length}}</div></div>
+          <div class="summary-item"><div class="summary-label">미응답</div><div class="summary-value warn">${{unanswered.length}}</div></div>
         </div>
         <h2 class="section-title">오답 결과 복사</h2>
         <button class="btn primary" id="copyBtn" type="button">결과 복사</button>
@@ -861,7 +944,13 @@ def render_html(quiz):
       }});
     }}
 
-    function buildEncouragement(currentScore, total, wrongCount) {{
+    function buildEncouragement(currentScore, total, wrongCount, unansweredCountValue) {{
+      if (unansweredCountValue > 0) {{
+        return {{
+          title: '끝까지 확인하면 점수가 됩니다',
+          body: '아직 답하지 않은 문제가 남아 있어요. 오늘의 목표는 완벽함보다 끝까지 확인하는 습관입니다.\\n남은 문제까지 차분히 눌러 보고, 헷갈린 기준만 표시해두면 오늘 공부는 충분히 의미 있게 끝납니다.'
+        }};
+      }}
       const rate = total ? currentScore / total : 0;
       if (rate >= .9) {{
         return {{
@@ -881,7 +970,7 @@ def render_html(quiz):
       }};
     }}
 
-    function buildResultText(wrong, reviewItems, currentScore, total) {{
+    function buildResultText(wrong, unanswered, reviewItems, currentScore, total) {{
       const lines = [
         '[HEALTH_EXERCISE_RESULT]',
         `date=${{quiz.date}}`,
@@ -889,13 +978,18 @@ def render_html(quiz):
         `subject=${{quiz.subject}}`,
         `score=${{currentScore}}`,
         `total=${{total}}`,
-        `answered=${{answeredCount()}}`
+        `answered=${{answeredCount()}}`,
+        `unansweredCount=${{unanswered.length}}`
       ];
 
       wrong.forEach(item => {{
         const reason = state.wrongReasons[item.index] || '미선택';
         const bookmarked = state.bookmarked[item.index] ? 'yes' : 'no';
         lines.push(`wrong=${{item.q.id}}|topic=${{item.q.topic}}|selected=${{item.selected === null ? 'none' : item.selected + 1}}|answer=${{item.q.answerIndex + 1}}|wrongReason=${{reason}}|bookmarked=${{bookmarked}}`);
+      }});
+
+      unanswered.forEach(item => {{
+        lines.push(`unanswered=${{item.q.id}}|topic=${{item.q.topic}}|answer=${{item.q.answerIndex + 1}}`);
       }});
 
       reviewItems
@@ -931,6 +1025,9 @@ def render_html(quiz):
       scoreChip.textContent = `${{score()}}점`;
       prevBtn.disabled = state.current === 0;
       nextBtn.textContent = state.current === quiz.questions.length - 1 ? '결과' : '다음';
+      if (state.current === quiz.questions.length - 1 && unansweredCount() > 0) {{
+        nextBtn.textContent = `미응답 ${{unansweredCount()}}개`;
+      }}
       explainBtn.disabled = selected === null;
       explainBtn.textContent = state.explanationOpen[state.current] ? '해설 숨김' : '해설 보기';
     }}
@@ -950,6 +1047,14 @@ def render_html(quiz):
     }});
 
     nextBtn.addEventListener('click', () => {{
+      if (state.current === quiz.questions.length - 1) {{
+        const missing = unansweredIndexes();
+        if (missing.length) {{
+          state.current = missing[0];
+          render();
+          return;
+        }}
+      }}
       state.current = Math.min(quiz.questions.length, state.current + 1);
       render();
     }});
