@@ -10,26 +10,168 @@
   "missingSubjects": [],
   "questions": [
     {
-      "id": "2023-1A-71-03",
+      "id": "2023-1A-70-13",
       "year": 2023,
-      "subject": "건강·체력평가",
-      "topic": "체력 검사",
-      "type": "부정형",
-      "difficulty": 3,
-      "trap": "체력 검사 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "체력 검사를 계획하고 관리하기 위한 방법으로 옳지 않은 것은?",
+      "subject": "운동생리학",
+      "topic": "정보 이용하여",
+      "type": "계산",
+      "difficulty": 4,
+      "trap": "정보 이용하여 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>의 정보를 이용하여 추정한 안정 시 분당 산소섭취량(mL/분)은?\n<보기>.\n∙ 나이: 20세 ∙ 성별: 남성\n∙ 체중: 60 kg ∙ 심박수: 60 회/분\n∙ 1회 박출량: 100 mL/회 ∙ 동정맥산소차: 50 mL/L",
       "choices": [
-        "검사 결과를 설명할 때는 전문적인 용어보다 일반적인 용어를 사용한다.",
-        "검사의 타당성, 신뢰성, 객관성을 확보하기 위해 노력한다.",
-        "검사해야 할 체력요소와 체력 검사의 목적을 파악한다. ④ 검사는 공개적으로 실시하고 결과를 공유한다.",
-        "검사는 공개적으로 실시하고 결과를 공유한다."
+        "300",
+        "360",
+        "500",
+        "600"
+      ],
+      "answerIndex": 0,
+      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 13,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 70
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-2A-74-15",
+      "year": 2023,
+      "subject": "운동상해",
+      "topic": "어깨밑 봉우리",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "어깨밑 봉우리 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "어깨밑 봉우리 충돌 증후군(subacromial impingement syndrome)의\n평가법으로 옳은 것으로만 모두 고른 것은?\n<보기>.\n㉠ 오브라이언(O’Brien) 검사 ㉡ 호킨스(Hawkins) 검사\n㉢ 니어(Neer) 검사 ㉣ 조브(Jobe) 검사\n㉤ 크랭크(Crank) 검사",
+      "choices": [
+        "㉠, ㉡, ㉢",
+        "㉡, ㉢, ㉣",
+        "㉢, ㉣, ㉤",
+        "㉠, ㉣, ㉤"
+      ],
+      "answerIndex": 1,
+      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 15,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 74
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-2A-76-11",
+      "year": 2023,
+      "subject": "병태생리학",
+      "topic": "급성관상동맥증후군 설명",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "급성관상동맥증후군 설명 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 급성관상동맥증후군(acute coronary syndrome)에 대한\n설명으로 옳은 것으로만 고른 것은?\n<보기>.\n㉠ 흉통은 운동시 발생하지만 안정을 취하면 사라진다.\n㉡ 관상동맥의 경화반(plaque) 파열 및 혈전과 관련 있다.\n㉢ 관상동맥의 혈전이 아닌 연축(spasm)에 의해 발생한다.\n㉣ cTnI와 cTnT의 비정상적인 증가와 ST 분절 상승이 발생할 수\n있다.",
+      "choices": [
+        "㉠, ㉡",
+        "㉠, ㉢",
+        "㉡, ㉢",
+        "㉡, ㉣"
       ],
       "answerIndex": 3,
       "explanation": "최종정답 기준 정답은 ④입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 11,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 76
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-1A-73-08",
+      "year": 2023,
+      "subject": "운동부하검사",
+      "topic": "대상자별 증상",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "대상자별 증상 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 대상자별 증상-제한 운동부하검사에 대한 설명으로 옳은\n것으로만 모두 고른 것은?\n<보기>.\n㉠ 어린이와 청소년: 운동 중 생리적 반응은 성인과 다르므로 성인\n운동검사의 표준지침을 따르지 않는다.\n㉡ 노인: 최대심박수 공식(220－나이)은 노인의 최대심박수를 과소\n평가하게 되므로 사용하지 않는 것이 바람직하다.\n㉢ 임산부: 금기사항에대한의학적평가후의사감독하에최대하운동\n검사를 수행할 수 있다.\n㉣ 고혈압 환자: 안정 시 수축기혈압이 ≥160 mmHg이거나 이완기\n혈압이 ≥100 mmHg인 경우에는 의사 감독하에도 운동검사를\n실시하면 안 된다.",
+      "choices": [
+        "㉠, ㉡",
+        "㉠, ㉣",
+        "㉡, ㉢",
+        "㉢, ㉣"
+      ],
+      "answerIndex": 2,
+      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
         "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
         "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 3,
+        "questionNo": 8,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 73
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-1A-exphys-02",
+      "year": 2023,
+      "subject": "운동생리학",
+      "topic": "세포호흡",
+      "type": "보기조합",
+      "difficulty": 4,
+      "trap": "포도당 에너지가 모두 ATP로 전환된다고 보는 과잉 일반화",
+      "question": "세포호흡에 관한 설명으로 옳은 것으로만 모두 고른 것은?\n㉠ 포도당의 에너지는 모두 ATP로 전환된다.\n㉡ 미토콘드리아에서 가장 많은 ATP를 생성한다.\n㉢ ATP가 분해되기 위해서는 물(H2O)이 필요하다.",
+      "choices": [
+        "㉠, ㉡",
+        "㉡, ㉢",
+        "㉠, ㉢",
+        "㉠, ㉡, ㉢"
+      ],
+      "answerIndex": 1,
+      "explanation": "포도당 에너지 일부는 열 등으로 손실되므로 ㉠은 틀리다. ATP 대부분은 미토콘드리아 산화적 인산화에서 생성되고, ATP 가수분해에는 물이 필요하다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 2
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "data/quizzes/2026-05-18-daily.json"
+    },
+    {
+      "id": "2023-1A-71-12",
+      "year": 2023,
+      "subject": "건강·체력평가",
+      "topic": "윗몸일으키기 검사",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "윗몸일으키기 검사 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<그림>은 윗몸일으키기 검사 결과에 대한 해석으로 옳은 것은?",
+      "choices": [
+        "사분위편차는 7.5이다.",
+        "윗몸일으키기 29회 이하인 인원수는 25명이다.",
+        "윗몸일으키기 57회 이상인 인원수는 35명이다.",
+        "누가백분율(%) 46%에 해당하는 원점수의 표준점수는 -0.5 이다."
+      ],
+      "answerIndex": 0,
+      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 12,
         "session": 1,
         "form": "A",
         "subjectCode": 71
@@ -39,84 +181,87 @@
       "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
     },
     {
-      "id": "2023-1A-72-13",
+      "id": "2023-1A-71-02",
       "year": 2023,
-      "subject": "운동처방론",
-      "topic": "ACSM이 권고하",
-      "type": "보기조합",
-      "difficulty": 5,
-      "trap": "ACSM이 권고하 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "<보기>에서 ACSM(11판)이 권고하는 우울증 환자를 위한 운동처방 시\n고려사항으로 옳은 것으로만 모두 고른 것은?\n<보기>.\n㉠ 유산소운동은 심리요법이나 약물요법만큼 우울 증상을 감소시킬\n수 있다.\n㉡ 운동은 강도와 상관없이 우울 증상을 완화하는 데 도움이 된다.\n㉢ 운동은 즉각적으로 감정 상태에 영향을 미쳐서 우울 증상을\n일시적으로 완화할 수 있다.\n㉣ 운동이 공황장애가 있는 환자에게 공황발작과 유사한 생리적\n변화를 유발할 수 있지만, 정상적인 반응이므로 이를 충분히\n설명해야 한다.",
+      "subject": "건강·체력평가",
+      "topic": "체력 요소",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "체력 요소 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "체력 요소에 대한 설명으로 옳지 않은 것은?",
       "choices": [
-        "㉠",
-        "㉠, ㉡",
-        "㉠, ㉡, ㉢ ④ ㉠, ㉡, ㉢, ㉣",
-        "㉠, ㉡, ㉢, ㉣"
+        "근력이란 오랜 시간 동안 중강도에서 고강도 사이의 동적 운동을 수행할 수 있는 능력을 말한다.",
+        "밸런스 능력은 선 자세유지 등의 정적 밸런스 능력과 보행 등의 동적 밸런스 능력으로 나눌 수 있다.",
+        "민첩성이란 전신 혹은 신체의 일부분을 신속하게 움직이거나 재빠르게 방향을 전환하는 능력을 말한다.",
+        "순발력은 순간적으로 힘을 발휘하는 능력을 말하며, 검사 방법에는 제자리멀리뛰기, 서전트 점프 등이 있다."
       ],
-      "answerIndex": 3,
-      "explanation": "최종정답 기준 정답은 ④입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "answerIndex": 0,
+      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
         "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
         "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 13,
+        "questionNo": 2,
         "session": 1,
         "form": "A",
-        "subjectCode": 72
+        "subjectCode": 71
       },
       "wrongRateBasis": "고오답 추정",
       "verified": true,
       "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
     },
     {
-      "id": "2023-1A-exphys-06",
-      "year": 2023,
-      "subject": "운동생리학",
-      "topic": "RAAS",
-      "type": "개념구분",
-      "difficulty": 4,
-      "trap": "레닌, ACE, 알도스테론의 생성 위치와 작용 순서를 섞는 함정",
-      "question": "레닌-안지오텐신-알도스테론 시스템에 대한 설명으로 옳은 것은?",
-      "choices": [
-        "안지오텐신 II는 혈관을 수축시켜 혈압을 높인다.",
-        "안지오텐신 전환효소(ACE)는 안지오텐신 II를 안지오텐신 I로 바꾼다.",
-        "부신 속질에서 분비된 알도스테론은 신장에서 Na+ 재흡수를 증가시킨다.",
-        "간에서 생성된 레닌은 안지오텐신 I을 안지오텐시노겐으로 바꾼다."
-      ],
-      "answerIndex": 0,
-      "explanation": "RAAS에서는 안지오텐신 II가 강력한 혈관수축 작용을 해 혈압을 높인다. ACE는 I을 II로 전환하고, 알도스테론은 부신겉질에서 분비된다.",
-      "source": {
-        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
-        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 6
-      },
-      "wrongRateBasis": "고오답 추정",
-      "verified": true,
-      "bankSource": "data/quizzes/2026-05-18-daily.json"
-    },
-    {
-      "id": "2023-2A-77-05",
+      "id": "2023-2A-77-11",
       "year": 2023,
       "subject": "스포츠심리학",
-      "topic": "지도행동 바스",
+      "topic": "숙련자 특성",
       "type": "보기조합",
-      "difficulty": 5,
-      "trap": "지도행동 바스 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "<보기>의 지도행동 중 바스(Bass)의 변혁적리더십(transformational\nleadership)에 해당하는 것으로만 모두 고른 것은?\n<보기>.\n㉠ 운동프로그램을 창의적으로 구성할 수 있도록 새로운 지식을\n제공한다.\n㉡ 목표달성에 따른 포상금 지급 계획을 명확히 제시한다.\n㉢ 개인의 목표와 필요사항을 조사하여 운동프로그램에 반영한다.",
+      "difficulty": 4,
+      "trap": "숙련자 특성 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 숙련자의 특성으로 옳은 것으로만 모두 고른 것은?\n<보기>.\n㉠ 환경 정보를 빨리 탐색할 수 있다.\n㉡ 새로운 상황에 쉽게 적응할 수 있다.\n㉢ 짧은 시간에 의미 있는 정보를 선택할 수 있다.",
       "choices": [
         "㉠, ㉡",
         "㉠, ㉢",
-        "㉡, ㉢ ④ ㉠, ㉡, ㉢",
+        "㉡, ㉢",
         "㉠, ㉡, ㉢"
+      ],
+      "answerIndex": 3,
+      "explanation": "최종정답 기준 정답은 ④입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 11,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 77
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
+    },
+    {
+      "id": "2023-1A-72-16",
+      "year": 2023,
+      "subject": "운동처방론",
+      "topic": "당뇨병 환자",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "당뇨병 환자 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 당뇨병 환자를 위한 운동처방 시 고려사항으로 옳은\n것으로만 모두 고른 것은?\n<보기>.\n㉠ 당뇨병 합병증으로 인한 금기사항이 아니라면 고강도의\n유산소운동을 더 많이 강조해야 한다.\n㉡ 제2형 당뇨병 환자는 유산소운동을 2일 이상 연속해서 중단하지\n않도록 한다.\n㉢ 인슐린 또는 혈당강하제는 운동 직전에 사용하도록 해야 한다.\n㉣ 공복 시에 운동하는 것을 권장한다.",
+      "choices": [
+        "㉠",
+        "㉠, ㉡",
+        "㉠, ㉡, ㉢",
+        "㉠, ㉡, ㉢, ㉣"
       ],
       "answerIndex": 1,
       "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
-        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
         "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 5,
-        "session": 2,
+        "questionNo": 16,
+        "session": 1,
         "form": "A",
-        "subjectCode": 77
+        "subjectCode": 72
       },
       "wrongRateBasis": "고오답 추정",
       "verified": true,
@@ -134,7 +279,7 @@
       "choices": [
         "가시위근(supraspinatus)",
         "관절주머니인대(capsular ligament)",
-        "위팔가로인대(transverse humeral ligament) ④ 부리위팔인대(coracohumeral ligament)",
+        "위팔가로인대(transverse humeral ligament)",
         "부리위팔인대(coracohumeral ligament)"
       ],
       "answerIndex": 2,
@@ -146,151 +291,6 @@
         "session": 2,
         "form": "A",
         "subjectCode": 75
-      },
-      "wrongRateBasis": "고오답 추정",
-      "verified": true,
-      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
-    },
-    {
-      "id": "2023-2A-76-20",
-      "year": 2023,
-      "subject": "병태생리학",
-      "topic": "파킨슨병 특징",
-      "type": "보기조합",
-      "difficulty": 5,
-      "trap": "파킨슨병 특징 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "파킨슨병에 대한 특징으로 옳은 것으로만 고른 것은?\n<보기>.\n㉠ 운동과 약물요법 및 수술적 치료로 완치된다.\n㉡ 중뇌의 흑색질로부터 도파민의 과도한 생성과 관련 있다.\n㉢ Hoehn 및 Yahr의 5단계 중 1~2단계까지는 자세불안정성이\n없는 것이 특징이다.\n㉣ 주요증상으로움직임이느리고톱니바퀴강직(cogwheel rigidity)과\n떨림이 특징이다.",
-      "choices": [
-        "㉠, ㉡",
-        "㉠, ㉣",
-        "㉡, ㉢ ④ ㉢, ㉣ 건강운동관리사 필기시험 2교시 A형 9면",
-        "㉢, ㉣ 건강운동관리사 필기시험 2교시 A형 9면"
-      ],
-      "answerIndex": 3,
-      "explanation": "최종정답 기준 정답은 ④입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
-      "source": {
-        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
-        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 20,
-        "session": 2,
-        "form": "A",
-        "subjectCode": 76
-      },
-      "wrongRateBasis": "고오답 추정",
-      "verified": true,
-      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
-    },
-    {
-      "id": "2023-1A-70-03",
-      "year": 2023,
-      "subject": "운동생리학",
-      "topic": "고온 노출",
-      "type": "개념구분",
-      "difficulty": 3,
-      "trap": "고온 노출 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "고온 노출 시 항상성(homeostasis) 유지를 위한 반응은?",
-      "choices": [
-        "대사율 증가",
-        "부교감신경 활성 증가",
-        "티록신(thyroxine) 분비 증가 ④ 갑상선 자극호르몬(TSH) 분비 증가",
-        "갑상선 자극호르몬(TSH) 분비 증가"
-      ],
-      "answerIndex": 1,
-      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
-      "source": {
-        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
-        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 3,
-        "session": 1,
-        "form": "A",
-        "subjectCode": 70
-      },
-      "wrongRateBasis": "고오답 추정",
-      "verified": true,
-      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
-    },
-    {
-      "id": "2023-2A-74-16",
-      "year": 2023,
-      "subject": "운동상해",
-      "topic": "설명하 특수검사로",
-      "type": "개념구분",
-      "difficulty": 4,
-      "trap": "설명하 특수검사로 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "<보기>에서 설명하는 특수검사(special test)로 옳은 것은?\n<보기>.\n∙ 반달연골(meniscus) 파열을 알아보기 위한 검사이다.\n∙ 검사자는 대상자 앞에서 넘어지지 않도록 잡아준다.\n∙ 대상자는 무릎을 5°와 20°로 구부려 정강뼈 위의 넙다리뼈를\n안쪽과 가쪽으로 회전시킨다.",
-      "choices": [
-        "테살리(Thessaly) 검사",
-        "크로스오버(crossover) 검사",
-        "어플리 압박(Apley compression) 검사 ④ 바깥굽이/안쪽굽이 부하(valgus/varus stress) 검사 대상자 검사자 건강운동관리사 필기시험 2교시 A형 3면",
-        "바깥굽이/안쪽굽이 부하(valgus/varus stress) 검사 대상자 검사자 건강운동관리사 필기시험 2교시 A형 3면"
-      ],
-      "answerIndex": 0,
-      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
-      "source": {
-        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
-        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 16,
-        "session": 2,
-        "form": "A",
-        "subjectCode": 74
-      },
-      "wrongRateBasis": "고오답 추정",
-      "verified": true,
-      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
-    },
-    {
-      "id": "2023-1A-71-07",
-      "year": 2023,
-      "subject": "건강·체력평가",
-      "topic": "국민체력100 노인",
-      "type": "보기조합",
-      "difficulty": 5,
-      "trap": "국민체력100 노인 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "<보기>의 ‘국민체력100’ 노인 체력 검사 측정 방법 중 옳은 것으로만\n모두 고른 것은?\n<보기>.\n측정요인 검사 항목 측정방법\n㉠ 유연성\n의자에앉았다가\n일어서기\n등을 곧게 펴고, 양 발은 바닥에\n붙인상태로양팔은손목에서교차\n(20초 동안 측정)\n㉡\n보행 및\n동적\n평형성\n의자에앉아\n3m표적\n돌아오기\n의자에서 일어나 가능한 빠르게\n걸어고깔을돌아의자에다시앉기\n(0.1초 단위로 측정)\n㉢ 협응력 8자보행검사\n오른쪽 뒤에 있는 고깔을 안에서\n바깥쪽으로돌아의자에앉고, 다시\n일어나왼쪽뒤에있는고깔을안에서\n바깥쪽으로 돌아와 앉는 것을\n두 번 반복(0.1초 단위로 측정)\n㉣ 근지구력 2분제자리걷기\n무릎을 올려야 하는 최소 높이를\n지정하고 실시(2분 동안 한발 걸을\n때마다 1회 계수)",
-      "choices": [
-        "㉠, ㉡",
-        "㉠, ㉢",
-        "㉡, ㉢ ④ ㉢, ㉣",
-        "㉢, ㉣"
-      ],
-      "answerIndex": 2,
-      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
-      "source": {
-        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
-        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 7,
-        "session": 1,
-        "form": "A",
-        "subjectCode": 71
-      },
-      "wrongRateBasis": "고오답 추정",
-      "verified": true,
-      "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
-    },
-    {
-      "id": "2023-1A-73-07",
-      "year": 2023,
-      "subject": "운동부하검사",
-      "topic": "미국심장협회 제시한",
-      "type": "보기조합",
-      "difficulty": 4,
-      "trap": "미국심장협회 제시한 관련 조건과 보기 표현을 섞어 판단하는 문항",
-      "question": "<보기>에서 미국심장협회(AHA)가 제시한 증상-제한 최대운동검사의\n상대적인 중단기준이 옳은 것으로만 모두 고른 것은?\n<보기>.\n㉠ 가슴통증의 증가\n㉡ 관류부족으로 인한 창백증\n㉢ 다리경련이나 절뚝거림 증상\n㉣ 중추신경계 이상 증상으로 인한 운동실조",
-      "choices": [
-        "㉠, ㉡",
-        "㉠, ㉢",
-        "㉡, ㉣ ④ ㉢, ㉣",
-        "㉢, ㉣"
-      ],
-      "answerIndex": 1,
-      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
-      "source": {
-        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
-        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
-        "questionNo": 7,
-        "session": 1,
-        "form": "A",
-        "subjectCode": 73
       },
       "wrongRateBasis": "고오답 추정",
       "verified": true,

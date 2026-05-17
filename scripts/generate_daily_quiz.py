@@ -49,6 +49,16 @@ def normalize_stem(text):
     return "".join(str(text).split()).lower()
 
 
+def has_extraction_artifact(question):
+    artifact_patterns = ("건강운동관리사 필기시험", "A형 건강운동관리사", "B형 건강운동관리사")
+    for choice in question.get("choices", []):
+        if any(pattern in choice for pattern in artifact_patterns):
+            return True
+        if any(marker in choice for marker in "①②③④⑤"):
+            return True
+    return False
+
+
 def load_bank(bank_dir):
     bank = []
     seen = set()
@@ -58,6 +68,8 @@ def load_bank(bank_dir):
             if question_id in seen:
                 raise ValueError(f"문제은행 중복 questionId: {question_id}")
             seen.add(question_id)
+            if has_extraction_artifact(item):
+                continue
             item["_bankFile"] = str(path.relative_to(ROOT))
             item["_normalizedStem"] = normalize_stem(item["question"])
             bank.append(item)

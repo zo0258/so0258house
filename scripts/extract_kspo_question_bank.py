@@ -115,9 +115,10 @@ def parse_question_block(block):
     first_choice = choice_matches[0].start()
     stem = re.sub(r"^\d{1,2}\.\s*", "", block[:first_choice]).strip()
     choices = []
-    for idx, match in enumerate(choice_matches[:4]):
+    selected_choice_matches = choice_matches[:4]
+    for idx, match in enumerate(selected_choice_matches):
         start = match.end()
-        end = choice_matches[idx + 1].start() if idx + 1 < 3 else len(block)
+        end = selected_choice_matches[idx + 1].start() if idx + 1 < len(selected_choice_matches) else len(block)
         choice_text = block[start:end].strip()
         choice_text = re.sub(r"\s+", " ", choice_text)
         choices.append(choice_text)

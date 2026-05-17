@@ -24,6 +24,16 @@ def normalize_stem(text):
     return "".join(str(text).split()).lower()
 
 
+def has_extraction_artifact(question):
+    artifact_patterns = ("건강운동관리사 필기시험", "A형 건강운동관리사", "B형 건강운동관리사")
+    for choice in question.get("choices", []):
+        if any(pattern in choice for pattern in artifact_patterns):
+            return True
+        if any(marker in choice for marker in "①②③④⑤"):
+            return True
+    return False
+
+
 def load_attempts(path):
     if not path.exists():
         return []
@@ -81,6 +91,10 @@ def validate(quiz, policy, attempts):
     for stem, count in stems.items():
         if count > 1:
             errors.append(f"normalizedStem 기준 동일 문항 중복 가능성: {stem[:40]}...")
+
+    for question in questions:
+        if has_extraction_artifact(question):
+            errors.append(f"보기 추출 노이즈가 남아 있습니다: {question['id']}")
 
     seen_recent_ids = {}
     seen_recent_topics = defaultdict(list)
