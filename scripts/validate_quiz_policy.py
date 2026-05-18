@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 POLICY_PATH = ROOT / "config" / "daily-selection-policy.json"
 ATTEMPTS_PATH = ROOT / "results" / "attempts.jsonl"
+DELIVERY_HISTORY_PATH = ROOT / "data" / "delivery-history.jsonl"
 
 
 def load_json(path):
@@ -45,7 +46,18 @@ def load_attempts(path):
     return attempts
 
 
-def validate(quiz, policy, attempts):
+def load_history(path):
+    if not path.exists():
+        return []
+    records = []
+    with path.open("r", encoding="utf-8") as file:
+        for line in file:
+            if line.strip():
+                records.append(json.loads(line))
+    return records
+
+
+def validate(quiz, policy, attempts, history):
     errors = []
     warnings = []
     questions = quiz.get("questions", [])
@@ -67,6 +79,7 @@ def validate(quiz, policy, attempts):
     types = Counter(q.get("type", "미분류") for q in questions)
     answers = Counter(int(q["answerIndex"]) + 1 for q in questions)
     stems = Counter(normalize_stem(q["question"]) for q in questions)
+    current_id_set = set(ids)
 
     for subject, count in subjects.items():
         if count > dedupe["maxSameSubjectPerDay"]:
@@ -95,6 +108,17 @@ def validate(quiz, policy, attempts):
     for question in questions:
         if has_extraction_artifact(question):
             errors.append(f"보기 추출 노이즈가 남아 있습니다: {question['id']}")
+
+    for record in history:
+        history_ids = set(record.get("questionIds", []))
+        if history_ids == current_id_set:
+            continue
+        duplicated = sorted(current_id_set & history_ids)
+        if duplicated:
+            errors.append(
+                f"출제 이력 장부와 문항 중복: {record.get('date', '날짜없음')} "
+                f"{', '.join(duplicated)}"
+            )
 
     seen_recent_ids = {}
     seen_recent_topics = defaultdict(list)
@@ -128,16 +152,19 @@ def main():
     parser.add_argument("quiz_json", type=Path)
     parser.add_argument("--policy", type=Path, default=POLICY_PATH)
     parser.add_argument("--attempts", type=Path, default=ATTEMPTS_PATH)
+    parser.add_argument("--history", type=Path, default=DELIVERY_HISTORY_PATH)
     args = parser.parse_args()
 
     quiz_path = args.quiz_json if args.quiz_json.is_absolute() else ROOT / args.quiz_json
     policy_path = args.policy if args.policy.is_absolute() else ROOT / args.policy
     attempts_path = args.attempts if args.attempts.is_absolute() else ROOT / args.attempts
+    history_path = args.history if args.history.is_absolute() else ROOT / args.history
 
     quiz = load_json(quiz_path)
     policy = load_json(policy_path)
     attempts = load_attempts(attempts_path)
-    errors, warnings = validate(quiz, policy, attempts)
+    history = load_history(history_path)
+    errors, warnings = validate(quiz, policy, attempts, history)
 
     for warning in warnings:
         print(f"WARNING: {warning}")

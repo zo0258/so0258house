@@ -14,6 +14,7 @@ POLICY_PATH = ROOT / "config" / "daily-selection-policy.json"
 QUESTION_BANK_DIR = ROOT / "data" / "question-bank"
 QUIZ_DIR = ROOT / "data" / "quizzes"
 ATTEMPTS_PATH = ROOT / "results" / "attempts.jsonl"
+DELIVERY_HISTORY_PATH = ROOT / "data" / "delivery-history.jsonl"
 
 
 def read_json(path):
@@ -82,18 +83,56 @@ def load_attempts(path):
     return read_jsonl(path)
 
 
-def load_delivered_quizzes(quiz_dir, target_date):
+def load_delivered_quizzes(quiz_dir, history_path, bank):
+    bank_by_id = {question["id"]: question for question in bank}
     delivered = []
     for path in sorted(quiz_dir.glob("*-daily.json")):
         quiz = read_json(path)
-        if quiz.get("date") == target_date.isoformat():
-            continue
         try:
             quiz_date = parse_date(quiz["date"])
         except (KeyError, ValueError):
             continue
         delivered.append((quiz_date, quiz))
+    for record in read_jsonl(history_path):
+        try:
+            quiz_date = parse_date(record["date"])
+        except (KeyError, ValueError):
+            continue
+        questions = []
+        for question_id in record.get("questionIds", []):
+            question = bank_by_id.get(question_id)
+            if question:
+                questions.append(question)
+            else:
+                questions.append({
+                    "id": question_id,
+                    "question": question_id,
+                    "topic": f"history:{question_id}",
+                })
+        delivered.append((quiz_date, {
+            "date": record["date"],
+            "quizId": record.get("quizId", ""),
+            "questions": questions,
+        }))
     return delivered
+
+
+def append_delivery_history(path, quiz):
+    record = {
+        "date": quiz["date"],
+        "quizId": quiz["quizId"],
+        "questionIds": [question["id"] for question in quiz["questions"]],
+    }
+    encoded = json.dumps(record, ensure_ascii=False)
+    existing = set()
+    if path.exists():
+        with path.open("r", encoding="utf-8") as file:
+            existing = {line.strip() for line in file if line.strip()}
+    if encoded in existing:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as file:
+        file.write(encoded + "\n")
 
 
 def recent_history(delivered, target_date, policy):
@@ -105,12 +144,12 @@ def recent_history(delivered, target_date, policy):
     recent_stems = set()
 
     for quiz_date, quiz in delivered:
-        if not (exact_cutoff <= quiz_date < target_date):
+        if not (exact_cutoff <= quiz_date <= target_date):
             continue
         for question in quiz.get("questions", []):
             recent_ids.add(question["id"])
             recent_stems.add(normalize_stem(question["question"]))
-            if topic_cutoff <= quiz_date < target_date:
+            if topic_cutoff <= quiz_date <= target_date:
                 recent_topics.add(question["topic"])
     return recent_ids, recent_topics, recent_stems
 
@@ -323,7 +362,7 @@ def main():
         raise SystemExit(f"문제은행이 비어 있습니다: {bank_dir}")
 
     attempts = load_attempts(attempts_path)
-    delivered = load_delivered_quizzes(QUIZ_DIR, target_date)
+    delivered = load_delivered_quizzes(QUIZ_DIR, DELIVERY_HISTORY_PATH, bank)
     try:
         questions, missing_subjects = select_questions(bank, policy, attempts, delivered, target_date, count, args.allow_partial)
     except RuntimeError as error:
@@ -345,6 +384,8 @@ def main():
         sys.stderr.write(result.stderr)
         if result.returncode != 0:
             raise SystemExit(result.returncode)
+
+    append_delivery_history(DELIVERY_HISTORY_PATH, quiz)
 
 
 if __name__ == "__main__":
