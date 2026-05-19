@@ -82,6 +82,20 @@ def render_index(files):
       font-size: 14px;
       font-weight: 650;
     }}
+    .nav {{
+      display: flex;
+      gap: 10px;
+      margin: 18px 0 18px;
+    }}
+    .nav a {{
+      min-height: 44px;
+      justify-content: center;
+      flex: 1;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 900;
+      background: #f8faf7;
+    }}
     ul {{
       display: grid;
       gap: 10px;
@@ -119,6 +133,7 @@ def render_index(files):
   <main>
     <h1>건강운동관리사 데일리 퀴즈</h1>
     <p>유소영님의 합격을 기원합니다.</p>
+    <div class="nav"><a href="index.html">데일리 퀴즈</a><a href="wrong-note.html">오답노트</a></div>
     <ul>
       {''.join(items)}
     </ul>
@@ -153,6 +168,18 @@ def main():
         target = quiz_dir / f"quiz-{date_label(path)}.html"
         shutil.copy2(path, target)
         copied.append(target)
+    wrong_note = ROOT / "wrong-note.html"
+    if wrong_note.exists():
+        wrong_note_target = site_dir / "wrong-note.html"
+        if wrong_note.resolve() != wrong_note_target.resolve():
+            shutil.copy2(wrong_note, wrong_note_target)
+    review_dir = ROOT / "data" / "review"
+    if review_dir.exists():
+        target_review_dir = site_dir / "data" / "review"
+        if review_dir.resolve() != target_review_dir.resolve():
+            if target_review_dir.exists():
+                shutil.rmtree(target_review_dir)
+            shutil.copytree(review_dir, target_review_dir)
     (site_dir / "index.html").write_text(render_index(copied), encoding="utf-8")
 
     print(site_dir)

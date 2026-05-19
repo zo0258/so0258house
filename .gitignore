@@ -8,3 +8,7 @@ __pycache__/
 
 tmp/
 *.log
+
+# Personal quiz attempt records generated from HEALTH_EXERCISE_RESULT blocks.
+results/
+notes/

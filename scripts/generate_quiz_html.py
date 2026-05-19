@@ -124,6 +124,23 @@ def render_html(quiz):
       font-weight: 600;
     }}
 
+    .utility-row {{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 750;
+    }}
+
+    .utility-row a {{
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 900;
+    }}
+
     .score-chip {{
       flex: 0 0 auto;
       min-width: 64px;
@@ -636,6 +653,7 @@ def render_html(quiz):
           <div>
             <h1>{title}</h1>
             <div class="meta">{date} · {subject} · <span id="positionLabel">1 / 10</span></div>
+            <div class="utility-row"><span id="saveStateLabel">자동 저장 대기</span><a href="../wrong-note.html">오답노트</a></div>
           </div>
           <div class="score-chip" id="scoreChip">0점</div>
         </div>
@@ -659,6 +677,7 @@ def render_html(quiz):
     const quiz = JSON.parse(document.getElementById('quiz-data').textContent);
     const circled = ['①', '②', '③', '④', '⑤'];
     const wrongReasonOptions = ['개념 모름', '헷갈림', '계산 실수', '문제 잘못 읽음'];
+    const storageKey = 'health-exercise-quiz:' + quiz.quizId;
     const state = {{
       current: 0,
       answers: Array(quiz.questions.length).fill(null),
@@ -676,6 +695,42 @@ def render_html(quiz):
     const nextBtn = document.getElementById('nextBtn');
     const explainBtn = document.getElementById('explainBtn');
     const actions = document.getElementById('actions');
+    const saveStateLabel = document.getElementById('saveStateLabel');
+
+    function normalizeArray(value, fallback) {{
+      if (!Array.isArray(value)) return [...fallback];
+      return fallback.map((item, index) => value[index] ?? item);
+    }}
+
+    function loadSavedState() {{
+      try {{
+        const saved = JSON.parse(localStorage.getItem(storageKey) || 'null');
+        if (!saved || saved.quizId !== quiz.quizId) return;
+        state.current = Math.min(Math.max(Number(saved.current || 0), 0), quiz.questions.length);
+        state.answers = normalizeArray(saved.answers, state.answers).map(value => value === null ? null : Number(value));
+        state.explanationOpen = normalizeArray(saved.explanationOpen, state.explanationOpen).map(Boolean);
+        state.bookmarked = normalizeArray(saved.bookmarked, state.bookmarked).map(Boolean);
+        state.wrongReasons = normalizeArray(saved.wrongReasons, state.wrongReasons).map(value => String(value || ''));
+        saveStateLabel.textContent = '저장된 풀이 불러옴';
+      }} catch (error) {{
+        saveStateLabel.textContent = '저장 불러오기 실패';
+      }}
+    }}
+
+    function saveState() {{
+      const payload = {{
+        quizId: quiz.quizId,
+        date: quiz.date,
+        savedAt: new Date().toISOString(),
+        current: state.current,
+        answers: state.answers,
+        explanationOpen: state.explanationOpen,
+        bookmarked: state.bookmarked,
+        wrongReasons: state.wrongReasons
+      }};
+      localStorage.setItem(storageKey, JSON.stringify(payload));
+      saveStateLabel.textContent = '풀이 자동 저장됨';
+    }}
 
     function score() {{
       return state.answers.reduce((total, selected, index) => {{
@@ -723,6 +778,7 @@ def render_html(quiz):
           if (choiceIndex !== quiz.questions[questionIndex].answerIndex) {{
             state.explanationOpen[questionIndex] = true;
           }}
+          saveState();
           render();
         }});
       }});
@@ -731,6 +787,7 @@ def render_html(quiz):
         button.addEventListener('click', () => {{
           const questionIndex = Number(button.dataset.question);
           state.bookmarked[questionIndex] = !state.bookmarked[questionIndex];
+          saveState();
           render();
         }});
       }});
@@ -739,6 +796,7 @@ def render_html(quiz):
         button.addEventListener('click', () => {{
           const questionIndex = Number(button.dataset.question);
           state.wrongReasons[questionIndex] = button.dataset.reason;
+          saveState();
           render();
         }});
       }});
@@ -850,8 +908,7 @@ def render_html(quiz):
       return `
         <p class="feedback-title ${{ok ? 'ok' : 'bad'}}">${{title}}</p>
         <div class="explanation ${{state.explanationOpen[index] ? 'visible' : ''}}">
-          <div class="ex-row"><strong>정답 기준</strong><span>${{escapeHtml(q.explanation)}}</span></div>
-          <div class="ex-row"><strong>오답 포인트</strong><span>${{escapeHtml(q.trap || '보기의 표현 차이보다 핵심 기준을 먼저 확인해야 합니다.')}}</span></div>
+          ${{choiceExplanationMarkup(q)}}
           <div class="ex-row"><strong>다음에 볼 포인트</strong><span>${{escapeHtml(reviewPoint)}}</span></div>
         </div>
         <div class="review-tools">
@@ -861,6 +918,25 @@ def render_html(quiz):
           ${{ok ? '' : reasonMarkup(index)}}
         </div>
       `;
+    }}
+
+    function choiceExplanationMarkup(q) {{
+      const rows = Array.isArray(q.choiceExplanations) && q.choiceExplanations.length === q.choices.length
+        ? q.choiceExplanations
+        : fallbackChoiceExplanations(q);
+      return rows.map((text, choiceIndex) => {{
+        const label = choiceIndex === q.answerIndex ? `${{circled[choiceIndex]}} 정답` : `${{circled[choiceIndex]}} 오답`;
+        return `<div class="ex-row"><strong>${{escapeHtml(label)}}</strong><span>${{escapeHtml(text)}}</span></div>`;
+      }}).join('');
+    }}
+
+    function fallbackChoiceExplanations(q) {{
+      return q.choices.map((choice, choiceIndex) => {{
+        if (choiceIndex === q.answerIndex) {{
+          return `정답입니다. ${{q.explanation || '최종정답 기준에 맞는 보기입니다.'}}`;
+        }}
+        return `정답 기준과 맞지 않는 보기입니다. ${{q.trap || '문제의 핵심 조건과 보기 표현을 나누어 확인하세요.'}} 선택지 표현: ${{choice}}`;
+      }});
     }}
 
     function reasonMarkup(index) {{
@@ -1042,6 +1118,7 @@ def render_html(quiz):
 
     prevBtn.addEventListener('click', () => {{
       state.current = Math.max(0, state.current - 1);
+      saveState();
       render();
     }});
 
@@ -1055,15 +1132,18 @@ def render_html(quiz):
         }}
       }}
       state.current = Math.min(quiz.questions.length, state.current + 1);
+      saveState();
       render();
     }});
 
     explainBtn.addEventListener('click', () => {{
       if (state.answers[state.current] === null) return;
       state.explanationOpen[state.current] = !state.explanationOpen[state.current];
+      saveState();
       render();
     }});
 
+    loadSavedState();
     render();
   </script>
 </body>

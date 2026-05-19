@@ -15,6 +15,7 @@ POLICY_PATH = ROOT / "config" / "daily-selection-policy.json"
 QUESTION_BANK_DIR = ROOT / "data" / "question-bank"
 QUIZ_DIR = ROOT / "data" / "quizzes"
 ATTEMPTS_PATH = ROOT / "results" / "attempts.jsonl"
+MASTERED_PATH = ROOT / "results" / "mastered.json"
 DELIVERY_HISTORY_PATH = ROOT / "data" / "delivery-history.jsonl"
 
 
@@ -96,6 +97,12 @@ def load_attempts(path):
     return read_jsonl(path)
 
 
+def load_mastered(path):
+    if not path.exists():
+        return set()
+    return set(read_json(path))
+
+
 def load_delivered_quizzes(quiz_dir, history_path, bank):
     bank_by_id = {question["id"]: question for question in bank}
     delivered = []
@@ -150,14 +157,13 @@ def append_delivery_history(path, quiz):
 
 def recent_history(delivered, target_date, policy):
     dedupe = policy["deduplication"]
-    exact_cutoff = target_date - timedelta(days=dedupe["exactQuestionCooldownDays"])
     topic_cutoff = target_date - timedelta(days=dedupe["sameTopicCooldownDays"])
     recent_ids = set()
     recent_topics = set()
     recent_stems = set()
 
     for quiz_date, quiz in delivered:
-        if not (exact_cutoff <= quiz_date <= target_date):
+        if quiz_date > target_date:
             continue
         for question in quiz.get("questions", []):
             recent_ids.add(question["id"])
@@ -254,7 +260,7 @@ def can_add(question, selected, policy, allow_partial):
     return True
 
 
-def select_questions(bank, policy, attempts, delivered, target_date, count, allow_partial):
+def select_questions(bank, policy, attempts, delivered, mastered_ids, target_date, count, allow_partial):
     rng = random.Random(target_date.isoformat())
     subject_targets = dict(policy["defaultSubjectAllocation"])
     recent_ids, recent_topics, recent_stems = recent_history(delivered, target_date, policy)
@@ -262,7 +268,8 @@ def select_questions(bank, policy, attempts, delivered, target_date, count, allo
 
     strict_pool = [
         q for q in bank
-        if q["id"] not in recent_ids
+        if q["id"] not in mastered_ids
+        and q["id"] not in recent_ids
         and q["_normalizedStem"] not in recent_stems
         and (allow_partial or q["topic"] not in recent_topics or topic_counter[q["topic"]] >= policy["repeatWrongTopicThreshold"])
     ]
@@ -355,6 +362,7 @@ def main():
     parser.add_argument("--policy", type=Path, default=POLICY_PATH)
     parser.add_argument("--bank-dir", type=Path, default=QUESTION_BANK_DIR)
     parser.add_argument("--attempts", type=Path, default=ATTEMPTS_PATH)
+    parser.add_argument("--mastered", type=Path, default=MASTERED_PATH)
     parser.add_argument("--output", type=Path, help="Output quiz JSON path.")
     parser.add_argument("--html", action="store_true", help="Also generate the mobile HTML delivery file.")
     parser.add_argument("--allow-partial", action="store_true", help="Generate with the available verified bank even if full policy is not yet satisfiable.")
@@ -365,6 +373,7 @@ def main():
     policy_path = args.policy if args.policy.is_absolute() else ROOT / args.policy
     bank_dir = args.bank_dir if args.bank_dir.is_absolute() else ROOT / args.bank_dir
     attempts_path = args.attempts if args.attempts.is_absolute() else ROOT / args.attempts
+    mastered_path = args.mastered if args.mastered.is_absolute() else ROOT / args.mastered
     output_path = args.output or QUIZ_DIR / f"{target_date.isoformat()}-daily.json"
     output_path = output_path if output_path.is_absolute() else ROOT / output_path
 
@@ -375,9 +384,10 @@ def main():
         raise SystemExit(f"문제은행이 비어 있습니다: {bank_dir}")
 
     attempts = load_attempts(attempts_path)
+    mastered_ids = load_mastered(mastered_path)
     delivered = load_delivered_quizzes(QUIZ_DIR, DELIVERY_HISTORY_PATH, bank)
     try:
-        questions, missing_subjects = select_questions(bank, policy, attempts, delivered, target_date, count, args.allow_partial)
+        questions, missing_subjects = select_questions(bank, policy, attempts, delivered, mastered_ids, target_date, count, args.allow_partial)
     except RuntimeError as error:
         raise SystemExit(f"생성 중단: {error}") from error
     quiz = build_quiz(questions, target_date, args.allow_partial, missing_subjects)

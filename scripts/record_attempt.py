@@ -2,6 +2,7 @@
 import argparse
 import json
 import re
+import subprocess
 import sys
 from collections import Counter, defaultdict
 from datetime import datetime
@@ -11,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS_PATH = ROOT / "results" / "attempts.jsonl"
 NOTE_PATH = ROOT / "notes" / "wrong-note.md"
+MASTERED_PATH = ROOT / "results" / "mastered.json"
 
 
 def parse_result(text):
@@ -68,6 +70,31 @@ def parse_result(text):
 
     attempt["recordedAt"] = datetime.now().isoformat(timespec="seconds")
     return attempt
+
+
+def parse_mastered(text):
+    start = "[HEALTH_EXERCISE_MASTERED]"
+    end = "[/HEALTH_EXERCISE_MASTERED]"
+    if start not in text or end not in text:
+        return []
+    body = text.split(start, 1)[1].split(end, 1)[0].strip()
+    mastered = []
+    for raw_line in body.splitlines():
+        line = raw_line.strip()
+        if line.startswith("mastered="):
+            mastered.append(line.split("=", 1)[1].strip())
+    return [item for item in mastered if item]
+
+
+def load_mastered():
+    if not MASTERED_PATH.exists():
+        return []
+    return json.loads(MASTERED_PATH.read_text(encoding="utf-8"))
+
+
+def save_mastered(question_ids):
+    MASTERED_PATH.parent.mkdir(parents=True, exist_ok=True)
+    MASTERED_PATH.write_text(json.dumps(sorted(set(question_ids)), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def load_attempts():
@@ -199,10 +226,20 @@ def main():
     args = parser.parse_args()
 
     text = args.input.read_text(encoding="utf-8") if args.input else sys.stdin.read()
+    mastered = parse_mastered(text)
+    if mastered and "[HEALTH_EXERCISE_RESULT]" not in text:
+        save_mastered([*load_mastered(), *mastered])
+        subprocess.run([sys.executable, str(ROOT / "scripts" / "generate_wrong_note_site.py")], cwd=ROOT, check=True)
+        print(f"mastered: {MASTERED_PATH}")
+        return
+
     attempt = parse_result(text)
     append_attempt(attempt)
+    if mastered:
+        save_mastered([*load_mastered(), *mastered])
     attempts = load_attempts()
     render_wrong_note(attempts)
+    subprocess.run([sys.executable, str(ROOT / "scripts" / "generate_wrong_note_site.py")], cwd=ROOT, check=True)
     print(f"recorded: {RESULTS_PATH}")
     print(f"wrong-note: {NOTE_PATH}")
 

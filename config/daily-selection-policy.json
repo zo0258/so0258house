@@ -25,7 +25,7 @@
   "repeatWrongTopicThreshold": 2,
   "weakSubjectAccuracyThreshold": 0.4,
   "deduplication": {
-    "exactQuestionCooldownDays": 14,
+    "exactQuestionCooldownDays": 9999,
     "sameTopicCooldownDays": 3,
     "sameTrapCooldownDays": 3,
     "maxSameSubjectPerDay": 4,
@@ -38,7 +38,7 @@
       "normalizedStem"
     ],
     "rules": [
-      "같은 questionId는 최근 14일 안에 재출제하지 않는다.",
+      "같은 questionId는 누적 출제 이력 기준으로 재출제하지 않는다.",
       "A형/B형만 다른 동일 문항은 같은 문제로 본다.",
       "문항번호가 달라도 normalizedStem이 같으면 같은 문제로 본다.",
       "같은 topic은 최근 3일 안에 반복하지 않는 것을 기본으로 한다.",
@@ -70,7 +70,7 @@
     "최근 7일 오답 과목은 기본 배분에서 최대 2문항까지 추가한다.",
     "같은 topic을 2회 이상 틀리면 해당 topic 또는 같은 trap 유형을 다음 퀴즈에 최소 1문항 포함한다.",
     "특정 과목 전날 정답률이 40% 미만이면 다음 날 최소 3문항을 배정한다.",
-    "최근 14일 안에 나온 같은 원문 문항은 제외한다.",
+    "이미 데일리 퀴즈에 나온 같은 원문 문항은 누적 이력 기준으로 제외한다.",
     "최근 3일 안에 나온 같은 topic은 원칙적으로 제외하되, 반복 오답 복습일 때만 허용한다.",
     "공식 오답률이 없으면 오답률 높음이라고 쓰지 않고 고오답 추정으로 표기한다.",
     "총 문항 수는 반드시 10문항으로 맞춘다."
