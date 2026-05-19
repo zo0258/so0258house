@@ -22,7 +22,7 @@ def parse_result(text):
         raise ValueError("결과 블록을 찾지 못했습니다.")
 
     body = text.split(start, 1)[1].split(end, 1)[0].strip()
-    attempt = {"wrong": [], "review": [], "unanswered": []}
+    attempt = {"wrong": [], "review": [], "unanswered": [], "answerLog": []}
     for raw_line in body.splitlines():
         line = raw_line.strip()
         if not line:
@@ -37,6 +37,17 @@ def parse_result(text):
                 key, value = part.split("=", 1)
                 wrong_item[key] = value
             attempt["wrong"].append(wrong_item)
+            continue
+        if line.startswith("answerLog="):
+            payload = line.removeprefix("answerLog=")
+            parts = payload.split("|")
+            answer_item = {"questionId": parts[0]}
+            for part in parts[1:]:
+                if "=" not in part:
+                    continue
+                key, value = part.split("=", 1)
+                answer_item[key] = value
+            attempt["answerLog"].append(answer_item)
             continue
         if line.startswith("review="):
             payload = line.removeprefix("review=")

@@ -1029,6 +1029,15 @@
         `unansweredCount=${unanswered.length}`
       ];
 
+      quiz.questions.forEach((q, index) => {
+        const selected = state.answers[index];
+        const selectedText = selected === null ? 'none' : selected + 1;
+        const bookmarked = state.bookmarked[index] ? 'yes' : 'no';
+        const reason = state.wrongReasons[index] || '';
+        const correct = selected !== null && selected === q.answerIndex ? 'yes' : 'no';
+        lines.push(`answerLog=${q.id}|topic=${q.topic}|selected=${selectedText}|answer=${q.answerIndex + 1}|correct=${correct}|bookmarked=${bookmarked}|wrongReason=${reason || 'none'}`);
+      });
+
       wrong.forEach(item => {
         const reason = state.wrongReasons[item.index] || '미선택';
         const bookmarked = state.bookmarked[item.index] ? 'yes' : 'no';
