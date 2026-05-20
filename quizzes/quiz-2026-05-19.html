@@ -673,6 +673,107 @@
       font-weight: 800;
     }
 
+    .result-review {
+      margin: 18px 0;
+    }
+
+    .result-review h2 {
+      margin: 0 0 10px;
+      color: var(--accent-strong);
+      font-size: 18px;
+      font-weight: 950;
+    }
+
+    .result-review-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .result-review-card {
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .result-review-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .result-review-meta span:last-child {
+      flex: 0 0 auto;
+      color: var(--accent);
+    }
+
+    .result-review-question {
+      margin: 0 0 9px;
+      color: var(--ink);
+      font-size: 14.5px;
+      font-weight: 850;
+      line-height: 1.48;
+      white-space: pre-line;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .result-review-choices {
+      display: grid;
+      gap: 6px;
+    }
+
+    .result-review-choice {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 6px;
+      align-items: start;
+      padding: 8px 9px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fbfcfa;
+      color: #354039;
+      font-size: 13px;
+      line-height: 1.38;
+    }
+
+    .result-review-choice.correct {
+      border-color: rgba(47, 107, 79, .28);
+      background: var(--sage);
+      color: var(--accent-strong);
+      font-weight: 850;
+    }
+
+    .result-review-choice.picked:not(.correct) {
+      border-color: rgba(193, 116, 62, .24);
+      background: #fff3ea;
+      color: #8b4a1f;
+    }
+
+    .result-review-explanation {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+
+    .result-clear {
+      padding: 13px;
+      border: 1px solid rgba(47, 107, 79, .16);
+      border-radius: var(--radius);
+      background: #f7fbf7;
+      color: var(--accent-strong);
+      font-size: 14px;
+      font-weight: 850;
+      line-height: 1.5;
+    }
+
     .sync-status {
       margin: 10px 0 12px;
       color: var(--muted);
@@ -690,6 +791,10 @@
 
       .summary-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .result-review-meta {
+        align-items: flex-start;
       }
 
       .actions {
@@ -741,6 +846,33 @@
     const reviewMode = Boolean(completedAttempt);
     const circled = ['①', '②', '③', '④', '⑤'];
     const wrongReasonOptions = ['개념 모름', '헷갈림', '계산 실수', '문제 잘못 읽음'];
+    const resultMessages = {
+      '2026-05-20': { d: 'D-24', body: '오늘도 한 세트를 끝냈다는 것 자체가 의미 있는 흐름입니다. 틀린 문제는 부족함이 아니라, 다음에 더 단단해질 부분입니다.' },
+      '2026-05-21': { d: 'D-23', body: '오늘의 기록은 차곡차곡 쌓입니다. 맞힌 문제는 기준이 되고, 틀린 문제는 실수를 줄여주는 경험이 됩니다.' },
+      '2026-05-22': { d: 'D-22', body: '오늘도 멈추지 않았습니다. 매일 문제를 푸는 힘이 시험장에서 가장 믿을 수 있는 루틴이 됩니다.' },
+      '2026-05-23': { d: 'D-21', body: '틀린 문제 몇 개보다 중요한 건 오늘도 끝까지 풀어냈다는 사실입니다. 그 꾸준함이 결국 합격에 가까워지게 합니다.' },
+      '2026-05-24': { d: 'D-20', body: '오늘의 한 세트도 잘 지나왔습니다. 완벽하지 않아도 괜찮습니다. 반복한 만큼 실전에서 흔들림은 줄어듭니다.' },
+      '2026-05-25': { d: 'D-19', body: '오늘도 실력을 하나씩 확인했습니다. 모르는 문제는 줄어들고, 익숙한 기준은 더 선명해지고 있습니다.' },
+      '2026-05-26': { d: 'D-18', body: '틀린 문제는 오늘 다시 정리하면 됩니다. 중요한 건 오늘도 공부의 흐름을 이어갔다는 점입니다.' },
+      '2026-05-27': { d: 'D-17', body: '하루하루의 기록이 시험 당일의 안정감이 됩니다. 오늘도 그 안정감을 하나 더 쌓았습니다.' },
+      '2026-05-28': { d: 'D-16', body: '오늘도 충분히 잘해냈습니다. 잠깐의 불안보다, 지금까지 반복해온 시간이 훨씬 더 강합니다.' },
+      '2026-05-29': { d: 'D-15', body: '오늘 풀어낸 문제들이 실전 감각을 만들고 있습니다. 점수보다 중요한 건 흐름을 유지하는 힘입니다.' },
+      '2026-05-30': { d: 'D-14', body: '2주 남았습니다. 지금부터는 더 많이 하기보다, 아는 문제를 안정적으로 지켜내는 시간이 더 중요합니다.' },
+      '2026-05-31': { d: 'D-13', body: '오늘도 기준을 다시 확인했습니다. 틀린 문제는 다시 보면 되고, 맞힌 문제는 자신 있게 믿으면 됩니다.' },
+      '2026-06-01': { d: 'D-12', body: '오늘의 공부는 불안을 줄이는 가장 현실적인 방법입니다. 한 세트씩 쌓아온 힘은 쉽게 사라지지 않습니다.' },
+      '2026-06-02': { d: 'D-11', body: '오늘도 끝까지 잘 풀어냈습니다. 시험장에서 필요한 건 특별함보다, 평소처럼 읽고 판단하는 힘입니다.' },
+      '2026-06-03': { d: 'D-10', body: '열흘 남았습니다. 지금부터는 실력을 더 늘리기보다, 실수를 줄이고 익숙한 기준을 지키는 연습이 더 중요합니다.' },
+      '2026-06-04': { d: 'D-9', body: '오늘도 합격선에 가까운 감각을 유지했습니다. 낯선 문제보다 익숙한 문제를 지켜내는 힘을 믿어도 됩니다.' },
+      '2026-06-05': { d: 'D-8', body: '오늘의 오답은 시험장에서 같은 실수를 줄여주는 경험이 됩니다. 지금 확인한 만큼 더 단단해졌습니다.' },
+      '2026-06-06': { d: 'D-7', body: '일주일 남았습니다. 여기까지 꾸준히 해온 과정 자체가 이미 충분한 준비의 증거입니다.' },
+      '2026-06-07': { d: 'D-6', body: '오늘도 평소의 리듬을 잘 지켜냈습니다. 시험 당일에도 가장 필요한 건 이 리듬을 그대로 유지하는 것입니다.' },
+      '2026-06-08': { d: 'D-5', body: '남은 시간은 불안을 키우는 시간이 아니라, 기준을 정리하는 시간입니다. 오늘도 그 기준을 다시 확인했습니다.' },
+      '2026-06-09': { d: 'D-4', body: '오늘도 충분히 잘해냈습니다. 완벽하지 않아도, 끝까지 풀어내는 힘은 이미 충분히 만들어졌습니다.' },
+      '2026-06-10': { d: 'D-3', body: '이제는 새롭게 증명하려 하지 않아도 됩니다. 지금까지 쌓아온 실력을 차분히 꺼내는 연습이면 충분합니다.' },
+      '2026-06-11': { d: 'D-2', body: '오늘은 흔들리지 않는 기준을 다시 확인한 날입니다. 컨디션보다 중요한 건 익숙한 문제를 놓치지 않는 힘입니다.' },
+      '2026-06-12': { d: 'D-1', body: '마지막 하루입니다. 더 몰아붙이기보다, 지금까지 해온 것을 믿고 차분히 정리하면 됩니다.' },
+      '2026-06-13': { d: 'D-Day', body: '오늘은 완벽해야 하는 날이 아닙니다. 아는 문제를 끝까지 지키고, 모르는 문제에 오래 멈추지 않으면 됩니다. 충분히 준비해왔습니다.' }
+    };
     const storageKey = 'health-exercise-quiz:' + quiz.quizId;
     const reviewAnswers = new Map((completedAttempt?.answerLog || []).map(item => [
       item.questionId,
@@ -1073,14 +1205,10 @@
           <h2>${escapeHtml(message.title)}</h2>
           <p>${escapeHtml(message.body)}</p>
         </section>
-        <div class="summary-grid">
-          <div class="summary-item"><div class="summary-label">전체 정답률</div><div class="summary-value">${currentScore}/${total}</div></div>
-          <div class="summary-item"><div class="summary-label">풀이 완료</div><div class="summary-value">${answeredCount()}</div></div>
-          <div class="summary-item"><div class="summary-label">틀린 문제</div><div class="summary-value">${wrong.length}</div></div>
-          <div class="summary-item"><div class="summary-label">미응답</div><div class="summary-value warn">${unanswered.length}</div></div>
-        </div>
-        <h2 class="section-title">오늘 확인할 오답</h2>
-        <div class="wrong-summary">${wrongSummaryMarkup(wrong, unanswered)}</div>
+        <section class="result-review">
+          <h2>오늘 다시 볼 문제</h2>
+          ${resultReviewMarkup(wrong, unanswered)}
+        </section>
         ${syncConfig.enabled ? '<button class="btn primary" id="submitBtn" type="button">결과 저장</button><div class="sync-status" id="syncStatus">저장하면 대시보드와 오답노트에 반영됩니다.</div>' : ''}
         <div class="result-actions">
           <a href="../wrong-note.html">오답노트 보기</a>
@@ -1128,13 +1256,33 @@
       }
     }
 
-    function wrongSummaryMarkup(wrong, unanswered) {
+    function resultReviewMarkup(wrong, unanswered) {
       if (!wrong.length && !unanswered.length) {
-        return '<div>오답 없이 마무리했습니다. 오답노트로 이동해 누적 약점만 가볍게 확인하세요.</div>';
+        return '<div class="result-clear">오답 없이 마무리했습니다. 오늘은 누적 오답만 가볍게 확인하면 충분합니다.</div>';
       }
-      const rows = wrong.slice(0, 3).map(item => `<div>${escapeHtml(item.q.topic)} · 내 답 ${item.selected === null ? '미응답' : circled[item.selected]} / 정답 ${circled[item.q.answerIndex]}</div>`);
-      unanswered.slice(0, 2).forEach(item => rows.push(`<div>${escapeHtml(item.q.topic)} · 미응답 / 정답 ${circled[item.q.answerIndex]}</div>`));
-      return rows.join('');
+      const rows = [...wrong, ...unanswered].map(item => {
+        const selectedLabel = item.selected === null ? '미응답' : circled[item.selected];
+        const choices = item.q.choices.map((choice, index) => {
+          const classes = [
+            'result-review-choice',
+            index === item.q.answerIndex ? 'correct' : '',
+            index === item.selected ? 'picked' : ''
+          ].filter(Boolean).join(' ');
+          return `<div class="${classes}"><strong>${circled[index]}</strong><span>${escapeHtml(choice)}</span></div>`;
+        }).join('');
+        return `
+          <article class="result-review-card">
+            <div class="result-review-meta">
+              <span>Q${item.index + 1} · ${escapeHtml(item.q.topic)}</span>
+              <span>내 답 ${selectedLabel} / 정답 ${circled[item.q.answerIndex]}</span>
+            </div>
+            <p class="result-review-question">${escapeHtml(item.q.question)}</p>
+            <div class="result-review-choices">${choices}</div>
+            <p class="result-review-explanation">${escapeHtml(item.q.explanation || '정답 기준을 다시 확인하세요.')}</p>
+          </article>
+        `;
+      });
+      return `<div class="result-review-list">${rows.join('')}</div>`;
     }
 
     function buildReviewItems(wrong) {
@@ -1160,6 +1308,13 @@
         return {
           title: '끝까지 확인하면 점수가 됩니다',
           body: '아직 답하지 않은 문제가 남아 있어요. 오늘의 목표는 완벽함보다 끝까지 확인하는 습관입니다.\n남은 문제까지 차분히 눌러 보고, 헷갈린 기준만 표시해두면 오늘 공부는 충분히 의미 있게 끝납니다.'
+        };
+      }
+      const daily = resultMessages[quiz.date];
+      if (daily) {
+        return {
+          title: daily.d + ' · 오늘도 잘 마무리했습니다',
+          body: daily.body
         };
       }
       const rate = total ? currentScore / total : 0;
