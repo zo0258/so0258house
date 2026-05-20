@@ -834,7 +834,7 @@
             <div class="topic">
               <span>${q.year} 기출</span>
               <button class="bookmark-toggle ${state.bookmarked[index] ? 'active' : ''}" type="button" data-question="${index}" aria-label="다시 볼 문제 표시" aria-pressed="${state.bookmarked[index] ? 'true' : 'false'}">
-                <span class="bookmark-icon">√</span><span>다시 보기</span>
+                <span class="bookmark-icon">${state.bookmarked[index] ? '☑' : '☐'}</span><span>다시 보기</span>
               </button>
             </div>
           </div>
