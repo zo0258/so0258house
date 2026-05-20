@@ -97,7 +97,7 @@ def render_index(files):
         items.append(
             f'<li><a class="quiz-row" href="{html.escape(href, quote=True)}">'
             f'<span class="date">{html.escape(label)}</span>'
-            f'<span class="row-meta"><small>건강운동관리사 데일리 퀴즈</small><span class="badges">{badges}</span></span>'
+            f'<span class="row-meta"><small>전과목 10문항</small><span class="badges">{badges}</span></span>'
             "</a></li>"
         )
 
@@ -109,7 +109,7 @@ def render_index(files):
   <title>건강운동관리사 데일리 퀴즈</title>
   <style>
     :root {{
-      --bg: #f3f5f0;
+      --bg: #f4f6f2;
       --surface: #fff;
       --ink: #17201a;
       --muted: #69736c;
@@ -117,74 +117,66 @@ def render_index(files):
       --accent: #2f6b4f;
       --accent-dark: #214f3a;
       --soft: #eef3ec;
+      --cream: #faf8f2;
     }}
     * {{ box-sizing: border-box; }}
     body {{
       margin: 0;
-      background: var(--bg);
+      background:
+        radial-gradient(circle at 0 0, rgba(47, 107, 79, .10), transparent 28rem),
+        linear-gradient(180deg, #fbfcfa 0%, var(--bg) 100%);
       color: var(--ink);
       font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
       line-height: 1.5;
     }}
     main {{
-      width: min(720px, 100%);
+      width: min(760px, 100%);
       min-height: 100svh;
       margin: 0 auto;
-      padding: 22px 16px 28px;
-      background: var(--surface);
-      border-left: 1px solid rgba(23, 32, 26, .06);
-      border-right: 1px solid rgba(23, 32, 26, .06);
+      padding: 24px 16px 30px;
     }}
     .brand {{
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 22px;
+      gap: 12px;
+      margin-bottom: 18px;
     }}
     .brand img {{
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      object-fit: cover;
-      border: 1px solid var(--line);
-      background: #fff;
+      width: 44px;
+      height: 44px;
+      filter: drop-shadow(0 8px 18px rgba(23, 32, 26, .10));
     }}
     .brand strong {{
       display: block;
-      font-size: 14px;
+      font-size: 17px;
       font-weight: 900;
       letter-spacing: 0;
     }}
-    .brand small {{
-      display: block;
-      margin-top: 2px;
-      color: var(--muted);
-      text-align: left;
+    .hero {{
+      padding: 22px 20px 18px;
+      border: 1px solid rgba(47, 107, 79, .14);
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(255,255,255,.94), rgba(248,250,247,.94));
+      box-shadow: 0 18px 45px rgba(23, 32, 26, .07);
     }}
     h1 {{
       margin: 0;
-      font-size: 28px;
+      font-size: 30px;
       line-height: 1.25;
       font-weight: 900;
-    }}
-    p {{
-      margin: 8px 0 22px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 650;
     }}
     .quick {{
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
-      margin: 18px 0 12px;
+      margin-top: 18px;
     }}
     .quick a {{
-      min-height: 116px;
+      min-height: 108px;
       align-items: flex-start;
       flex-direction: column;
       justify-content: center;
-      background: linear-gradient(180deg, #fbfcfa 0%, #f2f7f1 100%);
+      background: linear-gradient(180deg, #fff 0%, #f4f8f2 100%);
       border-color: #cfdace;
     }}
     .quick a:first-child {{
@@ -195,7 +187,7 @@ def render_index(files):
     .quick a:first-child small {{ color: rgba(255, 255, 255, .82); }}
     .quick strong {{
       display: block;
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 900;
     }}
     .quick small {{
@@ -208,13 +200,13 @@ def render_index(files):
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 8px;
-      margin: 0 0 18px;
+      margin: 14px 0 18px;
     }}
     .stat {{
-      padding: 10px;
+      padding: 12px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: #fbfcfa;
+      background: rgba(255, 255, 255, .82);
     }}
     .stat strong {{
       display: block;
@@ -229,7 +221,7 @@ def render_index(files):
     }}
     ul {{
       display: grid;
-      gap: 10px;
+      gap: 9px;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -239,13 +231,13 @@ def render_index(files):
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      min-height: 64px;
-      padding: 14px;
+      min-height: 70px;
+      padding: 15px 16px;
       border: 1px solid var(--line);
       border-radius: 8px;
       color: var(--ink);
       text-decoration: none;
-      background: #fbfcfa;
+      background: rgba(255, 255, 255, .88);
     }}
     a:active {{ transform: scale(.99); }}
     .date {{
@@ -288,20 +280,23 @@ def render_index(files):
       .stats {{ grid-template-columns: 1fr 1fr 1fr; }}
       .quiz-row {{ align-items: flex-start; }}
       .row-meta {{ align-items: flex-end; max-width: 52%; }}
+      .hero {{ padding: 18px 14px 14px; }}
+      h1 {{ font-size: 28px; }}
     }}
   </style>
 </head>
 <body>
   <main>
     <header class="brand">
-      <img src="assets/soo2-symbol.jpg" alt="SoO2 House">
-      <div><strong>SoO2 House Study</strong><small>Health Exercise Quiz</small></div>
+      <img src="assets/soo2-mark.svg" alt="So02 House">
+      <div><strong>So02 House DashBoard</strong></div>
     </header>
-    <h1>건강운동관리사 데일리 퀴즈</h1>
-    <p>매일 10문항을 풀고, 틀린 기준만 다시 잡습니다.</p>
-    <section class="quick" aria-label="빠른 이동">
-      <a href="{html.escape(latest_href, quote=True)}"><strong>오늘 문제 풀기</strong><small>{html.escape(latest_label)} 퀴즈 바로가기</small></a>
-      <a href="wrong-note.html"><strong>오답노트 보기</strong><small>틀린 문제와 다시 볼 문제 모아보기</small></a>
+    <section class="hero">
+      <h1>건강운동관리사 데일리 퀴즈</h1>
+      <section class="quick" aria-label="빠른 이동">
+        <a href="{html.escape(latest_href, quote=True)}"><strong>오늘 문제 풀기</strong><small>{html.escape(latest_label)} 퀴즈 바로가기</small></a>
+        <a href="wrong-note.html"><strong>오답노트 보기</strong><small>틀린 문제와 다시 볼 문제 모아보기</small></a>
+      </section>
     </section>
     <section class="stats" aria-label="학습 현황">
       <div class="stat"><strong>{completed_count}</strong><small>풀이완료</small></div>
