@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-20T15:11:44",
+  "generatedAt": "2026-05-20T15:29:35",
   "stats": {
-    "attemptCount": 2,
-    "totalScore": 17,
-    "totalQuestions": 20,
-    "accuracy": 85.0,
-    "wrongCount": 3,
-    "wrongQuestionCount": 3,
+    "attemptCount": 3,
+    "totalScore": 26,
+    "totalQuestions": 30,
+    "accuracy": 86.7,
+    "wrongCount": 4,
+    "wrongQuestionCount": 4,
     "reviewCount": 2,
     "masteredCount": 0
   },
@@ -84,6 +84,31 @@
       "answerIndex": 2,
       "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "trap": "ACSM이 권고하 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "choiceExplanations": [],
+      "reviewRound": 1
+    },
+    {
+      "date": "2026-05-20",
+      "quizId": "2026-05-20-daily-all-subjects",
+      "subject": "운동부하검사",
+      "questionId": "2023-1A-73-19",
+      "topic": "퀸스대학 스텝",
+      "selected": "4",
+      "selectedLabel": "④",
+      "answer": "3",
+      "answerLabel": "③",
+      "wrongReason": "개념 모름",
+      "bookmarked": "no",
+      "question": "퀸스대학 스텝 검사(Queens college step test)에 대한 설명으로 옳지\n않은 것은?",
+      "choices": [
+        "스텝박스의 높이는 41.25 cm(16.25 in)이다.",
+        "남성은 분당 24스텝(96박자), 여성은 분당 22스텝(88박자)의 속도로 3분 동안 수행한다.",
+        "최대산소섭취량을 산출하기 위하여 남녀 간 동일한 회귀공식을 사용한다.",
+        "심박수는 스텝 종료 후 5초에서 20초까지 계측 후 분당 심박수로 환산한다."
+      ],
+      "answerIndex": 2,
+      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "trap": "퀸스대학 스텝 관련 조건과 보기 표현을 섞어 판단하는 문항",
       "choiceExplanations": [],
       "reviewRound": 1
     }
