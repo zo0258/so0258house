@@ -187,6 +187,8 @@ def render_html(data):
     .priority-item strong {{ display:block; font-size:14px; font-weight:950; }}
     .priority-item span {{ display:block; margin-top:3px; color:var(--muted); font-size:12.5px; font-weight:800; }}
     .list {{ display:grid; gap:12px; }}
+    .list-head {{ display:flex; align-items:center; justify-content:space-between; margin:2px 2px -2px; color:var(--accent-dark); font-size:16px; font-weight:950; }}
+    .list-head span {{ color:var(--muted); font-size:12px; font-weight:850; }}
     .card {{ border:1px solid var(--line); border-radius:13px; background:#fff; overflow:hidden; scroll-margin-top:14px; }}
     details.card summary {{ list-style:none; cursor:pointer; }}
     details.card summary::-webkit-details-marker {{ display:none; }}
@@ -321,7 +323,7 @@ def render_html(data):
       return '오답입니다. ' + (record.trap || '문제 조건과 보기 표현을 분리해서 확인하세요.');
     }}
     function renderStats(items, mastered) {{
-      const rows = [['틀린 문제', items.length + '개'], ['숙지 완료', mastered.size + '개'], ['전체 정답률', data.stats.accuracy + '%']];
+      const rows = [['틀린 문제', items.length + '개'], ['숙지 완료', mastered.size + '개']];
       stats.innerHTML = rows.map(function(row) {{ return '<div class="stat"><span>' + row[0] + '</span><strong>' + row[1] + '</strong></div>'; }}).join('');
     }}
     function renderPriority(items, mastered) {{
@@ -335,8 +337,8 @@ def render_html(data):
         if (roundDiff) return roundDiff;
         return b.dates.join('').localeCompare(a.dates.join(''));
       }}).slice(0, 3);
-      if (!candidates.length) {{ priority.innerHTML = '<h2>오늘 복습할 문제 3개</h2><div class="priority-list"><div class="priority-item"><strong>틀린 문제가 없습니다</strong><span>오늘 문제를 풀면 자동으로 정리됩니다.</span></div></div>'; return; }}
-      priority.innerHTML = '<h2>오늘 복습할 문제 3개</h2><div class="priority-list">' + candidates.map(function(item, index) {{
+      if (!candidates.length) {{ priority.innerHTML = '<h2>오늘 복습할 문제</h2><div class="priority-list"><div class="priority-item"><strong>틀린 문제가 없습니다</strong><span>오늘 문제를 풀면 자동으로 정리됩니다.</span></div></div>'; return; }}
+      priority.innerHTML = '<h2>오늘 복습할 문제</h2><div class="priority-list">' + candidates.map(function(item, index) {{
         return '<a class="priority-item" href="#' + anchorId(item.questionId) + '"><strong>' + (index + 1) + '. ' + escapeHtml(item.topic || item.questionId) + '</strong><span>' + escapeHtml(item.subject) + ' · 문제 먼저 풀어보기</span></a>';
       }}).join('') + '</div>';
     }}
@@ -349,7 +351,7 @@ def render_html(data):
       renderPriority(items, mastered);
       const visible = items;
       if (!visible.length) {{ list.innerHTML = '<div class="empty">표시할 오답 문제가 없습니다.</div>'; return; }}
-      list.innerHTML = visible.map(function(record) {{
+      const cards = visible.map(function(record) {{
         const isMastered = mastered.has(record.questionId);
         const currentImportance = importance[record.questionId] || defaultImportance(record);
         const flagged = new Set(choiceFlags[record.questionId] || []);
@@ -366,6 +368,7 @@ def render_html(data):
         }}).join('');
         return '<details class="card ' + (isMastered ? 'mastered' : '') + '" id="' + anchorId(record.questionId) + '"><summary class="card-head"><div class="topic">' + escapeHtml(record.topic || record.questionId) + '</div><div class="sub">' + escapeHtml(record.subject) + ' · 복습 ' + (record.reviewRound || 1) + '회</div><div class="open-hint">문제 보기</div></summary><div class="body"><div class="review-controls"><div class="importance"><span class="importance-label">중요도</span>' + importanceButtons + '</div><button class="master-toggle ' + (isMastered ? 'active' : '') + '" type="button" data-id="' + escapeHtml(record.questionId) + '">' + (isMastered ? '완료됨' : '숙지 완료') + '</button></div><p class="question">' + escapeHtml(record.question || record.questionId) + '</p><div class="choices">' + choices + '</div><button class="explain-toggle" type="button">해설 보기</button><div class="explanation" hidden>' + ex + '</div></div></details>';
       }}).join('');
+      list.innerHTML = '<div class="list-head">전체 오답 <span>' + visible.length + '개</span></div>' + cards;
       list.querySelectorAll('.importance button').forEach(function(button) {{
         button.addEventListener('click', function(event) {{
           event.preventDefault();
