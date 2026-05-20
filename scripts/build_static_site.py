@@ -203,16 +203,18 @@ def render_index(files):
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 8px;
       margin-bottom: 12px;
     }}
     .section-head h2 {{
       margin: 0;
-      font-size: 29px;
-      line-height: 1.22;
+      min-width: 0;
+      font-size: 27px;
+      line-height: 1.12;
       font-weight: 950;
       color: var(--accent-dark);
       letter-spacing: 0;
+      white-space: nowrap;
     }}
     .section-head span {{
       display: inline-flex;
@@ -225,6 +227,7 @@ def render_index(files):
       font-size: 12px;
       font-weight: 900;
       white-space: nowrap;
+      flex: 0 0 auto;
     }}
     .stats {{
       display: grid;
@@ -383,9 +386,9 @@ def render_index(files):
       .title-brand {{ font-size: 25px; line-height: 1.02; }}
       .title-label {{ margin-top: 3px; font-size: 16px; letter-spacing: .03em; }}
       .module {{ padding: 14px 12px 12px; }}
-      .section-head {{ margin-bottom: 10px; }}
-      .section-head h2 {{ font-size: 23px; }}
-      .section-head span {{ min-height: 24px; padding: 3px 8px; font-size: 11px; }}
+      .section-head {{ gap: 6px; margin-bottom: 10px; }}
+      .section-head h2 {{ font-size: 17px; line-height: 1.1; }}
+      .section-head span {{ min-height: 22px; padding: 3px 6px; font-size: 9.5px; }}
       .stats {{ grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-bottom: 10px; }}
       .stat {{ padding: 8px 9px; }}
       .stat strong {{ font-size: 19px; }}
