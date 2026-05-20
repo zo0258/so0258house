@@ -248,28 +248,42 @@ def render_index(files):
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 8px;
-      margin: 13px 0 8px;
+      gap: 10px;
+      margin: 20px 0 10px;
+      padding: 0 2px;
+    }}
+    .history-wrap {{
+      width: calc(100% - 10px);
+      margin: 0 auto;
     }}
     .history-summary {{
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      gap: 6px;
+      gap: 8px;
       min-width: 0;
-      color: var(--muted);
-      font-size: 11px;
-      font-weight: 850;
+      padding: 4px;
+      border: 1px solid rgba(102, 115, 93, .18);
+      border-radius: 999px;
+      background: rgba(255,255,255,.62);
       white-space: nowrap;
     }}
     .history-summary span {{
-      display: flex;
-      align-items: baseline;
-      gap: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      min-height: 27px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(248,244,241,.78);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 900;
     }}
     .history-summary strong {{
-      display: block;
-      font-size: 15px;
+      display: inline-block;
+      font-size: 12px;
       font-weight: 950;
       color: var(--accent-dark);
     }}
@@ -386,10 +400,12 @@ def render_index(files):
       .quick a {{ min-height: 66px; padding: 10px; }}
       .quick strong {{ font-size: 16px; }}
       .quick small {{ font-size: 10.5px; line-height: 1.22; }}
-      .history-bar {{ margin: 13px 0 8px; }}
+      .history-wrap {{ width: calc(100% - 8px); }}
+      .history-bar {{ margin: 19px 0 10px; }}
       .history-title {{ font-size: 15px; }}
-      .history-summary {{ gap: 5px; font-size: 10px; }}
-      .history-summary strong {{ font-size: 14px; }}
+      .history-summary {{ gap: 5px; padding: 3px; }}
+      .history-summary span {{ min-height: 25px; padding: 3px 7px; font-size: 10.5px; }}
+      .history-summary strong {{ font-size: 11.5px; }}
       .quiz-row {{ align-items: flex-start; }}
       .row-meta {{ align-items: flex-end; max-width: 52%; }}
       a {{ min-height: 62px; padding: 12px; }}
@@ -415,17 +431,19 @@ def render_index(files):
         <a href="wrong-note.html"><strong>오답노트 보기</strong><small>틀린 문제·다시 볼 문제</small></a>
       </section>
     </section>
-    <div class="history-bar">
-      <div class="history-title">학습 기록</div>
-      <div class="history-summary" aria-label="학습 현황">
-        <span><strong>{completed_count}</strong>풀이완료</span>
-        <span><strong>{review_count}</strong>오답노트</span>
-        <span><strong>{pending_count}</strong>미완료</span>
+    <div class="history-wrap">
+      <div class="history-bar">
+        <div class="history-title">학습 기록</div>
+        <div class="history-summary" aria-label="학습 현황">
+          <span>풀이완료 <strong>{completed_count}</strong></span>
+          <span>오답노트 <strong>{review_count}</strong></span>
+          <span>미완료 <strong>{pending_count}</strong></span>
+        </div>
       </div>
+      <ul>
+        {''.join(items)}
+      </ul>
     </div>
-    <ul>
-      {''.join(items)}
-    </ul>
   </main>
 </body>
 </html>
