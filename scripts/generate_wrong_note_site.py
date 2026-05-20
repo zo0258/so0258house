@@ -152,12 +152,6 @@ def render_html(data):
     .stat {{ display:inline-flex; align-items:center; gap:5px; min-height:29px; padding:5px 9px; border:1px solid rgba(102,115,93,.18); border-radius:999px; background:#fbfcfa; }}
     .stat span {{ color:var(--muted); font-size:11.5px; font-weight:850; }}
     .stat strong {{ color:var(--accent-dark); font-size:12.5px; line-height:1; font-weight:950; }}
-    .toolbar {{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; margin:12px 0 16px; padding:10px 11px; border:1px solid var(--line); border-radius:var(--radius); background:#fbfcfa; }}
-    .toggle {{ display:inline-flex; align-items:center; gap:8px; color:var(--muted); font-size:14px; font-weight:850; }}
-    .export {{ min-height:38px; border:1px solid var(--line); border-radius:var(--radius); background:#fff; color:var(--muted); padding:8px 11px; font:inherit; font-size:13px; font-weight:900; }}
-    .admin-tools {{ width:100%; margin-top:8px; }}
-    .admin-tools summary {{ color:var(--muted); font-size:12px; font-weight:900; cursor:pointer; }}
-    .admin-tools .export {{ margin-top:8px; }}
     .priority {{ margin:14px 0 14px; padding:14px; border:1px solid rgba(47,107,79,.22); border-left:3px solid var(--accent); border-radius:13px; background:linear-gradient(135deg, rgba(233,238,228,.78), rgba(255,255,255,.76)); box-shadow:0 8px 20px rgba(36,37,34,.04); }}
     .priority h2 {{ margin:0 0 10px; color:var(--accent-dark); font-size:18px; font-weight:950; }}
     .priority-list {{ display:grid; gap:8px; }}
@@ -173,13 +167,21 @@ def render_html(data):
     .card-head {{ display:grid; grid-template-columns:1fr auto; gap:12px; padding:14px; border-bottom:1px solid var(--line); background:#fbfcfa; }}
     .topic {{ font-size:15px; font-weight:950; }}
     .sub {{ margin-top:3px; color:var(--muted); font-size:13px; font-weight:700; }}
-    .master {{ display:inline-flex; align-items:center; gap:7px; color:var(--accent); font-size:13px; font-weight:900; white-space:nowrap; }}
+    .card-tools {{ display:grid; justify-items:end; gap:8px; }}
+    .importance {{ display:inline-flex; align-items:center; gap:3px; padding:3px; border:1px solid rgba(102,115,93,.2); border-radius:999px; background:#fff; }}
+    .importance-label {{ margin-right:3px; color:var(--muted); font-size:11px; font-weight:900; }}
+    .importance button {{ min-width:28px; min-height:26px; border:0; border-radius:999px; background:transparent; color:var(--muted); font:inherit; font-size:12px; font-weight:950; }}
+    .importance button.active {{ background:var(--accent); color:#fff; }}
+    .master {{ display:inline-flex; align-items:center; gap:7px; color:var(--accent); font-size:12.5px; font-weight:900; white-space:nowrap; }}
     .body {{ padding:14px; }}
     .question {{ margin:0 0 12px; font-size:16px; font-weight:850; white-space:pre-line; }}
     .choices {{ display:grid; gap:7px; margin:10px 0 12px; }}
-    .choice {{ display:grid; grid-template-columns:28px 1fr; gap:8px; padding:10px; border:1px solid var(--line); border-radius:var(--radius); background:#fff; font-size:14px; }}
+    .choice {{ display:grid; grid-template-columns:28px 1fr auto; gap:8px; align-items:center; padding:10px; border:1px solid var(--line); border-radius:var(--radius); background:#fff; font-size:14px; cursor:pointer; }}
+    .choice strong {{ align-self:start; }}
     .choice.answer {{ border-color:var(--ok); background:var(--ok-soft); }}
     .choice.selected:not(.answer) {{ border-color:var(--danger); background:var(--danger-soft); }}
+    .choice-check {{ min-width:30px; min-height:30px; border:1px solid rgba(102,115,93,.28); border-radius:8px; background:#fff; color:var(--muted); font:inherit; font-size:16px; font-weight:950; }}
+    .choice-check.active {{ border-color:var(--accent); background:var(--sage); color:var(--accent-dark); }}
     .explain-toggle {{ width:100%; min-height:42px; margin-top:8px; border:0; border-radius:10px; background:var(--accent); color:#fff; font:inherit; font-size:14px; font-weight:950; }}
     .explanation {{ display:grid; gap:8px; margin-top:12px; }}
     .explanation[hidden] {{ display:none; }}
@@ -188,7 +190,7 @@ def render_html(data):
     .ex-row span {{ color:#2c352f; font-size:14px; white-space:pre-line; }}
     .empty {{ padding:28px 14px; color:var(--muted); border:1px solid var(--line); border-radius:var(--radius); background:#fbfcfa; text-align:center; font-weight:800; }}
     textarea {{ width:100%; min-height:130px; margin-top:10px; padding:10px; border:1px solid var(--line); border-radius:var(--radius); font:inherit; font-size:13px; resize:vertical; }}
-    @media (max-width:520px) {{ main {{ padding:18px 12px 28px; }} h1 {{ font-size:25px; }} .back {{ font-size:12px; }} .stats {{ margin-bottom:15px; }} .stat {{ min-height:27px; padding:4px 8px; }} .priority {{ padding:13px 12px; }} .priority h2 {{ font-size:17px; }} .card-head {{ grid-template-columns:1fr; padding:13px; }} .body {{ padding:13px; }} .question {{ font-size:15.5px; }} }}
+    @media (max-width:520px) {{ main {{ padding:18px 12px 28px; }} h1 {{ font-size:25px; }} .back {{ font-size:12px; }} .stats {{ margin-bottom:15px; }} .stat {{ min-height:27px; padding:4px 8px; }} .priority {{ padding:13px 12px; }} .priority h2 {{ font-size:17px; }} .card-head {{ grid-template-columns:1fr; padding:13px; }} .card-tools {{ justify-items:start; }} .body {{ padding:13px; }} .question {{ font-size:15.5px; }} .choice {{ grid-template-columns:26px 1fr auto; padding:9px; }} }}
   </style>
 </head>
 <body>
@@ -196,15 +198,7 @@ def render_html(data):
     <div class="topline"><h1>소빵이의 오답노트</h1><a class="back" href="index.html">Dashboard</a></div>
     <section class="stats" id="stats"></section>
     <section class="priority" id="priority"></section>
-    <section class="toolbar">
-      <label class="toggle"><input type="checkbox" id="hideMastered"> 숙지 완료 숨김</label>
-      <details class="admin-tools">
-        <summary>관리</summary>
-        <button class="export" id="exportBtn" type="button">관리자용 동기화</button>
-      </details>
-    </section>
     <section class="list" id="list"></section>
-    <textarea id="exportBox" readonly hidden></textarea>
   </main>
   <script id="wrong-note-data" type="application/json">{safe_data}</script>
   <script>
@@ -214,9 +208,10 @@ def render_html(data):
     const list = document.getElementById('list');
     const stats = document.getElementById('stats');
     const priority = document.getElementById('priority');
-    const hideMastered = document.getElementById('hideMastered');
-    const exportBtn = document.getElementById('exportBtn');
-    const exportBox = document.getElementById('exportBox');
+    const importanceKey = 'health-exercise-importance';
+    const choiceFlagKey = 'health-exercise-choice-flags';
+    const importanceRank = {{ high: 3, mid: 2, low: 1 }};
+    const importanceLabel = {{ high: '상', mid: '중', low: '하' }};
     function loadMastered() {{
       try {{
         const local = JSON.parse(localStorage.getItem(masteredKey) || '[]');
@@ -226,6 +221,15 @@ def render_html(data):
       }}
     }}
     function saveMastered(mastered) {{ localStorage.setItem(masteredKey, JSON.stringify(Array.from(mastered).sort())); }}
+    function loadMap(key) {{
+      try {{ return JSON.parse(localStorage.getItem(key) || '{{}}') || {{}}; }} catch (error) {{ return {{}}; }}
+    }}
+    function saveMap(key, value) {{ localStorage.setItem(key, JSON.stringify(value)); }}
+    function defaultImportance(item) {{ return (item.reviewRound || 1) > 1 ? 'high' : 'mid'; }}
+    function loadImportance() {{ return loadMap(importanceKey); }}
+    function saveImportance(value) {{ saveMap(importanceKey, value); }}
+    function loadChoiceFlags() {{ return loadMap(choiceFlagKey); }}
+    function saveChoiceFlags(value) {{ saveMap(choiceFlagKey, value); }}
     function escapeHtml(value) {{ return String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;"); }}
     function anchorId(value) {{ return 'wrong-' + String(value ?? '').replace(/[^a-zA-Z0-9_-]/g, '-'); }}
     function groupedWrong() {{
@@ -250,7 +254,12 @@ def render_html(data):
       stats.innerHTML = rows.map(function(row) {{ return '<div class="stat"><span>' + row[0] + '</span><strong>' + row[1] + '</strong></div>'; }}).join('');
     }}
     function renderPriority(items, mastered) {{
+      const importance = loadImportance();
       const candidates = items.filter(function(item) {{ return !mastered.has(item.questionId); }}).slice().sort(function(a, b) {{
+        const aImportance = importance[a.questionId] || defaultImportance(a);
+        const bImportance = importance[b.questionId] || defaultImportance(b);
+        const importanceDiff = importanceRank[bImportance] - importanceRank[aImportance];
+        if (importanceDiff) return importanceDiff;
         const roundDiff = (b.reviewRound || 1) - (a.reviewRound || 1);
         if (roundDiff) return roundDiff;
         return b.dates.join('').localeCompare(a.dates.join(''));
@@ -262,22 +271,71 @@ def render_html(data):
     }}
     function renderList() {{
       const mastered = loadMastered();
+      const importance = loadImportance();
+      const choiceFlags = loadChoiceFlags();
       const items = groupedWrong();
       renderStats(items, mastered);
       renderPriority(items, mastered);
-      const visible = hideMastered.checked ? items.filter(function(item) {{ return !mastered.has(item.questionId); }}) : items;
+      const visible = items;
       if (!visible.length) {{ list.innerHTML = '<div class="empty">표시할 오답 문제가 없습니다.</div>'; return; }}
       list.innerHTML = visible.map(function(record) {{
         const isMastered = mastered.has(record.questionId);
+        const currentImportance = importance[record.questionId] || defaultImportance(record);
+        const flagged = new Set(choiceFlags[record.questionId] || []);
         const answer = Number(record.answer) - 1;
         const choices = (record.choices || []).map(function(choice, index) {{
-          return '<div class="choice"><strong>' + (circled[index] || index + 1) + '</strong><span>' + escapeHtml(choice) + '</span></div>';
+          const checked = flagged.has(String(index));
+          return '<div class="choice" role="button" tabindex="0" data-answer="' + answer + '" data-index="' + index + '"><strong>' + (circled[index] || index + 1) + '</strong><span>' + escapeHtml(choice) + '</span><button class="choice-check ' + (checked ? 'active' : '') + '" type="button" data-id="' + escapeHtml(record.questionId) + '" data-choice="' + index + '" aria-pressed="' + (checked ? 'true' : 'false') + '">' + (checked ? '☑' : '☐') + '</button></div>';
         }}).join('');
         const ex = (record.choices || []).map(function(choice, index) {{
           return '<div class="ex-row"><strong>' + (circled[index] || index + 1) + ' ' + (index === answer ? '정답' : '오답') + '</strong><span>' + escapeHtml(choiceExplanation(record, index)) + '</span></div>';
         }}).join('');
-        return '<details class="card ' + (isMastered ? 'mastered' : '') + '" id="' + anchorId(record.questionId) + '"><summary class="card-head"><div><div class="topic">' + escapeHtml(record.topic || record.questionId) + '</div><div class="sub">' + escapeHtml(record.subject) + ' · 복습 ' + (record.reviewRound || 1) + '회</div><div class="open-hint">문제 보기</div></div><label class="master"><input type="checkbox" class="masteredBox" data-id="' + escapeHtml(record.questionId) + '"' + (isMastered ? ' checked' : '') + '> 숙지 완료</label></summary><div class="body"><p class="question">' + escapeHtml(record.question || record.questionId) + '</p><div class="choices">' + choices + '</div><button class="explain-toggle" type="button">해설 보기</button><div class="explanation" hidden>' + ex + '</div></div></details>';
+        const importanceButtons = ['high','mid','low'].map(function(level) {{
+          return '<button type="button" class="' + (currentImportance === level ? 'active' : '') + '" data-id="' + escapeHtml(record.questionId) + '" data-importance="' + level + '">' + importanceLabel[level] + '</button>';
+        }}).join('');
+        return '<details class="card ' + (isMastered ? 'mastered' : '') + '" id="' + anchorId(record.questionId) + '"><summary class="card-head"><div><div class="topic">' + escapeHtml(record.topic || record.questionId) + '</div><div class="sub">' + escapeHtml(record.subject) + ' · 복습 ' + (record.reviewRound || 1) + '회</div><div class="open-hint">문제 보기</div></div><div class="card-tools"><div class="importance"><span class="importance-label">중요도</span>' + importanceButtons + '</div><label class="master"><input type="checkbox" class="masteredBox" data-id="' + escapeHtml(record.questionId) + '"' + (isMastered ? ' checked' : '') + '> 숙지 완료</label></div></summary><div class="body"><p class="question">' + escapeHtml(record.question || record.questionId) + '</p><div class="choices">' + choices + '</div><button class="explain-toggle" type="button">해설 보기</button><div class="explanation" hidden>' + ex + '</div></div></details>';
       }}).join('');
+      list.querySelectorAll('.importance button').forEach(function(button) {{
+        button.addEventListener('click', function(event) {{
+          event.preventDefault();
+          event.stopPropagation();
+          const next = loadImportance();
+          next[button.dataset.id] = button.dataset.importance;
+          saveImportance(next);
+          renderList();
+        }});
+      }});
+      list.querySelectorAll('.choice').forEach(function(choice) {{
+        choice.addEventListener('click', function() {{
+          const card = choice.closest('.card');
+          const answer = Number(choice.dataset.answer);
+          const picked = Number(choice.dataset.index);
+          card.querySelectorAll('.choice').forEach(function(row) {{
+            const rowIndex = Number(row.dataset.index);
+            row.classList.toggle('answer', rowIndex === answer);
+            row.classList.toggle('selected', rowIndex === picked);
+          }});
+          const explanation = card.querySelector('.explanation');
+          const button = card.querySelector('.explain-toggle');
+          if (explanation) explanation.removeAttribute('hidden');
+          if (button) button.textContent = '해설 숨김';
+        }});
+      }});
+      list.querySelectorAll('.choice-check').forEach(function(button) {{
+        button.addEventListener('click', function(event) {{
+          event.preventDefault();
+          event.stopPropagation();
+          const next = loadChoiceFlags();
+          const id = button.dataset.id;
+          const choice = button.dataset.choice;
+          const set = new Set(next[id] || []);
+          if (set.has(choice)) set.delete(choice); else set.add(choice);
+          next[id] = Array.from(set).sort();
+          if (!next[id].length) delete next[id];
+          saveChoiceFlags(next);
+          renderList();
+        }});
+      }});
       list.querySelectorAll('.explain-toggle').forEach(function(button) {{
         button.addEventListener('click', function() {{
           const explanation = button.nextElementSibling;
@@ -317,15 +375,6 @@ def render_html(data):
         }});
       }});
     }}
-    exportBtn.addEventListener('click', async function() {{
-      const mastered = Array.from(loadMastered()).sort();
-      const text = ['[HEALTH_EXERCISE_MASTERED]'].concat(mastered.map(function(id) {{ return 'mastered=' + id; }}), ['[/HEALTH_EXERCISE_MASTERED]']).join('\\n');
-      exportBox.hidden = false;
-      exportBox.value = text;
-      exportBox.select();
-      try {{ await navigator.clipboard.writeText(text); exportBtn.textContent = '복사 완료'; }} catch (error) {{ document.execCommand('copy'); exportBtn.textContent = '선택됨'; }}
-    }});
-    hideMastered.addEventListener('change', renderList);
     renderList();
   </script>
 </body>
