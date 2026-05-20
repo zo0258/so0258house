@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ATTEMPTS_PATH = ROOT / "results" / "attempts.jsonl"
 CONFIG_PATH = ROOT / "config" / "sync.json"
+REVIEW_STATE_PATH = ROOT / "data" / "review" / "review-state.json"
 
 
 def run(command, check=True):
@@ -29,6 +30,11 @@ def run(command, check=True):
 def read_json(path):
     with path.open("r", encoding="utf-8") as file:
         return json.load(file)
+
+
+def write_json(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def read_jsonl(path):
@@ -64,6 +70,102 @@ def row_result_text(row):
     except json.JSONDecodeError:
         return ""
     return payload.get("resultText", "")
+
+
+def row_payload(row):
+    payload_json = row.get("payloadJson", "")
+    if not payload_json:
+        return {}
+    try:
+        payload = json.loads(payload_json)
+    except json.JSONDecodeError:
+        return {}
+    return payload if isinstance(payload, dict) else {}
+
+
+def default_review_state():
+    return {
+        "generatedAt": "",
+        "importance": {},
+        "mastered": [],
+        "choiceFlags": {},
+        "updatedAt": {},
+    }
+
+
+def normalize_review_state(state):
+    normalized = default_review_state()
+    if isinstance(state, dict):
+        normalized.update({key: state.get(key, normalized[key]) for key in normalized})
+    normalized["importance"] = {
+        str(question_id): level
+        for question_id, level in dict(normalized.get("importance") or {}).items()
+        if level in {"high", "mid", "low"}
+    }
+    normalized["mastered"] = sorted({str(question_id) for question_id in (normalized.get("mastered") or []) if question_id})
+    choice_flags = {}
+    for question_id, values in dict(normalized.get("choiceFlags") or {}).items():
+        flags = sorted({str(value) for value in (values or []) if str(value) != ""})
+        if flags:
+            choice_flags[str(question_id)] = flags
+    normalized["choiceFlags"] = choice_flags
+    normalized["updatedAt"] = {
+        str(question_id): str(value)
+        for question_id, value in dict(normalized.get("updatedAt") or {}).items()
+        if question_id and value
+    }
+    return normalized
+
+
+def load_review_state():
+    if not REVIEW_STATE_PATH.exists():
+        return default_review_state()
+    return normalize_review_state(read_json(REVIEW_STATE_PATH))
+
+
+def import_review_state(rows):
+    previous = load_review_state()
+    state = normalize_review_state(previous)
+    mastered = set(state.get("mastered", []))
+
+    for row in rows:
+        payload = row_payload(row)
+        if payload.get("kind") != "reviewState":
+            continue
+        question_id = str(payload.get("questionId", "")).strip()
+        if not question_id:
+            continue
+
+        if "importance" in payload:
+            level = payload.get("importance")
+            if level in {"high", "mid", "low"}:
+                state["importance"][question_id] = level
+            elif level in ("", None):
+                state["importance"].pop(question_id, None)
+
+        if "mastered" in payload:
+            if payload.get("mastered"):
+                mastered.add(question_id)
+            else:
+                mastered.discard(question_id)
+
+        if "choiceFlags" in payload:
+            flags = sorted({str(value) for value in (payload.get("choiceFlags") or []) if str(value) != ""})
+            if flags:
+                state["choiceFlags"][question_id] = flags
+            else:
+                state["choiceFlags"].pop(question_id, None)
+
+        state["updatedAt"][question_id] = str(payload.get("submittedAt") or row.get("receivedAt") or "")
+
+    state["mastered"] = sorted(mastered)
+    state = normalize_review_state(state)
+    if state != previous:
+        from datetime import datetime
+        state["generatedAt"] = datetime.now().isoformat(timespec="seconds")
+        write_json(REVIEW_STATE_PATH, state)
+        return True
+    return False
 
 
 def load_existing_keys():
@@ -110,9 +212,12 @@ def main():
     config = read_json(CONFIG_PATH) if CONFIG_PATH.exists() else {}
     csv_url = args.csv_url or config.get("csvUrl")
 
+    rows = fetch_rows(config, csv_url=csv_url, web_app_url=args.web_app_url)
+    review_state_changed = import_review_state(rows)
+
     existing = load_existing_keys()
     imported_dates = set()
-    for row in fetch_rows(config, csv_url=csv_url, web_app_url=args.web_app_url):
+    for row in rows:
         result_text = row_result_text(row)
         key = parse_key(result_text)
         if not all(key) or key in existing:
@@ -132,9 +237,13 @@ def main():
         if quiz_json.exists():
             run([sys.executable, "scripts/generate_quiz_html.py", str(quiz_json)])
 
-    if imported_dates:
+    if imported_dates or review_state_changed:
+        if review_state_changed and not imported_dates:
+            run([sys.executable, "scripts/generate_wrong_note_site.py"])
         run([sys.executable, "scripts/build_static_site.py", "--site-dir", "."])
         paths = ["index.html", "wrong-note.html", "data/review/wrong-note.json"]
+        if REVIEW_STATE_PATH.exists():
+            paths.append("data/review/review-state.json")
         paths.extend(f"quizzes/quiz-{quiz_date}.html" for quiz_date in sorted(imported_dates) if (ROOT / "quizzes" / f"quiz-{quiz_date}.html").exists())
         run(["git", "add", *paths])
         if has_staged_changes():

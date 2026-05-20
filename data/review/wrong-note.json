@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T15:29:35",
+  "generatedAt": "2026-05-20T15:44:02",
   "stats": {
     "attemptCount": 3,
     "totalScore": 26,
@@ -11,6 +11,15 @@
     "masteredCount": 0
   },
   "mastered": [],
+  "reviewState": {
+    "importance": {},
+    "mastered": [],
+    "choiceFlags": {}
+  },
+  "syncConfig": {
+    "enabled": true,
+    "submitUrl": "https://script.google.com/macros/s/AKfycbxLBnQsxe61wtXORx4q-ebWYPpaeH5Vy0h-hoZ51d0Oy-YYR_wX6UV5L7TjO1hVUHBH1A/exec"
+  },
   "wrong": [
     {
       "date": "2026-05-19",

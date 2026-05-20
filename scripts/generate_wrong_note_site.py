@@ -13,12 +13,23 @@ QUIZ_DIR = ROOT / "data" / "quizzes"
 BANK_DIR = ROOT / "data" / "question-bank"
 REVIEW_DIR = ROOT / "data" / "review"
 REVIEW_JSON = REVIEW_DIR / "wrong-note.json"
+REVIEW_STATE_JSON = REVIEW_DIR / "review-state.json"
 WRONG_NOTE_HTML = ROOT / "wrong-note.html"
+CONFIG_PATH = ROOT / "config" / "sync.json"
 
 
 def read_json(path):
     with path.open("r", encoding="utf-8") as file:
         return json.load(file)
+
+
+def read_json_safe(path, fallback):
+    if not path.exists():
+        return fallback
+    try:
+        return read_json(path)
+    except json.JSONDecodeError:
+        return fallback
 
 
 def read_jsonl(path):
@@ -54,6 +65,13 @@ def choice_label(value):
 def build_data():
     attempts = read_jsonl(ATTEMPTS_PATH)
     mastered = read_json(MASTERED_PATH) if MASTERED_PATH.exists() else []
+    sync_config = read_json_safe(CONFIG_PATH, {})
+    review_state = read_json_safe(REVIEW_STATE_JSON, {
+        "importance": {},
+        "mastered": [],
+        "choiceFlags": {},
+        "updatedAt": {},
+    })
     questions = load_question_map()
     total_score = sum(int(attempt.get("score", 0)) for attempt in attempts)
     total_questions = sum(int(attempt.get("total", 0)) for attempt in attempts)
@@ -118,9 +136,18 @@ def build_data():
             "wrongCount": len(wrong),
             "wrongQuestionCount": len({item["questionId"] for item in wrong}),
             "reviewCount": len(review),
-            "masteredCount": len(set(mastered)),
+            "masteredCount": len(set(mastered) | set(review_state.get("mastered", []))),
         },
-        "mastered": sorted(set(mastered)),
+        "mastered": sorted(set(mastered) | set(review_state.get("mastered", []))),
+        "reviewState": {
+            "importance": review_state.get("importance", {}),
+            "mastered": sorted(set(review_state.get("mastered", []))),
+            "choiceFlags": review_state.get("choiceFlags", {}),
+        },
+        "syncConfig": {
+            "enabled": bool(sync_config.get("enabled")),
+            "submitUrl": sync_config.get("submitUrl", ""),
+        },
         "wrong": wrong,
         "review": review,
     }
@@ -208,6 +235,7 @@ def render_html(data):
   <script id="wrong-note-data" type="application/json">{safe_data}</script>
   <script>
     const data = JSON.parse(document.getElementById('wrong-note-data').textContent);
+    const syncConfig = data.syncConfig || {{}};
     const circled = ['①','②','③','④','⑤'];
     const masteredKey = 'health-exercise-mastered';
     const list = document.getElementById('list');
@@ -220,20 +248,38 @@ def render_html(data):
     function loadMastered() {{
       try {{
         const local = JSON.parse(localStorage.getItem(masteredKey) || '[]');
-        return new Set([].concat(data.mastered || [], local || []));
+        return new Set([].concat(data.mastered || [], (data.reviewState || {{}}).mastered || [], local || []));
       }} catch (error) {{
-        return new Set(data.mastered || []);
+        return new Set([].concat(data.mastered || [], (data.reviewState || {{}}).mastered || []));
       }}
     }}
     function saveMastered(mastered) {{ localStorage.setItem(masteredKey, JSON.stringify(Array.from(mastered).sort())); }}
-    function loadMap(key) {{
-      try {{ return JSON.parse(localStorage.getItem(key) || '{{}}') || {{}}; }} catch (error) {{ return {{}}; }}
+    function loadMap(key, serverValue) {{
+      const base = Object.assign({{}}, serverValue || {{}});
+      try {{ return Object.assign(base, JSON.parse(localStorage.getItem(key) || '{{}}') || {{}}); }} catch (error) {{ return base; }}
     }}
     function saveMap(key, value) {{ localStorage.setItem(key, JSON.stringify(value)); }}
+    function postReviewState(questionId, patch) {{
+      if (!syncConfig.enabled || !syncConfig.submitUrl) return;
+      const payload = Object.assign({{
+        source: 'so0258house',
+        kind: 'reviewState',
+        submittedAt: new Date().toISOString(),
+        questionId: questionId
+      }}, patch || {{}});
+      try {{
+        fetch(syncConfig.submitUrl, {{
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {{ 'Content-Type': 'text/plain;charset=utf-8' }},
+          body: JSON.stringify(payload)
+        }}).catch(function() {{}});
+      }} catch (error) {{}}
+    }}
     function defaultImportance(item) {{ return (item.reviewRound || 1) > 1 ? 'high' : 'mid'; }}
-    function loadImportance() {{ return loadMap(importanceKey); }}
+    function loadImportance() {{ return loadMap(importanceKey, (data.reviewState || {{}}).importance); }}
     function saveImportance(value) {{ saveMap(importanceKey, value); }}
-    function loadChoiceFlags() {{ return loadMap(choiceFlagKey); }}
+    function loadChoiceFlags() {{ return loadMap(choiceFlagKey, (data.reviewState || {{}}).choiceFlags); }}
     function saveChoiceFlags(value) {{ saveMap(choiceFlagKey, value); }}
     function escapeHtml(value) {{ return String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;"); }}
     function anchorId(value) {{ return 'wrong-' + String(value ?? '').replace(/[^a-zA-Z0-9_-]/g, '-'); }}
@@ -307,6 +353,7 @@ def render_html(data):
           const next = loadImportance();
           next[button.dataset.id] = button.dataset.importance;
           saveImportance(next);
+          postReviewState(button.dataset.id, {{ importance: button.dataset.importance }});
           const group = button.closest('.importance');
           group.querySelectorAll('button').forEach(function(item) {{
             item.classList.toggle('active', item === button);
@@ -341,6 +388,7 @@ def render_html(data):
           next[id] = Array.from(set).sort();
           if (!next[id].length) delete next[id];
           saveChoiceFlags(next);
+          postReviewState(id, {{ choiceFlags: Array.from(set).sort() }});
           const active = set.has(choice);
           button.classList.toggle('active', active);
           button.setAttribute('aria-pressed', active ? 'true' : 'false');
@@ -369,6 +417,7 @@ def render_html(data):
           const next = loadMastered();
           if (next.has(box.dataset.id)) next.delete(box.dataset.id); else next.add(box.dataset.id);
           saveMastered(next);
+          postReviewState(box.dataset.id, {{ mastered: next.has(box.dataset.id) }});
           renderList();
         }});
       }});
