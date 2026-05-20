@@ -54,8 +54,8 @@ pbpaste | python3 scripts/publish_result_update.py
 
 자동 저장이 꼭 필요해지면 무료 티어만 검토한다.
 
+- Google Sheets + Apps Script Web App
 - Cloudflare Workers
 - Firebase 무료 티어
-- Google Forms / Sheets
 
 현재 단계에서는 추가 서버보다 로컬 자동화 + GitHub Pages 조합이 관리 포인트가 가장 적다.

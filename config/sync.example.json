@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "mode": "google-apps-script",
+  "submitUrl": "https://script.google.com/macros/s/DEPLOYMENT_ID/exec",
+  "csvUrl": "https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/export?format=csv&gid=0"
+}

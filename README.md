@@ -30,6 +30,16 @@ python3 scripts/publish_result_update.py result.txt
 
 이 명령은 풀이 기록을 로컬에 누적하고, 오답노트와 메인 대시보드 상태를 다시 만든 뒤 GitHub Pages에 반영합니다.
 
+## Google Sheets 동기화
+
+실시간에 가까운 결과 제출은 `Google Sheets + Apps Script Web App`으로 처리합니다.
+
+```bash
+python3 scripts/sync_google_sheet_results.py
+```
+
+설정 방법은 `docs/google-sheets-sync.md`를 참고합니다.
+
 ## 주요 경로
 
 - `materials/raw/kspo/`: 공식 기출 PDF 원본

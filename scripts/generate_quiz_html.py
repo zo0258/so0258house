@@ -31,10 +31,23 @@ def latest_attempt_for_date(quiz_date):
     return attempts[-1] if attempts else None
 
 
+def load_sync_config():
+    path = ROOT / "config" / "sync.json"
+    if not path.exists():
+        return {"enabled": False, "submitUrl": "", "mode": "copy"}
+    config = read_json(path)
+    return {
+        "enabled": bool(config.get("enabled") and config.get("submitUrl")),
+        "submitUrl": config.get("submitUrl", ""),
+        "mode": config.get("mode", "google-apps-script"),
+    }
+
+
 def render_html(quiz):
     data_json = json.dumps(quiz, ensure_ascii=False)
     attempt = latest_attempt_for_date(quiz.get("date"))
     attempt_json = json.dumps(attempt, ensure_ascii=False)
+    sync_json = json.dumps(load_sync_config(), ensure_ascii=False)
     safe_data = (
         data_json
         .replace("<", "\\u003c")
@@ -44,6 +57,13 @@ def render_html(quiz):
     )
     safe_attempt = (
         attempt_json
+        .replace("<", "\\u003c")
+        .replace(">", "\\u003e")
+        .replace("&", "\\u0026")
+        .replace("</script", "\\u003c/script")
+    )
+    safe_sync = (
+        sync_json
         .replace("<", "\\u003c")
         .replace(">", "\\u003e")
         .replace("&", "\\u0026")
@@ -736,6 +756,16 @@ def render_html(quiz):
       font-weight: 800;
     }}
 
+    .sync-status {{
+      margin: 10px 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }}
+
+    .sync-status.ok {{ color: var(--ok); }}
+    .sync-status.bad {{ color: var(--danger); }}
+
     @media (max-width: 420px) {{
       .question {{
         font-size: 18px;
@@ -788,9 +818,11 @@ def render_html(quiz):
 
   <script id="quiz-data" type="application/json">{safe_data}</script>
   <script id="attempt-data" type="application/json">{safe_attempt}</script>
+  <script id="sync-config" type="application/json">{safe_sync}</script>
   <script>
     const quiz = JSON.parse(document.getElementById('quiz-data').textContent);
     const completedAttempt = JSON.parse(document.getElementById('attempt-data').textContent);
+    const syncConfig = JSON.parse(document.getElementById('sync-config').textContent);
     const reviewMode = Boolean(completedAttempt);
     const circled = ['①', '②', '③', '④', '⑤'];
     const wrongReasonOptions = ['개념 모름', '헷갈림', '계산 실수', '문제 잘못 읽음'];
@@ -1135,19 +1167,25 @@ def render_html(quiz):
         </div>
         <h2 class="section-title">오늘 확인할 오답</h2>
         <div class="wrong-summary">${{wrongSummaryMarkup(wrong, unanswered)}}</div>
+        ${{syncConfig.enabled ? '<button class="btn primary" id="submitBtn" type="button">결과 제출</button><div class="sync-status" id="syncStatus">제출하면 Google Sheets에 바로 저장됩니다.</div>' : ''}}
         <div class="result-actions">
           <a href="../wrong-note.html">오답노트로 이동</a>
           <a class="secondary" id="retryLink" href="${{location.pathname}}">오늘 다시 풀기</a>
         </div>
-        <h2 class="section-title">Telegram 반영용 결과</h2>
+        <h2 class="section-title">${{syncConfig.enabled ? '수동 백업용 결과' : 'Telegram 반영용 결과'}}</h2>
         <button class="btn primary" id="copyBtn" type="button">결과 복사</button>
         <textarea class="copy-box" id="copyBox" readonly>${{escapeHtml(resultText)}}</textarea>
       `;
 
       const copyBtn = document.getElementById('copyBtn');
       const copyBox = document.getElementById('copyBox');
+      const submitBtn = document.getElementById('submitBtn');
+      const syncStatus = document.getElementById('syncStatus');
       const retryLink = document.getElementById('retryLink');
       retryLink.addEventListener('click', () => localStorage.removeItem(storageKey));
+      if (submitBtn) {{
+        submitBtn.addEventListener('click', async () => submitResult(resultText, submitBtn, syncStatus));
+      }}
       copyBtn.addEventListener('click', async () => {{
         copyBox.select();
         try {{
@@ -1158,6 +1196,39 @@ def render_html(quiz):
           copyBtn.textContent = '선택됨';
         }}
       }});
+    }}
+
+    async function submitResult(resultText, submitBtn, syncStatus) {{
+      if (!syncConfig.enabled || !syncConfig.submitUrl) return;
+      submitBtn.disabled = true;
+      submitBtn.textContent = '제출 중';
+      syncStatus.className = 'sync-status';
+      syncStatus.textContent = 'Google Sheets에 저장 중입니다.';
+      const payload = {{
+        source: 'so0258house',
+        submittedAt: new Date().toISOString(),
+        quizId: quiz.quizId,
+        date: quiz.date,
+        subject: quiz.subject,
+        resultText,
+        userAgent: navigator.userAgent
+      }};
+      try {{
+        await fetch(syncConfig.submitUrl, {{
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {{ 'Content-Type': 'text/plain;charset=utf-8' }},
+          body: JSON.stringify(payload)
+        }});
+        submitBtn.textContent = '제출 완료';
+        syncStatus.className = 'sync-status ok';
+        syncStatus.textContent = '저장 요청을 보냈습니다. 메인/오답노트 반영은 OpenClaw 동기화 후 갱신됩니다.';
+      }} catch (error) {{
+        submitBtn.disabled = false;
+        submitBtn.textContent = '다시 제출';
+        syncStatus.className = 'sync-status bad';
+        syncStatus.textContent = '제출 실패. 아래 결과 복사로 Telegram에 보내면 수동 반영할 수 있습니다.';
+      }}
     }}
 
     function wrongSummaryMarkup(wrong, unanswered) {{
