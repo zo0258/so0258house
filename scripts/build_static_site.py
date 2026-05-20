@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import argparse
-from datetime import date
+from datetime import date, datetime
 import html
 import json
 import re
@@ -94,6 +94,23 @@ def load_review_dates():
     return dates
 
 
+def read_review_generated_at():
+    for path in (ROOT / "data" / "review" / "review-state.json", ROOT / "data" / "review" / "wrong-note.json"):
+        if not path.exists():
+            continue
+        try:
+            generated_at = json.loads(path.read_text(encoding="utf-8")).get("generatedAt", "")
+        except json.JSONDecodeError:
+            continue
+        if not generated_at:
+            continue
+        try:
+            return datetime.fromisoformat(generated_at).strftime("%H:%M")
+        except ValueError:
+            return generated_at
+    return "대기 중"
+
+
 def status_badges(label, attempts, review_dates):
     if label in attempts:
         score = attempts[label].get("score")
@@ -125,6 +142,7 @@ def sentence_lines(sentence):
 def render_index(files):
     attempts = load_attempt_status()
     review_dates = load_review_dates()
+    sync_time = read_review_generated_at()
     dday_label, daily_sentence = today_sentence()
     daily_sentence_html = "".join(f"<span>{html.escape(line)}</span>" for line in sentence_lines(daily_sentence))
     completed_count = sum(1 for path in files if date_label(path) in attempts)
@@ -335,6 +353,13 @@ def render_index(files):
       font-weight: 950;
       color: var(--accent-dark);
     }}
+    .sync-note {{
+      margin: -3px 2px 9px;
+      color: var(--muted);
+      font-size: 11.5px;
+      font-weight: 800;
+      text-align: right;
+    }}
     .quick {{
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -506,6 +531,7 @@ def render_index(files):
       .daily-word p {{ font-size: 12.8px; line-height: 1.48; }}
       .history-wrap {{ width: calc(100% - 8px); }}
       .history-bar {{ margin: 19px 0 10px; }}
+      .sync-note {{ text-align: left; font-size: 11px; }}
       .history-title {{ font-size: 15px; }}
       .history-summary {{ gap: 5px; padding: 3px; }}
       .history-summary span {{ min-height: 25px; padding: 3px 7px; font-size: 10.5px; }}
@@ -551,6 +577,7 @@ def render_index(files):
           <span>미완료 <strong>{pending_count}</strong></span>
         </div>
       </div>
+      <div class="sync-note">마지막 반영 {html.escape(sync_time)}</div>
       <ul>
         {''.join(items)}
       </ul>

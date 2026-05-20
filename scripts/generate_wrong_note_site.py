@@ -143,6 +143,7 @@ def build_data():
             "importance": review_state.get("importance", {}),
             "mastered": sorted(set(review_state.get("mastered", []))),
             "choiceFlags": review_state.get("choiceFlags", {}),
+            "updatedAt": review_state.get("updatedAt", {}),
         },
         "syncConfig": {
             "enabled": bool(sync_config.get("enabled")),
@@ -194,12 +195,12 @@ def render_html(data):
     .card-head {{ display:block; padding:14px; border-bottom:1px solid var(--line); background:#fbfcfa; }}
     .topic {{ font-size:15px; font-weight:950; }}
     .sub {{ margin-top:3px; color:var(--muted); font-size:13px; font-weight:700; }}
-    .review-controls {{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin:0 0 10px; padding:7px 9px; border:1px solid rgba(102,115,93,.14); border-radius:999px; background:#fbfcfa; }}
-    .importance {{ display:inline-flex; align-items:center; justify-content:space-between; gap:6px; flex:1 1 auto; min-width:0; max-width:218px; padding:3px 5px 3px 9px; border:1px solid rgba(102,115,93,.18); border-radius:999px; background:#fff; }}
-    .importance-label {{ margin:0 2px 0 0; color:var(--ink); font-size:11.5px; font-weight:950; white-space:nowrap; }}
-    .importance button {{ min-width:34px; min-height:30px; border:0; border-radius:999px; background:transparent; color:var(--muted); font:inherit; font-size:12.5px; font-weight:950; }}
+    .review-controls {{ display:flex; align-items:center; justify-content:space-between; gap:9px; margin:0 0 10px; padding:8px; border:1px solid rgba(102,115,93,.14); border-radius:14px; background:#fbfcfa; }}
+    .importance {{ display:grid; grid-template-columns:auto repeat(3, minmax(40px, 1fr)); align-items:center; gap:7px; flex:1 1 auto; min-width:0; padding:5px 6px 5px 10px; border:1px solid rgba(102,115,93,.18); border-radius:999px; background:#fff; }}
+    .importance-label {{ margin:0 3px 0 0; color:var(--ink); font-size:12px; font-weight:950; white-space:nowrap; }}
+    .importance button {{ min-width:40px; min-height:34px; border:0; border-radius:999px; background:transparent; color:var(--muted); font:inherit; font-size:13px; font-weight:950; }}
     .importance button.active {{ background:var(--accent); color:#fff; }}
-    .master-toggle {{ flex:0 0 auto; min-height:34px; padding:6px 11px; border:1px solid rgba(102,115,93,.22); border-radius:999px; background:#fff; color:var(--accent); font:inherit; font-size:12px; font-weight:950; white-space:nowrap; }}
+    .master-toggle {{ flex:0 0 auto; min-height:42px; padding:8px 12px; border:1px solid rgba(102,115,93,.22); border-radius:999px; background:#fff; color:var(--accent); font:inherit; font-size:12px; font-weight:950; white-space:nowrap; }}
     .master-toggle.active {{ background:var(--sage); color:var(--accent-dark); }}
     .body {{ padding:14px; }}
     .question {{ margin:0 0 11px; font-size:15.2px; font-weight:850; line-height:1.46; white-space:pre-line; word-break:keep-all; overflow-wrap:anywhere; }}
@@ -222,7 +223,7 @@ def render_html(data):
     .ex-row span {{ color:#2c352f; font-size:14px; white-space:pre-line; }}
     .empty {{ padding:28px 14px; color:var(--muted); border:1px solid var(--line); border-radius:var(--radius); background:#fbfcfa; text-align:center; font-weight:800; }}
     textarea {{ width:100%; min-height:130px; margin-top:10px; padding:10px; border:1px solid var(--line); border-radius:var(--radius); font:inherit; font-size:13px; resize:vertical; }}
-    @media (max-width:520px) {{ main {{ padding:18px 12px 28px; }} h1 {{ font-size:25px; }} .back {{ font-size:12px; }} .stats {{ margin-bottom:15px; }} .stat {{ min-height:27px; padding:4px 8px; }} .priority {{ padding:13px 12px; }} .priority h2 {{ font-size:17px; }} .card-head {{ padding:13px; }} .body {{ padding:13px; }} .review-controls {{ gap:8px; padding:7px 8px; }} .importance {{ max-width:205px; gap:5px; padding-left:8px; }} .importance button {{ min-width:32px; min-height:30px; }} .master-toggle {{ min-height:34px; padding:6px 10px; }} .question {{ font-size:14.6px; }} .choice {{ grid-template-columns:23px 1fr 38px; padding:8px 9px; font-size:13px; }} }}
+    @media (max-width:520px) {{ main {{ padding:18px 12px 28px; }} h1 {{ font-size:25px; }} .back {{ font-size:12px; }} .stats {{ margin-bottom:15px; }} .stat {{ min-height:27px; padding:4px 8px; }} .priority {{ padding:13px 12px; }} .priority h2 {{ font-size:17px; }} .card-head {{ padding:13px; }} .body {{ padding:13px; }} .review-controls {{ gap:7px; padding:7px; }} .importance {{ grid-template-columns:auto repeat(3, minmax(36px, 1fr)); gap:6px; padding-left:9px; }} .importance button {{ min-width:36px; min-height:34px; }} .master-toggle {{ min-height:40px; padding:7px 10px; }} .question {{ font-size:14.6px; }} .choice {{ grid-template-columns:23px 1fr 38px; padding:8px 9px; font-size:13px; }} }}
   </style>
 </head>
 <body>
@@ -243,6 +244,7 @@ def render_html(data):
     const priority = document.getElementById('priority');
     const importanceKey = 'health-exercise-importance';
     const choiceFlagKey = 'health-exercise-choice-flags';
+    const localUpdatedSuffix = ':updated';
     const importanceRank = {{ high: 3, mid: 2, low: 1 }};
     const importanceLabel = {{ high: '상', mid: '중', low: '하' }};
     function loadMastered() {{
@@ -256,9 +258,27 @@ def render_html(data):
     function saveMastered(mastered) {{ localStorage.setItem(masteredKey, JSON.stringify(Array.from(mastered).sort())); }}
     function loadMap(key, serverValue) {{
       const base = Object.assign({{}}, serverValue || {{}});
-      try {{ return Object.assign(base, JSON.parse(localStorage.getItem(key) || '{{}}') || {{}}); }} catch (error) {{ return base; }}
+      const serverUpdated = ((data.reviewState || {{}}).updatedAt || {{}});
+      try {{
+        const local = JSON.parse(localStorage.getItem(key) || '{{}}') || {{}};
+        const localUpdated = JSON.parse(localStorage.getItem(key + localUpdatedSuffix) || '{{}}') || {{}};
+        Object.keys(local).forEach(function(id) {{
+          const localTime = Date.parse(localUpdated[id] || '');
+          const serverTime = Date.parse(serverUpdated[id] || '');
+          if (!serverUpdated[id] || localTime > serverTime) base[id] = local[id];
+        }});
+        return base;
+      }} catch (error) {{ return base; }}
     }}
-    function saveMap(key, value) {{ localStorage.setItem(key, JSON.stringify(value)); }}
+    function saveMap(key, value, touchedId) {{
+      localStorage.setItem(key, JSON.stringify(value));
+      if (touchedId) {{
+        let localUpdated = {{}};
+        try {{ localUpdated = JSON.parse(localStorage.getItem(key + localUpdatedSuffix) || '{{}}') || {{}}; }} catch (error) {{}}
+        localUpdated[touchedId] = new Date().toISOString();
+        localStorage.setItem(key + localUpdatedSuffix, JSON.stringify(localUpdated));
+      }}
+    }}
     function postReviewState(questionId, patch) {{
       if (!syncConfig.enabled || !syncConfig.submitUrl) return;
       const payload = Object.assign({{
@@ -278,9 +298,9 @@ def render_html(data):
     }}
     function defaultImportance(item) {{ return (item.reviewRound || 1) > 1 ? 'high' : 'mid'; }}
     function loadImportance() {{ return loadMap(importanceKey, (data.reviewState || {{}}).importance); }}
-    function saveImportance(value) {{ saveMap(importanceKey, value); }}
+    function saveImportance(value, touchedId) {{ saveMap(importanceKey, value, touchedId); }}
     function loadChoiceFlags() {{ return loadMap(choiceFlagKey, (data.reviewState || {{}}).choiceFlags); }}
-    function saveChoiceFlags(value) {{ saveMap(choiceFlagKey, value); }}
+    function saveChoiceFlags(value, touchedId) {{ saveMap(choiceFlagKey, value, touchedId); }}
     function escapeHtml(value) {{ return String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;"); }}
     function anchorId(value) {{ return 'wrong-' + String(value ?? '').replace(/[^a-zA-Z0-9_-]/g, '-'); }}
     function groupedWrong() {{
@@ -344,7 +364,7 @@ def render_html(data):
         const importanceButtons = ['high','mid','low'].map(function(level) {{
           return '<button type="button" class="' + (currentImportance === level ? 'active' : '') + '" data-id="' + escapeHtml(record.questionId) + '" data-importance="' + level + '">' + importanceLabel[level] + '</button>';
         }}).join('');
-        return '<details class="card ' + (isMastered ? 'mastered' : '') + '" id="' + anchorId(record.questionId) + '"><summary class="card-head"><div class="topic">' + escapeHtml(record.topic || record.questionId) + '</div><div class="sub">' + escapeHtml(record.subject) + ' · 복습 ' + (record.reviewRound || 1) + '회</div><div class="open-hint">문제 보기</div></summary><div class="body"><div class="review-controls"><div class="importance"><span class="importance-label">중요도</span>' + importanceButtons + '</div><button class="master-toggle ' + (isMastered ? 'active' : '') + '" type="button" data-id="' + escapeHtml(record.questionId) + '">' + (isMastered ? '숙지 완료됨' : '숙지 완료') + '</button></div><p class="question">' + escapeHtml(record.question || record.questionId) + '</p><div class="choices">' + choices + '</div><button class="explain-toggle" type="button">해설 보기</button><div class="explanation" hidden>' + ex + '</div></div></details>';
+        return '<details class="card ' + (isMastered ? 'mastered' : '') + '" id="' + anchorId(record.questionId) + '"><summary class="card-head"><div class="topic">' + escapeHtml(record.topic || record.questionId) + '</div><div class="sub">' + escapeHtml(record.subject) + ' · 복습 ' + (record.reviewRound || 1) + '회</div><div class="open-hint">문제 보기</div></summary><div class="body"><div class="review-controls"><div class="importance"><span class="importance-label">중요도</span>' + importanceButtons + '</div><button class="master-toggle ' + (isMastered ? 'active' : '') + '" type="button" data-id="' + escapeHtml(record.questionId) + '">' + (isMastered ? '완료됨' : '숙지 완료') + '</button></div><p class="question">' + escapeHtml(record.question || record.questionId) + '</p><div class="choices">' + choices + '</div><button class="explain-toggle" type="button">해설 보기</button><div class="explanation" hidden>' + ex + '</div></div></details>';
       }}).join('');
       list.querySelectorAll('.importance button').forEach(function(button) {{
         button.addEventListener('click', function(event) {{
@@ -352,7 +372,7 @@ def render_html(data):
           event.stopPropagation();
           const next = loadImportance();
           next[button.dataset.id] = button.dataset.importance;
-          saveImportance(next);
+          saveImportance(next, button.dataset.id);
           postReviewState(button.dataset.id, {{ importance: button.dataset.importance }});
           const group = button.closest('.importance');
           group.querySelectorAll('button').forEach(function(item) {{
@@ -387,7 +407,7 @@ def render_html(data):
           if (set.has(choice)) set.delete(choice); else set.add(choice);
           next[id] = Array.from(set).sort();
           if (!next[id].length) delete next[id];
-          saveChoiceFlags(next);
+          saveChoiceFlags(next, id);
           postReviewState(id, {{ choiceFlags: Array.from(set).sort() }});
           const active = set.has(choice);
           button.classList.toggle('active', active);
