@@ -148,7 +148,7 @@ def render_index(files):
     }}
     .dashboard-hero {{
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-between;
       gap: 11px;
       min-height: 50px;
@@ -205,6 +205,7 @@ def render_index(files):
       font-weight: 950;
       white-space: nowrap;
       text-decoration: none;
+      transform: translateY(-4px);
     }}
     .module {{
       padding: 16px;
@@ -391,7 +392,7 @@ def render_index(files):
       .logo-plate img {{ height: 46px; }}
       .dashboard-title {{ min-height: 46px; }}
       .title-label {{ font-size: 29px; letter-spacing: 0; transform: translateY(1px); }}
-      .today-chip {{ min-height: 27px; padding: 4px 8px; font-size: 11px; }}
+      .today-chip {{ min-height: 27px; padding: 4px 8px; font-size: 11px; transform: translateY(-4px); }}
       .module {{ padding: 13px 12px; }}
       .section-head {{ gap: 6px; margin-bottom: 10px; }}
       .section-head h2 {{ font-size: 17px; line-height: 1.1; }}
