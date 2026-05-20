@@ -149,9 +149,9 @@ def render_index(files):
     .dashboard-hero {{
       display: flex;
       align-items: center;
-      gap: 9px;
-      min-height: 52px;
-      margin-bottom: 15px;
+      gap: 11px;
+      min-height: 50px;
+      margin-bottom: 14px;
       text-align: left;
     }}
     .logo-plate {{
@@ -162,7 +162,7 @@ def render_index(files):
     }}
     .logo-plate img {{
       width: auto;
-      height: 48px;
+      height: 50px;
       display: block;
       mix-blend-mode: multiply;
     }}
@@ -170,7 +170,7 @@ def render_index(files):
       margin: 0;
       display: flex;
       align-items: center;
-      min-height: 48px;
+      min-height: 50px;
       line-height: 1;
       font-weight: 950;
       letter-spacing: 0;
@@ -179,13 +179,13 @@ def render_index(files):
     .title-label {{
       display: block;
       color: var(--accent);
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 950;
       letter-spacing: .01em;
-      transform: translateY(2px);
+      transform: translateY(1px);
     }}
     .module {{
-      padding: 19px;
+      padding: 16px;
       border: 1px solid rgba(102, 115, 93, .20);
       border-radius: 16px;
       background:
@@ -223,54 +223,61 @@ def render_index(files):
       flex: 0 0 auto;
     }}
     .stats {{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       gap: 8px;
-      margin: 12px 0 0;
+      margin: 10px 0 0;
+      padding-top: 10px;
+      border-top: 1px solid rgba(102, 115, 93, .16);
     }}
     .stat {{
-      padding: 12px 14px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: rgba(255, 255, 255, .66);
-      box-shadow: 0 8px 18px rgba(36, 37, 34, .03);
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
     }}
     .stat strong {{
       display: block;
-      font-size: 24px;
+      font-size: 16px;
       font-weight: 950;
       color: var(--accent-dark);
     }}
     .stat small {{
       display: block;
-      margin-top: 2px;
+      margin-top: 0;
       text-align: left;
-      font-size: 12px;
+      font-size: 11px;
+      white-space: nowrap;
     }}
     .today-status {{
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      margin: 0 0 12px;
-      padding: 13px 14px;
-      border: 1px solid rgba(102, 115, 93, .22);
-      border-radius: 12px;
-      background: rgba(255,255,255,.72);
+      gap: 10px;
+      margin: 0 0 10px;
+      padding: 0 0 10px;
+      border-bottom: 1px solid rgba(102, 115, 93, .16);
+      border-radius: 0;
+      background: transparent;
     }}
     .today-status strong {{
       display: block;
       color: var(--accent-dark);
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 950;
     }}
     .today-status span {{
       display: inline-flex;
-      min-height: 26px;
+      min-height: 24px;
       align-items: center;
       padding: 4px 9px;
       border-radius: 999px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 900;
     }}
     .today-status span.done {{ color: #2f583a; background: #e1eddf; }}
@@ -278,17 +285,17 @@ def render_index(files):
     .quick {{
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      gap: 8px;
       margin-top: 0;
     }}
     .quick a {{
-      min-height: 84px;
+      min-height: 68px;
       align-items: flex-start;
       flex-direction: column;
       justify-content: center;
       background: rgba(255,255,255,.84);
       border-color: rgba(102, 115, 93, .22);
-      box-shadow: 0 10px 24px rgba(36, 37, 34, .045);
+      box-shadow: none;
     }}
     .quick a:first-child {{
       color: #fff;
@@ -299,7 +306,7 @@ def render_index(files):
     .quick a:first-child small {{ color: rgba(255, 255, 255, .82); }}
     .quick strong {{
       display: block;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 900;
     }}
     .quick small {{
@@ -307,10 +314,10 @@ def render_index(files):
       margin-top: 4px;
       text-align: left;
       line-height: 1.35;
-      font-size: 13px;
+      font-size: 12px;
     }}
     .history-title {{
-      margin: 15px 0 9px;
+      margin: 13px 0 8px;
       color: var(--accent-dark);
       font-size: 16px;
       font-weight: 950;
@@ -327,18 +334,18 @@ def render_index(files):
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      min-height: 68px;
-      padding: 14px 16px;
+      min-height: 58px;
+      padding: 11px 13px;
       border: 1px solid var(--line);
       border-radius: 10px;
       color: var(--ink);
       text-decoration: none;
       background: rgba(255, 255, 255, .86);
-      box-shadow: 0 8px 20px rgba(36, 37, 34, .03);
+      box-shadow: none;
     }}
     a:active {{ transform: scale(.99); }}
     .date {{
-      font-size: 20px;
+      font-size: 17px;
       font-weight: 900;
     }}
     small {{
@@ -374,25 +381,24 @@ def render_index(files):
     .pending {{ color: #5f6661; background: #ecefed; }}
     @media (max-width: 430px) {{
       main {{ padding: 18px 12px 24px; }}
-      .dashboard-hero {{ gap: 8px; min-height: 44px; margin-bottom: 12px; }}
-      .logo-plate img {{ height: 40px; }}
-      .dashboard-title {{ min-height: 40px; }}
-      .title-label {{ font-size: 32px; letter-spacing: 0; transform: translateY(2px); }}
-      .module {{ padding: 14px 12px 12px; }}
+      .dashboard-hero {{ gap: 10px; min-height: 48px; margin-bottom: 12px; }}
+      .logo-plate img {{ height: 46px; }}
+      .dashboard-title {{ min-height: 46px; }}
+      .title-label {{ font-size: 29px; letter-spacing: 0; transform: translateY(1px); }}
+      .module {{ padding: 13px 12px; }}
       .section-head {{ gap: 6px; margin-bottom: 10px; }}
       .section-head h2 {{ font-size: 17px; line-height: 1.1; }}
       .section-head span {{ min-height: 22px; padding: 3px 6px; font-size: 9.5px; }}
-      .stats {{ grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin: 10px 0 0; }}
-      .stat {{ padding: 8px 9px; }}
-      .stat strong {{ font-size: 19px; }}
-      .stat small {{ font-size: 11px; }}
-      .today-status {{ padding: 10px 11px; margin-bottom: 10px; }}
+      .stats {{ gap: 6px; margin: 9px 0 0; padding-top: 9px; }}
+      .stat strong {{ font-size: 15px; }}
+      .stat small {{ font-size: 10px; }}
+      .today-status {{ padding: 0 0 9px; margin-bottom: 9px; }}
       .today-status strong {{ font-size: 14px; }}
       .today-status span {{ font-size: 11px; }}
       .quick {{ grid-template-columns: 1fr 1fr; gap: 7px; }}
-      .quick a {{ min-height: 78px; padding: 11px; }}
-      .quick strong {{ font-size: 17px; }}
-      .quick small {{ font-size: 11px; line-height: 1.25; }}
+      .quick a {{ min-height: 64px; padding: 10px; }}
+      .quick strong {{ font-size: 16px; }}
+      .quick small {{ font-size: 10.5px; line-height: 1.22; }}
       .history-title {{ margin: 13px 0 8px; font-size: 15px; }}
       .quiz-row {{ align-items: flex-start; }}
       .row-meta {{ align-items: flex-end; max-width: 52%; }}
