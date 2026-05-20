@@ -52,6 +52,20 @@ def parse_key(result_text):
     return data.get("date", ""), data.get("quizId", "")
 
 
+def row_result_text(row):
+    result_text = row.get("resultText", "")
+    if result_text:
+        return result_text
+    payload_json = row.get("payloadJson", "")
+    if not payload_json:
+        return ""
+    try:
+        payload = json.loads(payload_json)
+    except json.JSONDecodeError:
+        return ""
+    return payload.get("resultText", "")
+
+
 def load_existing_keys():
     return {(row.get("date", ""), row.get("quizId", "")) for row in read_jsonl(ATTEMPTS_PATH)}
 
@@ -99,7 +113,7 @@ def main():
     existing = load_existing_keys()
     imported_dates = set()
     for row in fetch_rows(config, csv_url=csv_url, web_app_url=args.web_app_url):
-        result_text = row.get("resultText", "")
+        result_text = row_result_text(row)
         key = parse_key(result_text)
         if not all(key) or key in existing:
             continue
