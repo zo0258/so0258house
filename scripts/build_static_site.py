@@ -138,13 +138,15 @@ def render_index(files):
     }}
     .dashboard-hero {{
       display: grid;
-      gap: 12px;
+      grid-template-columns: minmax(112px, 150px) 1fr;
+      align-items: center;
+      gap: 16px;
       margin-bottom: 14px;
-      text-align: center;
+      text-align: left;
     }}
     .logo-plate {{
-      width: min(238px, 70%);
-      margin: 0 auto;
+      width: 100%;
+      margin: 0;
       padding: 0;
       background: transparent;
     }}
@@ -156,8 +158,8 @@ def render_index(files):
     }}
     .dashboard-title {{
       margin: 0;
-      font-size: 40px;
-      line-height: 1.02;
+      font-size: 37px;
+      line-height: 1.05;
       font-weight: 950;
       letter-spacing: 0;
       color: var(--ink);
@@ -321,9 +323,8 @@ def render_index(files):
     .pending {{ color: #5f6661; background: #ecefed; }}
     @media (max-width: 430px) {{
       main {{ padding: 18px 12px 24px; }}
-      .dashboard-hero {{ gap: 8px; margin-bottom: 12px; }}
-      .logo-plate {{ width: min(176px, 62%); }}
-      .dashboard-title {{ font-size: 31px; }}
+      .dashboard-hero {{ grid-template-columns: 96px 1fr; gap: 10px; margin-bottom: 12px; }}
+      .dashboard-title {{ font-size: 27px; line-height: 1.06; }}
       .module {{ padding: 14px 12px 12px; }}
       .section-head {{ margin-bottom: 10px; }}
       .section-head h2 {{ font-size: 23px; }}
