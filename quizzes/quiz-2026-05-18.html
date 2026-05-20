@@ -159,6 +159,10 @@
     }
 
     .topic {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
       color: var(--muted);
       font-size: 12px;
       font-weight: 800;
@@ -255,31 +259,6 @@
     .choice:disabled:hover {
       border-color: var(--line);
       background: #fff;
-    }
-
-    .review-mode-note {
-      margin: 0 0 14px;
-      padding: 12px 13px;
-      border: 1px solid rgba(47, 107, 79, .18);
-      border-radius: var(--radius);
-      background: var(--accent-soft);
-      color: var(--accent-strong);
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .review-mode-note strong {
-      display: block;
-      color: var(--accent-strong);
-      font-size: 16px;
-      font-weight: 950;
-    }
-
-    .review-mode-note span {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 13px;
     }
 
     .review-summary {
@@ -409,16 +388,15 @@
     }
 
     .bookmark-toggle {
-      width: 100%;
-      min-height: 42px;
+      flex: 0 0 auto;
+      min-height: 29px;
       border: 1px solid var(--line);
-      border-radius: var(--radius);
+      border-radius: 999px;
       background: #fff;
-      color: var(--ink);
-      font-size: 14px;
-      font-weight: 850;
-      text-align: left;
-      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      padding: 5px 9px;
       cursor: pointer;
     }
 
@@ -739,11 +717,15 @@
       item.questionId,
       item.selected === 'none' ? null : Number(item.selected) - 1
     ]));
+    const initialReviewIds = new Set([
+      ...(completedAttempt?.review || []),
+      ...(completedAttempt?.wrong || [])
+    ].map(item => typeof item === 'string' ? item : item?.questionId).filter(Boolean));
     const state = {
       current: 0,
       answers: Array(quiz.questions.length).fill(null),
-      explanationOpen: Array(quiz.questions.length).fill(reviewMode),
-      bookmarked: Array(quiz.questions.length).fill(false),
+      explanationOpen: Array(quiz.questions.length).fill(false),
+      bookmarked: quiz.questions.map(q => initialReviewIds.has(q.id)),
       wrongReasons: Array(quiz.questions.length).fill('')
     };
 
@@ -817,17 +799,21 @@
     function renderQuiz() {
       quizView.innerHTML = quiz.questions.map((q, index) => `
         <article class="question-card ${index === state.current ? 'active' : ''}" data-index="${index}">
-          ${reviewMode && index === 0 ? '<div class="review-mode-note"><strong>복습 모드</strong><span>풀이완료 회차입니다. 정답과 해설을 바로 확인하세요.</span></div>' : ''}
           ${reviewMode && index === 0 ? reviewSummaryMarkup() : ''}
           <div class="q-head">
             <div class="q-count">Q${index + 1} · ${escapeHtml(q.topic)}</div>
-            <div class="topic">${q.year} 기출</div>
+            <div class="topic">
+              <span>${q.year} 기출</span>
+              <button class="bookmark-toggle ${state.bookmarked[index] ? 'active' : ''}" type="button" data-question="${index}" aria-label="다시 볼 문제 표시">
+                ${state.bookmarked[index] ? '✓ 다시 볼 문제' : '다시 볼 문제'}
+              </button>
+            </div>
           </div>
           <div class="question">${questionMarkup(q.question)}</div>
           <div class="choices">
             ${q.choices.map((choice, choiceIndex) => choiceMarkup(q, index, choice, choiceIndex)).join('')}
           </div>
-          <div class="feedback ${reviewMode || state.answers[index] !== null ? 'visible' : ''}">
+          <div class="feedback ${state.explanationOpen[index] || (!reviewMode && state.answers[index] !== null) ? 'visible' : ''}">
             ${feedbackMarkup(q, index)}
           </div>
         </article>
@@ -869,10 +855,10 @@
 
     function choiceMarkup(q, questionIndex, choice, choiceIndex) {
       const selected = selectedForQuestion(questionIndex);
-      const answered = reviewMode || selected !== null;
+      const answered = reviewMode ? state.explanationOpen[questionIndex] : selected !== null;
       const isCorrect = choiceIndex === q.answerIndex;
       const isSelected = choiceIndex === selected;
-      const disabled = answered ? 'disabled' : '';
+      const disabled = reviewMode || answered ? 'disabled' : '';
       const classes = [
         'choice',
         answered && isCorrect ? 'correct' : '',
@@ -983,6 +969,7 @@
 
     function feedbackMarkup(q, index) {
       const selected = selectedForQuestion(index);
+      if (reviewMode && !state.explanationOpen[index]) return '';
       if (!reviewMode && selected === null) return '';
       const ok = selected === q.answerIndex;
       const title = reviewMode
@@ -995,12 +982,7 @@
           ${choiceExplanationMarkup(q)}
           <div class="ex-row"><strong>다음에 볼 포인트</strong><span>${escapeHtml(reviewPoint)}</span></div>
         </div>
-        <div class="review-tools">
-          <button class="bookmark-toggle ${state.bookmarked[index] ? 'active' : ''}" type="button" data-question="${index}">
-            ${state.bookmarked[index] ? '다시 볼 문제로 표시됨' : '다시 볼 문제로 표시'}
-          </button>
-          ${reviewMode || ok ? '' : reasonMarkup(index)}
-        </div>
+        ${reviewMode || ok ? '' : '<div class="review-tools">' + reasonMarkup(index) + '</div>'}
       `;
     }
 
