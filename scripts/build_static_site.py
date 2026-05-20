@@ -107,7 +107,7 @@ def render_index(files):
         items.append(
             f'<li><a class="quiz-row" href="{html.escape(href, quote=True)}">'
             f'<span class="date">{html.escape(label)}</span>'
-            f'<span class="row-meta"><small>전과목 10문항</small><span class="badges">{badges}</span></span>'
+            f'<span class="row-meta"><span class="badges">{badges}</span></span>'
             "</a></li>"
         )
 
@@ -149,10 +149,17 @@ def render_index(files):
     .dashboard-hero {{
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 11px;
       min-height: 50px;
       margin-bottom: 14px;
       text-align: left;
+    }}
+    .brand-lockup {{
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
     }}
     .logo-plate {{
       flex: 0 0 auto;
@@ -183,6 +190,21 @@ def render_index(files):
       font-weight: 950;
       letter-spacing: .01em;
       transform: translateY(1px);
+    }}
+    .today-chip {{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      padding: 5px 10px;
+      border: 1px solid rgba(102, 115, 93, .22);
+      border-radius: 999px;
+      background: rgba(255,255,255,.72);
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 950;
+      white-space: nowrap;
+      text-decoration: none;
     }}
     .module {{
       padding: 16px;
@@ -222,66 +244,35 @@ def render_index(files):
       white-space: nowrap;
       flex: 0 0 auto;
     }}
-    .stats {{
+    .history-bar {{
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 8px;
-      margin: 10px 0 0;
-      padding-top: 10px;
-      border-top: 1px solid rgba(102, 115, 93, .16);
+      margin: 13px 0 8px;
     }}
-    .stat {{
+    .history-summary {{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+      min-width: 0;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 850;
+      white-space: nowrap;
+    }}
+    .history-summary span {{
       display: flex;
       align-items: baseline;
       gap: 4px;
-      padding: 0;
-      border: 0;
-      border-radius: 0;
-      background: transparent;
-      box-shadow: none;
     }}
-    .stat strong {{
+    .history-summary strong {{
       display: block;
-      font-size: 16px;
-      font-weight: 950;
-      color: var(--accent-dark);
-    }}
-    .stat small {{
-      display: block;
-      margin-top: 0;
-      text-align: left;
-      font-size: 11px;
-      white-space: nowrap;
-    }}
-    .today-status {{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin: 0 0 10px;
-      padding: 0 0 10px;
-      border-bottom: 1px solid rgba(102, 115, 93, .16);
-      border-radius: 0;
-      background: transparent;
-    }}
-    .today-status strong {{
-      display: block;
-      color: var(--accent-dark);
       font-size: 15px;
       font-weight: 950;
+      color: var(--accent-dark);
     }}
-    .today-status span {{
-      display: inline-flex;
-      min-height: 24px;
-      align-items: center;
-      padding: 4px 9px;
-      border-radius: 999px;
-      font-size: 11px;
-      font-weight: 900;
-    }}
-    .today-status span.done {{ color: #2f583a; background: #e1eddf; }}
-    .today-status span.pending {{ color: #5f6661; background: #ecefed; }}
     .quick {{
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -289,7 +280,7 @@ def render_index(files):
       margin-top: 0;
     }}
     .quick a {{
-      min-height: 68px;
+      min-height: 72px;
       align-items: flex-start;
       flex-direction: column;
       justify-content: center;
@@ -317,7 +308,7 @@ def render_index(files):
       font-size: 12px;
     }}
     .history-title {{
-      margin: 13px 0 8px;
+      margin: 0;
       color: var(--accent-dark);
       font-size: 16px;
       font-weight: 950;
@@ -382,24 +373,23 @@ def render_index(files):
     @media (max-width: 430px) {{
       main {{ padding: 18px 12px 24px; }}
       .dashboard-hero {{ gap: 10px; min-height: 48px; margin-bottom: 12px; }}
+      .brand-lockup {{ gap: 10px; }}
       .logo-plate img {{ height: 46px; }}
       .dashboard-title {{ min-height: 46px; }}
       .title-label {{ font-size: 29px; letter-spacing: 0; transform: translateY(1px); }}
+      .today-chip {{ min-height: 27px; padding: 4px 8px; font-size: 11px; }}
       .module {{ padding: 13px 12px; }}
       .section-head {{ gap: 6px; margin-bottom: 10px; }}
       .section-head h2 {{ font-size: 17px; line-height: 1.1; }}
-      .section-head span {{ min-height: 22px; padding: 3px 6px; font-size: 9.5px; }}
-      .stats {{ gap: 6px; margin: 9px 0 0; padding-top: 9px; }}
-      .stat strong {{ font-size: 15px; }}
-      .stat small {{ font-size: 10px; }}
-      .today-status {{ padding: 0 0 9px; margin-bottom: 9px; }}
-      .today-status strong {{ font-size: 14px; }}
-      .today-status span {{ font-size: 11px; }}
+      .section-head span {{ display:none; }}
       .quick {{ grid-template-columns: 1fr 1fr; gap: 7px; }}
-      .quick a {{ min-height: 64px; padding: 10px; }}
+      .quick a {{ min-height: 66px; padding: 10px; }}
       .quick strong {{ font-size: 16px; }}
       .quick small {{ font-size: 10.5px; line-height: 1.22; }}
-      .history-title {{ margin: 13px 0 8px; font-size: 15px; }}
+      .history-bar {{ margin: 13px 0 8px; }}
+      .history-title {{ font-size: 15px; }}
+      .history-summary {{ gap: 5px; font-size: 10px; }}
+      .history-summary strong {{ font-size: 14px; }}
       .quiz-row {{ align-items: flex-start; }}
       .row-meta {{ align-items: flex-end; max-width: 52%; }}
       a {{ min-height: 62px; padding: 12px; }}
@@ -412,25 +402,27 @@ def render_index(files):
 <body>
   <main>
     <header class="dashboard-hero">
-      <div class="logo-plate"><img src="assets/soo2-logo.png" alt="So02 House"></div>
-      <h1 class="dashboard-title"><span class="title-label">DashBoard</span></h1>
+      <div class="brand-lockup">
+        <div class="logo-plate"><img src="assets/soo2-logo.png" alt="So02 House"></div>
+        <h1 class="dashboard-title"><span class="title-label">DashBoard</span></h1>
+      </div>
+      <a class="today-chip" href="{html.escape(latest_href, quote=True)}">{html.escape(latest_label)}</a>
     </header>
     <section class="module">
-      <div class="section-head"><h2>건강운동관리사 데일리 퀴즈</h2><span>전과목 10문항</span></div>
-      <section class="today-status" aria-label="오늘 학습 상태">
-        <strong>오늘 {html.escape(latest_label)}</strong><span class="{latest_status_class}">{html.escape(latest_status)}</span>
-      </section>
+      <div class="section-head"><h2>건강운동관리사 데일리 퀴즈</h2></div>
       <section class="quick" aria-label="빠른 이동">
-        <a href="{html.escape(latest_href, quote=True)}"><strong>오늘 문제 풀기</strong><small>{html.escape(latest_label)} 퀴즈 바로가기</small></a>
+        <a href="{html.escape(latest_href, quote=True)}"><strong>오늘 문제 풀기</strong><small>{html.escape(latest_status)}</small></a>
         <a href="wrong-note.html"><strong>오답노트 보기</strong><small>틀린 문제·다시 볼 문제</small></a>
       </section>
-      <section class="stats" aria-label="학습 현황">
-        <div class="stat"><strong>{completed_count}</strong><small>풀이완료</small></div>
-        <div class="stat"><strong>{review_count}</strong><small>오답노트 반영</small></div>
-        <div class="stat"><strong>{pending_count}</strong><small>미완료</small></div>
-      </section>
     </section>
-    <div class="history-title">학습 기록</div>
+    <div class="history-bar">
+      <div class="history-title">학습 기록</div>
+      <div class="history-summary" aria-label="학습 현황">
+        <span><strong>{completed_count}</strong>풀이완료</span>
+        <span><strong>{review_count}</strong>오답노트</span>
+        <span><strong>{pending_count}</strong>미완료</span>
+      </div>
+    </div>
     <ul>
       {''.join(items)}
     </ul>

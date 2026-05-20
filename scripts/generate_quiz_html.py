@@ -83,21 +83,21 @@ def render_html(quiz):
   <title>{title} | {date}</title>
   <style>
     :root {{
-      --bg: #f3f5f0;
+      --bg: #f8f4f1;
       --surface: #ffffff;
-      --ink: #17201a;
-      --muted: #69736c;
-      --line: #dfe5dc;
-      --accent: #2f6b4f;
-      --accent-strong: #234d39;
-      --accent-soft: #e5f1ea;
-      --accent-wash: #f1f7f3;
+      --ink: #242522;
+      --muted: #6e746d;
+      --line: #ddd7ca;
+      --accent: #66735d;
+      --accent-strong: #2f3d32;
+      --accent-soft: #e9eee4;
+      --accent-wash: #f7faf4;
       --danger: #b64032;
       --danger-soft: #f8e8e5;
       --ok: #287a4b;
       --ok-soft: #e4f3e9;
       --warn: #a16b18;
-      --shadow: 0 18px 42px rgba(23, 32, 26, .10);
+      --shadow: none;
       --radius: 8px;
     }}
 
@@ -118,7 +118,8 @@ def render_html(quiz):
       inset: 0;
       z-index: -1;
       background:
-        linear-gradient(180deg, rgba(47, 107, 79, .08), rgba(47, 107, 79, 0) 260px),
+        radial-gradient(circle at 50% -12%, rgba(102, 115, 93, .12), transparent 18rem),
+        linear-gradient(180deg, #f8f4f1 0%, #f3eee7 100%),
         var(--bg);
     }}
 
@@ -130,23 +131,23 @@ def render_html(quiz):
       width: min(760px, 100%);
       min-height: 100svh;
       margin: 0 auto;
-      background: var(--surface);
+      background: transparent;
       box-shadow: var(--shadow);
-      border-left: 1px solid rgba(23, 32, 26, .06);
-      border-right: 1px solid rgba(23, 32, 26, .06);
+      border-left: 0;
+      border-right: 0;
     }}
 
     .topbar {{
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(255, 255, 255, .96);
-      border-bottom: 1px solid var(--line);
+      background: rgba(248, 244, 241, .94);
+      border-bottom: 1px solid rgba(102, 115, 93, .16);
       backdrop-filter: blur(14px);
     }}
 
     .topbar-inner {{
-      padding: 16px 16px 12px;
+      padding: 13px 14px 10px;
     }}
 
     .title-row {{
@@ -158,13 +159,14 @@ def render_html(quiz):
 
     h1 {{
       margin: 0;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 1.25;
-      font-weight: 800;
+      font-weight: 950;
+      color: var(--accent-strong);
     }}
 
     .meta {{
-      margin-top: 4px;
+      margin-top: 3px;
       color: var(--muted);
       font-size: 13px;
       font-weight: 600;
@@ -175,7 +177,7 @@ def render_html(quiz):
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      margin-top: 9px;
+      margin-top: 7px;
       color: var(--muted);
       font-size: 12px;
       font-weight: 750;
@@ -189,19 +191,19 @@ def render_html(quiz):
 
     .score-chip {{
       flex: 0 0 auto;
-      min-width: 64px;
-      padding: 9px 11px;
+      min-width: 56px;
+      padding: 7px 10px;
       border-radius: 999px;
       background: var(--accent-soft);
       color: var(--accent);
       text-align: center;
-      font-size: 13px;
-      font-weight: 800;
+      font-size: 12px;
+      font-weight: 950;
     }}
 
     .progress-track {{
-      height: 6px;
-      margin-top: 12px;
+      height: 5px;
+      margin-top: 10px;
       overflow: hidden;
       border-radius: 999px;
       background: #e8ece6;
@@ -216,7 +218,7 @@ def render_html(quiz):
     }}
 
     main {{
-      padding: 20px 16px 28px;
+      padding: 16px 14px 26px;
     }}
 
     .question-card {{
@@ -225,6 +227,10 @@ def render_html(quiz):
 
     .question-card.active {{
       display: block;
+      padding: 16px;
+      border: 1px solid rgba(102, 115, 93, .18);
+      border-radius: 14px;
+      background: rgba(255,255,255,.76);
       animation: questionIn .18s ease-out;
     }}
 
@@ -238,11 +244,11 @@ def render_html(quiz):
       align-items: flex-start;
       justify-content: space-between;
       gap: 12px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }}
 
     .q-count {{
-      color: var(--accent);
+      color: var(--accent-strong);
       font-size: 13px;
       font-weight: 800;
       padding: 5px 9px;
@@ -258,8 +264,8 @@ def render_html(quiz):
     }}
 
     .question {{
-      margin: 0 0 20px;
-      font-size: 20px;
+      margin: 0 0 18px;
+      font-size: 19px;
       line-height: 1.56;
       font-weight: 760;
     }}
@@ -311,7 +317,7 @@ def render_html(quiz):
 
     .choices {{
       display: grid;
-      gap: 11px;
+      gap: 9px;
     }}
 
     .choice {{
@@ -320,11 +326,11 @@ def render_html(quiz):
       align-items: start;
       gap: 8px;
       width: 100%;
-      min-height: 58px;
-      padding: 15px 14px;
+      min-height: 56px;
+      padding: 13px 13px;
       border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: #fff;
+      border-radius: 10px;
+      background: rgba(255,255,255,.9);
       color: var(--ink);
       text-align: left;
       cursor: pointer;
@@ -332,8 +338,8 @@ def render_html(quiz):
     }}
 
     .choice:hover {{
-      border-color: rgba(47, 107, 79, .45);
-      background: #fbfdfb;
+      border-color: rgba(102, 115, 93, .45);
+      background: #fbfcfa;
     }}
 
     .choice:active {{
@@ -561,20 +567,20 @@ def render_html(quiz):
       display: grid;
       grid-template-columns: 1fr 1.2fr 1fr;
       gap: 8px;
-      margin: 24px -16px -28px;
-      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-      background: rgba(255, 255, 255, .96);
-      border-top: 1px solid var(--line);
+      margin: 22px -14px -26px;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(248, 244, 241, .94);
+      border-top: 1px solid rgba(102, 115, 93, .16);
       backdrop-filter: blur(14px);
     }}
 
     .btn {{
-      min-height: 48px;
+      min-height: 46px;
       border: 1px solid var(--line);
-      border-radius: var(--radius);
+      border-radius: 10px;
       background: #fff;
       color: var(--ink);
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 800;
       cursor: pointer;
     }}
