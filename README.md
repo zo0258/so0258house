@@ -38,7 +38,7 @@ python3 scripts/publish_result_update.py result.txt
 python3 scripts/sync_google_sheet_results.py
 ```
 
-설정 방법은 `docs/google-sheets-sync.md`를 참고합니다.
+기본값은 Apps Script Web App에서 결과 행을 JSON으로 읽는 방식입니다. 설정 방법은 `docs/google-sheets-sync.md`를 참고합니다.
 
 ## 주요 경로
 

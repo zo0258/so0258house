@@ -30,13 +30,15 @@ GitHub Pages 재배포
 
 ## OpenClaw 동기화 명령
 
-Sheets에 쌓인 제출 결과를 읽어 로컬 오답노트와 공개 페이지를 갱신한다.
+Sheets에 쌓인 제출 결과를 Apps Script Web App에서 JSON으로 읽어 로컬 오답노트와 공개 페이지를 갱신한다.
 
 ```bash
 python3 scripts/sync_google_sheet_results.py
 ```
 
-`config/sync.json`의 `csvUrl`이 비어 있으면 아래처럼 직접 넘길 수 있다.
+이 방식은 `apps-script/Code.gs`의 `doGet(e)`에 `action=rows` 조회 기능이 있어야 한다. Apps Script 코드를 바꾼 뒤에는 웹 앱을 새 버전으로 다시 배포한다.
+
+CSV 공개 방식이 필요하면 아래처럼 직접 넘길 수 있다.
 
 ```bash
 python3 scripts/sync_google_sheet_results.py --csv-url "https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/export?format=csv&gid=0"

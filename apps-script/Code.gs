@@ -21,8 +21,12 @@ function setup() {
   }
 }
 
-function doGet() {
+function doGet(e) {
   setup();
+  const action = getAction_(e);
+  if (action === 'rows') {
+    return json_({ ok: true, rows: readRows_() });
+  }
   return json_({ ok: true, service: 'so0258house-sync' });
 }
 
@@ -49,6 +53,29 @@ function doPost(e) {
 function getSheet_() {
   const spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
   return spreadsheet.getSheetByName(SHEET_NAME) || spreadsheet.insertSheet(SHEET_NAME);
+}
+
+function getAction_(e) {
+  if (!e || !e.parameter) {
+    return '';
+  }
+  return String(e.parameter.action || '');
+}
+
+function readRows_() {
+  const sheet = getSheet_();
+  const values = sheet.getDataRange().getValues();
+  if (values.length < 2) {
+    return [];
+  }
+  const headers = values[0].map(String);
+  return values.slice(1).filter((row) => row.some((cell) => cell !== '')).map((row) => {
+    const item = {};
+    headers.forEach((header, index) => {
+      item[header] = row[index] instanceof Date ? row[index].toISOString() : row[index];
+    });
+    return item;
+  });
 }
 
 function parsePayload_(e) {

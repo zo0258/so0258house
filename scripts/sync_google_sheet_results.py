@@ -5,6 +5,7 @@ import json
 import subprocess
 import sys
 import tempfile
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -55,10 +56,30 @@ def load_existing_keys():
     return {(row.get("date", ""), row.get("quizId", "")) for row in read_jsonl(ATTEMPTS_PATH)}
 
 
-def fetch_rows(csv_url):
+def fetch_csv_rows(csv_url):
     with urllib.request.urlopen(csv_url, timeout=30) as response:
         text = response.read().decode("utf-8-sig")
     return list(csv.DictReader(text.splitlines()))
+
+
+def fetch_web_app_rows(submit_url):
+    query = urllib.parse.urlencode({"action": "rows"})
+    separator = "&" if "?" in submit_url else "?"
+    url = f"{submit_url}{separator}{query}"
+    with urllib.request.urlopen(url, timeout=30) as response:
+        payload = json.loads(response.read().decode("utf-8"))
+    if not payload.get("ok"):
+        raise SystemExit(f"Apps Script rows 조회 실패: {payload}")
+    return payload.get("rows", [])
+
+
+def fetch_rows(config, csv_url=None, web_app_url=None):
+    if csv_url:
+        return fetch_csv_rows(csv_url)
+    submit_url = web_app_url or config.get("submitUrl")
+    if submit_url:
+        return fetch_web_app_rows(submit_url)
+    raise SystemExit("csvUrl 또는 submitUrl이 없습니다. config/sync.json 설정을 확인해주세요.")
 
 
 def has_staged_changes():
@@ -66,19 +87,18 @@ def has_staged_changes():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Import submitted quiz results from Google Sheets CSV and republish static pages.")
+    parser = argparse.ArgumentParser(description="Import submitted quiz results from Google Sheets or Apps Script and republish static pages.")
     parser.add_argument("--csv-url", help="Google Sheets CSV export URL. Defaults to config/sync.json csvUrl.")
+    parser.add_argument("--web-app-url", help="Apps Script Web App URL. Defaults to config/sync.json submitUrl.")
     parser.add_argument("--no-push", action="store_true")
     args = parser.parse_args()
 
     config = read_json(CONFIG_PATH) if CONFIG_PATH.exists() else {}
     csv_url = args.csv_url or config.get("csvUrl")
-    if not csv_url:
-        raise SystemExit("csvUrl이 없습니다. config/sync.json에 Google Sheets CSV URL을 넣어주세요.")
 
     existing = load_existing_keys()
     imported_dates = set()
-    for row in fetch_rows(csv_url):
+    for row in fetch_rows(config, csv_url=csv_url, web_app_url=args.web_app_url):
         result_text = row.get("resultText", "")
         key = parse_key(result_text)
         if not all(key) or key in existing:
