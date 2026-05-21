@@ -253,6 +253,21 @@ def render_html(quiz):
       font-weight: 760;
     }}
 
+    .question-figures {{
+      display: grid;
+      gap: 8px;
+      margin: -4px 0 16px;
+    }}
+
+    .question-figures img {{
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }}
+
     .q-line {{
       margin: 0 0 8px;
     }}
@@ -1048,6 +1063,7 @@ def render_html(quiz):
             </div>
           </div>
           <div class="question">${{questionMarkup(q.question)}}</div>
+          ${{questionImagesMarkup(q)}}
           <div class="choices">
             ${{q.choices.map((choice, choiceIndex) => choiceMarkup(q, index, choice, choiceIndex)).join('')}}
           </div>
@@ -1108,6 +1124,19 @@ def render_html(quiz):
           <span class="choice-prefix">${{circled[choiceIndex]}}</span><span class="choice-text">${{escapeHtml(choice)}}</span>
         </button>
       `;
+    }}
+
+    function questionImagesMarkup(q) {{
+      if (!Array.isArray(q.images) || !q.images.length) return '';
+      const images = q.images.map(image => {{
+        let src = String(image.src || '');
+        if (src.startsWith('./')) src = src.slice(2);
+        if (src.startsWith('/')) src = src.slice(1);
+        if (!src) return '';
+        const alt = image.alt || '문항 그림';
+        return '<img src="../' + escapeHtml(src) + '" alt="' + escapeHtml(alt) + '" loading="lazy">';
+      }}).join('');
+      return '<div class="question-figures">' + images + '</div>';
     }}
 
     function selectedForQuestion(questionIndex) {{
