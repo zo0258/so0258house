@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-20T16:14:29",
+  "generatedAt": "2026-05-21T10:13:57",
   "stats": {
     "attemptCount": 3,
     "totalScore": 26,
@@ -13,16 +13,12 @@
   "mastered": [],
   "reviewState": {
     "importance": {
-      "2023-1A-73-19": "high"
+      "2023-1A-73-19": "mid"
     },
     "mastered": [],
-    "choiceFlags": {
-      "2023-1A-73-19": [
-        "0"
-      ]
-    },
+    "choiceFlags": {},
     "updatedAt": {
-      "2023-1A-73-19": "2026-05-20T06:46:24.185Z"
+      "2023-1A-73-19": "2026-05-20T09:25:56.183Z"
     }
   },
   "syncConfig": {
@@ -165,8 +161,8 @@
         "㉡, ㉢",
         "㉡, ㉣"
       ],
-      "answerIndex": 2,
-      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "answerIndex": 0,
+      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "trap": "발목인대 평가하 관련 조건과 보기 표현을 섞어 판단하는 문항",
       "choiceExplanations": []
     }
