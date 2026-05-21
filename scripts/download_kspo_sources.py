@@ -36,6 +36,13 @@ TARGETS = [
     {"year": 2020, "kind": "questions_and_draft_answer", "view_id": "6618"},
     {"year": 2019, "kind": "final_answer", "view_id": "6604"},
     {"year": 2019, "kind": "questions_and_draft_answer", "view_id": "6603"},
+    {"year": 2018, "kind": "final_answer", "view_id": "6592"},
+    {"year": 2018, "kind": "questions_and_draft_answer", "view_id": "6591"},
+    {"year": 2017, "kind": "final_answer", "view_id": "6589"},
+    {"year": 2017, "kind": "questions_and_draft_answer", "view_id": "6588"},
+    {"year": 2016, "kind": "final_answer_notice", "view_id": "6583"},
+    {"year": 2016, "kind": "questions_and_draft_answer", "view_id": "6582"},
+    {"year": 2015, "kind": "questions_and_draft_answer", "view_id": "6575"},
 ]
 
 

@@ -59,6 +59,7 @@ def has_extraction_artifact(question):
     figure_dependent_patterns = (
         "<그림>",
         "그림>",
+        "<표>",
         "분포도",
     )
     if any(pattern in stem for pattern in figure_dependent_patterns) and not has_images:
@@ -286,6 +287,15 @@ def select_questions(bank, policy, attempts, delivered, mastered_ids, target_dat
         if len(selected) >= count:
             break
         subject_pool = [q for q in strict_pool if q["subject"] == subject and can_add(q, selected, policy, allow_partial)]
+        if not subject_pool and not allow_partial:
+            subject_pool = [
+                q for q in bank
+                if q["subject"] == subject
+                and q["id"] not in mastered_ids
+                and q["id"] not in recent_ids
+                and q["_normalizedStem"] not in recent_stems
+                and can_add(q, selected, policy, allow_partial)
+            ]
         if not subject_pool:
             continue
         subject_pool.sort(key=lambda q: score_candidate(q, selected, subject_targets, topic_counter, subject_counter, review_topics, rng, policy), reverse=True)

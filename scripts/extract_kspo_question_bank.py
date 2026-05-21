@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 import argparse
+import html
 import json
 import re
 import subprocess
+import tempfile
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_OUTPUT = ROOT / "data" / "question-bank" / "kspo-2023-a.jsonl"
+HWP5TXT = Path.home() / "Library" / "Python" / "3.13" / "bin" / "hwp5txt"
+HWP5HTML = Path.home() / "Library" / "Python" / "3.13" / "bin" / "hwp5html"
 
 SESSION_SUBJECTS = {
     1: [
@@ -25,6 +29,7 @@ SESSION_SUBJECTS = {
 }
 
 CIRCLED_TO_INDEX = {"①": 0, "②": 1, "③": 2, "④": 3, "⑤": 4}
+HANGUL_TO_INDEX = {"가": 0, "나": 1, "다": 2, "라": 3, "마": 4}
 INDEX_TO_CIRCLED = ["①", "②", "③", "④", "⑤"]
 
 
@@ -38,8 +43,49 @@ def run_pdftotext(path):
     return result.stdout
 
 
+def run_hwp5txt(path):
+    if not HWP5TXT.exists():
+        raise SystemExit(f"hwp5txt를 찾지 못했습니다: {HWP5TXT}")
+    result = subprocess.run(
+        [str(HWP5TXT), str(path)],
+        check=True,
+        text=True,
+        capture_output=True,
+    )
+    return result.stdout
+
+
+def run_hwp5html_text(path):
+    if not HWP5HTML.exists():
+        raise SystemExit(f"hwp5html을 찾지 못했습니다: {HWP5HTML}")
+    with tempfile.TemporaryDirectory() as tmpdir:
+        output_dir = Path(tmpdir) / "html"
+        subprocess.run(
+            [str(HWP5HTML), "--output", str(output_dir), str(path)],
+            check=True,
+            text=True,
+            capture_output=True,
+        )
+        index = output_dir / "index.xhtml"
+        raw = index.read_text(encoding="utf-8", errors="ignore")
+    raw = re.sub(r"<style\b[^>]*>.*?</style>", " ", raw, flags=re.S)
+    raw = re.sub(r"<[^>]+>", " ", raw)
+    raw = html.unescape(raw)
+    raw = raw.replace("\r", "\n")
+    return compact_spaces(raw)
+
+
+def extract_text(path):
+    suffix = path.suffix.lower()
+    if suffix == ".pdf":
+        return run_pdftotext(path)
+    if suffix == ".hwp":
+        return run_hwp5txt(path)
+    raise ValueError(f"지원하지 않는 원본 형식입니다: {path}")
+
+
 def normalize_subject_text(text):
-    return re.sub(r"[\s･·\(\)（）]", "", text)
+    return re.sub(r"[\s･·․\.\-_/\(\)（）]", "", text)
 
 
 def compact_spaces(text):
@@ -48,22 +94,113 @@ def compact_spaces(text):
     return text.strip()
 
 
-def parse_answer_rows(answer_pdf):
-    text = run_pdftotext(answer_pdf)
-    rows = []
-    for line in text.splitlines():
-        answers = re.findall(r"[①②③④⑤]", line)
-        if len(answers) == 20:
-            rows.append([CIRCLED_TO_INDEX[value] for value in answers])
-    if len(rows) < 16:
-        raise ValueError(f"정답 행을 충분히 찾지 못했습니다: {answer_pdf} ({len(rows)}행)")
+def answer_tokens(text):
+    tokens = []
+    for token in re.findall(r"[①②③④⑤]|(?<![가-힣])[가나다라마](?![가-힣])", text):
+        if token in CIRCLED_TO_INDEX:
+            tokens.append(CIRCLED_TO_INDEX[token])
+        else:
+            tokens.append(HANGUL_TO_INDEX[token])
+    return tokens
 
-    return {
-        (1, "A"): rows[0:4],
-        (1, "B"): rows[4:8],
-        (2, "A"): rows[8:12],
-        (2, "B"): rows[12:16],
-    }
+
+def subject_answer_rows_from_text(text):
+    rows = {}
+    subjects = SESSION_SUBJECTS[1] + SESSION_SUBJECTS[2]
+    for idx, (subject, _code) in enumerate(subjects):
+        subject_norm = normalize_subject_text(subject)
+        next_subject_norm = normalize_subject_text(subjects[idx + 1][0]) if idx + 1 < len(subjects) else None
+        pattern = re.compile(re.escape(subject_norm))
+        normalized = normalize_subject_text(text)
+        match = pattern.search(normalized)
+        if not match:
+            continue
+
+        # Work on original text from an approximate position. The normalized
+        # offset is not byte-equivalent, so locate the visible subject again.
+        original_match = re.search(re.escape(subject).replace("·", r"[·\s]*"), text)
+        if not original_match:
+            original_match = re.search(subject.replace("·", r".{0,5}"), text)
+        if not original_match:
+            continue
+        start = original_match.end()
+        end = len(text)
+        if next_subject_norm:
+            next_match = re.search(subjects[idx + 1][0].replace("·", r".{0,5}"), text[start:])
+            if next_match:
+                end = start + next_match.start()
+        tokens = answer_tokens(text[start:end])
+        if len(tokens) >= 20:
+            rows[subject] = tokens[:20]
+    return rows
+
+
+def parse_answer_rows(answer_path):
+    if answer_path.suffix.lower() == ".hwp":
+        text = run_hwp5html_text(answer_path)
+    else:
+        text = run_pdftotext(answer_path)
+
+    form_sections = {}
+    form_matches = list(re.finditer(r"건강\s*[\(（]\s*([ABＡＢ]|A|B|에이|비)\s*[형型]", text))
+    if form_matches:
+        for idx, match in enumerate(form_matches):
+            marker = match.group(1)
+            form = "A" if marker in {"A", "Ａ", "에이"} else "B"
+            start = match.end()
+            end = form_matches[idx + 1].start() if idx + 1 < len(form_matches) else len(text)
+            form_sections[form] = text[start:end]
+    else:
+        form_sections["A"] = text
+
+    subject_rows = {"A": {}, "B": {}}
+    for form, section in form_sections.items():
+        rows = subject_answer_rows_from_text(section)
+        if len(rows) >= 8:
+            subject_rows[form] = rows
+
+    if len(subject_rows["A"]) < 8:
+        rows = []
+        for line in text.splitlines():
+            tokens = answer_tokens(line)
+            if len(tokens) == 20:
+                rows.append(tokens)
+        if len(rows) >= 16:
+            subject_rows["A"] = {subject: rows[idx] for idx, (subject, _code) in enumerate(SESSION_SUBJECTS[1] + SESSION_SUBJECTS[2])}
+            subject_rows["B"] = {subject: rows[idx + 8] for idx, (subject, _code) in enumerate(SESSION_SUBJECTS[1] + SESSION_SUBJECTS[2])}
+        elif len(rows) >= 8:
+            subject_rows["A"] = {subject: rows[idx] for idx, (subject, _code) in enumerate(SESSION_SUBJECTS[1] + SESSION_SUBJECTS[2])}
+
+    if len(subject_rows["A"]) < 8:
+        tokens = answer_tokens(text)
+        # Some final-answer PDFs render as subject names followed by answers on
+        # separate lines. When a form marker exists, the first 160 answers are A.
+        if len(tokens) >= 160:
+            subject_rows["A"] = {
+                subject: tokens[idx * 20 : (idx + 1) * 20]
+                for idx, (subject, _code) in enumerate(SESSION_SUBJECTS[1] + SESSION_SUBJECTS[2])
+            }
+            if len(tokens) >= 320:
+                subject_rows["B"] = {
+                    subject: tokens[160 + idx * 20 : 160 + (idx + 1) * 20]
+                    for idx, (subject, _code) in enumerate(SESSION_SUBJECTS[1] + SESSION_SUBJECTS[2])
+                }
+
+    if len(subject_rows["A"]) < 8:
+        raise ValueError(f"정답 행을 충분히 찾지 못했습니다: {answer_path} ({len(subject_rows['A'])}과목)")
+
+    result = {}
+    for session in (1, 2):
+        for form in ("A", "B"):
+            form_rows = subject_rows.get(form) or {}
+            if not form_rows and form == "B":
+                continue
+            result[(session, form)] = []
+            for subject, _code in SESSION_SUBJECTS[session]:
+                if subject not in form_rows:
+                    raise ValueError(f"정답 행을 찾지 못했습니다: {answer_path} {form}형 {subject}")
+                result[(session, form)].append(form_rows[subject])
+    return result
 
 
 def find_subject_ranges(text, session):
@@ -79,7 +216,8 @@ def find_subject_ranges(text, session):
         position = None
         for start, line in lines:
             normalized_line = normalize_subject_text(line)
-            if "(" in line and ")" in line and normalized_subject in normalized_line and str(code) in normalized_line:
+            has_code_marker = bool(re.search(rf"[\(（]\s*{code}\s*[\)）]", line))
+            if normalized_subject in normalized_line and (has_code_marker or "◆" in line):
                 position = start
                 break
         if position is None:
@@ -95,7 +233,7 @@ def find_subject_ranges(text, session):
 
 
 def split_question_blocks(section_text):
-    matches = list(re.finditer(r"(?m)^(\d{1,2})\.\s+", section_text))
+    matches = list(re.finditer(r"(?m)^(20|1\d|[1-9])\.(?=\s|<|[A-Za-z가-힣'‘])\s*", section_text))
     blocks = []
     for idx, match in enumerate(matches):
         question_no = int(match.group(1))
@@ -108,14 +246,18 @@ def split_question_blocks(section_text):
 
 def parse_question_block(block):
     block = compact_spaces(block)
-    choice_matches = list(re.finditer(r"[①②③④⑤]", block))
-    if len(choice_matches) < 4:
+    marker_matches = list(re.finditer(r"[①②③④⑤]", block))
+    marker_type = "circled"
+    if len(marker_matches) < 4:
+        marker_matches = list(re.finditer(r"(?m)(?<![가-힣])([가나다라마])\.\s*", block))
+        marker_type = "hangul"
+    if len(marker_matches) < 4:
         return None
 
-    first_choice = choice_matches[0].start()
+    first_choice = marker_matches[0].start()
     stem = re.sub(r"^\d{1,2}\.\s*", "", block[:first_choice]).strip()
     choices = []
-    selected_choice_matches = choice_matches[:4]
+    selected_choice_matches = marker_matches[:5]
     for idx, match in enumerate(selected_choice_matches):
         start = match.end()
         end = selected_choice_matches[idx + 1].start() if idx + 1 < len(selected_choice_matches) else len(block)
@@ -123,9 +265,11 @@ def parse_question_block(block):
         choice_text = re.sub(r"\s+", " ", choice_text)
         choices.append(choice_text)
 
-    if not stem or any(not choice for choice in choices):
+    if marker_type == "hangul" and len(choices) > 4 and not choices[4]:
+        choices = choices[:4]
+    if not stem or len(choices) < 4 or any(not choice for choice in choices[:4]):
         return None
-    return stem, choices
+    return stem, choices[:5]
 
 
 def infer_type(stem):
@@ -135,7 +279,7 @@ def infer_type(stem):
         return "보기조합"
     if "괄호" in stem:
         return "빈칸"
-    if "옳지 않은" in stem:
+    if "옳지 않은" in stem or "바르지" in stem or "아닌" in stem:
         return "부정형"
     return "개념구분"
 
@@ -145,6 +289,8 @@ def infer_difficulty(stem, qtype):
     if qtype in {"보기조합", "계산"}:
         score += 1
     if len(stem) > 160:
+        score += 1
+    if "<표>" in stem or "<그림>" in stem:
         score += 1
     return min(score, 5)
 
@@ -160,10 +306,10 @@ def infer_topic(subject, stem):
     return " ".join(words[:2])[:24]
 
 
-def build_question(year, session, form, subject, code, question_no, stem, choices, answer_index, question_pdf, answer_pdf):
+def build_question(year, session, form, subject, code, question_no, stem, choices, answer_index, question_path, answer_path):
     qtype = infer_type(stem)
     topic = infer_topic(subject, stem)
-    answer_label = INDEX_TO_CIRCLED[answer_index]
+    answer_label = INDEX_TO_CIRCLED[answer_index] if answer_index < len(INDEX_TO_CIRCLED) else str(answer_index + 1)
     return {
         "id": f"{year}-{session}{form}-{code}-{question_no:02d}",
         "year": year,
@@ -177,8 +323,8 @@ def build_question(year, session, form, subject, code, question_no, stem, choice
         "answerIndex": answer_index,
         "explanation": f"최종정답 기준 정답은 {answer_label}입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
         "source": {
-            "file": str(question_pdf.relative_to(ROOT)),
-            "answerFile": str(answer_pdf.relative_to(ROOT)),
+            "file": str(question_path.relative_to(ROOT)),
+            "answerFile": str(answer_path.relative_to(ROOT)),
             "questionNo": question_no,
             "session": session,
             "form": form,
@@ -186,13 +332,14 @@ def build_question(year, session, form, subject, code, question_no, stem, choice
         },
         "wrongRateBasis": "고오답 추정",
         "verified": True,
-        "bankSource": "pdftotext 자동 추출 후 최종정답 매칭",
+        "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭",
     }
 
 
-def extract_session(year, session, form, question_pdf, answer_pdf, answers):
-    text = run_pdftotext(question_pdf)
+def extract_session(year, session, form, question_path, answer_path, answers):
+    text = extract_text(question_path)
     extracted = []
+    seen_ids = set()
     answer_rows = answers[(session, form)]
 
     for subject_index, (subject, code, section) in enumerate(find_subject_ranges(text, session)):
@@ -203,46 +350,108 @@ def extract_session(year, session, form, question_pdf, answer_pdf, answers):
                 continue
             stem, choices = parsed
             answer_index = subject_answers[question_no - 1]
-            extracted.append(build_question(year, session, form, subject, code, question_no, stem, choices, answer_index, question_pdf, answer_pdf))
+            if answer_index >= len(choices):
+                continue
+            question = build_question(year, session, form, subject, code, question_no, stem, choices, answer_index, question_path, answer_path)
+            if question["id"] in seen_ids:
+                continue
+            seen_ids.add(question["id"])
+            extracted.append(question)
     return extracted
 
 
+def find_question_file(base, year, session, form):
+    candidates = []
+    session_texts = [f"{session}교시", f"{session} 교시"]
+    form_texts = [f"{form}형", f"{form} 형"]
+    for directory_name in ("questions", "questions_and_draft_answer"):
+        directory = base / directory_name
+        if not directory.exists():
+            continue
+        for path in sorted(directory.iterdir()):
+            if path.suffix.lower() not in {".pdf", ".hwp"}:
+                continue
+            name = path.name
+            if not any(value in name for value in session_texts):
+                continue
+            if any(value in name for value in form_texts):
+                return path
+            candidates.append(path)
+    if form == "A" and candidates:
+        return candidates[0]
+    raise FileNotFoundError(f"{year}년 {session}교시 {form}형 문제 파일을 찾지 못했습니다.")
+
+
+def find_answer_file(base):
+    directories = ["final_answer", "final_answer_notice", "draft_answer", "questions_and_draft_answer"]
+    keywords = ["최종", "정답", "답안", "정답가안"]
+    candidates = []
+    for directory_name in directories:
+        directory = base / directory_name
+        if not directory.exists():
+            continue
+        for path in sorted(directory.iterdir()):
+            if path.suffix.lower() not in {".pdf", ".hwp"}:
+                continue
+            if any(keyword in path.name for keyword in keywords):
+                candidates.append(path)
+    if not candidates:
+        raise FileNotFoundError(f"정답 파일을 찾지 못했습니다: {base}")
+    candidates.sort(key=lambda path: (0 if "final" in str(path.parent) or "최종" in path.name else 1, path.name))
+    return candidates[0]
+
+
+def extract_year(year, form, output):
+    base = ROOT / "materials" / "raw" / "kspo" / str(year)
+    answer_path = find_answer_file(base)
+    try:
+        answers = parse_answer_rows(answer_path)
+    except ValueError:
+        fallback = None
+        for candidate in sorted((base / "questions_and_draft_answer").glob("*정답*")) if (base / "questions_and_draft_answer").exists() else []:
+            if candidate != answer_path and candidate.suffix.lower() in {".pdf", ".hwp"}:
+                fallback = candidate
+                break
+        if not fallback:
+            raise
+        answer_path = fallback
+        answers = parse_answer_rows(answer_path)
+
+    questions = []
+    for session in (1, 2):
+        question_path = find_question_file(base, year, session, form)
+        questions.extend(extract_session(year, session, form, question_path, answer_path, answers))
+
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open("w", encoding="utf-8") as file:
+        for question in questions:
+            file.write(json.dumps(question, ensure_ascii=False) + "\n")
+    return questions, answer_path
+
+
 def main():
-    parser = argparse.ArgumentParser(description="Extract KSPO health exercise question bank from text-readable PDFs.")
+    parser = argparse.ArgumentParser(description="Extract KSPO health exercise question bank from official source files.")
     parser.add_argument("--year", type=int, default=2023)
     parser.add_argument("--form", default="A", choices=["A", "B"])
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--all-years", action="store_true", help="Extract A-form banks for 2015-2025.")
     args = parser.parse_args()
 
-    base = ROOT / "materials" / "raw" / "kspo" / str(args.year)
-    question_pdfs = {
-        1: base / "questions" / f"{args.year} 건강운동관리사 필기시험 1교시 {args.form}형kspo.pdf",
-        2: base / "questions" / f"{args.year} 건강운동관리사 필기시험 2교시 {args.form}형kspo.pdf",
-    }
-    answer_pdf = base / "final_answer" / f"{args.year} 건강운동관리사 필기시험 최종정답.pdf"
-
-    for path in [*question_pdfs.values(), answer_pdf]:
-        if not path.exists():
-            raise SystemExit(f"파일을 찾지 못했습니다: {path}")
-
-    answers = parse_answer_rows(answer_pdf)
-    questions = []
-    for session, question_pdf in question_pdfs.items():
-        questions.extend(extract_session(args.year, session, args.form, question_pdf, answer_pdf, answers))
-
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    with args.output.open("w", encoding="utf-8") as file:
+    targets = range(2015, 2026) if args.all_years else [args.year]
+    for year in targets:
+        output = args.output
+        if args.all_years:
+            output = ROOT / "data" / "question-bank" / f"kspo-{year}-a.jsonl"
+        questions, answer_path = extract_year(year, args.form, output)
+        subject_counts = {}
         for question in questions:
-            file.write(json.dumps(question, ensure_ascii=False) + "\n")
+            subject_counts[question["subject"]] = subject_counts.get(question["subject"], 0) + 1
 
-    subject_counts = {}
-    for question in questions:
-        subject_counts[question["subject"]] = subject_counts.get(question["subject"], 0) + 1
-
-    print(args.output)
-    print(f"questions={len(questions)}")
-    for subject, _code in SESSION_SUBJECTS[1] + SESSION_SUBJECTS[2]:
-        print(f"{subject}={subject_counts.get(subject, 0)}")
+        print(output)
+        print(f"answer={answer_path.relative_to(ROOT)}")
+        print(f"questions={len(questions)}")
+        for subject, _code in SESSION_SUBJECTS[1] + SESSION_SUBJECTS[2]:
+            print(f"{subject}={subject_counts.get(subject, 0)}")
 
 
 if __name__ == "__main__":

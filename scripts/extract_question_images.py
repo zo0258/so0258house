@@ -13,7 +13,7 @@ BANK_DIR = ROOT / "data" / "question-bank"
 IMAGE_DIR = ROOT / "assets" / "question-images"
 
 NS = {"x": "http://www.w3.org/1999/xhtml"}
-FIGURE_MARKERS = ("<그림>", "그림>", "분포도", "그래프")
+FIGURE_MARKERS = ("<그림>", "그림>", "<표>", "분포도", "그래프")
 CHOICE_ARTIFACT_RE = re.compile(r"\s*(?:[AB]형\s*)?건강운동관리사\s+필기시험.*$")
 
 
@@ -173,7 +173,7 @@ def process_bank(path, dpi):
             if not pdf_rel or not question_no or not subject_code:
                 continue
             pdf_path = ROOT / pdf_rel
-            if not pdf_path.exists():
+            if not pdf_path.exists() or pdf_path.suffix.lower() != ".pdf":
                 continue
             if pdf_path not in layout_cache:
                 layout_cache[pdf_path] = pdf_layout(pdf_path)

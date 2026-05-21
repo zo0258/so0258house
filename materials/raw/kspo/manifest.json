@@ -1,7 +1,7 @@
 {
   "source": "KSPO 체육지도자 자격검정 및 연수 - 필기시험 문제ㆍ정답",
   "list_url": "https://sqms.kspo.or.kr/exam/wrQnaList.kspo",
-  "downloaded_at": "2026-05-18T01:28:57+0900",
+  "downloaded_at": "2026-05-21T10:01:01+0900",
   "items": [
     {
       "year": 2025,
@@ -410,6 +410,207 @@
           "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574706",
           "path": "materials/raw/kspo/2019/questions_and_draft_answer/2019년 건강운동관리사 필기시험 정답가안.pdf",
           "bytes": 145344
+        }
+      ],
+      "file_count": 5
+    },
+    {
+      "year": 2018,
+      "kind": "final_answer",
+      "view_id": "6592",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574696",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574696",
+          "path": "materials/raw/kspo/2018/final_answer/건강필기_최종답안.pdf",
+          "bytes": 43760
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2018,
+      "kind": "questions_and_draft_answer",
+      "view_id": "6591",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574695",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574695",
+          "path": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_1교시_A형.pdf",
+          "bytes": 8118400
+        },
+        {
+          "file_id": "2574740",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574740",
+          "path": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_1교시_B형.pdf",
+          "bytes": 8118720
+        },
+        {
+          "file_id": "2574774",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574774",
+          "path": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_2교시_A형.pdf",
+          "bytes": 3015552
+        },
+        {
+          "file_id": "2574796",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574796",
+          "path": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_2교시_B형.pdf",
+          "bytes": 3015104
+        },
+        {
+          "file_id": "2574817",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574817",
+          "path": "materials/raw/kspo/2018/questions_and_draft_answer/건강필기_정답가안.pdf",
+          "bytes": 105216
+        }
+      ],
+      "file_count": 5
+    },
+    {
+      "year": 2017,
+      "kind": "final_answer",
+      "view_id": "6589",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574694",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574694",
+          "path": "materials/raw/kspo/2017/final_answer/최종 정답.pdf",
+          "bytes": 54656
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2017,
+      "kind": "questions_and_draft_answer",
+      "view_id": "6588",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574693",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574693",
+          "path": "materials/raw/kspo/2017/questions_and_draft_answer/건강운동관리사_필기시험_1교시_A형.pdf",
+          "bytes": 955792
+        },
+        {
+          "file_id": "2574738",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574738",
+          "path": "materials/raw/kspo/2017/questions_and_draft_answer/건강운동관리사_필기시험_1교시_B형.pdf",
+          "bytes": 956272
+        },
+        {
+          "file_id": "2574773",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574773",
+          "path": "materials/raw/kspo/2017/questions_and_draft_answer/건강운동관리사_필기시험_2교시_A형.pdf",
+          "bytes": 871632
+        },
+        {
+          "file_id": "2574795",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574795",
+          "path": "materials/raw/kspo/2017/questions_and_draft_answer/건강운동관리사_필기시험_2교시_B형.pdf",
+          "bytes": 871808
+        },
+        {
+          "file_id": "2574816",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574816",
+          "path": "materials/raw/kspo/2017/questions_and_draft_answer/건강필기_정답가안.pdf",
+          "bytes": 38528
+        }
+      ],
+      "file_count": 5
+    },
+    {
+      "year": 2016,
+      "kind": "final_answer_notice",
+      "view_id": "6583",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574688",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574688",
+          "path": "materials/raw/kspo/2016/final_answer_notice/건강필기_정답.hwp",
+          "bytes": 25104
+        }
+      ],
+      "file_count": 1
+    },
+    {
+      "year": 2016,
+      "kind": "questions_and_draft_answer",
+      "view_id": "6582",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574687",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574687",
+          "path": "materials/raw/kspo/2016/questions_and_draft_answer/건강운동관리사 필기시험_1교시_A형.pdf",
+          "bytes": 725360
+        },
+        {
+          "file_id": "2574734",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574734",
+          "path": "materials/raw/kspo/2016/questions_and_draft_answer/건강운동관리사 필기시험_1교시_B형.pdf",
+          "bytes": 724960
+        },
+        {
+          "file_id": "2574770",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574770",
+          "path": "materials/raw/kspo/2016/questions_and_draft_answer/건강운동관리사 필기시험_2교시_A형.pdf",
+          "bytes": 183632
+        },
+        {
+          "file_id": "2574793",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574793",
+          "path": "materials/raw/kspo/2016/questions_and_draft_answer/건강운동관리사 필기시험_2교시_B형.pdf",
+          "bytes": 187680
+        },
+        {
+          "file_id": "2574814",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574814",
+          "path": "materials/raw/kspo/2016/questions_and_draft_answer/건강필기_정답가안.pdf",
+          "bytes": 32256
+        }
+      ],
+      "file_count": 5
+    },
+    {
+      "year": 2015,
+      "kind": "questions_and_draft_answer",
+      "view_id": "6575",
+      "view_url": "https://sqms.kspo.or.kr/exam/wrQnaView.kspo",
+      "files": [
+        {
+          "file_id": "2574729",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574729",
+          "path": "materials/raw/kspo/2015/questions_and_draft_answer/건강A형_1교시.hwp",
+          "bytes": 110096
+        },
+        {
+          "file_id": "2574767",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574767",
+          "path": "materials/raw/kspo/2015/questions_and_draft_answer/건강A형_2교시.hwp",
+          "bytes": 171536
+        },
+        {
+          "file_id": "2574790",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574790",
+          "path": "materials/raw/kspo/2015/questions_and_draft_answer/건강B형_1교시.hwp",
+          "bytes": 168464
+        },
+        {
+          "file_id": "2574811",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574811",
+          "path": "materials/raw/kspo/2015/questions_and_draft_answer/건강B형_2교시.hwp",
+          "bytes": 99344
+        },
+        {
+          "file_id": "2574680",
+          "source_url": "https://sqms.kspo.or.kr/file/downloadFile.kspo?type=board&BRD_FILE_SN=2574680",
+          "path": "materials/raw/kspo/2015/questions_and_draft_answer/건강필기_정답가안.hwp",
+          "bytes": 22032
         }
       ],
       "file_count": 5
