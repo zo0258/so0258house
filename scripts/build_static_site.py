@@ -14,6 +14,7 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE_DIR = Path.home() / "Desktop" / "건강운동관리사"
 DEFAULT_SITE_DIR = Path.home() / "Desktop" / "건강운동관리사_web"
+SYNC_CONFIG_PATH = ROOT / "config" / "sync.json"
 EXAM_DATE = date(2026, 6, 13)
 DAILY_SENTENCES = {
     "2026-05-20": "새로운 문제가 나와도 괜찮다. 그동안 쌓아온 실력이 너를 지켜준다.",
@@ -141,8 +142,23 @@ def read_review_generated_at():
     return "대기 중"
 
 
+def load_sync_config():
+    if not SYNC_CONFIG_PATH.exists():
+        return {"enabled": False, "submitUrl": ""}
+    try:
+        config = json.loads(SYNC_CONFIG_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"enabled": False, "submitUrl": ""}
+    return {
+        "enabled": bool(config.get("enabled") and config.get("submitUrl")),
+        "submitUrl": str(config.get("submitUrl") or ""),
+    }
+
+
 def status_badges(date_text, quiz_id, attempts, review_dates):
-    attempt = attempts.get(quiz_id) or attempts.get(date_text)
+    attempt = attempts.get(quiz_id)
+    if not re.search(r"-daily-\d+-", str(quiz_id or "")):
+        attempt = attempt or attempts.get(date_text)
     if attempt:
         score = attempt.get("score")
         total = attempt.get("total")
@@ -173,6 +189,9 @@ def sentence_lines(sentence):
 def render_index(files):
     attempts = load_attempt_status()
     review_dates = load_review_dates()
+    sync_config = load_sync_config()
+    sync_config_json = json.dumps(sync_config, ensure_ascii=False)
+    safe_sync_config_json = sync_config_json.replace("</", "<\\/")
     sync_time = read_review_generated_at()
     dday_label, daily_sentence = today_sentence()
     daily_sentence_html = "".join(f"<span>{html.escape(line)}</span>" for line in sentence_lines(daily_sentence))
@@ -181,7 +200,7 @@ def render_index(files):
     review_count = 0
     for path in files:
         date_text, _, _, quiz_id = quiz_identity(path)
-        if quiz_id in attempts or date_text in attempts:
+        if quiz_id in attempts or (not re.search(r"-daily-\d+-", str(quiz_id or "")) and date_text in attempts):
             completed_count += 1
         if date_text in review_dates:
             review_count += 1
@@ -199,7 +218,9 @@ def render_index(files):
             label = display_label(date_text, "1")
         cache_buster = str(int(path.stat().st_mtime))
         href = f"quizzes/{path.name}?v={cache_buster}"
-        latest_attempt = attempts.get(quiz_id) or attempts.get(date_text)
+        latest_attempt = attempts.get(quiz_id)
+        if not re.search(r"-daily-\d+-", str(quiz_id or "")):
+            latest_attempt = latest_attempt or attempts.get(date_text)
         candidate = (href, label, latest_attempt)
         if latest_candidate is None:
             latest_candidate = candidate
@@ -207,7 +228,10 @@ def render_index(files):
             latest_candidate_status = candidate
         badges = status_badges(date_text, quiz_id, attempts, review_dates)
         items.append(
-            f'<li><a class="quiz-row" href="{html.escape(href, quote=True)}">'
+            f'<li><a class="quiz-row" href="{html.escape(href, quote=True)}" '
+            f'data-date="{html.escape(date_text, quote=True)}" '
+            f'data-quiz-id="{html.escape(quiz_id or date_text, quote=True)}" '
+            f'data-review="{str(date_text in review_dates).lower()}">'
             f'<span class="date">{html.escape(label)}</span>'
             f'<span class="row-meta"><span class="badges">{badges}</span></span>'
             "</a></li>"
@@ -319,7 +343,12 @@ def render_index(files):
       font-weight: 950;
       white-space: nowrap;
       text-decoration: none;
+      font-family: inherit;
+      cursor: pointer;
       transform: translateY(-4px);
+    }}
+    button.today-chip {{
+      appearance: none;
     }}
     .module {{
       padding: 16px;
@@ -595,13 +624,14 @@ def render_index(files):
   </style>
 </head>
 <body>
+  <script id="sync-config" type="application/json">{safe_sync_config_json}</script>
   <main>
     <header class="dashboard-hero">
       <div class="brand-lockup">
         <div class="logo-plate"><img src="assets/soo2-logo.png" alt="So02 House"></div>
         <h1 class="dashboard-title"><span class="title-label">DashBoard</span></h1>
       </div>
-      <a class="today-chip" href="{html.escape(latest_href, quote=True)}">{html.escape(latest_label)}</a>
+      <button class="today-chip" id="syncButton" type="button" aria-label="학습 기록 동기화">{html.escape(latest_label)}</button>
     </header>
     <section class="module">
       <div class="section-head"><h2>건강운동관리사 데일리 퀴즈</h2></div>
@@ -632,6 +662,115 @@ def render_index(files):
       </ul>
     </div>
   </main>
+  <script>
+    (function() {{
+      const configEl = document.getElementById('sync-config');
+      const syncButton = document.getElementById('syncButton');
+      const syncNote = document.querySelector('.sync-note');
+      const rows = Array.from(document.querySelectorAll('.quiz-row'));
+      let syncConfig = {{}};
+      try {{ syncConfig = JSON.parse(configEl ? configEl.textContent : '{{}}'); }} catch (error) {{ syncConfig = {{}}; }}
+
+      function parseResultText(text) {{
+        const result = {{}};
+        String(text || '').split('\\n').forEach(function(line) {{
+          const index = line.indexOf('=');
+          if (index === -1 || /^(wrong|review|answerLog|unanswered)=/.test(line)) return;
+          result[line.slice(0, index)] = line.slice(index + 1);
+        }});
+        return result.date && result.quizId ? result : null;
+      }}
+
+      function rowResultText(row) {{
+        if (row.resultText) return row.resultText;
+        if (!row.payloadJson) return '';
+        try {{
+          const payload = JSON.parse(row.payloadJson);
+          return payload && payload.resultText ? payload.resultText : '';
+        }} catch (error) {{
+          return '';
+        }}
+      }}
+
+      function badgeHtml(attempt, hasReview) {{
+        const scoreText = attempt.score && attempt.total ? attempt.score + '/' + attempt.total : '완료';
+        return '<span class="badge done">풀이완료 ' + escapeHtml(scoreText) + '</span>' +
+          (hasReview ? '<span class="badge review">오답노트 반영</span>' : '');
+      }}
+
+      function rowAttempt(row, attempts) {{
+        const exact = attempts[row.dataset.quizId];
+        if (exact) return exact;
+        if (/-daily-\\d+-/.test(row.dataset.quizId || '')) return null;
+        return attempts[row.dataset.date] || null;
+      }}
+
+      function escapeHtml(value) {{
+        return String(value == null ? '' : value).replace(/[&<>"']/g, function(ch) {{
+          return {{ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }}[ch];
+        }});
+      }}
+
+      async function fetchRows() {{
+        const separator = syncConfig.submitUrl.indexOf('?') === -1 ? '?' : '&';
+        const url = syncConfig.submitUrl + separator + 'action=rows&_=' + Date.now();
+        const response = await fetch(url, {{ method: 'GET', cache: 'no-store' }});
+        const payload = await response.json();
+        if (!payload.ok) throw new Error('rows lookup failed');
+        return payload.rows || [];
+      }}
+
+      async function syncDashboard() {{
+        if (!syncConfig.enabled || !syncConfig.submitUrl) {{
+          if (syncNote) syncNote.textContent = '동기화 설정 확인 필요';
+          return;
+        }}
+        const originalLabel = syncButton ? syncButton.textContent : '';
+        if (syncButton) {{
+          syncButton.disabled = true;
+          syncButton.textContent = '동기화 중';
+        }}
+        if (syncNote) syncNote.textContent = 'Sheets 최신 제출 확인 중';
+        try {{
+          const sheetRows = await fetchRows();
+          const attempts = {{}};
+          sheetRows.forEach(function(row) {{
+            const parsed = parseResultText(rowResultText(row));
+            if (!parsed) return;
+            attempts[parsed.quizId] = parsed;
+            attempts[parsed.date] = parsed;
+          }});
+          let completed = 0;
+          let review = 0;
+          rows.forEach(function(row) {{
+            const attempt = rowAttempt(row, attempts);
+            const hasReview = row.dataset.review === 'true';
+            if (attempt) {{
+              const badges = row.querySelector('.badges');
+              if (badges) badges.innerHTML = badgeHtml(attempt, hasReview);
+              completed += 1;
+            }}
+            if (hasReview) review += 1;
+          }});
+          const summary = document.querySelectorAll('.history-summary strong');
+          if (summary[0]) summary[0].textContent = completed;
+          if (summary[1]) summary[1].textContent = review;
+          if (summary[2]) summary[2].textContent = Math.max(rows.length - completed, 0);
+          const now = new Date();
+          const label = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+          if (syncNote) syncNote.textContent = '방금 동기화 ' + label;
+          if (syncButton) syncButton.textContent = originalLabel;
+        }} catch (error) {{
+          if (syncNote) syncNote.textContent = '동기화 실패 · 잠시 후 다시 시도';
+          if (syncButton) syncButton.textContent = originalLabel;
+        }} finally {{
+          if (syncButton) syncButton.disabled = false;
+        }}
+      }}
+
+      if (syncButton) syncButton.addEventListener('click', syncDashboard);
+    }})();
+  </script>
 </body>
 </html>
 """
