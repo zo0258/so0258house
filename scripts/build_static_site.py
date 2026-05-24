@@ -856,7 +856,8 @@ def main():
     site_dir = args.site_dir.expanduser()
     quiz_dir = site_dir / "quizzes"
     files = find_quiz_files(source_dir)
-    if not files:
+    held = held_quizzes()
+    if not files and not held:
         raise SystemExit(f"HTML 퀴즈 파일을 찾지 못했습니다: {source_dir}")
 
     if site_dir.exists() and (site_dir / ".git").exists():
@@ -872,7 +873,7 @@ def main():
         target = quiz_dir / f"quiz-{slug}.html"
         shutil.copy2(path, target)
         copied.append(target)
-    for slug, quiz in held_quizzes():
+    for slug, quiz in held:
         target = quiz_dir / f"quiz-{slug}.html"
         target.write_text(render_hold_page(quiz), encoding="utf-8")
     wrong_note = ROOT / "wrong-note.html"

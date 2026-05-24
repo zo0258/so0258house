@@ -300,9 +300,17 @@
       "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
     }
   ],
-  "publishStatus": "ok",
+  "publishStatus": "hold",
   "audit": {
     "answerAudit": "pending",
-    "status": "ok"
-  }
+    "status": "hold",
+    "reason": "공식 정답표 대조만으로는 공개 기준을 충족하지 못함. 문제 원문/보기/해설 검증 완료 후 재공개.",
+    "holdItems": [
+      {
+        "id": "all",
+        "reason": "원문·보기·해설 수동 검증 필요"
+      }
+    ]
+  },
+  "displayStatus": "검수 보류"
 }
