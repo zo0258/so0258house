@@ -113,7 +113,7 @@ def render_hold_page(quiz):
   <main>
     <section class="panel">
       <h1>검수 보류</h1>
-      <p><strong>{date_label}</strong> 회차는 공식 정답표 재검수 중입니다. 틀린 답을 노출하지 않기 위해 문제 화면을 잠시 내렸습니다.</p>
+      <p><strong>{date_label}</strong> 회차는 원문·보기·정답·해설 재검수 중입니다. 불확실한 답을 노출하지 않기 위해 문제 화면을 잠시 내렸습니다.</p>
       <p>{reason}</p>
       <ul>{item_html}</ul>
       <a href="../index.html">DashBoard로 돌아가기</a>
