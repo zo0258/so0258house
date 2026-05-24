@@ -10,10 +10,11 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+from verified_question_data import VERIFIED_BANK_DIR, load_verified_bank
+
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY_PATH = ROOT / "config" / "daily-selection-policy.json"
-QUESTION_BANK_DIR = ROOT / "data" / "question-bank"
 QUIZ_DIR = ROOT / "data" / "quizzes"
 ATTEMPTS_PATH = ROOT / "results" / "attempts.jsonl"
 MASTERED_PATH = ROOT / "results" / "mastered.json"
@@ -78,22 +79,7 @@ def has_extraction_artifact(question):
 
 
 def load_bank(bank_dir):
-    bank = []
-    seen = set()
-    for path in sorted(bank_dir.glob("*.jsonl")):
-        for item in read_jsonl(path):
-            question_id = item["id"]
-            if question_id in seen:
-                raise ValueError(f"문제은행 중복 questionId: {question_id}")
-            seen.add(question_id)
-            if has_extraction_artifact(item):
-                continue
-            if not item.get("wrongRateBasis"):
-                continue
-            item["_bankFile"] = str(path.relative_to(ROOT))
-            item["_normalizedStem"] = normalize_stem(item["question"])
-            bank.append(item)
-    return bank
+    return load_verified_bank(bank_dir)
 
 
 def load_attempts(path):
@@ -379,8 +365,8 @@ def build_quiz(questions, target_date, allow_partial, missing_subjects, sequence
         "subject": subject_text,
         "round": round_text,
         "timeLimitMinutes": max(8, len(questions) * 1),
-        "sourceSummary": f"{', '.join(source_years)}년 검증 문제은행 기반",
-        "generationNote": "allow-partial 모드로 생성되어 과목 배분이 완전하지 않습니다." if allow_partial else "정책 기반 자동 생성",
+        "sourceSummary": f"{', '.join(source_years)}년 문제·정답·해설 검증 로우데이터 기반",
+        "generationNote": "검증 로우데이터 기반 생성. answerVerified와 explanationVerified가 모두 true인 문항만 출제 후보에 포함합니다.",
         "missingSubjects": missing_subjects,
         "questions": questions,
     }
@@ -397,13 +383,13 @@ def main():
     parser.add_argument("--date", default=today_kst(), help="Quiz date, YYYY-MM-DD. Defaults to Asia/Seoul today.")
     parser.add_argument("--count", type=int, help="Question count. Defaults to policy dailyQuestionCount.")
     parser.add_argument("--policy", type=Path, default=POLICY_PATH)
-    parser.add_argument("--bank-dir", type=Path, default=QUESTION_BANK_DIR)
+    parser.add_argument("--bank-dir", type=Path, default=VERIFIED_BANK_DIR, help="검증 완료 로우데이터 JSONL 디렉터리")
     parser.add_argument("--attempts", type=Path, default=ATTEMPTS_PATH)
     parser.add_argument("--mastered", type=Path, default=MASTERED_PATH)
     parser.add_argument("--output", type=Path, help="Output quiz JSON path.")
     parser.add_argument("--sequence", type=int, choices=range(1, 10), metavar="N", help="Daily sequence: 1=오전, 2=저녁.")
     parser.add_argument("--html", action="store_true", help="Also generate the mobile HTML delivery file.")
-    parser.add_argument("--allow-partial", action="store_true", help="Generate with the available verified bank even if full policy is not yet satisfiable.")
+    parser.add_argument("--allow-partial", action="store_true", help="검증 로우데이터 안에서만 부분 생성합니다. 미검증 문항은 어떤 경우에도 포함하지 않습니다.")
     parser.add_argument("--skip-validation", action="store_true", help="Skip policy validation after generation.")
     args = parser.parse_args()
 
@@ -418,9 +404,15 @@ def main():
 
     policy = read_json(policy_path)
     count = args.count or int(policy["dailyQuestionCount"])
-    bank = load_bank(bank_dir)
+    try:
+        bank = load_bank(bank_dir)
+    except ValueError as error:
+        raise SystemExit(str(error)) from error
     if not bank:
-        raise SystemExit(f"문제은행이 비어 있습니다: {bank_dir}")
+        raise SystemExit(
+            f"검증 완료 로우데이터가 없습니다: {bank_dir}\n"
+            "문제·정답·해설 검증이 끝난 JSONL만 data/verified-question-bank/에 넣은 뒤 출제할 수 있습니다."
+        )
 
     attempts = load_attempts(attempts_path)
     mastered_ids = load_mastered(mastered_path)
@@ -432,6 +424,12 @@ def main():
     quiz = build_quiz(questions, target_date, args.allow_partial, missing_subjects, args.sequence)
     write_json(output_path, quiz)
     print(output_path)
+
+    audit_result = run_script("audit_quiz_answers.py", output_path)
+    sys.stdout.write(audit_result.stdout)
+    sys.stderr.write(audit_result.stderr)
+    if audit_result.returncode != 0:
+        raise SystemExit(audit_result.returncode)
 
     if not args.skip_validation and not args.allow_partial:
         result = run_script("validate_quiz_policy.py", output_path)

@@ -114,8 +114,8 @@
         "비만, 고혈압, 골다공증 40~59% V̇O2R 1RM의 40~50%",
         "당뇨병, 골다공증 60~70% V̇O2R 1RM의 60~70%"
       ],
-      "answerIndex": 2,
-      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "answerIndex": 0,
+      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
         "file": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 1교시 A형(게시).pdf",
         "answerFile": "materials/raw/kspo/2022/final_answer/2022 건강운동관리사 필기시험 최종정답(게시).pdf",
@@ -126,7 +126,10 @@
       },
       "wrongRateBasis": "고오답 추정",
       "verified": true,
-      "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭"
+      "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭",
+      "answerIndexes": [
+        0
+      ]
     },
     {
       "id": "2020-2A-75-03",
@@ -143,8 +146,8 @@
         "㉠, ㉢, ㉣",
         "㉡, ㉢, ㉣"
       ],
-      "answerIndex": 1,
-      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "answerIndex": 0,
+      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
         "file": "materials/raw/kspo/2020/questions_and_draft_answer/2020건강운동관리사 필기시험 2교시_A형.pdf",
         "answerFile": "materials/raw/kspo/2020/final_answer/2020건강운동관리사 필기시험 최종정답.pdf",
@@ -155,7 +158,10 @@
       },
       "wrongRateBasis": "고오답 추정",
       "verified": true,
-      "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭"
+      "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭",
+      "answerIndexes": [
+        0
+      ]
     },
     {
       "id": "2022-2A-74-09",
@@ -201,8 +207,8 @@
         "㉡, ㉢, ㉣",
         "㉠, ㉡, ㉢, ㉣"
       ],
-      "answerIndex": 1,
-      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "answerIndex": 2,
+      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
         "file": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 2교시 A형(게시).pdf",
         "answerFile": "materials/raw/kspo/2022/final_answer/2022 건강운동관리사 필기시험 최종정답(게시).pdf",
@@ -213,7 +219,10 @@
       },
       "wrongRateBasis": "고오답 추정",
       "verified": true,
-      "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭"
+      "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭",
+      "answerIndexes": [
+        2
+      ]
     },
     {
       "id": "2019-1A-73-19",
@@ -302,5 +311,45 @@
       "verified": true,
       "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭"
     }
-  ]
+  ],
+  "publishStatus": "hold",
+  "displayStatus": "검수 보류",
+  "audit": {
+    "answerAudit": "pending",
+    "status": "hold",
+    "reason": "공식 정답표 범위 밖이거나 출처 필드가 부족한 문항 포함",
+    "holdItems": [
+      {
+        "id": "2016-1A-70-01",
+        "reason": "official answer key missing or source fields incomplete"
+      },
+      {
+        "id": "2016-1A-70-05",
+        "reason": "official answer key missing or source fields incomplete"
+      }
+    ],
+    "corrections": [
+      {
+        "id": "2022-1A-72-17",
+        "old": 3,
+        "new": [
+          1
+        ]
+      },
+      {
+        "id": "2020-2A-75-03",
+        "old": 2,
+        "new": [
+          1
+        ]
+      },
+      {
+        "id": "2022-2A-77-10",
+        "old": 2,
+        "new": [
+          3
+        ]
+      }
+    ]
+  }
 }

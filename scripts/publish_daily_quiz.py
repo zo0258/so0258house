@@ -89,6 +89,7 @@ def main():
     if args.count:
         generate_command.extend(["--count", str(args.count)])
     run(generate_command)
+    run([sys.executable, "scripts/audit_quiz_answers.py", quiz_json_path(args.date, args.sequence)])
     run([sys.executable, "scripts/validate_quiz_policy.py", quiz_json_path(args.date, args.sequence)])
     run([sys.executable, "scripts/build_static_site.py", "--site-dir", "."])
 

@@ -299,5 +299,10 @@
       "verified": true,
       "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
     }
-  ]
+  ],
+  "publishStatus": "ok",
+  "audit": {
+    "answerAudit": "pending",
+    "status": "ok"
+  }
 }

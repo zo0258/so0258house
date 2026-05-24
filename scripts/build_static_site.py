@@ -49,9 +49,79 @@ def find_quiz_files(source_dir):
     files = []
     for path in source_dir.glob("*.html"):
         normalized_name = unicodedata.normalize("NFC", path.name)
-        if normalized_name.startswith("건강운동관리사_"):
+        if normalized_name.startswith("건강운동관리사_") and is_publishable_quiz_html(path):
             files.append(path)
     return sorted(files, key=quiz_sort_key, reverse=True)
+
+
+def is_publishable_quiz_html(path):
+    _, _, slug, _ = quiz_identity(path)
+    quiz_json = ROOT / "data" / "quizzes" / f"{slug}-daily.json"
+    if not quiz_json.exists():
+        return True
+    try:
+        quiz = json.loads(quiz_json.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return False
+    return quiz.get("publishStatus", "ok") != "hold"
+
+
+def held_quizzes():
+    held = []
+    for path in sorted((ROOT / "data" / "quizzes").glob("*-daily.json")):
+        try:
+            quiz = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        if quiz.get("publishStatus") != "hold":
+            continue
+        slug = quiz.get("slug") or path.name.removesuffix("-daily.json")
+        held.append((slug, quiz))
+    return held
+
+
+def render_hold_page(quiz):
+    title = html.escape(quiz.get("title") or "건강운동관리사 데일리 퀴즈")
+    date_label = html.escape(quiz.get("displayDate") or quiz.get("date") or "")
+    audit = quiz.get("audit") or {}
+    reason = html.escape(audit.get("reason") or "공식 정답표 기준 재검수가 끝나지 않은 문항이 포함되어 있습니다.")
+    hold_items = audit.get("holdItems") or []
+    item_html = "".join(
+        f"<li><code>{html.escape(str(item.get('id') or 'id없음'))}</code> - {html.escape(str(item.get('reason') or '검수 필요'))}</li>"
+        for item in hold_items[:20]
+    )
+    if not item_html:
+        item_html = "<li>검수 대기 문항이 포함되어 있습니다.</li>"
+    return f"""<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title} | 검수 보류</title>
+  <style>
+    body {{ margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; background: #f8f4f1; color: #242522; }}
+    main {{ max-width: 680px; margin: 0 auto; padding: 32px 18px; }}
+    .panel {{ background: #fff; border: 1px solid #ddd7ca; border-radius: 10px; padding: 22px; }}
+    h1 {{ margin: 0 0 8px; font-size: 24px; color: #2f3d32; }}
+    p {{ line-height: 1.65; color: #5f665f; }}
+    ul {{ padding-left: 20px; line-height: 1.7; }}
+    a {{ display: inline-block; margin-top: 14px; color: #2f3d32; font-weight: 800; }}
+    code {{ font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="panel">
+      <h1>검수 보류</h1>
+      <p><strong>{date_label}</strong> 회차는 공식 정답표 재검수 중입니다. 틀린 답을 노출하지 않기 위해 문제 화면을 잠시 내렸습니다.</p>
+      <p>{reason}</p>
+      <ul>{item_html}</ul>
+      <a href="../index.html">DashBoard로 돌아가기</a>
+    </section>
+  </main>
+</body>
+</html>
+"""
 
 
 def quiz_sort_key(path):
@@ -802,6 +872,9 @@ def main():
         target = quiz_dir / f"quiz-{slug}.html"
         shutil.copy2(path, target)
         copied.append(target)
+    for slug, quiz in held_quizzes():
+        target = quiz_dir / f"quiz-{slug}.html"
+        target.write_text(render_hold_page(quiz), encoding="utf-8")
     wrong_note = ROOT / "wrong-note.html"
     if wrong_note.exists():
         wrong_note_target = site_dir / "wrong-note.html"

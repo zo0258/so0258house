@@ -27,8 +27,8 @@
         "혈소판 응집성 감소",
         "인슐린 요구도 감소"
       ],
-      "answerIndex": 0,
-      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "answerIndex": 1,
+      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
         "file": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 1교시 A형(게시).pdf",
         "answerFile": "materials/raw/kspo/2022/final_answer/2022 건강운동관리사 필기시험 최종정답(게시).pdf",
@@ -39,7 +39,10 @@
       },
       "wrongRateBasis": "고오답 추정",
       "verified": true,
-      "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭"
+      "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭",
+      "answerIndexes": [
+        1
+      ]
     },
     {
       "id": "2016-1A-70-13",
@@ -85,8 +88,8 @@
         "조기심실수축(premature ventricular contraction)",
         "2도 I형 방실차단(second-degree type I AV block)"
       ],
-      "answerIndex": 0,
-      "explanation": "최종정답 기준 정답은 ①입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "answerIndex": 3,
+      "explanation": "최종정답 기준 정답은 ④입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
         "file": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 2교시 A형(게시).pdf",
         "answerFile": "materials/raw/kspo/2022/final_answer/2022 건강운동관리사 필기시험 최종정답(게시).pdf",
@@ -104,6 +107,9 @@
           "alt": "2022-2A-76-02 원본 그림 문항",
           "sourcePage": 7
         }
+      ],
+      "answerIndexes": [
+        3
       ]
     },
     {
@@ -273,8 +279,8 @@
         "㉡, ㉢",
         "㉡, ㉣"
       ],
-      "answerIndex": 2,
-      "explanation": "최종정답 기준 정답은 ③입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
+      "answerIndex": 1,
+      "explanation": "최종정답 기준 정답은 ②입니다. 해설 보강 전 기본 문항이므로, 틀린 경우 문제 조건과 각 보기의 핵심 용어를 원문 기준으로 다시 확인하세요.",
       "source": {
         "file": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 2교시 A형(게시).pdf",
         "answerFile": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
@@ -285,7 +291,10 @@
       },
       "wrongRateBasis": "고오답 추정",
       "verified": true,
-      "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭"
+      "bankSource": "공식 KSPO 원문 자동 추출 후 정답 매칭",
+      "answerIndexes": [
+        1
+      ]
     },
     {
       "id": "2020-2A-75-04",
@@ -323,5 +332,45 @@
         }
       ]
     }
-  ]
+  ],
+  "publishStatus": "hold",
+  "displayStatus": "검수 보류",
+  "audit": {
+    "answerAudit": "pending",
+    "status": "hold",
+    "reason": "공식 정답표 범위 밖이거나 출처 필드가 부족한 문항 포함",
+    "holdItems": [
+      {
+        "id": "2016-1A-70-13",
+        "reason": "official answer key missing or source fields incomplete"
+      },
+      {
+        "id": "2016-1A-73-07",
+        "reason": "official answer key missing or source fields incomplete"
+      }
+    ],
+    "corrections": [
+      {
+        "id": "2022-1A-71-01",
+        "old": 1,
+        "new": [
+          2
+        ]
+      },
+      {
+        "id": "2022-2A-76-02",
+        "old": 1,
+        "new": [
+          4
+        ]
+      },
+      {
+        "id": "2021-2A-77-11",
+        "old": 3,
+        "new": [
+          2
+        ]
+      }
+    ]
+  }
 }

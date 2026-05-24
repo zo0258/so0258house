@@ -296,5 +296,18 @@
       "verified": true,
       "bankSource": "pdftotext 자동 추출 후 최종정답 매칭"
     }
-  ]
+  ],
+  "publishStatus": "hold",
+  "displayStatus": "검수 보류",
+  "audit": {
+    "answerAudit": "pending",
+    "status": "hold",
+    "reason": "공식 정답표 범위 밖이거나 출처 필드가 부족한 문항 포함",
+    "holdItems": [
+      {
+        "id": "2023-1A-exphys-01",
+        "reason": "official answer key missing or source fields incomplete"
+      }
+    ]
+  }
 }
