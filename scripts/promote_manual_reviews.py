@@ -34,6 +34,21 @@ def load_candidates():
     return rows
 
 
+def clean_extraction_artifacts(value):
+    if not isinstance(value, str):
+        return value
+    markers = (
+        "건강운동관리사 필기시험",
+        "A형 건강운동관리사 필기시험",
+        "B형 건강운동관리사 필기시험",
+    )
+    cleaned = value
+    for marker in markers:
+        if marker in cleaned:
+            cleaned = cleaned.split(marker, 1)[0]
+    return cleaned.strip()
+
+
 def promoted_question(candidate, annotation):
     answer_index = int(candidate["answerIndex"])
     choice_reasons = annotation["choiceReasons"]
@@ -43,6 +58,8 @@ def promoted_question(candidate, annotation):
     if len(sources) < 2:
         raise ValueError(f"{candidate['id']}: 해설 출처 2개 미만")
     question = dict(candidate)
+    question["question"] = clean_extraction_artifacts(question.get("question"))
+    question["choices"] = [clean_extraction_artifacts(choice) for choice in question.get("choices") or []]
     question.update(
         {
             "sourceVerified": True,

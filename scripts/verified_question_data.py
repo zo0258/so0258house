@@ -13,6 +13,9 @@ ALLOWED_CONFIDENCE = {"high", "manual"}
 MIN_EXTERNAL_REVIEW_SOURCES = 2
 FOOTER_CONTAMINATION_TERMS = (
     "건강운동관리사 자격검정",
+    "건강운동관리사 필기시험",
+    "A형 건강운동관리사 필기시험",
+    "B형 건강운동관리사 필기시험",
     "본 문제는 저작권법에",
     "한국스포츠정책과학원",
     "본 제작물에는",
