@@ -1,0 +1,1176 @@
+{
+  "quizId": "2026-05-26-daily-1-all-subjects",
+  "date": "2026-05-26",
+  "displayDate": "2026-05-26 (오전)",
+  "slug": "2026-05-26-1",
+  "sequence": 1,
+  "title": "건강운동관리사 데일리 퀴즈",
+  "subject": "전과목",
+  "round": "시험 임박 전과목 10문항",
+  "timeLimitMinutes": 10,
+  "sourceSummary": "2023, 2024년 문제·정답·해설 검증 로우데이터 기반",
+  "generationNote": "검증 로우데이터 기반 생성. answerVerified와 explanationVerified가 모두 true인 문항만 출제 후보에 포함합니다.",
+  "missingSubjects": [],
+  "questions": [
+    {
+      "id": "2023-1A-73-01",
+      "year": 2023,
+      "subject": "운동부하검사",
+      "topic": "운동부하검사 설명",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "운동부하검사 설명 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "운동부하검사에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "질환에 대한 진단과 예후 및 평가를 위한 목적으로 사용된다.",
+        "진행 중인 불안정 협심증 진단을 위해 검사하는 것을 추천한다.",
+        "혈압이나 최고 운동능력과 같은 생리적 반응을 평가하기 위해 적합한 방법이다.",
+        "ST분절 하강과 같은 증상-제한 최대수준에 도달할 때까지 실시한다."
+      ],
+      "answerIndex": 1,
+      "explanation": "운동부하검사는 진단, 예후평가, 생리적 반응 평가, 운동처방 설정에 쓰이지만 진행 중인 불안정 협심증에서는 권장되지 않으며 금기 또는 중단 사유로 본다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 1,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 73
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "questionNo": 1,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription, exercise testing indications and contraindications",
+            "url": "textbook:ACSM-GETP-11"
+          },
+          {
+            "title": "AHA/ACC exercise testing contraindications",
+            "url": "guideline:AHA-ACC-exercise-testing"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+          "questionNo": 1
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "운동부하검사는 진단, 예후평가, 생리적 반응 평가, 운동처방 설정에 쓰이지만 진행 중인 불안정 협심증에서는 권장되지 않으며 금기 또는 중단 사유로 본다.",
+      "reviewPoint": "운동부하검사의 목적과 금기증을 함께 확인한다. 불안정 협심증, 급성 심근경색 초기 등은 금기다.",
+      "explanationSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription, exercise testing indications and contraindications",
+          "url": "textbook:ACSM-GETP-11"
+        },
+        {
+          "title": "AHA/ACC exercise testing contraindications",
+          "url": "guideline:AHA-ACC-exercise-testing"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "질환의 진단·예후·평가 목적으로 사용될 수 있다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "진행 중인 불안정 협심증은 운동검사 권장 상황이 아니다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "혈압과 최고 운동능력 등 생리적 반응 평가에 적합하다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "증상제한 최대수준까지 진행하는 방식이 운동부하검사의 일반 원칙이다."
+        }
+      ]
+    },
+    {
+      "id": "2023-2A-76-17",
+      "year": 2023,
+      "subject": "병태생리학",
+      "topic": "콜레스테롤과 혈중지질",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "콜레스테롤과 혈중지질 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "콜레스테롤과 혈중지질에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "세포막 구성성분의 일부는 콜레스테롤로 구성되어 있다.",
+        "혈중지질개선을 위한 약물치료가 식이요법 보다 더 효과적이다.",
+        "중성지방을 제외한 저밀도지단백 콜레스테롤(LDL-C)은 에너지원으로 사용될 수 있다.",
+        "스타틴은 간에서 HMG-CoA 환원효소를 억제하여 콜레스테롤을 개선시키고, 드물게 근육통의 부작용이 나타날 수 있다."
+      ],
+      "answerIndex": 2,
+      "explanation": "콜레스테롤은 세포막 구성과 스테로이드 전구체 등으로 중요하지만, 에너지원으로 주로 사용되는 것은 중성지방과 지방산이다. LDL-C 자체를 에너지원으로 사용한다는 설명은 부적절하다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 17,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 76
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        2
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          2
+        ],
+        "officialAnswer": "③",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "questionNo": 17,
+        "officialAnswerIndex": 2
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Merck Manual Professional Edition",
+            "url": "https://www.merckmanuals.com/professional"
+          },
+          {
+            "title": "NCBI Bookshelf",
+            "url": "https://www.ncbi.nlm.nih.gov/books/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+          "questionNo": 17
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            2
+          ]
+        }
+      ],
+      "correctRationale": "콜레스테롤은 세포막 구성과 스테로이드 전구체 등으로 중요하지만, 에너지원으로 주로 사용되는 것은 중성지방과 지방산이다. LDL-C 자체를 에너지원으로 사용한다는 설명은 부적절하다.",
+      "reviewPoint": "LDL은 콜레스테롤 운반 입자이지 에너지원 자체로 외우지 않는다.",
+      "explanationSources": [
+        {
+          "title": "Merck Manual Professional Edition",
+          "url": "https://www.merckmanuals.com/professional"
+        },
+        {
+          "title": "NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① 세포막 구성성분의 일부는 콜레스테롤로 구성되어 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "② 혈중지질개선을 위한 약물치료가 식이요법 보다 더 효과적이다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "correct",
+          "reason": "③ 중성지방을 제외한 저밀도지단백 콜레스테롤(LDL-C)은 에너지원으로 사용될 수 있다.: 공식 정답이며, 콜레스테롤은 세포막 구성과 스테로이드 전구체 등으로 중요하지만, 에너지원으로 주로 사용되는 것은 중성지방과 지방산이다. LDL-C 자체를 에너지원으로 사용한다는 설명은 부적절하다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "④ 스타틴은 간에서 HMG-CoA 환원효소를 억제하여 콜레스테롤을 개선시키고, 드물게 근육통의 부작용이 나타날 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        }
+      ]
+    },
+    {
+      "id": "2023-2A-75-04",
+      "year": 2023,
+      "subject": "기능해부학",
+      "topic": "운동역학적 변인에",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "운동역학적 변인에 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "운동역학적(kinetics) 변인(variable)에 해당하는 것은?",
+      "choices": [
+        "충격량(impulse)",
+        "각속도(angular velocity)",
+        "관절가동범위(joint range of motion)",
+        "한걸음 길이(stride length)"
+      ],
+      "answerIndex": 0,
+      "explanation": "운동역학(kinetics)은 힘과 그 효과를 다루며 충격량은 힘과 시간의 곱 또는 힘-시간 적분으로 설명되는 kinetics 변인이다. 각속도, 관절가동범위, 한걸음 길이는 움직임의 위치·각도·속도·거리와 관련된 kinematics 변인이다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 4,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 75
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        0
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          0
+        ],
+        "officialAnswer": "①",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "questionNo": 4,
+        "officialAnswerIndex": 0
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Hall, Basic Biomechanics, kinetics and kinematics variables",
+            "url": "textbook:Hall-Basic-Biomechanics"
+          },
+          {
+            "title": "Winter, Biomechanics and Motor Control of Human Movement",
+            "url": "textbook:Winter-Biomechanics"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+          "questionNo": 4
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            0
+          ]
+        }
+      ],
+      "correctRationale": "운동역학(kinetics)은 힘과 그 효과를 다루며 충격량은 힘과 시간의 곱 또는 힘-시간 적분으로 설명되는 kinetics 변인이다. 각속도, 관절가동범위, 한걸음 길이는 움직임의 위치·각도·속도·거리와 관련된 kinematics 변인이다.",
+      "reviewPoint": "kinetics는 힘·토크·일·파워·충격량, kinematics는 위치·변위·속도·가속도·각도 계열로 나눈다.",
+      "explanationSources": [
+        {
+          "title": "Hall, Basic Biomechanics, kinetics and kinematics variables",
+          "url": "textbook:Hall-Basic-Biomechanics"
+        },
+        {
+          "title": "Winter, Biomechanics and Motor Control of Human Movement",
+          "url": "textbook:Winter-Biomechanics"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "correct",
+          "reason": "충격량은 힘-시간 관계로 정의되는 kinetics 변인이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "각속도는 움직임의 속도를 나타내는 kinematics 변인이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "관절가동범위는 각도/변위 성격의 kinematics 변인이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "한걸음 길이는 거리/변위 성격의 kinematics 변인이다."
+        }
+      ]
+    },
+    {
+      "id": "2024-2A-74-11",
+      "year": 2024,
+      "subject": "운동상해",
+      "topic": "골단 성장판",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "골단 성장판 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "골단 성장판 손상의 Salter-Harris 분류로 옳지 않은 것은?",
+      "choices": [
+        "1형 - 뼈의 골절 없이 골단(physis) 분리",
+        "2형 - 뼈의 골절 없이 골단의 압착",
+        "3형 - 골단 부위 골절",
+        "4형 - 골단과 골간단(metaphysis)의 골절"
+      ],
+      "answerIndex": 1,
+      "explanation": "Salter-Harris 2형은 성장판을 지나 골간단으로 연장되는 골절이다. 뼈 골절 없이 골단의 압착은 5형에 해당하므로 ②가 옳지 않다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 11,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 74
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "questionNo": 11,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Brukner & Khan Clinical Sports Medicine, epiphyseal plate injuries",
+            "url": "textbook:Brukner-Khan"
+          },
+          {
+            "title": "Merck Manual Professional, Physeal fractures",
+            "url": "https://www.merckmanuals.com/professional/injuries-poisoning/fractures/physeal-growth-plate-fractures"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+          "questionNo": 11
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "Salter-Harris 2형은 성장판을 지나 골간단으로 연장되는 골절이다. 뼈 골절 없이 골단의 압착은 5형에 해당하므로 ②가 옳지 않다.",
+      "reviewPoint": "Salter-Harris 분류는 I 성장판 분리, II 골간단 포함, III 골단 포함, IV 골단+골간단, V 압착으로 정리한다.",
+      "explanationSources": [
+        {
+          "title": "Brukner & Khan Clinical Sports Medicine, epiphyseal plate injuries",
+          "url": "textbook:Brukner-Khan"
+        },
+        {
+          "title": "Merck Manual Professional, Physeal fractures",
+          "url": "https://www.merckmanuals.com/professional/injuries-poisoning/fractures/physeal-growth-plate-fractures"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "1형은 뼈 골절 없이 성장판 분리로 설명할 수 있다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "2형은 압착이 아니라 성장판과 골간단을 포함하는 골절이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "3형은 골단 부위까지 관여한다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "4형은 골단과 골간단을 모두 침범한다."
+        }
+      ]
+    },
+    {
+      "id": "2023-1A-71-14",
+      "year": 2023,
+      "subject": "건강·체력평가",
+      "topic": "국민체력100 체력측정",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "국민체력100 체력측정 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "‘국민체력100’ 체력측정 지침에 따른 대상과 검사방법이 옳지 않은\n것은?",
+      "choices": [
+        "유소년기(만 11세~12세) 협응력 검사는 벽패스 검사(회/30초)를 실시한다.",
+        "어르신기(만 65세 이상) 근지구력 검사는 6분걷기(m)를 실시한다.",
+        "청소년기(만 13세~18세) 민첩성 검사는 일리노이 민첩성 검사(초)를 실시한다.",
+        "성인기(만 19세~64세) 유연성 검사는 앉아윗몸앞으로굽히기(cm)를 실시한다."
+      ],
+      "answerIndex": 1,
+      "explanation": "어르신기 6분걷기는 심폐지구력 평가에 해당하며 근지구력 검사는 의자에 앉았다 일어서기 등으로 평가한다. 따라서 근지구력 검사를 6분걷기로 본 설명이 틀리다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 14,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 71
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "questionNo": 14,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "국민체력100 체력측정 항목",
+            "url": "https://nfa.kspo.or.kr/front/measure/measurePhysical.do"
+          },
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+          "questionNo": 14
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "어르신기 6분걷기는 심폐지구력 평가에 해당하며 근지구력 검사는 의자에 앉았다 일어서기 등으로 평가한다. 따라서 근지구력 검사를 6분걷기로 본 설명이 틀리다.",
+      "reviewPoint": "국민체력100은 생애주기별 체력요소와 검사명을 연결해 판단한다.",
+      "explanationSources": [
+        {
+          "title": "국민체력100 체력측정 항목",
+          "url": "https://nfa.kspo.or.kr/front/measure/measurePhysical.do"
+        },
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① 유소년기(만 11세~12세) 협응력 검사는 벽패스 검사(회/30초)를 실시한다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "② 어르신기(만 65세 이상) 근지구력 검사는 6분걷기(m)를 실시한다.: 공식 정답이며, 어르신기 6분걷기는 심폐지구력 평가에 해당하며 근지구력 검사는 의자에 앉았다 일어서기 등으로 평가한다. 따라서 근지구력 검사를 6분걷기로 본 설명이 틀리다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "③ 청소년기(만 13세~18세) 민첩성 검사는 일리노이 민첩성 검사(초)를 실시한다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "④ 성인기(만 19세~64세) 유연성 검사는 앉아윗몸앞으로굽히기(cm)를 실시한다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        }
+      ]
+    },
+    {
+      "id": "2024-2A-74-19",
+      "year": 2024,
+      "subject": "운동상해",
+      "topic": "뒤십자인대 안정성",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "뒤십자인대 안정성 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "뒤십자인대(후방십자인대, posterior cruciate ligament)의 안정성을 확인하\n기 위한 검사는?",
+      "choices": [
+        "갓프레이(Godfrey) 검사",
+        "라크만 드로워(Lachman drawer) 검사",
+        "절크(jerk) 검사",
+        "맥머레이(Mcmurray) 검사"
+      ],
+      "answerIndex": 0,
+      "explanation": "Godfrey 검사는 후방십자인대 손상에서 경골의 후방 처짐을 확인하는 검사다. Lachman은 주로 전방십자인대, McMurray는 반월상연골, jerk 검사는 회전 불안정성과 관련된다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 19,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 74
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        0
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          0
+        ],
+        "officialAnswer": "①",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "questionNo": 19,
+        "officialAnswerIndex": 0
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Magee, Orthopedic Physical Assessment, knee special tests",
+            "url": "textbook:Magee-Orthopedic-Physical-Assessment"
+          },
+          {
+            "title": "Brukner & Khan Clinical Sports Medicine, knee ligament tests",
+            "url": "textbook:Brukner-Khan"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+          "questionNo": 19
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            0
+          ]
+        }
+      ],
+      "correctRationale": "Godfrey 검사는 후방십자인대 손상에서 경골의 후방 처짐을 확인하는 검사다. Lachman은 주로 전방십자인대, McMurray는 반월상연골, jerk 검사는 회전 불안정성과 관련된다.",
+      "reviewPoint": "무릎 특수검사는 구조물별로 연결한다: PCL-Godfrey/posterior drawer, ACL-Lachman/anterior drawer, meniscus-McMurray.",
+      "explanationSources": [
+        {
+          "title": "Magee, Orthopedic Physical Assessment, knee special tests",
+          "url": "textbook:Magee-Orthopedic-Physical-Assessment"
+        },
+        {
+          "title": "Brukner & Khan Clinical Sports Medicine, knee ligament tests",
+          "url": "textbook:Brukner-Khan"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "correct",
+          "reason": "Godfrey 검사는 PCL 안정성 평가에 사용된다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "Lachman drawer는 주로 ACL 평가 검사다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "Jerk 검사는 PCL 대표 안정성 검사가 아니다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "McMurray 검사는 반월상연골 평가에 사용된다."
+        }
+      ]
+    },
+    {
+      "id": "2023-2A-77-19",
+      "year": 2023,
+      "subject": "스포츠심리학",
+      "topic": "상황에 해당하",
+      "type": "개념구분",
+      "difficulty": 4,
+      "trap": "상황에 해당하 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>의 상황에 해당하는 엘리엇(Eliot)의 2×2 성취목표성향은?\n<보기>.\n김○○군은 피트니스센터 트레드밀에서 혼자 달리는 것을\n좋아한다. 평상시 혼자 운동할 때는 7 km/h의 속도를 유지하며\n달리기를 한다. 하지만 다른 회원이 옆에서 더 높은 속도로 달리는\n것 같으면, 자신의 속도를 10 km/h로 높이는 성향이 있다.",
+      "choices": [
+        "숙달접근목표",
+        "수행접근목표",
+        "숙달회피목표",
+        "수행회피목표"
+      ],
+      "answerIndex": 1,
+      "explanation": "사례는 자기 숙련 기준보다 타인과의 비교에서 더 우월해지기 위해 속도를 높이는 행동이다. 이는 타인 대비 유능감을 입증하려는 수행접근목표에 해당한다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 19,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 77
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "questionNo": 19,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "APA Dictionary of Psychology",
+            "url": "https://dictionary.apa.org/"
+          },
+          {
+            "title": "NCBI PMC - Motor Imagery Review",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+          "questionNo": 19
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "사례는 자기 숙련 기준보다 타인과의 비교에서 더 우월해지기 위해 속도를 높이는 행동이다. 이는 타인 대비 유능감을 입증하려는 수행접근목표에 해당한다.",
+      "reviewPoint": "타인보다 잘하려는 접근 동기는 수행접근, 못해 보임을 피하려는 동기는 수행회피로 구분한다.",
+      "explanationSources": [
+        {
+          "title": "APA Dictionary of Psychology",
+          "url": "https://dictionary.apa.org/"
+        },
+        {
+          "title": "NCBI PMC - Motor Imagery Review",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① 숙달접근목표: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "② 수행접근목표: 공식 정답이며, 사례는 자기 숙련 기준보다 타인과의 비교에서 더 우월해지기 위해 속도를 높이는 행동이다. 이는 타인 대비 유능감을 입증하려는 수행접근목표에 해당한다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "③ 숙달회피목표: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "④ 수행회피목표: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        }
+      ]
+    },
+    {
+      "id": "2023-1A-72-09",
+      "year": 2023,
+      "subject": "운동처방론",
+      "topic": "체중이 100kg인",
+      "type": "계산",
+      "difficulty": 4,
+      "trap": "체중이 100kg인 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "체중이 100kg인 비만 남성이 1주일에 1,000 MET-min 유산소운동을\n했다면 에너지소비량은? (산소 소비 1L 당 5kcal 소비 기준으로 계산)",
+      "choices": [
+        "1,450 kcal",
+        "1,550 kcal",
+        "1,650 kcal",
+        "1,750 kcal"
+      ],
+      "answerIndex": 3,
+      "explanation": "에너지소비량은 MET-min × 3.5 × 체중(kg) / 200으로 계산한다. 1,000 × 3.5 × 100 / 200 = 1,750 kcal이므로 정답은 ④이다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 9,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 72
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        3
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          3
+        ],
+        "officialAnswer": "④",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "questionNo": 9,
+        "officialAnswerIndex": 3
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription, metabolic calculations",
+            "url": "textbook:ACSM-GETP-11"
+          },
+          {
+            "title": "Compendium of Physical Activities, MET convention",
+            "url": "https://pacompendium.com/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+          "questionNo": 9
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            3
+          ]
+        }
+      ],
+      "correctRationale": "에너지소비량은 MET-min × 3.5 × 체중(kg) / 200으로 계산한다. 1,000 × 3.5 × 100 / 200 = 1,750 kcal이므로 정답은 ④이다.",
+      "reviewPoint": "MET-min을 kcal로 바꿀 때는 1 MET = 3.5 mL/kg/min, 산소 1 L당 약 5 kcal 기준을 적용한다.",
+      "explanationSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription, metabolic calculations",
+          "url": "textbook:ACSM-GETP-11"
+        },
+        {
+          "title": "Compendium of Physical Activities, MET convention",
+          "url": "https://pacompendium.com/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "1,450 kcal은 공식 계산값보다 낮다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "1,550 kcal은 공식 계산값보다 낮다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "1,650 kcal은 공식 계산값보다 낮다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "correct",
+          "reason": "공식에 대입하면 1,750 kcal이다."
+        }
+      ]
+    },
+    {
+      "id": "2023-1A-70-14",
+      "year": 2023,
+      "subject": "운동생리학",
+      "topic": "신경세포 설명",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "신경세포 설명 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 신경세포에 대한 설명으로 옳은 것으로만 모두 고른\n것은?\n<보기>.\n㉠ 신경전달 속도는 축삭(axon)의 지름에 비례한다.\n㉡ 신경세포체에는 골격근 세포와 달리 핵, 리보솜, 미토콘드리아\n등이 없다.\n㉢ 미엘린 수초(myelin sheath)로 덮여 있는 축삭이 수초가 없는\n축삭보다 빠르게 자극을 전달한다.",
+      "choices": [
+        "㉠, ㉡",
+        "㉡, ㉢",
+        "㉠, ㉢",
+        "㉠, ㉡, ㉢"
+      ],
+      "answerIndex": 2,
+      "explanation": "㉠ 축삭 지름이 클수록 내부저항이 낮아져 신경전달 속도가 빨라진다. ㉢ 미엘린 수초는 도약전도를 가능하게 해 전도 속도를 높인다. ㉡ 신경세포체에는 핵과 리보솜, 미토콘드리아 등 세포소기관이 있으므로 틀리다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 14,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 70
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        2
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          2
+        ],
+        "officialAnswer": "③",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "questionNo": 14,
+        "officialAnswerIndex": 2
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "OpenStax A&P 2e, Nervous Tissue",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-2-nervous-tissue"
+          },
+          {
+            "title": "OpenStax A&P 2e, The Action Potential",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-4-the-action-potential"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+          "questionNo": 14
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            2
+          ]
+        }
+      ],
+      "correctRationale": "㉠ 축삭 지름이 클수록 내부저항이 낮아져 신경전달 속도가 빨라진다. ㉢ 미엘린 수초는 도약전도를 가능하게 해 전도 속도를 높인다. ㉡ 신경세포체에는 핵과 리보솜, 미토콘드리아 등 세포소기관이 있으므로 틀리다.",
+      "reviewPoint": "신경 전도 속도는 축삭 지름과 미엘린 수초 유무에 크게 영향을 받는다.",
+      "explanationSources": [
+        {
+          "title": "OpenStax A&P 2e, Nervous Tissue",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-2-nervous-tissue"
+        },
+        {
+          "title": "OpenStax A&P 2e, The Action Potential",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-4-the-action-potential"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "㉡이 틀렸으므로 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "㉡이 틀렸으므로 오답이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "correct",
+          "reason": "㉠과 ㉢이 모두 옳다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "㉡이 포함되어 오답이다."
+        }
+      ]
+    },
+    {
+      "id": "2023-2A-76-11",
+      "year": 2023,
+      "subject": "병태생리학",
+      "topic": "급성관상동맥증후군 설명",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "급성관상동맥증후군 설명 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 급성관상동맥증후군(acute coronary syndrome)에 대한\n설명으로 옳은 것으로만 고른 것은?\n<보기>.\n㉠ 흉통은 운동시 발생하지만 안정을 취하면 사라진다.\n㉡ 관상동맥의 경화반(plaque) 파열 및 혈전과 관련 있다.\n㉢ 관상동맥의 혈전이 아닌 연축(spasm)에 의해 발생한다.\n㉣ cTnI와 cTnT의 비정상적인 증가와 ST 분절 상승이 발생할 수\n있다.",
+      "choices": [
+        "㉠, ㉡",
+        "㉠, ㉢",
+        "㉡, ㉢",
+        "㉡, ㉣"
+      ],
+      "answerIndex": 3,
+      "explanation": "급성관상동맥증후군은 관상동맥 죽상경화반 파열, 혈소판 활성화, 혈전 형성과 관련된다. 심근손상이 동반되면 cTnI/cTnT 상승과 ST분절 상승이 나타날 수 있으므로 ㉡과 ㉣ 조합이 맞다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 11,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 76
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        3
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          3
+        ],
+        "officialAnswer": "④",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "questionNo": 11,
+        "officialAnswerIndex": 3
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Merck Manual Professional Edition",
+            "url": "https://www.merckmanuals.com/professional"
+          },
+          {
+            "title": "NCBI Bookshelf",
+            "url": "https://www.ncbi.nlm.nih.gov/books/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+          "questionNo": 11
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            3
+          ]
+        }
+      ],
+      "correctRationale": "급성관상동맥증후군은 관상동맥 죽상경화반 파열, 혈소판 활성화, 혈전 형성과 관련된다. 심근손상이 동반되면 cTnI/cTnT 상승과 ST분절 상승이 나타날 수 있으므로 ㉡과 ㉣ 조합이 맞다.",
+      "reviewPoint": "안정 시 사라지는 안정형 협심증 설명과 ACS의 plaque rupture·troponin·ST 변화를 구분한다.",
+      "explanationSources": [
+        {
+          "title": "Merck Manual Professional Edition",
+          "url": "https://www.merckmanuals.com/professional"
+        },
+        {
+          "title": "NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① ㉠, ㉡: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "② ㉠, ㉢: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "③ ㉡, ㉢: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "correct",
+          "reason": "④ ㉡, ㉣: 공식 정답이며, 급성관상동맥증후군은 관상동맥 죽상경화반 파열, 혈소판 활성화, 혈전 형성과 관련된다. 심근손상이 동반되면 cTnI/cTnT 상승과 ST분절 상승이 나타날 수 있으므로 ㉡과 ㉣ 조합이 맞다."
+        }
+      ]
+    }
+  ]
+}
