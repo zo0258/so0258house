@@ -1,0 +1,1604 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>건강운동관리사 데일리 퀴즈 | 2026-05-27 (오전)</title>
+  <style>
+    :root {
+      --bg: #f8f4f1;
+      --surface: #ffffff;
+      --ink: #242522;
+      --muted: #6e746d;
+      --line: #ddd7ca;
+      --accent: #66735d;
+      --accent-strong: #2f3d32;
+      --accent-soft: #e9eee4;
+      --sage: #e9eee4;
+      --accent-wash: #f7faf4;
+      --danger: #b64032;
+      --danger-soft: #f8e8e5;
+      --ok: #287a4b;
+      --ok-soft: #e4f3e9;
+      --warn: #a16b18;
+      --shadow: none;
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 50% -12%, rgba(102, 115, 93, .12), transparent 18rem),
+        linear-gradient(180deg, #f8f4f1 0%, #f3eee7 100%),
+        var(--bg);
+    }
+
+    button, textarea {
+      font: inherit;
+    }
+
+    .app {
+      width: min(760px, 100%);
+      min-height: 100svh;
+      margin: 0 auto;
+      background: transparent;
+      box-shadow: var(--shadow);
+      border-left: 0;
+      border-right: 0;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(248, 244, 241, .94);
+      border-bottom: 1px solid rgba(102, 115, 93, .16);
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar-inner {
+      padding: 14px 14px 10px;
+    }
+
+    .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.25;
+      font-weight: 950;
+      color: var(--accent-strong);
+    }
+
+    .progress-chip {
+      flex: 0 0 auto;
+      min-width: 58px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 950;
+    }
+
+    .progress-track {
+      height: 5px;
+      margin-top: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: #e8ece6;
+    }
+
+    .progress-bar {
+      width: 0%;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--accent);
+      transition: width .25s ease;
+    }
+
+    main {
+      padding: 16px 14px 26px;
+    }
+
+    .question-card {
+      display: none;
+    }
+
+    .question-card.active {
+      display: block;
+      padding: 16px;
+      border: 1px solid rgba(102, 115, 93, .18);
+      border-radius: 14px;
+      background: rgba(255,255,255,.76);
+      animation: questionIn .18s ease-out;
+    }
+
+    @keyframes questionIn {
+      from { opacity: .72; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .q-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .q-count {
+      color: var(--accent-strong);
+      font-size: 13px;
+      font-weight: 900;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+    }
+
+    .topic {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-align: right;
+    }
+
+    .trust-strip {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 5px;
+    }
+
+    .verify-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 5px 8px;
+      border: 1px solid rgba(102, 115, 93, .22);
+      border-radius: 999px;
+      background: rgba(233, 238, 228, .78);
+      color: var(--accent-strong);
+      font-size: 11px;
+      font-weight: 950;
+      white-space: nowrap;
+    }
+
+    .question {
+      margin: 0 0 18px;
+      font-size: 19px;
+      line-height: 1.56;
+      font-weight: 760;
+    }
+
+    .question-figures {
+      display: grid;
+      gap: 8px;
+      margin: -4px 0 16px;
+    }
+
+    .question-figures img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .q-line {
+      margin: 0 0 8px;
+    }
+
+    .q-line:last-child {
+      margin-bottom: 0;
+    }
+
+    .q-label {
+      margin-top: 10px;
+      color: var(--accent-strong);
+      font-weight: 900;
+    }
+
+    .q-block {
+      margin: 14px 0 16px;
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(47, 107, 79, .22);
+      border-radius: var(--radius);
+      background: var(--accent-wash);
+    }
+
+    .q-block .q-label {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .q-block .q-line {
+      margin-bottom: 10px;
+    }
+
+    .q-block .q-line:last-child {
+      margin-bottom: 0;
+    }
+
+    .q-hang {
+      padding-left: 1.65em;
+      text-indent: -1.65em;
+    }
+
+    .q-dot {
+      padding-left: 1em;
+      text-indent: -1em;
+    }
+
+    .choices {
+      display: grid;
+      gap: 9px;
+    }
+
+    .choice {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      align-items: start;
+      gap: 8px;
+      width: 100%;
+      min-height: 56px;
+      padding: 13px 13px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255,255,255,.9);
+      color: var(--ink);
+      text-align: left;
+      cursor: pointer;
+      transition: border-color .15s ease, background .15s ease, transform .15s ease;
+    }
+
+    .choice:hover {
+      border-color: rgba(102, 115, 93, .45);
+      background: #fbfcfa;
+    }
+
+    .choice:active {
+      transform: scale(.99);
+    }
+
+    .choice:disabled {
+      cursor: default;
+    }
+
+    .choice:disabled:hover {
+      border-color: var(--line);
+      background: #fff;
+    }
+
+    .review-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin: 0 0 14px;
+    }
+
+    .review-summary div {
+      min-height: 58px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfcfa;
+    }
+
+    .review-summary span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .review-summary strong {
+      display: block;
+      margin-top: 4px;
+      color: var(--accent-strong);
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .choice-prefix {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #eef2ed;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .choice-text {
+      min-width: 0;
+      padding-top: 1px;
+    }
+
+    .choice.correct {
+      border-color: var(--ok);
+      background: var(--ok-soft);
+    }
+
+    .choice.wrong {
+      border-color: var(--danger);
+      background: var(--danger-soft);
+    }
+
+    .choice.selected .choice-prefix {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .feedback {
+      display: none;
+      margin-top: 18px;
+      padding: 15px;
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, #fbfcfa, #f6f8f5);
+      border: 1px solid var(--line);
+    }
+
+    .feedback.visible {
+      display: block;
+    }
+
+    .feedback-title {
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 850;
+    }
+
+    .feedback-title.ok { color: var(--ok); }
+    .feedback-title.bad { color: var(--danger); }
+
+    .explanation {
+      display: none;
+      gap: 9px;
+      margin: 10px 0 0;
+    }
+
+    .explanation.visible {
+      display: grid;
+    }
+
+    .ex-row {
+      display: grid;
+      gap: 4px;
+      padding: 10px 11px;
+      border: 1px solid rgba(23, 32, 26, .08);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .ex-row strong {
+      color: var(--accent-strong);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .ex-row span {
+      color: #2c352f;
+      font-size: 14px;
+      line-height: 1.62;
+      white-space: pre-line;
+    }
+
+    .review-tools {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .bookmark-toggle {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      min-height: 36px;
+      border: 1px solid rgba(102, 115, 93, .34);
+      border-radius: 999px;
+      background: rgba(255,255,255,.92);
+      color: var(--accent-strong);
+      font-size: 13px;
+      font-weight: 900;
+      padding: 8px 12px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(42, 50, 38, .07);
+      transition: background .15s ease, border-color .15s ease, color .15s ease, transform .15s ease;
+    }
+
+    .bookmark-toggle:active {
+      transform: scale(.98);
+    }
+
+    .bookmark-toggle.active {
+      border-color: var(--accent-strong);
+      background: var(--accent-strong);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(47, 61, 50, .18);
+    }
+
+    .bookmark-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .bookmark-toggle.active .bookmark-icon {
+      background: rgba(255,255,255,.22);
+      color: #fff;
+    }
+
+    .issue-toggle {
+      border-color: rgba(161, 107, 24, .30);
+      color: #7d5113;
+    }
+
+    .issue-toggle.active {
+      border-color: var(--warn);
+      background: #fff3dc;
+      color: #7d5113;
+      box-shadow: 0 4px 12px rgba(161, 107, 24, .14);
+    }
+
+    .issue-toggle.active .bookmark-icon {
+      background: rgba(161, 107, 24, .18);
+      color: #7d5113;
+    }
+
+    .issue-note {
+      margin: 10px 0 0;
+      padding: 10px 11px;
+      border: 1px solid rgba(161, 107, 24, .22);
+      border-radius: var(--radius);
+      background: #fff8eb;
+      color: #6d4916;
+      font-size: 13px;
+      line-height: 1.5;
+      font-weight: 800;
+    }
+
+    .reason-panel {
+      display: grid;
+      gap: 8px;
+    }
+
+    .reason-label {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .reason-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .reason-chip {
+      min-height: 36px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .reason-chip.active {
+      border-color: var(--danger);
+      background: var(--danger-soft);
+      color: var(--danger);
+    }
+
+    .actions {
+      position: sticky;
+      bottom: 0;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 8px;
+      margin: 22px -14px -26px;
+      padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(248, 244, 241, .94);
+      border-top: 1px solid rgba(102, 115, 93, .16);
+      backdrop-filter: blur(14px);
+    }
+
+    .btn {
+      min-height: 46px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn.primary {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn.primary:hover {
+      background: var(--accent-strong);
+    }
+
+    .btn.ghost {
+      color: var(--muted);
+    }
+
+    .btn:disabled {
+      opacity: .45;
+      cursor: not-allowed;
+    }
+
+    .result {
+      display: none;
+    }
+
+    .result.active {
+      display: block;
+    }
+
+    .result-hero {
+      padding: 18px 0 14px;
+    }
+
+    .result-score {
+      font-size: 25px;
+      line-height: 1;
+      font-weight: 950;
+      color: var(--accent-strong);
+    }
+
+    .result-sub {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .result-sub.warn {
+      color: var(--warn);
+    }
+
+    .result-message {
+      margin: 16px 0 18px;
+      padding: 18px;
+      border: 1px solid rgba(47, 107, 79, .18);
+      border-radius: var(--radius);
+      background: #f5faf6;
+    }
+
+    .result-message h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      line-height: 1.3;
+      font-weight: 900;
+    }
+
+    .result-message p {
+      margin: 0;
+      color: #334138;
+      font-size: 15px;
+      line-height: 1.65;
+      white-space: pre-line;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .summary-item {
+      padding: 12px 10px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfcfa;
+    }
+
+    .summary-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .summary-value {
+      margin-top: 4px;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .summary-value.warn {
+      color: var(--warn);
+    }
+
+    .wrong-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .wrong-item,
+    .review-item {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .wrong-item strong,
+    .review-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 15px;
+    }
+
+    .wrong-item span,
+    .review-item span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .review-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .section-title {
+      margin: 24px 0 8px;
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .result-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 14px 0 18px;
+    }
+
+    .result-actions a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .result-actions a.secondary {
+      background: #fff;
+      color: var(--accent);
+    }
+
+    .wrong-summary {
+      display: grid;
+      gap: 8px;
+      margin: 12px 0 18px;
+    }
+
+    .wrong-summary div {
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfcfa;
+      color: #2c352f;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .result-review {
+      margin: 18px 0;
+    }
+
+    .result-review h2 {
+      margin: 0 0 10px;
+      color: var(--accent-strong);
+      font-size: 18px;
+      font-weight: 950;
+    }
+
+    .result-review-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .result-review-card {
+      padding: 13px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+    }
+
+    .result-review-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .result-review-meta span:last-child {
+      flex: 0 0 auto;
+      color: var(--accent);
+    }
+
+    .result-review-question {
+      margin: 0 0 9px;
+      color: var(--ink);
+      font-size: 14.5px;
+      font-weight: 850;
+      line-height: 1.48;
+      white-space: pre-line;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .result-review-choices {
+      display: grid;
+      gap: 6px;
+    }
+
+    .result-review-choice {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 6px;
+      align-items: start;
+      padding: 8px 9px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #fbfcfa;
+      color: #354039;
+      font-size: 13px;
+      line-height: 1.38;
+    }
+
+    .result-review-choice.correct {
+      border-color: rgba(47, 107, 79, .28);
+      background: var(--sage);
+      color: var(--accent-strong);
+      font-weight: 850;
+    }
+
+    .result-review-choice.picked:not(.correct) {
+      border-color: rgba(193, 116, 62, .24);
+      background: #fff3ea;
+      color: #8b4a1f;
+    }
+
+    .result-review-explanation {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+
+    .result-review-tag {
+      display: inline-flex;
+      width: fit-content;
+      min-height: 25px;
+      margin: 0 0 8px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #fff3dc;
+      color: #7d5113;
+      font-size: 12px;
+      font-weight: 950;
+    }
+
+    .result-clear {
+      padding: 13px;
+      border: 1px solid rgba(47, 107, 79, .16);
+      border-radius: var(--radius);
+      background: #f7fbf7;
+      color: var(--accent-strong);
+      font-size: 14px;
+      font-weight: 850;
+      line-height: 1.5;
+    }
+
+    .sync-status {
+      margin: 10px 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .sync-status.ok { color: var(--ok); }
+    .sync-status.bad { color: var(--danger); }
+
+    @media (max-width: 420px) {
+      .question {
+        font-size: 18px;
+      }
+
+      .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .result-review-meta {
+        align-items: flex-start;
+      }
+
+      .actions {
+        grid-template-columns: .9fr 1.2fr .9fr;
+      }
+
+      .btn {
+        font-size: 14px;
+      }
+
+      .review-summary { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+      .review-summary div { padding: 8px; min-height: 52px; }
+      .review-summary strong { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="title-row">
+          <div>
+            <h1>건강운동관리사 데일리 퀴즈</h1>
+          </div>
+          <div class="progress-chip" id="positionLabel">1/10</div>
+        </div>
+        <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+      </div>
+    </header>
+
+    <main>
+      <section id="quizView"></section>
+      <section id="resultView" class="result"></section>
+      <nav class="actions" id="actions">
+        <button class="btn ghost" id="prevBtn" type="button">이전</button>
+        <button class="btn primary" id="explainBtn" type="button">해설 보기</button>
+        <button class="btn" id="nextBtn" type="button">다음</button>
+      </nav>
+    </main>
+  </div>
+
+  <script id="quiz-data" type="application/json">{"quizId": "2026-05-27-daily-1-all-subjects", "date": "2026-05-27", "displayDate": "2026-05-27 (오전)", "slug": "2026-05-27-1", "sequence": 1, "title": "건강운동관리사 데일리 퀴즈", "subject": "전과목", "round": "시험 임박 전과목 10문항", "timeLimitMinutes": 10, "sourceSummary": "2023, 2024년 문제·정답·해설 검증 로우데이터 기반", "generationNote": "검증 로우데이터 기반 생성. answerVerified와 explanationVerified가 모두 true인 문항만 출제 후보에 포함합니다.", "missingSubjects": [], "questions": [{"id": "2023-2A-76-19", "year": 2023, "subject": "병태생리학", "topic": "뇌졸중 설명", "type": "부정형", "difficulty": 3, "trap": "뇌졸중 설명 관련 조건과 보기 표현을 섞어 판단하는 문항", "question": "뇌졸중에 대한 설명으로 옳지 않은 것은?", "choices": ["고혈압은 뇌동맥 파열의 주요 위험요인이다.", "색전증으로 인한 뇌경색은 심방세동으로 유발될 수 있다.", "뇌동맥류의 증상은 갑작스런 극심한 두통이며 치료법으로는 클립결찰술(clipping)이나 코일색전술(coil embolization)이 있다.", "일과성허혈발작(transient ischemic attack)은 급성기에 영구적 뇌손상이 특징이다."], "answerIndex": 3, "explanation": "일과성허혈발작(TIA)은 일시적인 국소 신경학적 증상이 나타났다가 영구적 뇌손상 없이 회복되는 것이 핵심이다. 영구적 뇌손상이 특징이라는 설명은 틀리다.", "source": {"file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf", "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf", "questionNo": 19, "session": 2, "form": "A", "subjectCode": 76}, "wrongRateBasis": "고오답 추정", "verified": true, "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수", "answerIndexes": [3], "answerEvidence": {"officialAnswerIndexes": [3], "officialAnswer": "④", "basis": "KSPO 최종정답 기준", "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf", "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf", "questionNo": 19, "officialAnswerIndex": 3}, "sourceVerified": true, "answerVerified": true, "explanationVerified": true, "answerStatus": "official_verified", "explanationStatus": "cross_checked", "parserConfidence": "manual", "externalReview": {"sources": [{"title": "Merck Manual Professional Edition", "url": "https://www.merckmanuals.com/professional"}, {"title": "NCBI Bookshelf", "url": "https://www.ncbi.nlm.nih.gov/books/"}]}, "verificationTodo": [], "manualApproved": true, "reviewer": "Diana", "reviewedAt": "2026-05-25", "sourceEvidence": [{"type": "official_question_pdf", "status": "matched_by_candidate_audit", "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf", "questionNo": 19}, {"type": "official_answer_key", "status": "matched_by_audit_quiz_answers", "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf", "answerIndexes": [3]}], "correctRationale": "일과성허혈발작(TIA)은 일시적인 국소 신경학적 증상이 나타났다가 영구적 뇌손상 없이 회복되는 것이 핵심이다. 영구적 뇌손상이 특징이라는 설명은 틀리다.", "reviewPoint": "TIA는 transient라는 이름 그대로 영구 뇌손상이 특징이 아니다.", "explanationSources": [{"title": "Merck Manual Professional Edition", "url": "https://www.merckmanuals.com/professional"}, {"title": "NCBI Bookshelf", "url": "https://www.ncbi.nlm.nih.gov/books/"}], "choiceExplanationsVerified": true, "choiceExplanations": [{"choiceIndex": 0, "verdict": "incorrect", "reason": "① 고혈압은 뇌동맥 파열의 주요 위험요인이다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}, {"choiceIndex": 1, "verdict": "incorrect", "reason": "② 색전증으로 인한 뇌경색은 심방세동으로 유발될 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}, {"choiceIndex": 2, "verdict": "incorrect", "reason": "③ 뇌동맥류의 증상은 갑작스런 극심한 두통이며 치료법으로는 클립결찰술(clipping)이나 코일색전술(coil embolization)이 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}, {"choiceIndex": 3, "verdict": "correct", "reason": "④ 일과성허혈발작(transient ischemic attack)은 급성기에 영구적 뇌손상이 특징이다.: 공식 정답이며, 일과성허혈발작(TIA)은 일시적인 국소 신경학적 증상이 나타났다가 영구적 뇌손상 없이 회복되는 것이 핵심이다. 영구적 뇌손상이 특징이라는 설명은 틀리다."}]}, {"id": "2024-2A-77-01", "year": 2024, "subject": "스포츠심리학", "topic": "운동발달에 영향", "type": "개념구분", "difficulty": 3, "trap": "운동발달에 영향 관련 조건과 보기 표현을 섞어 판단하는 문항", "question": "운동발달에 영향을 미치는 사회･문화적 요인은?", "choices": ["유전", "성역할", "신체의 성장", "체력의 발달"], "answerIndex": 1, "explanation": "운동발달에 영향을 미치는 사회·문화적 요인은 성역할이다. 유전, 신체 성장, 체력 발달은 생물학적·개인적 요인에 가깝다.", "source": {"file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionNo": 1, "session": 2, "form": "A", "subjectCode": 77}, "wrongRateBasis": "고오답 추정", "verified": true, "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수", "answerIndexes": [1], "answerEvidence": {"officialAnswerIndexes": [1], "officialAnswer": "②", "basis": "KSPO 최종정답 기준", "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 1, "officialAnswerIndex": 1}, "sourceVerified": true, "answerVerified": true, "explanationVerified": true, "answerStatus": "official_verified", "explanationStatus": "cross_checked", "parserConfidence": "manual", "externalReview": {"sources": [{"title": "Gallahue, Ozmun \u0026 Goodway, Understanding Motor Development", "url": "textbook:Gallahue-Motor-Development"}, {"title": "Weinberg \u0026 Gould, Foundations of Sport and Exercise Psychology", "url": "textbook:Weinberg-Gould"}]}, "verificationTodo": [], "manualApproved": true, "reviewer": "Diana", "reviewedAt": "2026-05-25", "sourceEvidence": [{"type": "official_question_pdf", "status": "matched_by_candidate_audit", "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 1}, {"type": "official_answer_key", "status": "matched_by_audit_quiz_answers", "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "answerIndexes": [1]}], "correctRationale": "운동발달에 영향을 미치는 사회·문화적 요인은 성역할이다. 유전, 신체 성장, 체력 발달은 생물학적·개인적 요인에 가깝다.", "reviewPoint": "운동발달 요인은 생물학적 성장 요인과 사회문화적 환경 요인을 구분한다.", "explanationSources": [{"title": "Gallahue, Ozmun \u0026 Goodway, Understanding Motor Development", "url": "textbook:Gallahue-Motor-Development"}, {"title": "Weinberg \u0026 Gould, Foundations of Sport and Exercise Psychology", "url": "textbook:Weinberg-Gould"}], "choiceExplanationsVerified": true, "choiceExplanations": [{"choiceIndex": 0, "verdict": "incorrect", "reason": "유전은 생물학적 요인이다."}, {"choiceIndex": 1, "verdict": "correct", "reason": "성역할은 사회·문화적 기대와 행동양식에 관련된다."}, {"choiceIndex": 2, "verdict": "incorrect", "reason": "신체의 성장은 생물학적 발달 요인이다."}, {"choiceIndex": 3, "verdict": "incorrect", "reason": "체력의 발달은 개인의 신체·운동능력 요인이다."}]}, {"id": "2023-2A-74-05", "year": 2023, "subject": "운동상해", "topic": "스포츠 활동", "type": "부정형", "difficulty": 3, "trap": "스포츠 활동 관련 조건과 보기 표현을 섞어 판단하는 문항", "question": "스포츠 활동에서 환경적 고려사항으로 옳지 않은 것은?", "choices": ["수중에서 다이버가 하강할 때 수압은 증가하고, 신체 내부의 공기 압력은 수면보다 낮아진다.", "고지대의 공기는 건조하고 호흡률이 더 높게 나타날 수 있어서 흔히 구강호흡의 형태를 보이게 된다.", "건조한 저온환경에서 호흡을 통한 수분 손실은 탈수가 유발될 수 있으며 저체온증에 걸릴 위험성을 높일 수 있다.", "고온환경에서 수분의 과다 공급은 저나트륨혈증(hyponatremia)을 유발할 수 있다."], "answerIndex": 0, "explanation": "다이버가 하강하면 주변 수압은 증가하고 신체의 공기 공간은 압력 변화에 따라 압축되거나 균등화가 필요하다. 내부 공기 압력이 수면보다 낮아진다는 설명은 하강 시 압력 증가 원리와 맞지 않는다.", "source": {"file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf", "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf", "questionNo": 5, "session": 2, "form": "A", "subjectCode": 74}, "wrongRateBasis": "고오답 추정", "verified": true, "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수", "answerIndexes": [0], "answerEvidence": {"officialAnswerIndexes": [0], "officialAnswer": "①", "basis": "KSPO 최종정답 기준", "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf", "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf", "questionNo": 5, "officialAnswerIndex": 0}, "sourceVerified": true, "answerVerified": true, "explanationVerified": true, "answerStatus": "official_verified", "explanationStatus": "cross_checked", "parserConfidence": "manual", "externalReview": {"sources": [{"title": "Merck Manual Professional - Overview of Fractures", "url": "https://www.merckmanuals.com/professional/injuries-poisoning/fractures/overview-of-fractures"}, {"title": "NATA/CDC sports injury and concussion resources", "url": "https://www.cdc.gov/heads-up/"}]}, "verificationTodo": [], "manualApproved": true, "reviewer": "Diana", "reviewedAt": "2026-05-25", "sourceEvidence": [{"type": "official_question_pdf", "status": "matched_by_candidate_audit", "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf", "questionNo": 5}, {"type": "official_answer_key", "status": "matched_by_audit_quiz_answers", "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf", "answerIndexes": [0]}], "correctRationale": "다이버가 하강하면 주변 수압은 증가하고 신체의 공기 공간은 압력 변화에 따라 압축되거나 균등화가 필요하다. 내부 공기 압력이 수면보다 낮아진다는 설명은 하강 시 압력 증가 원리와 맞지 않는다.", "reviewPoint": "수중 환경 문항은 하강 시 수압 증가와 공기 공간 압축·균등화를 기준으로 판단한다.", "explanationSources": [{"title": "Merck Manual Professional - Overview of Fractures", "url": "https://www.merckmanuals.com/professional/injuries-poisoning/fractures/overview-of-fractures"}, {"title": "NATA/CDC sports injury and concussion resources", "url": "https://www.cdc.gov/heads-up/"}], "choiceExplanationsVerified": true, "choiceExplanations": [{"choiceIndex": 0, "verdict": "correct", "reason": "① 수중에서 다이버가 하강할 때 수압은 증가하고, 신체 내부의 공기 압력은 수면보다 낮아진다.: 공식 정답이며, 다이버가 하강하면 주변 수압은 증가하고 신체의 공기 공간은 압력 변화에 따라 압축되거나 균등화가 필요하다. 내부 공기 압력이 수면보다 낮아진다는 설명은 하강 시 압력 증가 원리와 맞지 않는다."}, {"choiceIndex": 1, "verdict": "incorrect", "reason": "② 고지대의 공기는 건조하고 호흡률이 더 높게 나타날 수 있어서 흔히 구강호흡의 형태를 보이게 된다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}, {"choiceIndex": 2, "verdict": "incorrect", "reason": "③ 건조한 저온환경에서 호흡을 통한 수분 손실은 탈수가 유발될 수 있으며 저체온증에 걸릴 위험성을 높일 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}, {"choiceIndex": 3, "verdict": "incorrect", "reason": "④ 고온환경에서 수분의 과다 공급은 저나트륨혈증(hyponatremia)을 유발할 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}]}, {"id": "2024-2A-77-07", "year": 2024, "subject": "스포츠심리학", "topic": "운동학적 측정에", "type": "개념구분", "difficulty": 3, "trap": "운동학적 측정에 관련 조건과 보기 표현을 섞어 판단하는 문항", "question": "운동학적(kinematic) 측정에 가장 적합한 것은?", "choices": ["지면반력기", "회전판 추적기", "전자식 각도계", "바크만(Bachman) 사다리"], "answerIndex": 2, "explanation": "운동학적 측정은 힘의 원인보다 위치, 각도, 속도, 가속도 같은 움직임 형태를 측정한다. 전자식 각도계는 관절각과 관절운동범위 측정 장비이므로 가장 적합하다.", "source": {"file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionNo": 7, "session": 2, "form": "A", "subjectCode": 77}, "wrongRateBasis": "고오답 추정", "verified": true, "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수", "answerIndexes": [2], "answerEvidence": {"officialAnswerIndexes": [2], "officialAnswer": "③", "basis": "KSPO 최종정답 기준", "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 7, "officialAnswerIndex": 2}, "sourceVerified": true, "answerVerified": true, "explanationVerified": true, "answerStatus": "official_verified", "explanationStatus": "cross_checked", "parserConfidence": "manual", "externalReview": {"sources": [{"title": "OpenStax University Physics", "url": "https://openstax.org/subjects/science"}, {"title": "Kenhub Anatomy Library", "url": "https://www.kenhub.com/en/library/anatomy"}]}, "verificationTodo": [], "manualApproved": true, "reviewer": "Diana", "reviewedAt": "2026-05-25", "sourceEvidence": [{"type": "official_question_pdf", "status": "matched_by_candidate_audit", "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 7}, {"type": "official_answer_key", "status": "matched_by_audit_quiz_answers", "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "answerIndexes": [2]}], "correctRationale": "운동학적 측정은 힘의 원인보다 위치, 각도, 속도, 가속도 같은 움직임 형태를 측정한다. 전자식 각도계는 관절각과 관절운동범위 측정 장비이므로 가장 적합하다.", "reviewPoint": "운동학은 위치·각도·속도, 운동역학은 힘·토크·지면반력으로 구분한다.", "explanationSources": [{"title": "OpenStax University Physics", "url": "https://openstax.org/subjects/science"}, {"title": "Kenhub Anatomy Library", "url": "https://www.kenhub.com/en/library/anatomy"}], "choiceExplanationsVerified": true, "choiceExplanations": [{"choiceIndex": 0, "verdict": "incorrect", "reason": "① 지면반력기: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}, {"choiceIndex": 1, "verdict": "incorrect", "reason": "② 회전판 추적기: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}, {"choiceIndex": 2, "verdict": "correct", "reason": "③ 전자식 각도계: 공식 정답이며, 운동학적 측정은 힘의 원인보다 위치, 각도, 속도, 가속도 같은 움직임 형태를 측정한다. 전자식 각도계는 관절각과 관절운동범위 측정 장비이므로 가장 적합하다."}, {"choiceIndex": 3, "verdict": "incorrect", "reason": "④ 바크만(Bachman) 사다리: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}]}, {"id": "2024-2A-77-18", "year": 2024, "subject": "스포츠심리학", "topic": "규모 커질수록", "type": "개념구분", "difficulty": 3, "trap": "규모 커질수록 관련 조건과 보기 표현을 섞어 판단하는 문항", "question": "팀의 규모가 커질수록 개개인의 노력과 동기가 감소되는 현상은?", "choices": ["모델링 효과(modeling effect)", "링겔만 효과(Ringelmann effect)", "스테일네스 효과(staleness effect)", "반동기 효과(demotivation effect)"], "answerIndex": 1, "explanation": "집단 크기가 커질수록 개인의 노력 투입이 줄어드는 현상은 Ringelmann effect다. 모델링은 관찰학습, staleness는 과훈련·권태 상태, 반동기 효과는 표준 용어가 아니다.", "source": {"file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionNo": 18, "session": 2, "form": "A", "subjectCode": 77}, "wrongRateBasis": "고오답 추정", "verified": true, "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수", "answerIndexes": [1], "answerEvidence": {"officialAnswerIndexes": [1], "officialAnswer": "②", "basis": "KSPO 최종정답 기준", "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 18, "officialAnswerIndex": 1}, "sourceVerified": true, "answerVerified": true, "explanationVerified": true, "answerStatus": "official_verified", "explanationStatus": "cross_checked", "parserConfidence": "manual", "externalReview": {"sources": [{"title": "Weinberg \u0026 Gould, Foundations of Sport and Exercise Psychology, group productivity/social loafing", "url": "textbook:Weinberg-Gould"}, {"title": "Karau \u0026 Williams, Social Loafing: A Meta-Analytic Review and Theoretical Integration", "url": "doi:10.1037/0033-2909.115.3.681"}]}, "verificationTodo": [], "manualApproved": true, "reviewer": "Diana", "reviewedAt": "2026-05-25", "sourceEvidence": [{"type": "official_question_pdf", "status": "matched_by_candidate_audit", "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 18}, {"type": "official_answer_key", "status": "matched_by_audit_quiz_answers", "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "answerIndexes": [1]}], "correctRationale": "집단 크기가 커질수록 개인의 노력 투입이 줄어드는 현상은 Ringelmann effect다. 모델링은 관찰학습, staleness는 과훈련·권태 상태, 반동기 효과는 표준 용어가 아니다.", "reviewPoint": "집단 수행에서는 사회적 태만, Ringelmann effect, 응집력, 동기손실을 구분한다.", "explanationSources": [{"title": "Weinberg \u0026 Gould, Foundations of Sport and Exercise Psychology, group productivity/social loafing", "url": "textbook:Weinberg-Gould"}, {"title": "Karau \u0026 Williams, Social Loafing: A Meta-Analytic Review and Theoretical Integration", "url": "doi:10.1037/0033-2909.115.3.681"}], "choiceExplanationsVerified": true, "choiceExplanations": [{"choiceIndex": 0, "verdict": "incorrect", "reason": "모델링 효과는 타인의 행동 관찰을 통한 학습과 관련된다."}, {"choiceIndex": 1, "verdict": "correct", "reason": "Ringelmann effect는 집단 규모 증가에 따른 개인 노력 감소를 설명한다."}, {"choiceIndex": 2, "verdict": "incorrect", "reason": "staleness는 운동심리에서 피로·권태/과훈련 맥락의 용어다."}, {"choiceIndex": 3, "verdict": "incorrect", "reason": "반동기 효과는 이 현상의 표준 명칭이 아니다."}]}, {"id": "2024-2A-75-15", "year": 2024, "subject": "기능해부학", "topic": "성인 근육조직", "type": "개념구분", "difficulty": 3, "trap": "성인 근육조직 관련 조건과 보기 표현을 섞어 판단하는 문항", "question": "성인의 근육조직(muscle tissue)에 대한 설명으로 옳은 것은?", "choices": ["심장근육은 가로무늬수의근(striated voluntary muscle)이다.", "민무늬근육세포는 분열할 수 없으며, 손상 후 재생할 수 없다.", "심장근육은 근육위성세포(myosatellite cell)에 의해 손상 후 재생이 가능하다.", "뼈대 근육섬유는 분열할 수 없지만, 근육위성세포에 의해 새로운 근육섬유가 생산될 수 있다."], "answerIndex": 3, "explanation": "성인 골격근 섬유 자체는 일반적으로 분열하지 않지만, 근육위성세포가 활성화되어 손상 회복과 새로운 근섬유 형성에 기여할 수 있다. 심장근육은 불수의 가로무늬근이고, 민무늬근은 일부 재생 능력이 있으며, 심장근육은 위성세포에 의한 재생이 일반적이지 않다.", "source": {"file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionNo": 15, "session": 2, "form": "A", "subjectCode": 75}, "wrongRateBasis": "고오답 추정", "verified": true, "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수", "answerIndexes": [3], "answerEvidence": {"officialAnswerIndexes": [3], "officialAnswer": "④", "basis": "KSPO 최종정답 기준", "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 15, "officialAnswerIndex": 3}, "sourceVerified": true, "answerVerified": true, "explanationVerified": true, "answerStatus": "official_verified", "explanationStatus": "cross_checked", "parserConfidence": "manual", "externalReview": {"sources": [{"title": "OpenStax A\u0026P 2e, Muscle Tissue and satellite cells", "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-introduction"}, {"title": "OpenStax A\u0026P 2e, Skeletal Muscle", "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-2-skeletal-muscle"}]}, "verificationTodo": [], "manualApproved": true, "reviewer": "Diana", "reviewedAt": "2026-05-25", "sourceEvidence": [{"type": "official_question_pdf", "status": "matched_by_candidate_audit", "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 15}, {"type": "official_answer_key", "status": "matched_by_audit_quiz_answers", "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "answerIndexes": [3]}], "correctRationale": "성인 골격근 섬유 자체는 일반적으로 분열하지 않지만, 근육위성세포가 활성화되어 손상 회복과 새로운 근섬유 형성에 기여할 수 있다. 심장근육은 불수의 가로무늬근이고, 민무늬근은 일부 재생 능력이 있으며, 심장근육은 위성세포에 의한 재생이 일반적이지 않다.", "reviewPoint": "골격근, 심장근, 민무늬근의 수의성·가로무늬·재생능력을 구분한다.", "explanationSources": [{"title": "OpenStax A\u0026P 2e, Muscle Tissue and satellite cells", "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-introduction"}, {"title": "OpenStax A\u0026P 2e, Skeletal Muscle", "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-2-skeletal-muscle"}], "choiceExplanationsVerified": true, "choiceExplanations": [{"choiceIndex": 0, "verdict": "incorrect", "reason": "심장근육은 가로무늬근이지만 불수의근이다."}, {"choiceIndex": 1, "verdict": "incorrect", "reason": "민무늬근육세포는 일부 분열·재생 능력이 있다."}, {"choiceIndex": 2, "verdict": "incorrect", "reason": "심장근육은 위성세포에 의해 충분히 재생되는 조직으로 보지 않는다."}, {"choiceIndex": 3, "verdict": "correct", "reason": "골격근 섬유는 위성세포를 통해 재생과 새로운 섬유 형성에 기여할 수 있다."}]}, {"id": "2023-2A-77-20", "year": 2023, "subject": "스포츠심리학", "topic": "과제 전이", "type": "개념구분", "difficulty": 3, "trap": "과제 전이 관련 조건과 보기 표현을 섞어 판단하는 문항", "question": "과제 내 전이(intratask transfer) 효과와 관련이 없는 것은?", "choices": ["소음 속에서의 골프퍼팅 훈련이 실제 퍼팅에 미치는 효과", "야구 타격 동작 훈련이 골프 드라이버 비거리에 미치는 효과", "걷기 재활 훈련이 환자의 실생활 보행 적응에 미치는 효과", "발목 모래주머니 착용 달리기 훈련이 100m 달리기 기록에 미치는 효과"], "answerIndex": 1, "explanation": "과제 내 전이는 같은 과제 안에서 조건·상황을 달리한 훈련이 수행에 미치는 효과를 말한다. 야구 타격 동작 훈련이 골프 드라이버 비거리에 미치는 효과는 서로 다른 과제 사이의 전이에 가까우므로 과제 내 전이와 관련이 가장 낮다.", "source": {"file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf", "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf", "questionNo": 20, "session": 2, "form": "A", "subjectCode": 77}, "wrongRateBasis": "고오답 추정", "verified": true, "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수", "answerIndexes": [1], "answerEvidence": {"officialAnswerIndexes": [1], "officialAnswer": "②", "basis": "KSPO 최종정답 기준", "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf", "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf", "questionNo": 20, "officialAnswerIndex": 1}, "sourceVerified": true, "answerVerified": true, "explanationVerified": true, "answerStatus": "official_verified", "explanationStatus": "cross_checked", "parserConfidence": "manual", "externalReview": {"sources": [{"title": "Schmidt \u0026 Lee, Motor Control and Learning, transfer of learning", "url": "textbook:Schmidt-Lee-Motor-Control"}, {"title": "Magill \u0026 Anderson, Motor Learning and Control, transfer taxonomy", "url": "textbook:Magill-Anderson"}]}, "verificationTodo": [], "manualApproved": true, "reviewer": "Diana", "reviewedAt": "2026-05-25", "sourceEvidence": [{"type": "official_question_pdf", "status": "matched_by_candidate_audit", "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf", "questionNo": 20}, {"type": "official_answer_key", "status": "matched_by_audit_quiz_answers", "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf", "answerIndexes": [1]}], "correctRationale": "과제 내 전이는 같은 과제 안에서 조건·상황을 달리한 훈련이 수행에 미치는 효과를 말한다. 야구 타격 동작 훈련이 골프 드라이버 비거리에 미치는 효과는 서로 다른 과제 사이의 전이에 가까우므로 과제 내 전이와 관련이 가장 낮다.", "reviewPoint": "과제 내 전이(intratask)는 같은 기술 안의 조건 변화, 과제 간 전이(intertask)는 서로 다른 기술 사이의 전이로 구분한다.", "explanationSources": [{"title": "Schmidt \u0026 Lee, Motor Control and Learning, transfer of learning", "url": "textbook:Schmidt-Lee-Motor-Control"}, {"title": "Magill \u0026 Anderson, Motor Learning and Control, transfer taxonomy", "url": "textbook:Magill-Anderson"}], "choiceExplanationsVerified": true, "choiceExplanations": [{"choiceIndex": 0, "verdict": "incorrect", "reason": "소음 속 골프퍼팅 훈련이 실제 퍼팅에 미치는 효과는 같은 과제 안 조건 변화에 가깝다."}, {"choiceIndex": 1, "verdict": "correct", "reason": "야구 타격과 골프 드라이버는 서로 다른 과제 사이 전이에 가깝다."}, {"choiceIndex": 2, "verdict": "incorrect", "reason": "재활 걷기 훈련과 실생활 보행 적응은 같은 보행 과제의 전이로 볼 수 있다."}, {"choiceIndex": 3, "verdict": "incorrect", "reason": "모래주머니 착용 달리기와 100m 달리기는 같은 달리기 과제 안 조건 변화에 가깝다."}]}, {"id": "2024-2A-76-01", "year": 2024, "subject": "병태생리학", "topic": "급성염증 설명", "type": "부정형", "difficulty": 3, "trap": "급성염증 설명 관련 조건과 보기 표현을 섞어 판단하는 문항", "question": "급성염증(acute inflammation)에 관한 설명으로 옳지 않은 것은?", "choices": ["주로 히스타민의 작용으로 혈관 확장이 발생한다.", "손상된 세포로부터 화학매개체(chemical mediator)가 분비된다.", "초기 염증에는 단핵구나 대식세포가 주로 침윤하나 이후 호중구로 대체된다.", "모세혈관 투과성이 증가하며, 혈장 단백질이 수분과 함께 사이질 공간으로 이동한다."], "answerIndex": 2, "explanation": "급성염증 초기에는 주로 호중구가 먼저 침윤하고 이후 단핵구/대식세포가 뒤따른다. 선택지 ③은 초기와 이후 세포 반응의 순서를 반대로 설명하므로 옳지 않다.", "source": {"file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionNo": 1, "session": 2, "form": "A", "subjectCode": 76}, "wrongRateBasis": "고오답 추정", "verified": true, "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수", "answerIndexes": [2], "answerEvidence": {"officialAnswerIndexes": [2], "officialAnswer": "③", "basis": "KSPO 최종정답 기준", "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 1, "officialAnswerIndex": 2}, "sourceVerified": true, "answerVerified": true, "explanationVerified": true, "answerStatus": "official_verified", "explanationStatus": "cross_checked", "parserConfidence": "manual", "externalReview": {"sources": [{"title": "Robbins \u0026 Cotran Pathologic Basis of Disease, acute inflammation", "url": "textbook:Robbins-Cotran"}, {"title": "OpenStax A\u0026P 2e, Inflammation and Fever", "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-3-the-adaptive-immune-response-t-lymphocytes-and-their-functional-types"}]}, "verificationTodo": [], "manualApproved": true, "reviewer": "Diana", "reviewedAt": "2026-05-25", "sourceEvidence": [{"type": "official_question_pdf", "status": "matched_by_candidate_audit", "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 1}, {"type": "official_answer_key", "status": "matched_by_audit_quiz_answers", "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "answerIndexes": [2]}], "correctRationale": "급성염증 초기에는 주로 호중구가 먼저 침윤하고 이후 단핵구/대식세포가 뒤따른다. 선택지 ③은 초기와 이후 세포 반응의 순서를 반대로 설명하므로 옳지 않다.", "reviewPoint": "급성염증은 혈관확장, 투과성 증가, 혈장 단백 이동, 초기 호중구 침윤을 핵심으로 본다.", "explanationSources": [{"title": "Robbins \u0026 Cotran Pathologic Basis of Disease, acute inflammation", "url": "textbook:Robbins-Cotran"}, {"title": "OpenStax A\u0026P 2e, Inflammation and Fever", "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-3-the-adaptive-immune-response-t-lymphocytes-and-their-functional-types"}], "choiceExplanationsVerified": true, "choiceExplanations": [{"choiceIndex": 0, "verdict": "incorrect", "reason": "히스타민은 혈관확장과 투과성 증가에 관여한다."}, {"choiceIndex": 1, "verdict": "incorrect", "reason": "손상 세포와 염증세포는 화학매개체를 분비한다."}, {"choiceIndex": 2, "verdict": "correct", "reason": "초기 주된 침윤세포는 단핵구/대식세포가 아니라 호중구다."}, {"choiceIndex": 3, "verdict": "incorrect", "reason": "모세혈관 투과성 증가로 수분과 단백질이 사이질로 이동한다."}]}, {"id": "2024-2A-75-04", "year": 2024, "subject": "기능해부학", "topic": "척추 가로돌기가시근군에", "type": "개념구분", "difficulty": 3, "trap": "척추 가로돌기가시근군에 관련 조건과 보기 표현을 섞어 판단하는 문항", "question": "척추의 가로돌기가시근군(횡돌기극근군, transversospinalis group)에 포함\n되지 않는 것은?", "choices": ["뭇갈래근(다열근, multifidus)", "가시근(극근. spinalis)", "돌림근(회선근, rotators)", "반가시근(반극근, semispinalis)"], "answerIndex": 1, "explanation": "가로돌기가시근군은 반가시근, 뭇갈래근, 돌림근을 포함한다. 가시근은 척주세움근군에 속하므로 가로돌기가시근군에 포함되지 않는다.", "source": {"file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionNo": 4, "session": 2, "form": "A", "subjectCode": 75}, "wrongRateBasis": "고오답 추정", "verified": true, "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수", "answerIndexes": [1], "answerEvidence": {"officialAnswerIndexes": [1], "officialAnswer": "②", "basis": "KSPO 최종정답 기준", "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 4, "officialAnswerIndex": 1}, "sourceVerified": true, "answerVerified": true, "explanationVerified": true, "answerStatus": "official_verified", "explanationStatus": "cross_checked", "parserConfidence": "manual", "externalReview": {"sources": [{"title": "OpenStax University Physics", "url": "https://openstax.org/subjects/science"}, {"title": "Kenhub Anatomy Library", "url": "https://www.kenhub.com/en/library/anatomy"}]}, "verificationTodo": [], "manualApproved": true, "reviewer": "Diana", "reviewedAt": "2026-05-25", "sourceEvidence": [{"type": "official_question_pdf", "status": "matched_by_candidate_audit", "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf", "questionNo": 4}, {"type": "official_answer_key", "status": "matched_by_audit_quiz_answers", "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "answerIndexes": [1]}], "correctRationale": "가로돌기가시근군은 반가시근, 뭇갈래근, 돌림근을 포함한다. 가시근은 척주세움근군에 속하므로 가로돌기가시근군에 포함되지 않는다.", "reviewPoint": "Transversospinalis는 semispinalis, multifidus, rotatores로 묶고 spinalis는 erector spinae로 분류한다.", "explanationSources": [{"title": "OpenStax University Physics", "url": "https://openstax.org/subjects/science"}, {"title": "Kenhub Anatomy Library", "url": "https://www.kenhub.com/en/library/anatomy"}], "choiceExplanationsVerified": true, "choiceExplanations": [{"choiceIndex": 0, "verdict": "incorrect", "reason": "① 뭇갈래근(다열근, multifidus): 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}, {"choiceIndex": 1, "verdict": "correct", "reason": "② 가시근(극근. spinalis): 공식 정답이며, 가로돌기가시근군은 반가시근, 뭇갈래근, 돌림근을 포함한다. 가시근은 척주세움근군에 속하므로 가로돌기가시근군에 포함되지 않는다."}, {"choiceIndex": 2, "verdict": "incorrect", "reason": "③ 돌림근(회선근, rotators): 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}, {"choiceIndex": 3, "verdict": "incorrect", "reason": "④ 반가시근(반극근, semispinalis): 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}]}, {"id": "2024-1A-73-16", "year": 2024, "subject": "운동부하검사", "topic": "사례 운동부하검사", "type": "개념구분", "difficulty": 3, "trap": "사례 운동부하검사 관련 조건과 보기 표현을 섞어 판단하는 문항", "question": "\u003c보기\u003e의 사례가 운동부하검사 결과에 미치는 영향은?\n\u003c보기\u003e.\n디지털리스(digitalis) 약물치료 중인 환자가 운동부하검사 중\nST분절이 2 mm 이상 하강하여 검사를 중지하였다.", "choices": ["특이도를 증가시킬 수 있다.", "특이도를 감소시킬 수 있다.", "민감도를 증가시킬 수 있다.", "민감도를 감소시킬 수 있다."], "answerIndex": 1, "explanation": "Digitalis는 허혈이 없어도 운동부하검사 중 ST분절 하강을 유발할 수 있어 위양성 가능성을 높인다. 위양성이 늘면 특이도는 감소한다.", "source": {"file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf", "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionNo": 16, "session": 1, "form": "A", "subjectCode": 73}, "wrongRateBasis": "고오답 추정", "verified": true, "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수", "answerIndexes": [1], "answerEvidence": {"officialAnswerIndexes": [1], "officialAnswer": "②", "basis": "KSPO 최종정답 기준", "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf", "questionNo": 16, "officialAnswerIndex": 1}, "sourceVerified": true, "answerVerified": true, "explanationVerified": true, "answerStatus": "official_verified", "explanationStatus": "cross_checked", "parserConfidence": "manual", "externalReview": {"sources": [{"title": "ACSM Guidelines for Exercise Testing and Prescription", "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"}, {"title": "Topend Sports - Queens College Step Test", "url": "https://www.topendsports.com/testing/tests/step-queens.htm"}]}, "verificationTodo": [], "manualApproved": true, "reviewer": "Diana", "reviewedAt": "2026-05-25", "sourceEvidence": [{"type": "official_question_pdf", "status": "matched_by_candidate_audit", "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf", "questionNo": 16}, {"type": "official_answer_key", "status": "matched_by_audit_quiz_answers", "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf", "answerIndexes": [1]}], "correctRationale": "Digitalis는 허혈이 없어도 운동부하검사 중 ST분절 하강을 유발할 수 있어 위양성 가능성을 높인다. 위양성이 늘면 특이도는 감소한다.", "reviewPoint": "민감도와 특이도의 방향을 구분하고, Digitalis 관련 ST 하강은 위양성 증가로 연결한다.", "explanationSources": [{"title": "ACSM Guidelines for Exercise Testing and Prescription", "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"}, {"title": "Topend Sports - Queens College Step Test", "url": "https://www.topendsports.com/testing/tests/step-queens.htm"}], "choiceExplanationsVerified": true, "choiceExplanations": [{"choiceIndex": 0, "verdict": "incorrect", "reason": "① 특이도를 증가시킬 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}, {"choiceIndex": 1, "verdict": "correct", "reason": "② 특이도를 감소시킬 수 있다.: 공식 정답이며, Digitalis는 허혈이 없어도 운동부하검사 중 ST분절 하강을 유발할 수 있어 위양성 가능성을 높인다. 위양성이 늘면 특이도는 감소한다."}, {"choiceIndex": 2, "verdict": "incorrect", "reason": "③ 민감도를 증가시킬 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}, {"choiceIndex": 3, "verdict": "incorrect", "reason": "④ 민감도를 감소시킬 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."}]}]}</script>
+  <script id="attempt-data" type="application/json">null</script>
+  <script id="sync-config" type="application/json">{"enabled": true, "submitUrl": "https://script.google.com/macros/s/AKfycbxLBnQsxe61wtXORx4q-ebWYPpaeH5Vy0h-hoZ51d0Oy-YYR_wX6UV5L7TjO1hVUHBH1A/exec", "mode": "google-apps-script"}</script>
+  <script>
+    const quiz = JSON.parse(document.getElementById('quiz-data').textContent);
+    const completedAttempt = JSON.parse(document.getElementById('attempt-data').textContent);
+    const syncConfig = JSON.parse(document.getElementById('sync-config').textContent);
+    const reviewMode = Boolean(completedAttempt);
+    const circled = ['①', '②', '③', '④', '⑤'];
+    const wrongReasonOptions = ['개념 모름', '헷갈림', '계산 실수', '문제 잘못 읽음'];
+    const resultMessages = {
+      '2026-05-20': { d: 'D-24', body: '오늘도 한 세트를 끝냈다는 것 자체가 의미 있는 흐름입니다. 틀린 문제는 부족함이 아니라, 다음에 더 단단해질 부분입니다.' },
+      '2026-05-21': { d: 'D-23', body: '오늘의 기록은 차곡차곡 쌓입니다. 맞힌 문제는 기준이 되고, 틀린 문제는 실수를 줄여주는 경험이 됩니다.' },
+      '2026-05-22': { d: 'D-22', body: '오늘도 멈추지 않았습니다. 매일 문제를 푸는 힘이 시험장에서 가장 믿을 수 있는 루틴이 됩니다.' },
+      '2026-05-23': { d: 'D-21', body: '틀린 문제 몇 개보다 중요한 건 오늘도 끝까지 풀어냈다는 사실입니다. 그 꾸준함이 결국 합격에 가까워지게 합니다.' },
+      '2026-05-24': { d: 'D-20', body: '오늘의 한 세트도 잘 지나왔습니다. 완벽하지 않아도 괜찮습니다. 반복한 만큼 실전에서 흔들림은 줄어듭니다.' },
+      '2026-05-25': { d: 'D-19', body: '오늘도 실력을 하나씩 확인했습니다. 모르는 문제는 줄어들고, 익숙한 기준은 더 선명해지고 있습니다.' },
+      '2026-05-26': { d: 'D-18', body: '틀린 문제는 오늘 다시 정리하면 됩니다. 중요한 건 오늘도 공부의 흐름을 이어갔다는 점입니다.' },
+      '2026-05-27': { d: 'D-17', body: '하루하루의 기록이 시험 당일의 안정감이 됩니다. 오늘도 그 안정감을 하나 더 쌓았습니다.' },
+      '2026-05-28': { d: 'D-16', body: '오늘도 충분히 잘해냈습니다. 잠깐의 불안보다, 지금까지 반복해온 시간이 훨씬 더 강합니다.' },
+      '2026-05-29': { d: 'D-15', body: '오늘 풀어낸 문제들이 실전 감각을 만들고 있습니다. 점수보다 중요한 건 흐름을 유지하는 힘입니다.' },
+      '2026-05-30': { d: 'D-14', body: '2주 남았습니다. 지금부터는 더 많이 하기보다, 아는 문제를 안정적으로 지켜내는 시간이 더 중요합니다.' },
+      '2026-05-31': { d: 'D-13', body: '오늘도 기준을 다시 확인했습니다. 틀린 문제는 다시 보면 되고, 맞힌 문제는 자신 있게 믿으면 됩니다.' },
+      '2026-06-01': { d: 'D-12', body: '오늘의 공부는 불안을 줄이는 가장 현실적인 방법입니다. 한 세트씩 쌓아온 힘은 쉽게 사라지지 않습니다.' },
+      '2026-06-02': { d: 'D-11', body: '오늘도 끝까지 잘 풀어냈습니다. 시험장에서 필요한 건 특별함보다, 평소처럼 읽고 판단하는 힘입니다.' },
+      '2026-06-03': { d: 'D-10', body: '열흘 남았습니다. 지금부터는 실력을 더 늘리기보다, 실수를 줄이고 익숙한 기준을 지키는 연습이 더 중요합니다.' },
+      '2026-06-04': { d: 'D-9', body: '오늘도 합격선에 가까운 감각을 유지했습니다. 낯선 문제보다 익숙한 문제를 지켜내는 힘을 믿어도 됩니다.' },
+      '2026-06-05': { d: 'D-8', body: '오늘의 오답은 시험장에서 같은 실수를 줄여주는 경험이 됩니다. 지금 확인한 만큼 더 단단해졌습니다.' },
+      '2026-06-06': { d: 'D-7', body: '일주일 남았습니다. 여기까지 꾸준히 해온 과정 자체가 이미 충분한 준비의 증거입니다.' },
+      '2026-06-07': { d: 'D-6', body: '오늘도 평소의 리듬을 잘 지켜냈습니다. 시험 당일에도 가장 필요한 건 이 리듬을 그대로 유지하는 것입니다.' },
+      '2026-06-08': { d: 'D-5', body: '남은 시간은 불안을 키우는 시간이 아니라, 기준을 정리하는 시간입니다. 오늘도 그 기준을 다시 확인했습니다.' },
+      '2026-06-09': { d: 'D-4', body: '오늘도 충분히 잘해냈습니다. 완벽하지 않아도, 끝까지 풀어내는 힘은 이미 충분히 만들어졌습니다.' },
+      '2026-06-10': { d: 'D-3', body: '이제는 새롭게 증명하려 하지 않아도 됩니다. 지금까지 쌓아온 실력을 차분히 꺼내는 연습이면 충분합니다.' },
+      '2026-06-11': { d: 'D-2', body: '오늘은 흔들리지 않는 기준을 다시 확인한 날입니다. 컨디션보다 중요한 건 익숙한 문제를 놓치지 않는 힘입니다.' },
+      '2026-06-12': { d: 'D-1', body: '마지막 하루입니다. 더 몰아붙이기보다, 지금까지 해온 것을 믿고 차분히 정리하면 됩니다.' },
+      '2026-06-13': { d: 'D-Day', body: '오늘은 완벽해야 하는 날이 아닙니다. 아는 문제를 끝까지 지키고, 모르는 문제에 오래 멈추지 않으면 됩니다. 충분히 준비해왔습니다.' }
+    };
+    const storageKey = 'health-exercise-quiz:' + quiz.quizId;
+    const reviewAnswers = new Map((completedAttempt?.answerLog || []).map(item => [
+      item.questionId,
+      item.selected === 'none' ? null : Number(item.selected) - 1
+    ]));
+    const initialReviewIds = new Set([
+      ...(completedAttempt?.review || []),
+      ...(completedAttempt?.wrong || [])
+    ].map(item => typeof item === 'string' ? item : item?.questionId).filter(Boolean));
+    const state = {
+      current: 0,
+      answers: Array(quiz.questions.length).fill(null),
+      explanationOpen: Array(quiz.questions.length).fill(false),
+      bookmarked: quiz.questions.map(q => initialReviewIds.has(q.id)),
+      objections: Array(quiz.questions.length).fill(false),
+      wrongReasons: Array(quiz.questions.length).fill('')
+    };
+
+    const quizView = document.getElementById('quizView');
+    const resultView = document.getElementById('resultView');
+    const positionLabel = document.getElementById('positionLabel');
+    const progressBar = document.getElementById('progressBar');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const explainBtn = document.getElementById('explainBtn');
+    const actions = document.getElementById('actions');
+
+    function normalizeArray(value, fallback) {
+      if (!Array.isArray(value)) return [...fallback];
+      return fallback.map((item, index) => value[index] ?? item);
+    }
+
+    function loadSavedState() {
+      try {
+        if (reviewMode) return;
+        const saved = JSON.parse(localStorage.getItem(storageKey) || 'null');
+        if (!saved || saved.quizId !== quiz.quizId) return;
+        state.current = Math.min(Math.max(Number(saved.current || 0), 0), quiz.questions.length);
+        state.answers = normalizeArray(saved.answers, state.answers).map(value => value === null ? null : Number(value));
+        state.explanationOpen = normalizeArray(saved.explanationOpen, state.explanationOpen).map(Boolean);
+        state.bookmarked = normalizeArray(saved.bookmarked, state.bookmarked).map(Boolean);
+        state.objections = normalizeArray(saved.objections, state.objections).map(Boolean);
+        state.wrongReasons = normalizeArray(saved.wrongReasons, state.wrongReasons).map(value => String(value || ''));
+      } catch (error) {
+        console.warn('Saved quiz state could not be loaded.', error);
+      }
+    }
+
+    function saveState() {
+      if (reviewMode) return;
+      const payload = {
+        quizId: quiz.quizId,
+        date: quiz.date,
+        savedAt: new Date().toISOString(),
+        current: state.current,
+        answers: state.answers,
+        explanationOpen: state.explanationOpen,
+        bookmarked: state.bookmarked,
+        objections: state.objections,
+        wrongReasons: state.wrongReasons
+      };
+      localStorage.setItem(storageKey, JSON.stringify(payload));
+    }
+
+    function score() {
+      if (reviewMode) return Number(completedAttempt.score || 0);
+      return state.answers.reduce((total, selected, index) => {
+        return total + (isCorrectAnswer(quiz.questions[index], selected) ? 1 : 0);
+      }, 0);
+    }
+
+    function correctIndexes(q) {
+      const raw = q.answerIndexes || q.officialAnswerIndexes || q.answerEvidence?.officialAnswerIndexes || [q.answerIndex];
+      return (Array.isArray(raw) ? raw : [raw])
+        .map(value => Number(value))
+        .filter(value => Number.isInteger(value) && value >= 0);
+    }
+
+    function isCorrectAnswer(q, selected) {
+      if (selected === null || selected === undefined || Number.isNaN(Number(selected))) return false;
+      return correctIndexes(q).includes(Number(selected));
+    }
+
+    function correctLabel(q) {
+      return correctIndexes(q).map(index => circled[index] || String(index + 1)).join(', ');
+    }
+
+    function answeredCount() {
+      if (reviewMode) return Number(completedAttempt.answered || completedAttempt.total || quiz.questions.length);
+      return state.answers.filter(value => value !== null).length;
+    }
+
+    function unansweredIndexes() {
+      return state.answers
+        .map((value, index) => value === null ? index : null)
+        .filter(value => value !== null);
+    }
+
+    function unansweredCount() {
+      if (reviewMode) return Number(completedAttempt.unansweredCount || 0);
+      return unansweredIndexes().length;
+    }
+
+    function renderQuiz() {
+      quizView.innerHTML = quiz.questions.map((q, index) => `
+        <article class="question-card ${index === state.current ? 'active' : ''}" data-index="${index}">
+          ${reviewMode && index === 0 ? reviewSummaryMarkup() : ''}
+          <div class="q-head">
+            <div class="q-count">Q${index + 1} · ${escapeHtml(q.topic)}</div>
+            <div class="topic">
+              <span>${q.year} 기출</span>
+              ${verificationBadges(q)}
+              <button class="bookmark-toggle ${state.bookmarked[index] ? 'active' : ''}" type="button" data-question="${index}" aria-label="다시 볼 문제 표시" aria-pressed="${state.bookmarked[index] ? 'true' : 'false'}">
+                <span class="bookmark-icon">${state.bookmarked[index] ? '☑' : '☐'}</span><span>다시 보기</span>
+              </button>
+              <button class="bookmark-toggle issue-toggle ${state.objections[index] ? 'active' : ''}" type="button" data-question="${index}" aria-label="문제 이의제기 표시" aria-pressed="${state.objections[index] ? 'true' : 'false'}">
+                <span class="bookmark-icon">${state.objections[index] ? '!' : '?'}</span><span>이의제기</span>
+              </button>
+            </div>
+          </div>
+          <div class="question">${questionMarkup(q.question)}</div>
+          ${questionImagesMarkup(q)}
+          <div class="choices">
+            ${q.choices.map((choice, choiceIndex) => choiceMarkup(q, index, choice, choiceIndex)).join('')}
+          </div>
+          <div class="feedback ${state.explanationOpen[index] || (!reviewMode && state.answers[index] !== null) ? 'visible' : ''}">
+            ${feedbackMarkup(q, index)}
+          </div>
+          ${state.objections[index] ? '<div class="issue-note">이 문항은 이의제기 문제로 따로 분류됩니다. 저장 후 Diana가 원문·공식정답·해설 근거를 다시 확인해 피드백할 수 있습니다.</div>' : ''}
+        </article>
+      `).join('');
+
+      quizView.querySelectorAll('.choice').forEach(button => {
+        button.addEventListener('click', () => {
+          const questionIndex = Number(button.dataset.question);
+          if (state.answers[questionIndex] !== null) return;
+          const choiceIndex = Number(button.dataset.choice);
+          state.answers[questionIndex] = choiceIndex;
+          if (reviewMode || !isCorrectAnswer(quiz.questions[questionIndex], choiceIndex)) {
+            state.explanationOpen[questionIndex] = true;
+          }
+          saveState();
+          render();
+        });
+      });
+
+      quizView.querySelectorAll('.bookmark-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const questionIndex = Number(button.dataset.question);
+          if (button.classList.contains('issue-toggle')) {
+            state.objections[questionIndex] = !state.objections[questionIndex];
+          } else {
+            state.bookmarked[questionIndex] = !state.bookmarked[questionIndex];
+          }
+          saveState();
+          render();
+        });
+      });
+
+      quizView.querySelectorAll('.reason-chip').forEach(button => {
+        button.addEventListener('click', () => {
+          const questionIndex = Number(button.dataset.question);
+          state.wrongReasons[questionIndex] = button.dataset.reason;
+          saveState();
+          render();
+        });
+      });
+    }
+
+    function choiceMarkup(q, questionIndex, choice, choiceIndex) {
+      const selected = selectedForQuestion(questionIndex);
+      const answered = reviewMode ? state.explanationOpen[questionIndex] : selected !== null;
+      const isCorrect = isCorrectAnswer(q, choiceIndex);
+      const isSelected = choiceIndex === selected;
+      const disabled = answered ? 'disabled' : '';
+      const classes = [
+        'choice',
+        answered && isCorrect ? 'correct' : '',
+        answered && isSelected && !isCorrect ? 'wrong selected' : '',
+        answered && isSelected && isCorrect ? 'selected' : ''
+      ].filter(Boolean).join(' ');
+
+      return `
+        <button class="${classes}" type="button" data-question="${questionIndex}" data-choice="${choiceIndex}" ${disabled}>
+          <span class="choice-prefix">${circled[choiceIndex]}</span><span class="choice-text">${escapeHtml(choice)}</span>
+        </button>
+      `;
+    }
+
+    function verificationBadges(q) {
+      const badges = [];
+      if (q.answerVerified || q.answerStatus === 'official_verified') badges.push('공식정답 검수');
+      if (q.explanationVerified || q.explanationStatus === 'cross_checked') badges.push('해설 교차검수');
+      if (!badges.length) return '';
+      return '<span class="trust-strip">' + badges.map(label => '<span class="verify-badge">' + escapeHtml(label) + '</span>').join('') + '</span>';
+    }
+
+    function questionImagesMarkup(q) {
+      if (!Array.isArray(q.images) || !q.images.length) return '';
+      const images = q.images.map(image => {
+        let src = String(image.src || '');
+        if (src.startsWith('./')) src = src.slice(2);
+        if (src.startsWith('/')) src = src.slice(1);
+        if (!src) return '';
+        const alt = image.alt || '문항 그림';
+        return '<img src="../' + escapeHtml(src) + '" alt="' + escapeHtml(alt) + '" loading="lazy">';
+      }).join('');
+      return '<div class="question-figures">' + images + '</div>';
+    }
+
+    function selectedForQuestion(questionIndex) {
+      if (reviewMode) {
+        if (state.answers[questionIndex] !== null) return state.answers[questionIndex];
+        return state.explanationOpen[questionIndex] ? (reviewAnswers.get(quiz.questions[questionIndex].id) ?? null) : null;
+      }
+      return state.answers[questionIndex];
+    }
+
+    function reviewSummaryMarkup() {
+      const wrongCount = Number((completedAttempt?.wrong || []).length);
+      const reviewCount = Number((completedAttempt?.review || []).length);
+      return `
+        <section class="review-summary" aria-label="복습 요약">
+          <div><span>완료 점수</span><strong>${completedAttempt.score || 0}/${completedAttempt.total || quiz.questions.length}</strong></div>
+          <div><span>오답</span><strong>${wrongCount}</strong></div>
+          <div><span>다시 볼 문제</span><strong>${reviewCount}</strong></div>
+        </section>
+      `;
+    }
+
+    function normalizeQuestionText(text) {
+      const normalized = String(text)
+        .replaceAll('&lt;', '<')
+        .replaceAll('&gt;', '>')
+        .replace(/<보기>\s*\./g, '<보기>')
+        .replace(/<그림>\s*\./g, '<그림>')
+        .replace(/<표>\s*\./g, '<표>');
+      return mergeWrappedLines(normalized);
+    }
+
+    function mergeWrappedLines(text) {
+      const lines = text.split('\n').map(line => line.trim());
+      const merged = [];
+      lines.forEach(line => {
+        if (!line) return;
+        if (isSectionLabel(line) || isListStart(line) || !merged.length || isSectionLabel(merged[merged.length - 1])) {
+          merged.push(line);
+          return;
+        }
+        if (isContinuationLine(line)) {
+          merged[merged.length - 1] = `${merged[merged.length - 1]} ${line}`;
+          return;
+        }
+        merged.push(line);
+      });
+      return merged.join('\n');
+    }
+
+    function isSectionLabel(line) {
+      return line === '<보기>' || line === '<그림>' || line === '<표>';
+    }
+
+    function isListStart(line) {
+      return /^[㉠㉡㉢㉣㉤∙•·▪□]/.test(line);
+    }
+
+    function isContinuationLine(line) {
+      return !isListStart(line) && !isSectionLabel(line);
+    }
+
+    function questionMarkup(text) {
+      const lines = normalizeQuestionText(text).split('\n').map(line => line.trim()).filter(Boolean);
+      const parts = [];
+      let blockLines = [];
+
+      lines.forEach(line => {
+        if (isSectionLabel(line)) {
+          if (blockLines.length) parts.push(renderQuestionBlock(blockLines));
+          blockLines = [line];
+          return;
+        }
+        if (blockLines.length) {
+          blockLines.push(line);
+          return;
+        }
+        parts.push(renderQuestionLine(line));
+      });
+
+      if (blockLines.length) parts.push(renderQuestionBlock(blockLines));
+      return parts.join('');
+    }
+
+    function renderQuestionBlock(lines) {
+      return `<div class="q-block">${lines.map(line => renderQuestionLine(line)).join('')}</div>`;
+    }
+
+    function renderQuestionLine(line) {
+      return `<div class="${questionLineClass(line)}">${escapeHtml(line)}</div>`;
+    }
+
+    function questionLineClass(line) {
+      if (line === '<보기>' || line === '<그림>' || line === '<표>') return 'q-line q-label';
+      if (/^[㉠㉡㉢㉣㉤]/.test(line)) return 'q-line q-hang';
+      if (/^[∙•·▪□]/.test(line)) return 'q-line q-dot';
+      return 'q-line';
+    }
+
+    function feedbackMarkup(q, index) {
+      const selected = selectedForQuestion(index);
+      if (reviewMode && !state.explanationOpen[index]) return '';
+      if (!reviewMode && selected === null) return '';
+      const ok = isCorrectAnswer(q, selected);
+      const title = reviewMode
+        ? `풀이완료 · 정답 ${correctLabel(q)}`
+        : (ok ? '정답입니다' : `오답입니다 · 정답 ${correctLabel(q)}`);
+      const reviewPoint = `${q.topic} 기준을 다시 확인하고, 같은 표현이 다른 보기로 바뀌어도 핵심어를 먼저 찾기`;
+      return `
+        <p class="feedback-title ${ok ? 'ok' : 'bad'}">${title}</p>
+        <div class="explanation ${state.explanationOpen[index] ? 'visible' : ''}">
+          ${choiceExplanationMarkup(q)}
+          <div class="ex-row"><strong>다음에 볼 포인트</strong><span>${escapeHtml(reviewPoint)}</span></div>
+        </div>
+        ${reviewMode || ok ? '' : '<div class="review-tools">' + reasonMarkup(index) + '</div>'}
+      `;
+    }
+
+    function choiceExplanationMarkup(q) {
+      const rows = Array.isArray(q.choiceExplanations) && q.choiceExplanations.length === q.choices.length
+        ? q.choiceExplanations
+        : fallbackChoiceExplanations(q);
+      return rows.map((text, choiceIndex) => {
+        const label = isCorrectAnswer(q, choiceIndex) ? `${circled[choiceIndex]} 정답` : `${circled[choiceIndex]} 오답`;
+        const body = typeof text === 'object' && text !== null ? (text.reason || text.fix || text.trap || '') : text;
+        return `<div class="ex-row"><strong>${escapeHtml(label)}</strong><span>${escapeHtml(body)}</span></div>`;
+      }).join('');
+    }
+
+    function fallbackChoiceExplanations(q) {
+      return q.choices.map((choice, choiceIndex) => {
+        if (isCorrectAnswer(q, choiceIndex)) {
+          return `정답입니다. ${q.explanation || '최종정답 기준에 맞는 보기입니다.'}`;
+        }
+        return `정답 기준과 맞지 않는 보기입니다. ${q.trap || '문제의 핵심 조건과 보기 표현을 나누어 확인하세요.'} 선택지 표현: ${choice}`;
+      });
+    }
+
+    function reasonMarkup(index) {
+      return `
+        <div class="reason-panel">
+          <div class="reason-label">틀린 이유</div>
+          <div class="reason-options">
+            ${wrongReasonOptions.map(reason => `
+              <button class="reason-chip ${state.wrongReasons[index] === reason ? 'active' : ''}" type="button" data-question="${index}" data-reason="${escapeHtml(reason)}">
+                ${escapeHtml(reason)}
+              </button>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderResult() {
+      const wrong = quiz.questions
+        .map((q, index) => ({ q, index, selected: state.answers[index] }))
+        .filter(item => item.selected !== null && !isCorrectAnswer(item.q, item.selected));
+      const unanswered = quiz.questions
+        .map((q, index) => ({ q, index, selected: state.answers[index] }))
+        .filter(item => item.selected === null);
+      const total = quiz.questions.length;
+      const currentScore = score();
+      const objections = buildObjectionItems();
+      const reviewItems = buildReviewItems(wrong, unanswered, objections);
+      const resultText = buildResultText(wrong, unanswered, reviewItems, objections, currentScore, total);
+      const message = buildEncouragement(currentScore, total, wrong.length, unanswered.length);
+
+      resultView.innerHTML = `
+        <div class="result-hero">
+          <div class="result-score">오늘 풀이 완료</div>
+          <div class="result-sub">전체 정답률 ${currentScore}/${total} · 틀린 문제 ${wrong.length}개 · 미응답 ${unanswered.length}개</div>
+          ${objections.length ? '<div class="result-sub warn">이의제기 ' + objections.length + '문항은 별도 검수 큐로 분류됩니다.</div>' : ''}
+        </div>
+        <section class="result-message">
+          <h2>${escapeHtml(message.title)}</h2>
+          <p>${escapeHtml(message.body)}</p>
+        </section>
+        <section class="result-review">
+          <h2>오늘 다시 볼 문제</h2>
+          ${resultReviewMarkup(reviewItems)}
+        </section>
+        ${syncConfig.enabled ? '<button class="btn primary" id="submitBtn" type="button">결과 저장</button><div class="sync-status" id="syncStatus">저장 요청 후 대시보드와 오답노트에 반영됩니다.</div>' : ''}
+        <div class="result-actions">
+          <a href="../wrong-note.html">오답노트 보기</a>
+          <a class="secondary" href="../index.html">메인으로</a>
+        </div>
+      `;
+
+      const submitBtn = document.getElementById('submitBtn');
+      const syncStatus = document.getElementById('syncStatus');
+      if (submitBtn) {
+        submitBtn.addEventListener('click', async () => submitResult(resultText, submitBtn, syncStatus));
+      }
+    }
+
+    async function submitResult(resultText, submitBtn, syncStatus) {
+      if (!syncConfig.enabled || !syncConfig.submitUrl) return;
+      submitBtn.disabled = true;
+      submitBtn.textContent = '저장 요청 중';
+      syncStatus.className = 'sync-status';
+      syncStatus.textContent = '결과 저장을 요청하는 중입니다.';
+      const payload = {
+        source: 'so0258house',
+        submittedAt: new Date().toISOString(),
+        quizId: quiz.quizId,
+        date: quiz.date,
+        subject: quiz.subject,
+        resultText,
+        userAgent: navigator.userAgent
+      };
+      try {
+        await fetch(syncConfig.submitUrl, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(payload)
+        });
+        submitBtn.textContent = '저장 요청 완료';
+        syncStatus.className = 'sync-status ok';
+        syncStatus.textContent = '저장 요청 완료. 잠시 후 대시보드와 오답노트에 반영됩니다.';
+      } catch (error) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = '다시 저장';
+        syncStatus.className = 'sync-status bad';
+        syncStatus.textContent = '저장 실패. 잠시 후 다시 시도해 주세요.';
+      }
+    }
+
+    function resultReviewMarkup(items) {
+      if (!items.length) {
+        return '<div class="result-clear">오답 없이 마무리했습니다. 오늘은 누적 오답만 가볍게 확인하면 충분합니다.</div>';
+      }
+      const rows = items.map(item => {
+        const selectedLabel = item.selected === null ? '미응답' : circled[item.selected];
+        const choices = item.q.choices.map((choice, index) => {
+          const classes = [
+            'result-review-choice',
+            isCorrectAnswer(item.q, index) ? 'correct' : '',
+            index === item.selected ? 'picked' : ''
+          ].filter(Boolean).join(' ');
+          return `<div class="${classes}"><strong>${circled[index]}</strong><span>${escapeHtml(choice)}</span></div>`;
+        }).join('');
+        return `
+          <article class="result-review-card">
+            ${item.priority === 'objection' ? '<div class="result-review-tag">이의제기 검수 예정</div>' : ''}
+            <div class="result-review-meta">
+              <span>Q${item.index + 1} · ${escapeHtml(item.q.topic)}</span>
+              <span>내 답 ${selectedLabel} / 정답 ${correctLabel(item.q)}</span>
+            </div>
+            <p class="result-review-question">${escapeHtml(item.q.question)}</p>
+            <div class="result-review-choices">${choices}</div>
+            <p class="result-review-explanation">${escapeHtml(item.q.explanation || '정답 기준을 다시 확인하세요.')}</p>
+          </article>
+        `;
+      });
+      return `<div class="result-review-list">${rows.join('')}</div>`;
+    }
+
+    function buildObjectionItems() {
+      return quiz.questions
+        .map((q, index) => ({ q, index, selected: state.answers[index] }))
+        .filter(item => state.objections[item.index]);
+    }
+
+    function buildReviewItems(wrong, unanswered, objections) {
+      const reviewMap = new Map();
+      wrong.forEach(item => reviewMap.set(item.index, { ...item, priority: 'wrong' }));
+      unanswered.forEach(item => {
+        if (!reviewMap.has(item.index)) reviewMap.set(item.index, { ...item, priority: 'unanswered' });
+      });
+      objections.forEach(item => reviewMap.set(item.index, { ...item, priority: 'objection' }));
+      quiz.questions.forEach((q, index) => {
+        if (state.bookmarked[index] && !reviewMap.has(index)) {
+          reviewMap.set(index, { q, index, selected: state.answers[index], priority: 'bookmarked' });
+        }
+      });
+      return Array.from(reviewMap.values()).sort((a, b) => {
+        const aReason = state.wrongReasons[a.index] ? 0 : 1;
+        const bReason = state.wrongReasons[b.index] ? 0 : 1;
+        if (aReason !== bReason) return aReason - bReason;
+        const rank = { objection: 0, wrong: 1, unanswered: 2, bookmarked: 3 };
+        if (a.priority !== b.priority) return (rank[a.priority] ?? 9) - (rank[b.priority] ?? 9);
+        return a.index - b.index;
+      });
+    }
+
+    function buildEncouragement(currentScore, total, wrongCount, unansweredCountValue) {
+      if (unansweredCountValue > 0) {
+        return {
+          title: '끝까지 확인하면 점수가 됩니다',
+          body: '아직 답하지 않은 문제가 남아 있어요. 오늘의 목표는 완벽함보다 끝까지 확인하는 습관입니다.\n남은 문제까지 차분히 눌러 보고, 헷갈린 기준만 표시해두면 오늘 공부는 충분히 의미 있게 끝납니다.'
+        };
+      }
+      const daily = resultMessages[quiz.date];
+      if (daily) {
+        return {
+          title: daily.d + ' · 오늘도 잘 마무리했습니다',
+          body: daily.body
+        };
+      }
+      const rate = total ? currentScore / total : 0;
+      if (rate >= .9) {
+        return {
+          title: '오늘도 충분히 잘했습니다',
+          body: '잘하고 있어요. 오늘 맞힌 문제들은 그냥 운이 아니라, 버티면서 쌓아온 시간이 만든 결과입니다.\n남은 건 완벽해지는 일이 아니라, 흔들려도 다시 기준을 떠올리는 연습입니다. 고생 많았고, 오늘 하루도 차분하게 마무리해요.'
+        };
+      }
+      if (rate >= .7) {
+        return {
+          title: '좋은 흐름 안에 있습니다',
+          body: '틀린 문제보다 중요한 건 오늘 끝까지 풀었다는 사실입니다. 지금의 오답은 부족함의 증거가 아니라, 시험 전에 발견한 힌트입니다.\n오늘 헷갈린 기준만 다시 잡으면 내일은 더 가볍게 넘어갈 수 있어요. 잘될 거예요.'
+        };
+      }
+      return {
+        title: '오늘의 오답은 내일의 점수입니다',
+        body: '많이 틀린 날도 공부가 무너진 날은 아닙니다. 오히려 지금 틀려서 다행인 문제들이 있습니다.\n오늘은 고생 많았어요. 정답보다 중요한 건 다시 확인할 기준을 얻었다는 것, 그리고 포기하지 않고 여기까지 왔다는 것입니다. 내일도 한 문제씩 가면 됩니다.'
+      };
+    }
+
+    function buildResultText(wrong, unanswered, reviewItems, objections, currentScore, total) {
+      const lines = [
+        '[HEALTH_EXERCISE_RESULT]',
+        `date=${quiz.date}`,
+        `quizId=${quiz.quizId}`,
+        `subject=${quiz.subject}`,
+        `score=${currentScore}`,
+        `total=${total}`,
+        `answered=${answeredCount()}`,
+        `unansweredCount=${unanswered.length}`
+      ];
+
+      quiz.questions.forEach((q, index) => {
+        const selected = state.answers[index];
+        const selectedText = selected === null ? 'none' : selected + 1;
+        const bookmarked = state.bookmarked[index] ? 'yes' : 'no';
+        const objection = state.objections[index] ? 'yes' : 'no';
+        const reason = state.wrongReasons[index] || '';
+        const correct = isCorrectAnswer(q, selected) ? 'yes' : 'no';
+        const answerText = correctIndexes(q).map(index => index + 1).join(',');
+        lines.push(`answerLog=${q.id}|topic=${q.topic}|selected=${selectedText}|answer=${answerText}|correct=${correct}|bookmarked=${bookmarked}|objection=${objection}|wrongReason=${reason || 'none'}`);
+      });
+
+      wrong.forEach(item => {
+        const reason = state.wrongReasons[item.index] || '미선택';
+        const bookmarked = state.bookmarked[item.index] ? 'yes' : 'no';
+        lines.push(`wrong=${item.q.id}|topic=${item.q.topic}|selected=${item.selected === null ? 'none' : item.selected + 1}|answer=${correctIndexes(item.q).map(index => index + 1).join(',')}|wrongReason=${reason}|bookmarked=${bookmarked}`);
+      });
+
+      unanswered.forEach(item => {
+        lines.push(`unanswered=${item.q.id}|topic=${item.q.topic}|answer=${correctIndexes(item.q).map(index => index + 1).join(',')}`);
+      });
+
+      reviewItems
+        .filter(item => isCorrectAnswer(item.q, item.selected) && state.bookmarked[item.index])
+        .forEach(item => {
+          lines.push(`review=${item.q.id}|topic=${item.q.topic}|reason=bookmarked`);
+      });
+
+      objections.forEach(item => {
+        lines.push(`objection=${item.q.id}|topic=${item.q.topic}|selected=${item.selected === null ? 'none' : item.selected + 1}|answer=${correctIndexes(item.q).map(index => index + 1).join(',')}|reason=user_flagged`);
+      });
+
+      lines.push('[/HEALTH_EXERCISE_RESULT]');
+      return lines.join('\n');
+    }
+
+    function render() {
+      const isResult = state.current >= quiz.questions.length;
+      quizView.style.display = isResult ? 'none' : 'block';
+      resultView.classList.toggle('active', isResult);
+      actions.style.display = isResult ? 'none' : 'grid';
+
+      if (isResult) {
+        positionLabel.textContent = '완료';
+        progressBar.style.width = '100%';
+        renderResult();
+        return;
+      }
+
+      renderQuiz();
+      const q = quiz.questions[state.current];
+      const selected = selectedForQuestion(state.current);
+      const progress = ((state.current + 1) / quiz.questions.length) * 100;
+      positionLabel.textContent = `${state.current + 1}/${quiz.questions.length}`;
+      progressBar.style.width = `${progress}%`;
+      prevBtn.disabled = state.current === 0;
+      nextBtn.textContent = state.current === quiz.questions.length - 1 ? '결과 보기' : '다음';
+      if (!reviewMode && state.current === quiz.questions.length - 1 && unansweredCount() > 0) {
+        nextBtn.textContent = `미응답 ${unansweredCount()}개`;
+      }
+      const canAdvance = reviewMode || selected !== null;
+      nextBtn.disabled = !canAdvance;
+      explainBtn.disabled = !canAdvance;
+      explainBtn.textContent = state.explanationOpen[state.current] ? '해설 숨김' : '해설 보기';
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    prevBtn.addEventListener('click', () => {
+      state.current = Math.max(0, state.current - 1);
+      saveState();
+      render();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (state.current === quiz.questions.length - 1) {
+        const missing = unansweredIndexes();
+        if (!reviewMode && missing.length) {
+          state.current = missing[0];
+          render();
+          return;
+        }
+      }
+      state.current = Math.min(quiz.questions.length, state.current + 1);
+      saveState();
+      render();
+    });
+
+    explainBtn.addEventListener('click', () => {
+      if (!reviewMode && state.answers[state.current] === null) return;
+      state.explanationOpen[state.current] = !state.explanationOpen[state.current];
+      saveState();
+      render();
+    });
+
+    loadSavedState();
+    render();
+  </script>
+</body>
+</html>

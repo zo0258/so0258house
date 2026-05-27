@@ -1,0 +1,1176 @@
+{
+  "quizId": "2026-05-27-daily-1-all-subjects",
+  "date": "2026-05-27",
+  "displayDate": "2026-05-27 (오전)",
+  "slug": "2026-05-27-1",
+  "sequence": 1,
+  "title": "건강운동관리사 데일리 퀴즈",
+  "subject": "전과목",
+  "round": "시험 임박 전과목 10문항",
+  "timeLimitMinutes": 10,
+  "sourceSummary": "2023, 2024년 문제·정답·해설 검증 로우데이터 기반",
+  "generationNote": "검증 로우데이터 기반 생성. answerVerified와 explanationVerified가 모두 true인 문항만 출제 후보에 포함합니다.",
+  "missingSubjects": [],
+  "questions": [
+    {
+      "id": "2023-2A-76-19",
+      "year": 2023,
+      "subject": "병태생리학",
+      "topic": "뇌졸중 설명",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "뇌졸중 설명 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "뇌졸중에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "고혈압은 뇌동맥 파열의 주요 위험요인이다.",
+        "색전증으로 인한 뇌경색은 심방세동으로 유발될 수 있다.",
+        "뇌동맥류의 증상은 갑작스런 극심한 두통이며 치료법으로는 클립결찰술(clipping)이나 코일색전술(coil embolization)이 있다.",
+        "일과성허혈발작(transient ischemic attack)은 급성기에 영구적 뇌손상이 특징이다."
+      ],
+      "answerIndex": 3,
+      "explanation": "일과성허혈발작(TIA)은 일시적인 국소 신경학적 증상이 나타났다가 영구적 뇌손상 없이 회복되는 것이 핵심이다. 영구적 뇌손상이 특징이라는 설명은 틀리다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 19,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 76
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        3
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          3
+        ],
+        "officialAnswer": "④",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "questionNo": 19,
+        "officialAnswerIndex": 3
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Merck Manual Professional Edition",
+            "url": "https://www.merckmanuals.com/professional"
+          },
+          {
+            "title": "NCBI Bookshelf",
+            "url": "https://www.ncbi.nlm.nih.gov/books/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+          "questionNo": 19
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            3
+          ]
+        }
+      ],
+      "correctRationale": "일과성허혈발작(TIA)은 일시적인 국소 신경학적 증상이 나타났다가 영구적 뇌손상 없이 회복되는 것이 핵심이다. 영구적 뇌손상이 특징이라는 설명은 틀리다.",
+      "reviewPoint": "TIA는 transient라는 이름 그대로 영구 뇌손상이 특징이 아니다.",
+      "explanationSources": [
+        {
+          "title": "Merck Manual Professional Edition",
+          "url": "https://www.merckmanuals.com/professional"
+        },
+        {
+          "title": "NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① 고혈압은 뇌동맥 파열의 주요 위험요인이다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "② 색전증으로 인한 뇌경색은 심방세동으로 유발될 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "③ 뇌동맥류의 증상은 갑작스런 극심한 두통이며 치료법으로는 클립결찰술(clipping)이나 코일색전술(coil embolization)이 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "correct",
+          "reason": "④ 일과성허혈발작(transient ischemic attack)은 급성기에 영구적 뇌손상이 특징이다.: 공식 정답이며, 일과성허혈발작(TIA)은 일시적인 국소 신경학적 증상이 나타났다가 영구적 뇌손상 없이 회복되는 것이 핵심이다. 영구적 뇌손상이 특징이라는 설명은 틀리다."
+        }
+      ]
+    },
+    {
+      "id": "2024-2A-77-01",
+      "year": 2024,
+      "subject": "스포츠심리학",
+      "topic": "운동발달에 영향",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "운동발달에 영향 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "운동발달에 영향을 미치는 사회･문화적 요인은?",
+      "choices": [
+        "유전",
+        "성역할",
+        "신체의 성장",
+        "체력의 발달"
+      ],
+      "answerIndex": 1,
+      "explanation": "운동발달에 영향을 미치는 사회·문화적 요인은 성역할이다. 유전, 신체 성장, 체력 발달은 생물학적·개인적 요인에 가깝다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 1,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 77
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "questionNo": 1,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Gallahue, Ozmun & Goodway, Understanding Motor Development",
+            "url": "textbook:Gallahue-Motor-Development"
+          },
+          {
+            "title": "Weinberg & Gould, Foundations of Sport and Exercise Psychology",
+            "url": "textbook:Weinberg-Gould"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+          "questionNo": 1
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "운동발달에 영향을 미치는 사회·문화적 요인은 성역할이다. 유전, 신체 성장, 체력 발달은 생물학적·개인적 요인에 가깝다.",
+      "reviewPoint": "운동발달 요인은 생물학적 성장 요인과 사회문화적 환경 요인을 구분한다.",
+      "explanationSources": [
+        {
+          "title": "Gallahue, Ozmun & Goodway, Understanding Motor Development",
+          "url": "textbook:Gallahue-Motor-Development"
+        },
+        {
+          "title": "Weinberg & Gould, Foundations of Sport and Exercise Psychology",
+          "url": "textbook:Weinberg-Gould"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "유전은 생물학적 요인이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "성역할은 사회·문화적 기대와 행동양식에 관련된다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "신체의 성장은 생물학적 발달 요인이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "체력의 발달은 개인의 신체·운동능력 요인이다."
+        }
+      ]
+    },
+    {
+      "id": "2023-2A-74-05",
+      "year": 2023,
+      "subject": "운동상해",
+      "topic": "스포츠 활동",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "스포츠 활동 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "스포츠 활동에서 환경적 고려사항으로 옳지 않은 것은?",
+      "choices": [
+        "수중에서 다이버가 하강할 때 수압은 증가하고, 신체 내부의 공기 압력은 수면보다 낮아진다.",
+        "고지대의 공기는 건조하고 호흡률이 더 높게 나타날 수 있어서 흔히 구강호흡의 형태를 보이게 된다.",
+        "건조한 저온환경에서 호흡을 통한 수분 손실은 탈수가 유발될 수 있으며 저체온증에 걸릴 위험성을 높일 수 있다.",
+        "고온환경에서 수분의 과다 공급은 저나트륨혈증(hyponatremia)을 유발할 수 있다."
+      ],
+      "answerIndex": 0,
+      "explanation": "다이버가 하강하면 주변 수압은 증가하고 신체의 공기 공간은 압력 변화에 따라 압축되거나 균등화가 필요하다. 내부 공기 압력이 수면보다 낮아진다는 설명은 하강 시 압력 증가 원리와 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 5,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 74
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        0
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          0
+        ],
+        "officialAnswer": "①",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "questionNo": 5,
+        "officialAnswerIndex": 0
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Merck Manual Professional - Overview of Fractures",
+            "url": "https://www.merckmanuals.com/professional/injuries-poisoning/fractures/overview-of-fractures"
+          },
+          {
+            "title": "NATA/CDC sports injury and concussion resources",
+            "url": "https://www.cdc.gov/heads-up/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+          "questionNo": 5
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            0
+          ]
+        }
+      ],
+      "correctRationale": "다이버가 하강하면 주변 수압은 증가하고 신체의 공기 공간은 압력 변화에 따라 압축되거나 균등화가 필요하다. 내부 공기 압력이 수면보다 낮아진다는 설명은 하강 시 압력 증가 원리와 맞지 않는다.",
+      "reviewPoint": "수중 환경 문항은 하강 시 수압 증가와 공기 공간 압축·균등화를 기준으로 판단한다.",
+      "explanationSources": [
+        {
+          "title": "Merck Manual Professional - Overview of Fractures",
+          "url": "https://www.merckmanuals.com/professional/injuries-poisoning/fractures/overview-of-fractures"
+        },
+        {
+          "title": "NATA/CDC sports injury and concussion resources",
+          "url": "https://www.cdc.gov/heads-up/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "correct",
+          "reason": "① 수중에서 다이버가 하강할 때 수압은 증가하고, 신체 내부의 공기 압력은 수면보다 낮아진다.: 공식 정답이며, 다이버가 하강하면 주변 수압은 증가하고 신체의 공기 공간은 압력 변화에 따라 압축되거나 균등화가 필요하다. 내부 공기 압력이 수면보다 낮아진다는 설명은 하강 시 압력 증가 원리와 맞지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "② 고지대의 공기는 건조하고 호흡률이 더 높게 나타날 수 있어서 흔히 구강호흡의 형태를 보이게 된다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "③ 건조한 저온환경에서 호흡을 통한 수분 손실은 탈수가 유발될 수 있으며 저체온증에 걸릴 위험성을 높일 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "④ 고온환경에서 수분의 과다 공급은 저나트륨혈증(hyponatremia)을 유발할 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        }
+      ]
+    },
+    {
+      "id": "2024-2A-77-07",
+      "year": 2024,
+      "subject": "스포츠심리학",
+      "topic": "운동학적 측정에",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "운동학적 측정에 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "운동학적(kinematic) 측정에 가장 적합한 것은?",
+      "choices": [
+        "지면반력기",
+        "회전판 추적기",
+        "전자식 각도계",
+        "바크만(Bachman) 사다리"
+      ],
+      "answerIndex": 2,
+      "explanation": "운동학적 측정은 힘의 원인보다 위치, 각도, 속도, 가속도 같은 움직임 형태를 측정한다. 전자식 각도계는 관절각과 관절운동범위 측정 장비이므로 가장 적합하다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 7,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 77
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        2
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          2
+        ],
+        "officialAnswer": "③",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "questionNo": 7,
+        "officialAnswerIndex": 2
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "OpenStax University Physics",
+            "url": "https://openstax.org/subjects/science"
+          },
+          {
+            "title": "Kenhub Anatomy Library",
+            "url": "https://www.kenhub.com/en/library/anatomy"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+          "questionNo": 7
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            2
+          ]
+        }
+      ],
+      "correctRationale": "운동학적 측정은 힘의 원인보다 위치, 각도, 속도, 가속도 같은 움직임 형태를 측정한다. 전자식 각도계는 관절각과 관절운동범위 측정 장비이므로 가장 적합하다.",
+      "reviewPoint": "운동학은 위치·각도·속도, 운동역학은 힘·토크·지면반력으로 구분한다.",
+      "explanationSources": [
+        {
+          "title": "OpenStax University Physics",
+          "url": "https://openstax.org/subjects/science"
+        },
+        {
+          "title": "Kenhub Anatomy Library",
+          "url": "https://www.kenhub.com/en/library/anatomy"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① 지면반력기: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "② 회전판 추적기: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "correct",
+          "reason": "③ 전자식 각도계: 공식 정답이며, 운동학적 측정은 힘의 원인보다 위치, 각도, 속도, 가속도 같은 움직임 형태를 측정한다. 전자식 각도계는 관절각과 관절운동범위 측정 장비이므로 가장 적합하다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "④ 바크만(Bachman) 사다리: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        }
+      ]
+    },
+    {
+      "id": "2024-2A-77-18",
+      "year": 2024,
+      "subject": "스포츠심리학",
+      "topic": "규모 커질수록",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "규모 커질수록 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "팀의 규모가 커질수록 개개인의 노력과 동기가 감소되는 현상은?",
+      "choices": [
+        "모델링 효과(modeling effect)",
+        "링겔만 효과(Ringelmann effect)",
+        "스테일네스 효과(staleness effect)",
+        "반동기 효과(demotivation effect)"
+      ],
+      "answerIndex": 1,
+      "explanation": "집단 크기가 커질수록 개인의 노력 투입이 줄어드는 현상은 Ringelmann effect다. 모델링은 관찰학습, staleness는 과훈련·권태 상태, 반동기 효과는 표준 용어가 아니다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 18,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 77
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "questionNo": 18,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Weinberg & Gould, Foundations of Sport and Exercise Psychology, group productivity/social loafing",
+            "url": "textbook:Weinberg-Gould"
+          },
+          {
+            "title": "Karau & Williams, Social Loafing: A Meta-Analytic Review and Theoretical Integration",
+            "url": "doi:10.1037/0033-2909.115.3.681"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+          "questionNo": 18
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "집단 크기가 커질수록 개인의 노력 투입이 줄어드는 현상은 Ringelmann effect다. 모델링은 관찰학습, staleness는 과훈련·권태 상태, 반동기 효과는 표준 용어가 아니다.",
+      "reviewPoint": "집단 수행에서는 사회적 태만, Ringelmann effect, 응집력, 동기손실을 구분한다.",
+      "explanationSources": [
+        {
+          "title": "Weinberg & Gould, Foundations of Sport and Exercise Psychology, group productivity/social loafing",
+          "url": "textbook:Weinberg-Gould"
+        },
+        {
+          "title": "Karau & Williams, Social Loafing: A Meta-Analytic Review and Theoretical Integration",
+          "url": "doi:10.1037/0033-2909.115.3.681"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "모델링 효과는 타인의 행동 관찰을 통한 학습과 관련된다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "Ringelmann effect는 집단 규모 증가에 따른 개인 노력 감소를 설명한다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "staleness는 운동심리에서 피로·권태/과훈련 맥락의 용어다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "반동기 효과는 이 현상의 표준 명칭이 아니다."
+        }
+      ]
+    },
+    {
+      "id": "2024-2A-75-15",
+      "year": 2024,
+      "subject": "기능해부학",
+      "topic": "성인 근육조직",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "성인 근육조직 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "성인의 근육조직(muscle tissue)에 대한 설명으로 옳은 것은?",
+      "choices": [
+        "심장근육은 가로무늬수의근(striated voluntary muscle)이다.",
+        "민무늬근육세포는 분열할 수 없으며, 손상 후 재생할 수 없다.",
+        "심장근육은 근육위성세포(myosatellite cell)에 의해 손상 후 재생이 가능하다.",
+        "뼈대 근육섬유는 분열할 수 없지만, 근육위성세포에 의해 새로운 근육섬유가 생산될 수 있다."
+      ],
+      "answerIndex": 3,
+      "explanation": "성인 골격근 섬유 자체는 일반적으로 분열하지 않지만, 근육위성세포가 활성화되어 손상 회복과 새로운 근섬유 형성에 기여할 수 있다. 심장근육은 불수의 가로무늬근이고, 민무늬근은 일부 재생 능력이 있으며, 심장근육은 위성세포에 의한 재생이 일반적이지 않다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 15,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 75
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        3
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          3
+        ],
+        "officialAnswer": "④",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "questionNo": 15,
+        "officialAnswerIndex": 3
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "OpenStax A&P 2e, Muscle Tissue and satellite cells",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-introduction"
+          },
+          {
+            "title": "OpenStax A&P 2e, Skeletal Muscle",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-2-skeletal-muscle"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+          "questionNo": 15
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            3
+          ]
+        }
+      ],
+      "correctRationale": "성인 골격근 섬유 자체는 일반적으로 분열하지 않지만, 근육위성세포가 활성화되어 손상 회복과 새로운 근섬유 형성에 기여할 수 있다. 심장근육은 불수의 가로무늬근이고, 민무늬근은 일부 재생 능력이 있으며, 심장근육은 위성세포에 의한 재생이 일반적이지 않다.",
+      "reviewPoint": "골격근, 심장근, 민무늬근의 수의성·가로무늬·재생능력을 구분한다.",
+      "explanationSources": [
+        {
+          "title": "OpenStax A&P 2e, Muscle Tissue and satellite cells",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-introduction"
+        },
+        {
+          "title": "OpenStax A&P 2e, Skeletal Muscle",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/10-2-skeletal-muscle"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "심장근육은 가로무늬근이지만 불수의근이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "민무늬근육세포는 일부 분열·재생 능력이 있다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "심장근육은 위성세포에 의해 충분히 재생되는 조직으로 보지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "correct",
+          "reason": "골격근 섬유는 위성세포를 통해 재생과 새로운 섬유 형성에 기여할 수 있다."
+        }
+      ]
+    },
+    {
+      "id": "2023-2A-77-20",
+      "year": 2023,
+      "subject": "스포츠심리학",
+      "topic": "과제 전이",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "과제 전이 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "과제 내 전이(intratask transfer) 효과와 관련이 없는 것은?",
+      "choices": [
+        "소음 속에서의 골프퍼팅 훈련이 실제 퍼팅에 미치는 효과",
+        "야구 타격 동작 훈련이 골프 드라이버 비거리에 미치는 효과",
+        "걷기 재활 훈련이 환자의 실생활 보행 적응에 미치는 효과",
+        "발목 모래주머니 착용 달리기 훈련이 100m 달리기 기록에 미치는 효과"
+      ],
+      "answerIndex": 1,
+      "explanation": "과제 내 전이는 같은 과제 안에서 조건·상황을 달리한 훈련이 수행에 미치는 효과를 말한다. 야구 타격 동작 훈련이 골프 드라이버 비거리에 미치는 효과는 서로 다른 과제 사이의 전이에 가까우므로 과제 내 전이와 관련이 가장 낮다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 20,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 77
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "questionNo": 20,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Schmidt & Lee, Motor Control and Learning, transfer of learning",
+            "url": "textbook:Schmidt-Lee-Motor-Control"
+          },
+          {
+            "title": "Magill & Anderson, Motor Learning and Control, transfer taxonomy",
+            "url": "textbook:Magill-Anderson"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+          "questionNo": 20
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "과제 내 전이는 같은 과제 안에서 조건·상황을 달리한 훈련이 수행에 미치는 효과를 말한다. 야구 타격 동작 훈련이 골프 드라이버 비거리에 미치는 효과는 서로 다른 과제 사이의 전이에 가까우므로 과제 내 전이와 관련이 가장 낮다.",
+      "reviewPoint": "과제 내 전이(intratask)는 같은 기술 안의 조건 변화, 과제 간 전이(intertask)는 서로 다른 기술 사이의 전이로 구분한다.",
+      "explanationSources": [
+        {
+          "title": "Schmidt & Lee, Motor Control and Learning, transfer of learning",
+          "url": "textbook:Schmidt-Lee-Motor-Control"
+        },
+        {
+          "title": "Magill & Anderson, Motor Learning and Control, transfer taxonomy",
+          "url": "textbook:Magill-Anderson"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "소음 속 골프퍼팅 훈련이 실제 퍼팅에 미치는 효과는 같은 과제 안 조건 변화에 가깝다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "야구 타격과 골프 드라이버는 서로 다른 과제 사이 전이에 가깝다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "재활 걷기 훈련과 실생활 보행 적응은 같은 보행 과제의 전이로 볼 수 있다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "모래주머니 착용 달리기와 100m 달리기는 같은 달리기 과제 안 조건 변화에 가깝다."
+        }
+      ]
+    },
+    {
+      "id": "2024-2A-76-01",
+      "year": 2024,
+      "subject": "병태생리학",
+      "topic": "급성염증 설명",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "급성염증 설명 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "급성염증(acute inflammation)에 관한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "주로 히스타민의 작용으로 혈관 확장이 발생한다.",
+        "손상된 세포로부터 화학매개체(chemical mediator)가 분비된다.",
+        "초기 염증에는 단핵구나 대식세포가 주로 침윤하나 이후 호중구로 대체된다.",
+        "모세혈관 투과성이 증가하며, 혈장 단백질이 수분과 함께 사이질 공간으로 이동한다."
+      ],
+      "answerIndex": 2,
+      "explanation": "급성염증 초기에는 주로 호중구가 먼저 침윤하고 이후 단핵구/대식세포가 뒤따른다. 선택지 ③은 초기와 이후 세포 반응의 순서를 반대로 설명하므로 옳지 않다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 1,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 76
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        2
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          2
+        ],
+        "officialAnswer": "③",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "questionNo": 1,
+        "officialAnswerIndex": 2
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Robbins & Cotran Pathologic Basis of Disease, acute inflammation",
+            "url": "textbook:Robbins-Cotran"
+          },
+          {
+            "title": "OpenStax A&P 2e, Inflammation and Fever",
+            "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-3-the-adaptive-immune-response-t-lymphocytes-and-their-functional-types"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+          "questionNo": 1
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            2
+          ]
+        }
+      ],
+      "correctRationale": "급성염증 초기에는 주로 호중구가 먼저 침윤하고 이후 단핵구/대식세포가 뒤따른다. 선택지 ③은 초기와 이후 세포 반응의 순서를 반대로 설명하므로 옳지 않다.",
+      "reviewPoint": "급성염증은 혈관확장, 투과성 증가, 혈장 단백 이동, 초기 호중구 침윤을 핵심으로 본다.",
+      "explanationSources": [
+        {
+          "title": "Robbins & Cotran Pathologic Basis of Disease, acute inflammation",
+          "url": "textbook:Robbins-Cotran"
+        },
+        {
+          "title": "OpenStax A&P 2e, Inflammation and Fever",
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-3-the-adaptive-immune-response-t-lymphocytes-and-their-functional-types"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "히스타민은 혈관확장과 투과성 증가에 관여한다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "손상 세포와 염증세포는 화학매개체를 분비한다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "correct",
+          "reason": "초기 주된 침윤세포는 단핵구/대식세포가 아니라 호중구다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "모세혈관 투과성 증가로 수분과 단백질이 사이질로 이동한다."
+        }
+      ]
+    },
+    {
+      "id": "2024-2A-75-04",
+      "year": 2024,
+      "subject": "기능해부학",
+      "topic": "척추 가로돌기가시근군에",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "척추 가로돌기가시근군에 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "척추의 가로돌기가시근군(횡돌기극근군, transversospinalis group)에 포함\n되지 않는 것은?",
+      "choices": [
+        "뭇갈래근(다열근, multifidus)",
+        "가시근(극근. spinalis)",
+        "돌림근(회선근, rotators)",
+        "반가시근(반극근, semispinalis)"
+      ],
+      "answerIndex": 1,
+      "explanation": "가로돌기가시근군은 반가시근, 뭇갈래근, 돌림근을 포함한다. 가시근은 척주세움근군에 속하므로 가로돌기가시근군에 포함되지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 4,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 75
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "questionNo": 4,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "OpenStax University Physics",
+            "url": "https://openstax.org/subjects/science"
+          },
+          {
+            "title": "Kenhub Anatomy Library",
+            "url": "https://www.kenhub.com/en/library/anatomy"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+          "questionNo": 4
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "가로돌기가시근군은 반가시근, 뭇갈래근, 돌림근을 포함한다. 가시근은 척주세움근군에 속하므로 가로돌기가시근군에 포함되지 않는다.",
+      "reviewPoint": "Transversospinalis는 semispinalis, multifidus, rotatores로 묶고 spinalis는 erector spinae로 분류한다.",
+      "explanationSources": [
+        {
+          "title": "OpenStax University Physics",
+          "url": "https://openstax.org/subjects/science"
+        },
+        {
+          "title": "Kenhub Anatomy Library",
+          "url": "https://www.kenhub.com/en/library/anatomy"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① 뭇갈래근(다열근, multifidus): 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "② 가시근(극근. spinalis): 공식 정답이며, 가로돌기가시근군은 반가시근, 뭇갈래근, 돌림근을 포함한다. 가시근은 척주세움근군에 속하므로 가로돌기가시근군에 포함되지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "③ 돌림근(회선근, rotators): 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "④ 반가시근(반극근, semispinalis): 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        }
+      ]
+    },
+    {
+      "id": "2024-1A-73-16",
+      "year": 2024,
+      "subject": "운동부하검사",
+      "topic": "사례 운동부하검사",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "사례 운동부하검사 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>의 사례가 운동부하검사 결과에 미치는 영향은?\n<보기>.\n디지털리스(digitalis) 약물치료 중인 환자가 운동부하검사 중\nST분절이 2 mm 이상 하강하여 검사를 중지하였다.",
+      "choices": [
+        "특이도를 증가시킬 수 있다.",
+        "특이도를 감소시킬 수 있다.",
+        "민감도를 증가시킬 수 있다.",
+        "민감도를 감소시킬 수 있다."
+      ],
+      "answerIndex": 1,
+      "explanation": "Digitalis는 허혈이 없어도 운동부하검사 중 ST분절 하강을 유발할 수 있어 위양성 가능성을 높인다. 위양성이 늘면 특이도는 감소한다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 16,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 73
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf",
+        "questionNo": 16,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          },
+          {
+            "title": "Topend Sports - Queens College Step Test",
+            "url": "https://www.topendsports.com/testing/tests/step-queens.htm"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf",
+          "questionNo": 16
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "Digitalis는 허혈이 없어도 운동부하검사 중 ST분절 하강을 유발할 수 있어 위양성 가능성을 높인다. 위양성이 늘면 특이도는 감소한다.",
+      "reviewPoint": "민감도와 특이도의 방향을 구분하고, Digitalis 관련 ST 하강은 위양성 증가로 연결한다.",
+      "explanationSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "Topend Sports - Queens College Step Test",
+          "url": "https://www.topendsports.com/testing/tests/step-queens.htm"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① 특이도를 증가시킬 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "② 특이도를 감소시킬 수 있다.: 공식 정답이며, Digitalis는 허혈이 없어도 운동부하검사 중 ST분절 하강을 유발할 수 있어 위양성 가능성을 높인다. 위양성이 늘면 특이도는 감소한다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "③ 민감도를 증가시킬 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "④ 민감도를 감소시킬 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        }
+      ]
+    }
+  ]
+}
