@@ -1,0 +1,1176 @@
+{
+  "quizId": "2026-06-10-daily-1-all-subjects",
+  "date": "2026-06-10",
+  "displayDate": "2026-06-10 (오전)",
+  "slug": "2026-06-10-1",
+  "sequence": 1,
+  "title": "건강운동관리사 데일리 퀴즈",
+  "subject": "전과목",
+  "round": "시험 임박 전과목 10문항",
+  "timeLimitMinutes": 10,
+  "sourceSummary": "2018, 2020, 2021, 2022, 2023, 2024년 문제·정답·해설 검증 로우데이터 기반",
+  "generationNote": "검증 로우데이터 기반 생성. answerVerified와 explanationVerified가 모두 true인 문항만 출제 후보에 포함합니다.",
+  "missingSubjects": [],
+  "questions": [
+    {
+      "id": "2021-1A-71-07",
+      "year": 2021,
+      "subject": "건강·체력평가",
+      "topic": "일상생활 신체활동량",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "일상생활 신체활동량 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "일상생활 중의 신체활동량 측정에 관한 설명으로 옳은 것은?",
+      "choices": [
+        "질문지법으로는 총 에너지소비량을 추정할 수 없다.",
+        "질문지법에서 규칙적 운동에 대한 측정은 제외된다.",
+        "가속도계(acclerometer)를 이용한 측정으로는 격렬한 신체활동에 대한 에너지소비량을 추정할 수 없다.",
+        "보행계수계(pedometer), 가속도계 등은 신체활동 시 나타나는 진동을 측정하는 방식으로 정적 근력운동에 대한 과소추정이 나타난다."
+      ],
+      "answerIndex": 3,
+      "explanation": "공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '보행계수계(pedometer), 가속도계 등은 신체활동 시 나타나는 진동을 측정하는 방식으로 정적 근력운동에 대한 과소추정이 나타난다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 1교시 A형(게시).pdf",
+        "answerFile": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+        "questionNo": 7,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 71
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        3
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          3
+        ],
+        "officialAnswer": "④",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 1교시 A형(게시).pdf",
+        "questionNo": 7,
+        "officialAnswerIndex": 3
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          },
+          {
+            "title": "CDC - Physical Activity Basics",
+            "url": "https://www.cdc.gov/physical-activity-basics/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 1교시 A형(게시).pdf",
+          "questionNo": 7
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+          "answerIndexes": [
+            3
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '보행계수계(pedometer), 가속도계 등은 신체활동 시 나타나는 진동을 측정하는 방식으로 정적 근력운동에 대한 과소추정이 나타난다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "일상생활 신체활동량의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "CDC - Physical Activity Basics",
+          "url": "https://www.cdc.gov/physical-activity-basics/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '질문지법으로는 총 에너지소비량을 추정할 수 없다.'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '질문지법에서 규칙적 운동에 대한 측정은 제외된다.'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '가속도계(acclerometer)를 이용한 측정으로는 격렬한 신체활동에 대한 에너지소비량을 추정할 수 없다.'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '보행계수계(pedometer), 가속도계 등은 신체활동 시 나타나는 진동을 측정하는 방식으로 정적 근력운동에 대한 과소추정이 나타난다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2024-1A-71-07",
+      "year": 2024,
+      "subject": "건강·체력평가",
+      "topic": "국민체력100 협응력검사",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "국민체력100 협응력검사 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "‘국민체력100’의 눈-손 협응력검사에 대한 설명으로 옳은 것은?",
+      "choices": [
+        "T-wall 측정은 대상자가 유소년이며, 측정 종료 후 0.001초 단위의 시간과 실패한 횟수를 기록한다.",
+        "T-wall 측정은 대상자가 청소년이며, 성공한 횟수와 실패한 횟수를 합하여 총 100번 터치할 때까지 진행한다.",
+        "벽패스 측정은 대상자가 유소년이며, 공을 잡지 않고 왼손과 오른손 으로 번갈아 가며 쳐낸다.",
+        "벽패스 측정은 대상자가 청소년이며, 중간에 공을 떨어뜨리는 경우 그 공을 다시 주워서 실시한다."
+      ],
+      "answerIndex": 1,
+      "explanation": "국민체력100의 청소년 눈-손 협응력 검사는 T-wall 검사다. 성공과 실패 횟수를 합산해 총 100회 터치할 때까지 수행하는 방식이므로 해당 설명이 옳다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 7,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 71
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf",
+        "questionNo": 7,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "국민체력100 체력측정 항목",
+            "url": "https://nfa.kspo.or.kr/front/measure/measurePhysical.do"
+          },
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf",
+          "questionNo": 7
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "국민체력100의 청소년 눈-손 협응력 검사는 T-wall 검사다. 성공과 실패 횟수를 합산해 총 100회 터치할 때까지 수행하는 방식이므로 해당 설명이 옳다.",
+      "reviewPoint": "국민체력100 협응력 검사는 대상 연령과 검사명, 기록 방식을 함께 확인한다.",
+      "explanationSources": [
+        {
+          "title": "국민체력100 체력측정 항목",
+          "url": "https://nfa.kspo.or.kr/front/measure/measurePhysical.do"
+        },
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① T-wall 측정은 대상자가 유소년이며, 측정 종료 후 0.001초 단위의 시간과 실패한 횟수를 기록한다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "② T-wall 측정은 대상자가 청소년이며, 성공한 횟수와 실패한 횟수를 합하여 총 100번 터치할 때까지 진행한다.: 공식 정답이며, 국민체력100의 청소년 눈-손 협응력 검사는 T-wall 검사다. 성공과 실패 횟수를 합산해 총 100회 터치할 때까지 수행하는 방식이므로 해당 설명이 옳다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "③ 벽패스 측정은 대상자가 유소년이며, 공을 잡지 않고 왼손과 오른손 으로 번갈아 가며 쳐낸다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "④ 벽패스 측정은 대상자가 청소년이며, 중간에 공을 떨어뜨리는 경우 그 공을 다시 주워서 실시한다. 건강운동관리사 필기시험 1교시 (A형) 5면: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        }
+      ]
+    },
+    {
+      "id": "2023-1A-70-06",
+      "year": 2023,
+      "subject": "운동생리학",
+      "topic": "레닌 안지오텐신",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "레닌 안지오텐신 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "레닌(renin)-안지오텐신(angiotensin)-알도스테론(aldosterone) 시스템에 대한 설명으로 옳은 것은?",
+      "choices": [
+        "안지오텐신Ⅱ는 혈관을 수축시켜 혈압을 높인다.",
+        "안지오텐신 전환효소(ACE)는 안지오텐신Ⅱ를 안지오텐신Ⅰ으로 바꾼다.",
+        "부신 속질에서 분비된 알도스테론은 신장에서 Na+ 재흡수를 증가 시킨다.",
+        "간에서 생성된 레닌은 안지오텐신Ⅰ을 안지오텐시노겐(angiotensinogen) 으로 바꾼다."
+      ],
+      "answerIndex": 0,
+      "explanation": "공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '안지오텐신Ⅱ는 혈관을 수축시켜 혈압을 높인다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 6,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 70
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        0
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          0
+        ],
+        "officialAnswer": "①",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "questionNo": 6,
+        "officialAnswerIndex": 0
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          },
+          {
+            "title": "Merck Manual Professional - Exercise and Fitness",
+            "url": "https://www.merckmanuals.com/professional/special-subjects/exercise-and-fitness"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+          "questionNo": 6
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            0
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '안지오텐신Ⅱ는 혈관을 수축시켜 혈압을 높인다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "레닌 안지오텐신의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "Merck Manual Professional - Exercise and Fitness",
+          "url": "https://www.merckmanuals.com/professional/special-subjects/exercise-and-fitness"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '안지오텐신Ⅱ는 혈관을 수축시켜 혈압을 높인다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '안지오텐신 전환효소(ACE)는 안지오텐신Ⅱ를 안지오텐신Ⅰ으로 바꾼다.'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '부신 속질에서 분비된 알도스테론은 신장에서 Na+ 재흡수를 증가 시킨다.'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '간에서 생성된 레닌은 안지오텐신Ⅰ을 안지오텐시노겐(angiotensinogen) 으로 바꾼다.'는 문항의 핵심 조건과 일치하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2018-1A-70-11",
+      "year": 2018,
+      "subject": "운동생리학",
+      "topic": "운동단위 근섬유",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "운동단위 근섬유 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "운동단위(motor unit) 및 근섬유 동원(muscle fiber recruitment) 원리에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "활동전위가 전달되면 그 운동단위에 연결된 모든 근섬유는 수축한다.",
+        "동일한 근육에서 활성화되는 운동단위가 많을수록 큰 힘을 발휘한다.",
+        "크기의 원리(size principle)는 typeⅡ 섬유가 먼저 동원된 후 typeⅠ 섬유가 동원되는 것을 말한다.",
+        "typeⅡ 운동단위는 typeⅠ 운동단위보다 더 많은 근섬유를 포함하고 있다."
+      ],
+      "answerIndex": 2,
+      "explanation": "공식 최종정답은 ③이다. 문제의 조건과 보기 조합을 대조하면 '크기의 원리(size principle)는 typeⅡ 섬유가 먼저 동원된 후 typeⅠ 섬유가 동원되는 것을 말한다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_1교시_A형.pdf",
+        "answerFile": "materials/raw/kspo/2018/final_answer/건강필기_최종답안.pdf",
+        "questionNo": 11,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 70
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        2
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          2
+        ],
+        "officialAnswer": "③",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2018/final_answer/건강필기_최종답안.pdf",
+        "questionFile": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_1교시_A형.pdf",
+        "questionNo": 11,
+        "officialAnswerIndex": 2
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          },
+          {
+            "title": "Merck Manual Professional - Exercise and Fitness",
+            "url": "https://www.merckmanuals.com/professional/special-subjects/exercise-and-fitness"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_1교시_A형.pdf",
+          "questionNo": 11
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2018/final_answer/건강필기_최종답안.pdf",
+          "answerIndexes": [
+            2
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ③이다. 문제의 조건과 보기 조합을 대조하면 '크기의 원리(size principle)는 typeⅡ 섬유가 먼저 동원된 후 typeⅠ 섬유가 동원되는 것을 말한다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "운동단위 근섬유의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "Merck Manual Professional - Exercise and Fitness",
+          "url": "https://www.merckmanuals.com/professional/special-subjects/exercise-and-fitness"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '활동전위가 전달되면 그 운동단위에 연결된 모든 근섬유는 수축한다.'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '동일한 근육에서 활성화되는 운동단위가 많을수록 큰 힘을 발휘한다.'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ③이다. 문제의 조건과 보기 조합을 대조하면 '크기의 원리(size principle)는 typeⅡ 섬유가 먼저 동원된 후 typeⅠ 섬유가 동원되는 것을 말한다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 'typeⅡ 운동단위는 typeⅠ 운동단위보다 더 많은 근섬유를 포함하고 있다.'는 문항의 핵심 조건과 일치하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2022-2A-77-05",
+      "year": 2022,
+      "subject": "스포츠심리학",
+      "topic": "안에 들어갈",
+      "type": "개념구분",
+      "difficulty": 4,
+      "trap": "안에 들어갈 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>의 ( )안에 들어갈 용어는? <보기>. 격변이론(catastrophe theory)에 의하면, 인지불안이 매우 높을 때 신체적 각성이 적정 수준을 넘어서면 수행이 급격하게 추락한다. 이때 수행을 회복하기 위해 신체적 각성을 낮추더라도 수행은 직전의 수준으로 돌아가지 못하고 낮은 수준에 머무르게 되는데 이를 ( )라고 한다.",
+      "choices": [
+        "스투룹 효과(Stroop effect)",
+        "링겔만 효과(Ringelmann effect)",
+        "히스테리시스 효과(hysterisis effect)",
+        "자기조절 효과(self-regulation effect)"
+      ],
+      "answerIndex": 2,
+      "explanation": "공식 최종정답은 ③이다. 문제의 조건과 보기 조합을 대조하면 '히스테리시스 효과(hysterisis effect)'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 2교시 A형(게시).pdf",
+        "answerFile": "materials/raw/kspo/2022/final_answer/2022 건강운동관리사 필기시험 최종정답(게시).pdf",
+        "questionNo": 5,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 77
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        2
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          2
+        ],
+        "officialAnswer": "③",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2022/final_answer/2022 건강운동관리사 필기시험 최종정답(게시).pdf",
+        "questionFile": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 2교시 A형(게시).pdf",
+        "questionNo": 5,
+        "officialAnswerIndex": 2
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "APA Dictionary of Psychology",
+            "url": "https://dictionary.apa.org/"
+          },
+          {
+            "title": "Association for Applied Sport Psychology",
+            "url": "https://appliedsportpsych.org/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 2교시 A형(게시).pdf",
+          "questionNo": 5
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2022/final_answer/2022 건강운동관리사 필기시험 최종정답(게시).pdf",
+          "answerIndexes": [
+            2
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ③이다. 문제의 조건과 보기 조합을 대조하면 '히스테리시스 효과(hysterisis effect)'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "안에 들어갈의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "APA Dictionary of Psychology",
+          "url": "https://dictionary.apa.org/"
+        },
+        {
+          "title": "Association for Applied Sport Psychology",
+          "url": "https://appliedsportpsych.org/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '스투룹 효과(Stroop effect)'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '링겔만 효과(Ringelmann effect)'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ③이다. 문제의 조건과 보기 조합을 대조하면 '히스테리시스 효과(hysterisis effect)'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '자기조절 효과(self-regulation effect)'는 문항의 핵심 조건과 일치하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2020-2A-75-03",
+      "year": 2020,
+      "subject": "기능해부학",
+      "topic": "물속에 잠겨",
+      "type": "개념구분",
+      "difficulty": 4,
+      "trap": "물속에 잠겨 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>의 물속에 잠겨 있는 물체에 대한 설명 중 적절한 것으로만 나열된 것은? <보기>. ㉠ 물체는 중력의 반대 방향으로 힘을 받으며, 그 힘의 크기는물에잠긴물체의부피만큼의물의무게와같다. ㉡ 물체의부력중심과무게중심이동일수직선상에위치할 때 신체의 회전이 멈추게 된다. ㉢ 물체가 물에서 뜨거나 가라앉는 현상은 물체의 비중에 의해 결정된다. ㉣ 수영 시 머리가 물 밖에 있을 때보다 물속에 잠길 경우 부력은 작아진다.",
+      "choices": [
+        "㉠, ㉡, ㉢",
+        "㉠, ㉡, ㉣",
+        "㉠, ㉢, ㉣",
+        "㉡, ㉢, ㉣"
+      ],
+      "answerIndex": 0,
+      "explanation": "공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉡, ㉢'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2020/questions_and_draft_answer/2020건강운동관리사 필기시험 2교시_A형.pdf",
+        "answerFile": "materials/raw/kspo/2020/final_answer/2020건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 3,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 75
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        0
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          0
+        ],
+        "officialAnswer": "①",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2020/final_answer/2020건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2020/questions_and_draft_answer/2020건강운동관리사 필기시험 2교시_A형.pdf",
+        "questionNo": 3,
+        "officialAnswerIndex": 0
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "OpenStax Anatomy and Physiology",
+            "url": "https://openstax.org/details/books/anatomy-and-physiology-2e"
+          },
+          {
+            "title": "NCBI Bookshelf - Anatomy",
+            "url": "https://www.ncbi.nlm.nih.gov/books/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2020/questions_and_draft_answer/2020건강운동관리사 필기시험 2교시_A형.pdf",
+          "questionNo": 3
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2020/final_answer/2020건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            0
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉡, ㉢'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "물속에 잠겨의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "OpenStax Anatomy and Physiology",
+          "url": "https://openstax.org/details/books/anatomy-and-physiology-2e"
+        },
+        {
+          "title": "NCBI Bookshelf - Anatomy",
+          "url": "https://www.ncbi.nlm.nih.gov/books/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉡, ㉢'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉠, ㉡, ㉣'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉠, ㉢, ㉣'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉡, ㉢, ㉣'는 문항의 핵심 조건과 일치하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2024-1A-73-19",
+      "year": 2024,
+      "subject": "운동부하검사",
+      "topic": "관상동맥질환 사전검사",
+      "type": "부정형",
+      "difficulty": 4,
+      "trap": "관상동맥질환 사전검사 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>의 관상동맥질환(CAD) 사전검사 예측도를 이용한 운동부하검사 후 CAD 발생 예측으로 옳지 않은 것은? <보기>. ∙ CAD 사전검사 예측도(%) 나이 무증상 비협심증성 흉통 비전형적 협심증 전형적 협심증 남자 여자 남자 여자 남자 여자 남자 여자 30대 1.9 0.3 5.2 0.8 23.8 4.2 69.7 25.8 40대 5.5 1.0 14.1 2.8 46.1 13.3 80.1 55.2 50대 10.0 3.2 21.5 8.4 58.9 32.4 92.0 79.4 60대 12.3 7.5 28.1 20.0 67.1 54.4 94.3 90.6 ∙ 베이즈정리(Baye’stheorem)를 활용한 운동부하검사 후 CAD 사후검사 예측도(%) 증상분류 연령대/성별 운동부하 검사결과 CAD 사후 검사 예측확률",
+      "choices": [
+        "전형적 협심증 40대 남성 음성 약 90%",
+        "비협심증성 흉통 60대 여성 음성 약 5%",
+        "비전형적 협심증 30대 남성 양성 약 40%",
+        "무증상 50대 남성 양성 약 20%"
+      ],
+      "answerIndex": 0,
+      "explanation": "공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '전형적 협심증 40대 남성 음성 약 90%'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 19,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 73
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        0
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          0
+        ],
+        "officialAnswer": "①",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf",
+        "questionNo": 19,
+        "officialAnswerIndex": 0
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          },
+          {
+            "title": "AHA Scientific Statements",
+            "url": "https://professional.heart.org/en/guidelines-and-statements"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 1교시 A형.pdf",
+          "questionNo": 19
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            0
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '전형적 협심증 40대 남성 음성 약 90%'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "관상동맥질환 사전검사의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "AHA Scientific Statements",
+          "url": "https://professional.heart.org/en/guidelines-and-statements"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '전형적 협심증 40대 남성 음성 약 90%'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '비협심증성 흉통 60대 여성 음성 약 5%'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '비전형적 협심증 30대 남성 양성 약 40%'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '무증상 50대 남성 양성 약 20%'는 문항의 핵심 조건과 일치하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2021-2A-74-01",
+      "year": 2021,
+      "subject": "운동상해",
+      "topic": "손상조직 치유과정",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "손상조직 치유과정 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 손상조직의 치유과정 중 염증반응 단계(inflammatory response phase)의 내용으로 옳은 것을 모두 고른 것은? <보기>. ㉠ 포식작용(phagocytosis) ㉡ 육아조직(granulation tissue) 생성과 혈관 생성 ㉢ 혈관 수축과 혈관 확장 ㉣ 섬유아세포(fibroblast)와 상처 크기 감소",
+      "choices": [
+        "㉠, ㉡",
+        "㉠, ㉢",
+        "㉡, ㉣",
+        "㉢, ㉣"
+      ],
+      "answerIndex": 1,
+      "explanation": "공식 최종정답은 ②이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉢'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 2교시 A형(게시).pdf",
+        "answerFile": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+        "questionNo": 1,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 74
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 2교시 A형(게시).pdf",
+        "questionNo": 1,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Merck Manual Professional - Sports Injuries",
+            "url": "https://www.merckmanuals.com/professional/injuries-poisoning/sports-injury"
+          },
+          {
+            "title": "NATA Position Statements",
+            "url": "https://www.nata.org/practice-patient-care/health-issues"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 2교시 A형(게시).pdf",
+          "questionNo": 1
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ②이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉢'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "손상조직 치유과정의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "Merck Manual Professional - Sports Injuries",
+          "url": "https://www.merckmanuals.com/professional/injuries-poisoning/sports-injury"
+        },
+        {
+          "title": "NATA Position Statements",
+          "url": "https://www.nata.org/practice-patient-care/health-issues"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉠, ㉡'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ②이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉢'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉡, ㉣'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉢, ㉣'는 문항의 핵심 조건과 일치하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2024-2A-76-09",
+      "year": 2024,
+      "subject": "병태생리학",
+      "topic": "목뼈 추간판탈출증에",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "목뼈 추간판탈출증에 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 목뼈 추간판탈출증(cervical herniated intervertebral disc)에\n관한 설명으로 옳은 것만을 모두 고른 것은?\n<보기>.\nㄱ. 거북목은 목뼈 추간판탈출증을 유발시키는 원인이 될 수 있다.\nㄴ. 목근육의 과긴장이나 경직은 추간판에 영향을 주지 않는다.\nㄷ. 손저림, 뒷목 뻐근함, 두통 등의 증상이 나타난다.\nㄹ. 심할 경우 전신마비를 유발할 수 있다.",
+      "choices": [
+        "ㄱ, ㄷ",
+        "ㄴ, ㄹ",
+        "ㄱ, ㄴ, ㄹ",
+        "ㄱ, ㄷ, ㄹ"
+      ],
+      "answerIndex": 3,
+      "explanation": "경추 추간판탈출증은 자세 문제, 목 주변 근긴장, 퇴행성 변화와 관련될 수 있고 목 통증, 두통, 상지 저림을 보일 수 있다. 심한 척수 압박이 있으면 마비 등 중추신경 증상도 가능하다.",
+      "source": {
+        "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "answerFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionNo": 9,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 76
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        3
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          3
+        ],
+        "officialAnswer": "④",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+        "questionFile": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+        "questionNo": 9,
+        "officialAnswerIndex": 3
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Merck Manual Professional Edition",
+            "url": "https://www.merckmanuals.com/professional"
+          },
+          {
+            "title": "NCBI Bookshelf",
+            "url": "https://www.ncbi.nlm.nih.gov/books/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2024/questions/2024 건강운동관리사 필기시험 2교시 A형.pdf",
+          "questionNo": 9
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2024/final_answer/붙임1. 2024 건강운동관리사 필기시험 최종 정답.pdf",
+          "answerIndexes": [
+            3
+          ]
+        }
+      ],
+      "correctRationale": "경추 추간판탈출증은 자세 문제, 목 주변 근긴장, 퇴행성 변화와 관련될 수 있고 목 통증, 두통, 상지 저림을 보일 수 있다. 심한 척수 압박이 있으면 마비 등 중추신경 증상도 가능하다.",
+      "reviewPoint": "경추 추간판탈출증은 목 증상뿐 아니라 상지 방사 증상과 심한 척수 압박 증상까지 연결된다.",
+      "explanationSources": [
+        {
+          "title": "Merck Manual Professional Edition",
+          "url": "https://www.merckmanuals.com/professional"
+        },
+        {
+          "title": "NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① ㄱ, ㄷ: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "② ㄴ, ㄹ: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "③ ㄱ, ㄴ, ㄹ: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "correct",
+          "reason": "④ ㄱ, ㄷ, ㄹ: 공식 정답이며, 경추 추간판탈출증은 자세 문제, 목 주변 근긴장, 퇴행성 변화와 관련될 수 있고 목 통증, 두통, 상지 저림을 보일 수 있다. 심한 척수 압박이 있으면 마비 등 중추신경 증상도 가능하다."
+        }
+      ]
+    },
+    {
+      "id": "2023-1A-72-14",
+      "year": 2023,
+      "subject": "운동처방론",
+      "topic": "ACSM이 권고하",
+      "type": "보기조합",
+      "difficulty": 5,
+      "trap": "ACSM이 권고하 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 ACSM(11판)이 권고하는 관절염 환자를 위한 운동처방에\n대한 설명으로 옳은 것으로만 모두 고른 것은?\n<보기>.\n㉠ 특별한 통증과 기능적 제한이 없으면 일반적으로 건강한 성인의\n운동처방과 유사하다.\n㉡ 유연성 운동은 환부 관절에 집중하면서 모든 주요 관절에\n적용한다.\n㉢ 저항운동은 국소적･전신적 개선을 통해 만성통증을 감소시킬 수\n있다.\n㉣ 체중부하 운동은 관절의 손상과 통증을 악화시킬 수 있으므로\n권고하지 않는다.",
+      "choices": [
+        "㉠",
+        "㉠, ㉡",
+        "㉠, ㉡, ㉢",
+        "㉠, ㉡, ㉢, ㉣"
+      ],
+      "answerIndex": 2,
+      "explanation": "관절염 환자는 통증과 기능 제한이 특별히 없으면 일반 성인 운동처방 원칙을 바탕으로 적용할 수 있고, 유연성·저항운동도 기능 개선과 통증 감소에 도움이 될 수 있다. 체중부하 운동을 일괄 금지하는 설명은 과도하다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 14,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 72
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        2
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          2
+        ],
+        "officialAnswer": "③",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "questionNo": 14,
+        "officialAnswerIndex": 2
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM's Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          },
+          {
+            "title": "KSPO 체육지도자 자격검정 - 필기시험 문제·정답",
+            "url": "https://sqms.kspo.or.kr/exam/wrQnaList.kspo"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+          "questionNo": 14
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            2
+          ]
+        }
+      ],
+      "correctRationale": "관절염 환자는 통증과 기능 제한이 특별히 없으면 일반 성인 운동처방 원칙을 바탕으로 적용할 수 있고, 유연성·저항운동도 기능 개선과 통증 감소에 도움이 될 수 있다. 체중부하 운동을 일괄 금지하는 설명은 과도하다.",
+      "reviewPoint": "관절염 운동처방은 무조건 회피가 아니라 증상과 기능 제한에 맞춘 조절이 핵심이다.",
+      "explanationSources": [
+        {
+          "title": "ACSM's Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "KSPO 체육지도자 자격검정 - 필기시험 문제·정답",
+          "url": "https://sqms.kspo.or.kr/exam/wrQnaList.kspo"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① ㉠: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "② ㉠, ㉡: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "correct",
+          "reason": "③ ㉠, ㉡, ㉢: 공식 정답이며, 관절염 환자는 통증과 기능 제한이 특별히 없으면 일반 성인 운동처방 원칙을 바탕으로 적용할 수 있고, 유연성·저항운동도 기능 개선과 통증 감소에 도움이 될 수 있다. 체중부하 운동을 일괄 금지하는 설명은 과도하다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "④ ㉠, ㉡, ㉢, ㉣: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        }
+      ]
+    }
+  ]
+}
