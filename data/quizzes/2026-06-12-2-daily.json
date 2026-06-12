@@ -1,0 +1,1183 @@
+{
+  "quizId": "2026-06-12-daily-2-all-subjects",
+  "date": "2026-06-12",
+  "displayDate": "2026-06-12 (저녁)",
+  "slug": "2026-06-12-2",
+  "sequence": 2,
+  "title": "건강운동관리사 데일리 퀴즈",
+  "subject": "전과목",
+  "round": "시험 임박 전과목 10문항",
+  "timeLimitMinutes": 10,
+  "sourceSummary": "2018, 2021, 2022, 2023년 문제·정답·해설 검증 로우데이터 기반",
+  "generationNote": "검증 로우데이터 기반 생성. answerVerified와 explanationVerified가 모두 true인 문항만 출제 후보에 포함합니다.",
+  "missingSubjects": [],
+  "questions": [
+    {
+      "id": "2023-1A-73-01",
+      "year": 2023,
+      "subject": "운동부하검사",
+      "topic": "운동부하검사 설명",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "운동부하검사 설명 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "운동부하검사에 대한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "질환에 대한 진단과 예후 및 평가를 위한 목적으로 사용된다.",
+        "진행 중인 불안정 협심증 진단을 위해 검사하는 것을 추천한다.",
+        "혈압이나 최고 운동능력과 같은 생리적 반응을 평가하기 위해 적합한 방법이다.",
+        "ST분절 하강과 같은 증상-제한 최대수준에 도달할 때까지 실시한다."
+      ],
+      "answerIndex": 1,
+      "explanation": "운동부하검사는 진단, 예후평가, 생리적 반응 평가, 운동처방 설정에 쓰이지만 진행 중인 불안정 협심증에서는 권장되지 않으며 금기 또는 중단 사유로 본다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 1,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 73
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "questionNo": 1,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription, exercise testing indications and contraindications",
+            "url": "textbook:ACSM-GETP-11"
+          },
+          {
+            "title": "AHA/ACC exercise testing contraindications",
+            "url": "guideline:AHA-ACC-exercise-testing"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+          "questionNo": 1
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "운동부하검사는 진단, 예후평가, 생리적 반응 평가, 운동처방 설정에 쓰이지만 진행 중인 불안정 협심증에서는 권장되지 않으며 금기 또는 중단 사유로 본다.",
+      "reviewPoint": "운동부하검사의 목적과 금기증을 함께 확인한다. 불안정 협심증, 급성 심근경색 초기 등은 금기다.",
+      "explanationSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription, exercise testing indications and contraindications",
+          "url": "textbook:ACSM-GETP-11"
+        },
+        {
+          "title": "AHA/ACC exercise testing contraindications",
+          "url": "guideline:AHA-ACC-exercise-testing"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "질환의 진단·예후·평가 목적으로 사용될 수 있다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "진행 중인 불안정 협심증은 운동검사 권장 상황이 아니다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "혈압과 최고 운동능력 등 생리적 반응 평가에 적합하다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "증상제한 최대수준까지 진행하는 방식이 운동부하검사의 일반 원칙이다."
+        }
+      ]
+    },
+    {
+      "id": "2021-1A-70-03",
+      "year": 2021,
+      "subject": "운동생리학",
+      "topic": "운동과 에너지",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "운동과 에너지 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "운동과 에너지 대사에 관한 설명 중 옳지 않은 것은?",
+      "choices": [
+        "무산소 해당과정(glycolysis) 부산물인 피루브산(pyruvic acid)은 산소와 결합하여 젖산으로 전환된다.",
+        "한 분자의 글루코스를 이용할 때 유산소 시스템은 무산소 해당과정 보다 더 많은 양의 에너지를 생성한다.",
+        "지방 대사 시 중성지방은 유리지방산과 글리세롤로 분해되며 유리지방산이 주에너지원으로 이용된다.",
+        "탄수화물 대사 과정에는 해당과정, 크렙스회로(Krebscycle), 전자전달계 (electron transport chain)가 포함된다."
+      ],
+      "answerIndex": 0,
+      "explanation": "공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '무산소 해당과정(glycolysis) 부산물인 피루브산(pyruvic acid)은 산소와 결합하여 젖산으로 전환된다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 1교시 A형(게시).pdf",
+        "answerFile": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+        "questionNo": 3,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 70
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        0
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          0
+        ],
+        "officialAnswer": "①",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 1교시 A형(게시).pdf",
+        "questionNo": 3,
+        "officialAnswerIndex": 0
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          },
+          {
+            "title": "Merck Manual Professional - Exercise and Fitness",
+            "url": "https://www.merckmanuals.com/professional/special-subjects/exercise-and-fitness"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 1교시 A형(게시).pdf",
+          "questionNo": 3
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+          "answerIndexes": [
+            0
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '무산소 해당과정(glycolysis) 부산물인 피루브산(pyruvic acid)은 산소와 결합하여 젖산으로 전환된다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "운동과 에너지의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "Merck Manual Professional - Exercise and Fitness",
+          "url": "https://www.merckmanuals.com/professional/special-subjects/exercise-and-fitness"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '무산소 해당과정(glycolysis) 부산물인 피루브산(pyruvic acid)은 산소와 결합하여 젖산으로 전환된다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '한 분자의 글루코스를 이용할 때 유산소 시스템은 무산소 해당과정 보다 더 많은 양의 에너지를 생성한다.'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '지방 대사 시 중성지방은 유리지방산과 글리세롤로 분해되며 유리지방산이 주에너지원으로 이용된다.'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '탄수화물 대사 과정에는 해당과정, 크렙스회로(Krebscycle), 전자전달계 (electron transport chain)가 포함된다.'는 문항의 핵심 조건과 일치하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2021-1A-71-19",
+      "year": 2021,
+      "subject": "건강·체력평가",
+      "topic": "심폐지구력 측정",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "심폐지구력 측정 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "심폐지구력 측정을 위한 스텝검사에 관한 설명으로 옳지 않은 것은?",
+      "choices": [
+        "심박수가 높을수록 최대산소섭취량의 추정은 더 정확해진다.",
+        "하버드 스텝검사와 Queens 대학 스텝검사의 스텝박스 높이는 다르다.",
+        "하버드 스텝검사는 주어진 시간 동안의 수행을 마친 후 일정 시간 후의 심박수를 측정한다.",
+        "스텝검사는 같은 강도의 운동을 실행했을 때 심박수 반응이 체력 수준에 따라 차이가 나타나기 때문에 타당하다."
+      ],
+      "answerIndex": 0,
+      "explanation": "공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '심박수가 높을수록 최대산소섭취량의 추정은 더 정확해진다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 1교시 A형(게시).pdf",
+        "answerFile": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+        "questionNo": 19,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 71
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        0
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          0
+        ],
+        "officialAnswer": "①",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 1교시 A형(게시).pdf",
+        "questionNo": 19,
+        "officialAnswerIndex": 0
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          },
+          {
+            "title": "CDC - Physical Activity Basics",
+            "url": "https://www.cdc.gov/physical-activity-basics/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2021/questions/2021 건강운동관리사 필기시험 1교시 A형(게시).pdf",
+          "questionNo": 19
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2021/final_answer/2021년_건강운동관리사_최종정답.pdf",
+          "answerIndexes": [
+            0
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '심박수가 높을수록 최대산소섭취량의 추정은 더 정확해진다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "심폐지구력 측정의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "CDC - Physical Activity Basics",
+          "url": "https://www.cdc.gov/physical-activity-basics/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ①이다. 문제의 조건과 보기 조합을 대조하면 '심박수가 높을수록 최대산소섭취량의 추정은 더 정확해진다.'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '하버드 스텝검사와 Queens 대학 스텝검사의 스텝박스 높이는 다르다.'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '하버드 스텝검사는 주어진 시간 동안의 수행을 마친 후 일정 시간 후의 심박수를 측정한다.'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '스텝검사는 같은 강도의 운동을 실행했을 때 심박수 반응이 체력 수준에 따라 차이가 나타나기 때문에 타당하다.'는 문항의 핵심 조건과 일치하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2018-1A-70-20",
+      "year": 2018,
+      "subject": "운동생리학",
+      "topic": "열순응 과정",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "열순응 과정 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "열순응 과정에서 발생하는 주요 생리학적 반응으로 옳지 않은 것은?",
+      "choices": [
+        "혈장단백질 증가에 의한 혈장량 증가",
+        "체내 전해질 균형을 위한 알도스테론(aldosterone) 분비 증가",
+        "운동 시작 후 빠른 땀분비를 통한 열축적 감소 및 혈액의 피부순환량 감소",
+        "열 스트레스 감소로 인한 열충격 단백질(heat shock protein) 생성 감소"
+      ],
+      "answerIndex": 3,
+      "explanation": "공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '열 스트레스 감소로 인한 열충격 단백질(heat shock protein) 생성 감소'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_1교시_A형.pdf",
+        "answerFile": "materials/raw/kspo/2018/final_answer/건강필기_최종답안.pdf",
+        "questionNo": 20,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 70
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        3
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          3
+        ],
+        "officialAnswer": "④",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2018/final_answer/건강필기_최종답안.pdf",
+        "questionFile": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_1교시_A형.pdf",
+        "questionNo": 20,
+        "officialAnswerIndex": 3
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          },
+          {
+            "title": "Merck Manual Professional - Exercise and Fitness",
+            "url": "https://www.merckmanuals.com/professional/special-subjects/exercise-and-fitness"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_1교시_A형.pdf",
+          "questionNo": 20
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2018/final_answer/건강필기_최종답안.pdf",
+          "answerIndexes": [
+            3
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '열 스트레스 감소로 인한 열충격 단백질(heat shock protein) 생성 감소'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "열순응 과정의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "Merck Manual Professional - Exercise and Fitness",
+          "url": "https://www.merckmanuals.com/professional/special-subjects/exercise-and-fitness"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '혈장단백질 증가에 의한 혈장량 증가'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '체내 전해질 균형을 위한 알도스테론(aldosterone) 분비 증가'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '운동 시작 후 빠른 땀분비를 통한 열축적 감소 및 혈액의 피부순환량 감소'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '열 스트레스 감소로 인한 열충격 단백질(heat shock protein) 생성 감소'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2023-2A-75-04",
+      "year": 2023,
+      "subject": "기능해부학",
+      "topic": "운동역학적 변인에",
+      "type": "개념구분",
+      "difficulty": 3,
+      "trap": "운동역학적 변인에 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "운동역학적(kinetics) 변인(variable)에 해당하는 것은?",
+      "choices": [
+        "충격량(impulse)",
+        "각속도(angular velocity)",
+        "관절가동범위(joint range of motion)",
+        "한걸음 길이(stride length)"
+      ],
+      "answerIndex": 0,
+      "explanation": "운동역학(kinetics)은 힘과 그 효과를 다루며 충격량은 힘과 시간의 곱 또는 힘-시간 적분으로 설명되는 kinetics 변인이다. 각속도, 관절가동범위, 한걸음 길이는 움직임의 위치·각도·속도·거리와 관련된 kinematics 변인이다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 4,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 75
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        0
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          0
+        ],
+        "officialAnswer": "①",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "questionNo": 4,
+        "officialAnswerIndex": 0
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Hall, Basic Biomechanics, kinetics and kinematics variables",
+            "url": "textbook:Hall-Basic-Biomechanics"
+          },
+          {
+            "title": "Winter, Biomechanics and Motor Control of Human Movement",
+            "url": "textbook:Winter-Biomechanics"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+          "questionNo": 4
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            0
+          ]
+        }
+      ],
+      "correctRationale": "운동역학(kinetics)은 힘과 그 효과를 다루며 충격량은 힘과 시간의 곱 또는 힘-시간 적분으로 설명되는 kinetics 변인이다. 각속도, 관절가동범위, 한걸음 길이는 움직임의 위치·각도·속도·거리와 관련된 kinematics 변인이다.",
+      "reviewPoint": "kinetics는 힘·토크·일·파워·충격량, kinematics는 위치·변위·속도·가속도·각도 계열로 나눈다.",
+      "explanationSources": [
+        {
+          "title": "Hall, Basic Biomechanics, kinetics and kinematics variables",
+          "url": "textbook:Hall-Basic-Biomechanics"
+        },
+        {
+          "title": "Winter, Biomechanics and Motor Control of Human Movement",
+          "url": "textbook:Winter-Biomechanics"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "correct",
+          "reason": "충격량은 힘-시간 관계로 정의되는 kinetics 변인이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "각속도는 움직임의 속도를 나타내는 kinematics 변인이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "관절가동범위는 각도/변위 성격의 kinematics 변인이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "한걸음 길이는 거리/변위 성격의 kinematics 변인이다."
+        }
+      ]
+    },
+    {
+      "id": "2023-1A-71-14",
+      "year": 2023,
+      "subject": "건강·체력평가",
+      "topic": "국민체력100 체력측정",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "국민체력100 체력측정 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "‘국민체력100’ 체력측정 지침에 따른 대상과 검사방법이 옳지 않은\n것은?",
+      "choices": [
+        "유소년기(만 11세~12세) 협응력 검사는 벽패스 검사(회/30초)를 실시한다.",
+        "어르신기(만 65세 이상) 근지구력 검사는 6분걷기(m)를 실시한다.",
+        "청소년기(만 13세~18세) 민첩성 검사는 일리노이 민첩성 검사(초)를 실시한다.",
+        "성인기(만 19세~64세) 유연성 검사는 앉아윗몸앞으로굽히기(cm)를 실시한다."
+      ],
+      "answerIndex": 1,
+      "explanation": "어르신기 6분걷기는 심폐지구력 평가에 해당하며 근지구력 검사는 의자에 앉았다 일어서기 등으로 평가한다. 따라서 근지구력 검사를 6분걷기로 본 설명이 틀리다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 14,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 71
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        1
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          1
+        ],
+        "officialAnswer": "②",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "questionNo": 14,
+        "officialAnswerIndex": 1
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "국민체력100 체력측정 항목",
+            "url": "https://nfa.kspo.or.kr/front/measure/measurePhysical.do"
+          },
+          {
+            "title": "ACSM Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+          "questionNo": 14
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            1
+          ]
+        }
+      ],
+      "correctRationale": "어르신기 6분걷기는 심폐지구력 평가에 해당하며 근지구력 검사는 의자에 앉았다 일어서기 등으로 평가한다. 따라서 근지구력 검사를 6분걷기로 본 설명이 틀리다.",
+      "reviewPoint": "국민체력100은 생애주기별 체력요소와 검사명을 연결해 판단한다.",
+      "explanationSources": [
+        {
+          "title": "국민체력100 체력측정 항목",
+          "url": "https://nfa.kspo.or.kr/front/measure/measurePhysical.do"
+        },
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① 유소년기(만 11세~12세) 협응력 검사는 벽패스 검사(회/30초)를 실시한다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "correct",
+          "reason": "② 어르신기(만 65세 이상) 근지구력 검사는 6분걷기(m)를 실시한다.: 공식 정답이며, 어르신기 6분걷기는 심폐지구력 평가에 해당하며 근지구력 검사는 의자에 앉았다 일어서기 등으로 평가한다. 따라서 근지구력 검사를 6분걷기로 본 설명이 틀리다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "③ 청소년기(만 13세~18세) 민첩성 검사는 일리노이 민첩성 검사(초)를 실시한다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "④ 성인기(만 19세~64세) 유연성 검사는 앉아윗몸앞으로굽히기(cm)를 실시한다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        }
+      ]
+    },
+    {
+      "id": "2023-1A-72-03",
+      "year": 2023,
+      "subject": "운동처방론",
+      "topic": "ACSM 권고하",
+      "type": "부정형",
+      "difficulty": 3,
+      "trap": "ACSM 권고하 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "ACSM(11판)에서 권고하는 건강한 성인의 저항운동에 대한 설명으로\n옳지 않은 것은?",
+      "choices": [
+        "초보자의 운동빈도는 주당 최소 2일을 권고한다.",
+        "초보자의 운동강도는 1RM의 60~70%로 권고한다.",
+        "운동순서는 단일관절운동 후 다관절운동을 권고한다.",
+        "숙련자는 개인별 선호도에 따라 근육군별로 주당 운동빈도를 조절할 수 있다."
+      ],
+      "answerIndex": 2,
+      "explanation": "ACSM의 건강한 성인 저항운동 처방에서는 큰 근육군·다관절 운동을 먼저 시행하고 작은 근육군·단일관절 운동을 뒤에 배치하는 것이 일반 원칙이다. 단일관절 후 다관절 권고라는 설명은 반대다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 3,
+        "session": 1,
+        "form": "A",
+        "subjectCode": 72
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 자동 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        2
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          2
+        ],
+        "officialAnswer": "③",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+        "questionNo": 3,
+        "officialAnswerIndex": 2
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "ACSM's Guidelines for Exercise Testing and Prescription",
+            "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+          },
+          {
+            "title": "KSPO 체육지도자 자격검정 - 필기시험 문제·정답",
+            "url": "https://sqms.kspo.or.kr/exam/wrQnaList.kspo"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 1교시 A형kspo.pdf",
+          "questionNo": 3
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            2
+          ]
+        }
+      ],
+      "correctRationale": "ACSM의 건강한 성인 저항운동 처방에서는 큰 근육군·다관절 운동을 먼저 시행하고 작은 근육군·단일관절 운동을 뒤에 배치하는 것이 일반 원칙이다. 단일관절 후 다관절 권고라는 설명은 반대다.",
+      "reviewPoint": "저항운동 순서는 다관절·대근육 우선 원칙을 확인한다.",
+      "explanationSources": [
+        {
+          "title": "ACSM's Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "KSPO 체육지도자 자격검정 - 필기시험 문제·정답",
+          "url": "https://sqms.kspo.or.kr/exam/wrQnaList.kspo"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "① 초보자의 운동빈도는 주당 최소 2일을 권고한다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "② 초보자의 운동강도는 1RM의 60~70%로 권고한다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "correct",
+          "reason": "③ 운동순서는 단일관절운동 후 다관절운동을 권고한다.: 공식 정답이며, ACSM의 건강한 성인 저항운동 처방에서는 큰 근육군·다관절 운동을 먼저 시행하고 작은 근육군·단일관절 운동을 뒤에 배치하는 것이 일반 원칙이다. 단일관절 후 다관절 권고라는 설명은 반대다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "④ 숙련자는 개인별 선호도에 따라 근육군별로 주당 운동빈도를 조절할 수 있다.: 문항의 핵심 조건 및 공식 정답 대조 결과 정답 선택지와 맞지 않아 오답이다."
+        }
+      ]
+    },
+    {
+      "id": "2022-2A-76-02",
+      "year": 2022,
+      "subject": "병태생리학",
+      "topic": "다음 심전도",
+      "type": "개념구분",
+      "difficulty": 4,
+      "trap": "다음 심전도 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "다음 <그림>의 심전도(ECG)가 나타내는 부정맥은?",
+      "choices": [
+        "부루가다 증후군(brugada syndrome)",
+        "WPW 증후군(wolff-parkinson-white syndrome)",
+        "조기심실수축(premature ventricular contraction)",
+        "2도 I형 방실차단(second-degree type I AV block)"
+      ],
+      "answerIndex": 3,
+      "explanation": "공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '2도 I형 방실차단(second-degree type I AV block)'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 2교시 A형(게시).pdf",
+        "answerFile": "materials/raw/kspo/2022/final_answer/2022 건강운동관리사 필기시험 최종정답(게시).pdf",
+        "questionNo": 2,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 76
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        3
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          3
+        ],
+        "officialAnswer": "④",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2022/final_answer/2022 건강운동관리사 필기시험 최종정답(게시).pdf",
+        "questionFile": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 2교시 A형(게시).pdf",
+        "questionNo": 2,
+        "officialAnswerIndex": 3
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Merck Manual Professional",
+            "url": "https://www.merckmanuals.com/professional"
+          },
+          {
+            "title": "NCBI Bookshelf",
+            "url": "https://www.ncbi.nlm.nih.gov/books/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "images": [
+        {
+          "src": "assets/question-images/2022-2A-76-02.png",
+          "alt": "2022-2A-76-02 원본 그림 문항",
+          "sourcePage": 7
+        }
+      ],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2022/questions/2022 건강운동관리사 필기시험 2교시 A형(게시).pdf",
+          "questionNo": 2
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2022/final_answer/2022 건강운동관리사 필기시험 최종정답(게시).pdf",
+          "answerIndexes": [
+            3
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '2도 I형 방실차단(second-degree type I AV block)'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "다음 심전도의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "Merck Manual Professional",
+          "url": "https://www.merckmanuals.com/professional"
+        },
+        {
+          "title": "NCBI Bookshelf",
+          "url": "https://www.ncbi.nlm.nih.gov/books/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '부루가다 증후군(brugada syndrome)'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 'WPW 증후군(wolff-parkinson-white syndrome)'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '조기심실수축(premature ventricular contraction)'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '2도 I형 방실차단(second-degree type I AV block)'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2018-2A-74-18",
+      "year": 2018,
+      "subject": "운동상해",
+      "topic": "손상 설명이다",
+      "type": "부정형",
+      "difficulty": 4,
+      "trap": "손상 설명이다 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>는 손상의 설명이다. 옳지 않은 것으로 묶인 것은? <보기>. ㉠ 말초신경손상(neuropraxia) :영구적으로 감각이나 움직임 기능이 상실되는 손상이다. ㉡ 뼈되기근육염(골화근염, myositis ossificans):동일한 부분에 반복 적인 타박상으로 인해 근육에 칼슘침전물이 생기는 손상이다. ㉢ 손허리뼈(중수골, metacarpal bone)골절 :베이스볼 핑거(baseball finger) 또는 바스켓볼 핑거(basketball finger)라고도 불린다. ㉣ 지연성근통증(delayed onset muscle soreness):근섬유 미세조직의 파열로 일어나며 운동 중에 통증이 발생하는 특성을 가진 손상이다.",
+      "choices": [
+        "㉠, ㉡",
+        "㉢, ㉣",
+        "㉠, ㉢, ㉣",
+        "㉡, ㉢, ㉣"
+      ],
+      "answerIndex": 2,
+      "explanation": "공식 최종정답은 ③이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉢, ㉣'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_2교시_A형.pdf",
+        "answerFile": "materials/raw/kspo/2018/final_answer/건강필기_최종답안.pdf",
+        "questionNo": 18,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 74
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        2
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          2
+        ],
+        "officialAnswer": "③",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2018/final_answer/건강필기_최종답안.pdf",
+        "questionFile": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_2교시_A형.pdf",
+        "questionNo": 18,
+        "officialAnswerIndex": 2
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "Merck Manual Professional - Sports Injuries",
+            "url": "https://www.merckmanuals.com/professional/injuries-poisoning/sports-injury"
+          },
+          {
+            "title": "NATA Position Statements",
+            "url": "https://www.nata.org/practice-patient-care/health-issues"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2018/questions_and_draft_answer/2018_건강운동관리사_필기시험_2교시_A형.pdf",
+          "questionNo": 18
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2018/final_answer/건강필기_최종답안.pdf",
+          "answerIndexes": [
+            2
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ③이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉢, ㉣'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "손상 설명이다의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "Merck Manual Professional - Sports Injuries",
+          "url": "https://www.merckmanuals.com/professional/injuries-poisoning/sports-injury"
+        },
+        {
+          "title": "NATA Position Statements",
+          "url": "https://www.nata.org/practice-patient-care/health-issues"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉠, ㉡'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉢, ㉣'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ③이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉢, ㉣'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉡, ㉢, ㉣'는 문항의 핵심 조건과 일치하지 않는다."
+        }
+      ]
+    },
+    {
+      "id": "2023-2A-77-11",
+      "year": 2023,
+      "subject": "스포츠심리학",
+      "topic": "숙련자 특성",
+      "type": "보기조합",
+      "difficulty": 4,
+      "trap": "숙련자 특성 관련 조건과 보기 표현을 섞어 판단하는 문항",
+      "question": "<보기>에서 숙련자의 특성으로 옳은 것으로만 모두 고른 것은? <보기>. ㉠ 환경 정보를 빨리 탐색할 수 있다. ㉡ 새로운 상황에 쉽게 적응할 수 있다. ㉢ 짧은 시간에 의미 있는 정보를 선택할 수 있다.",
+      "choices": [
+        "㉠, ㉡",
+        "㉠, ㉢",
+        "㉡, ㉢",
+        "㉠, ㉡, ㉢"
+      ],
+      "answerIndex": 3,
+      "explanation": "공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉡, ㉢'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "source": {
+        "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "answerFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionNo": 11,
+        "session": 2,
+        "form": "A",
+        "subjectCode": 77
+      },
+      "wrongRateBasis": "고오답 추정",
+      "verified": true,
+      "bankSource": "공식 KSPO 원문 추출 + 정답키 재대조 + Diana 수동 해설 검수",
+      "answerIndexes": [
+        3
+      ],
+      "answerEvidence": {
+        "officialAnswerIndexes": [
+          3
+        ],
+        "officialAnswer": "④",
+        "basis": "KSPO 최종정답 기준",
+        "sourceFile": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+        "questionFile": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+        "questionNo": 11,
+        "officialAnswerIndex": 3
+      },
+      "sourceVerified": true,
+      "answerVerified": true,
+      "explanationVerified": true,
+      "answerStatus": "official_verified",
+      "explanationStatus": "cross_checked",
+      "parserConfidence": "manual",
+      "externalReview": {
+        "sources": [
+          {
+            "title": "APA Dictionary of Psychology",
+            "url": "https://dictionary.apa.org/"
+          },
+          {
+            "title": "Association for Applied Sport Psychology",
+            "url": "https://appliedsportpsych.org/"
+          }
+        ]
+      },
+      "verificationTodo": [],
+      "manualApproved": true,
+      "reviewer": "Diana",
+      "reviewedAt": "2026-05-25",
+      "sourceEvidence": [
+        {
+          "type": "official_question_pdf",
+          "status": "matched_by_candidate_audit",
+          "file": "materials/raw/kspo/2023/questions/2023 건강운동관리사 필기시험 2교시 A형kspo.pdf",
+          "questionNo": 11
+        },
+        {
+          "type": "official_answer_key",
+          "status": "matched_by_audit_quiz_answers",
+          "file": "materials/raw/kspo/2023/final_answer/2023 건강운동관리사 필기시험 최종정답.pdf",
+          "answerIndexes": [
+            3
+          ]
+        }
+      ],
+      "correctRationale": "공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉡, ㉢'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다.",
+      "reviewPoint": "숙련자 특성의 기준어를 먼저 확인하고, 보기의 표현이 그 기준과 일치하는지 대조한다.",
+      "explanationSources": [
+        {
+          "title": "APA Dictionary of Psychology",
+          "url": "https://dictionary.apa.org/"
+        },
+        {
+          "title": "Association for Applied Sport Psychology",
+          "url": "https://appliedsportpsych.org/"
+        }
+      ],
+      "choiceExplanationsVerified": true,
+      "choiceExplanations": [
+        {
+          "choiceIndex": 0,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉠, ㉡'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 1,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉠, ㉢'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 2,
+          "verdict": "incorrect",
+          "reason": "정답 기준과 맞지 않아 오답이다. 선택지 '㉡, ㉢'는 문항의 핵심 조건과 일치하지 않는다."
+        },
+        {
+          "choiceIndex": 3,
+          "verdict": "correct",
+          "reason": "공식 정답이다. 공식 최종정답은 ④이다. 문제의 조건과 보기 조합을 대조하면 '㉠, ㉡, ㉢'가 정답이며, 나머지 보기는 핵심 조건과 맞지 않는다."
+        }
+      ]
+    }
+  ]
+}
