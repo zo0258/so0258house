@@ -39,6 +39,7 @@
   </style>
 </head>
 <body>
+  <script id="today-question-data" type="application/json">[{"id": "practical-143", "subject": "운동손상평가 및 재활", "section": "운동손상평가", "type": "실기", "year": 2018, "question": "페트릭 테스트를 피험자의 오른쪽에 실시하시오.(2018)", "methodGuide": "수행 순서 중심으로 직접 말해보기", "memoryTip": "준비 → 설명 → 시범 → 수행 → 기록 순서로 떠올리기", "checkPoint": "자세 / 호흡 / 안전 / 기록 순서로 점검하기", "answerGuide": ""}, {"id": "practical-068", "subject": "트레이닝방법론", "section": "유·무산소 트레이닝 방법", "type": "구술", "year": 2023, "question": "장시간 유산소 운동 중 최대산소섭취량이 증가하는 원인 3가지를 구술하시오.(2023)", "methodGuide": "정의 → 기준 → 적용 → 주의사항 순서로 답변하기", "memoryTip": "핵심어 3개를 먼저 말하고 한 문장씩 설명하기", "checkPoint": "질문 의도를 확인하고, 기준과 적용 이유를 짧게 연결해 말하기", "answerGuide": ""}, {"id": "practical-010", "subject": "건강·체력측정평가", "section": "건강/체력 측정 평가 및 해석", "type": "실기", "year": 2016, "question": "노인에게 근지구력 테스트를 위한 의자 앉았다 일어서기 30초를 시범 후, 지도하시오.(2016)", "methodGuide": "수행 순서 중심으로 직접 말해보기", "memoryTip": "준비 → 설명 → 시범 → 수행 → 기록 순서로 떠올리기", "checkPoint": "자세 / 호흡 / 안전 / 기록 순서로 점검하기", "answerGuide": ""}, {"id": "practical-055", "subject": "건강·체력측정평가", "section": "운동부하검사 및 해석", "type": "구술", "year": 2021, "question": "램프 프로토콜 검사 방법에 대해 설명하시오.(2021)", "methodGuide": "정의 → 기준 → 적용 → 주의사항 순서로 답변하기", "memoryTip": "핵심어 3개를 먼저 말하고 한 문장씩 설명하기", "checkPoint": "질문 의도를 확인하고, 기준과 적용 이유를 짧게 연결해 말하기", "answerGuide": ""}]</script>
   <main>
     <header class="dashboard-hero">
       <div class="brand-lockup">
@@ -63,8 +64,8 @@
       <div class="history-bar">
         <div class="history-title">학습 기록</div>
         <div class="history-summary" aria-label="학습 현황">
-          <span>오늘 <strong>4</strong></span>
-          <span>다시 보기 <strong id="reviewCount">0</strong></span>
+          <span>오늘 완료 <strong id="todayDoneCount">0</strong>/4</span>
+          <span>복습 <strong id="reviewCount">0</strong></span>
           <span>어려움 <strong id="hardCount">0</strong></span>
         </div>
       </div>
@@ -76,13 +77,18 @@
   <script>
     (function() {
       const key = 'health-exercise-practical-records';
+      const todayQuestions = JSON.parse(document.getElementById('today-question-data').textContent);
+      const todayIds = new Set(todayQuestions.map(item => item.id));
       let records = {};
       try { records = JSON.parse(localStorage.getItem(key) || '{}'); } catch (error) { records = {}; }
-      const values = Object.values(records);
+      const values = Object.entries(records).filter(([id, item]) => todayIds.has(id) && item).map(([, item]) => item);
+      const done = values.length;
       const review = values.filter(item => item && item.status === 'review').length;
       const hard = values.filter(item => item && item.status === 'hard').length;
+      const todayDoneCount = document.getElementById('todayDoneCount');
       const reviewCount = document.getElementById('reviewCount');
       const hardCount = document.getElementById('hardCount');
+      if (todayDoneCount) todayDoneCount.textContent = done;
       if (reviewCount) reviewCount.textContent = review;
       if (hardCount) hardCount.textContent = hard;
     })();

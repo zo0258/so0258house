@@ -38,6 +38,10 @@ def main():
     assert_true("오늘 실기·구술 4문제" in index, "today CTA text not converted")
     assert_true("미풀이 · 4문항 남음" in index, "4-question pending copy missing")
     assert_true("복습노트 보기" in index, "review-note copy missing")
+    assert_true("오늘 완료 <strong id=\"todayDoneCount\">0</strong>/4" in index, "today completion count missing")
+    assert_true("복습 <strong id=\"reviewCount\">0</strong>" in index, "dashboard review count missing")
+    assert_true("어려움 <strong id=\"hardCount\">0</strong>" in index, "dashboard hard count missing")
+    assert_true("today-question-data" in index, "dashboard daily question data missing")
     assert_true("10문항" not in index, "old 10-question copy remains in index")
 
     quiz = read(quiz_path)
@@ -54,14 +58,27 @@ def main():
     assert_true("data-choice" not in quiz, "choice buttons remain in quiz page")
     assert_true('id="nextBtn"' not in quiz, "next button should not allow skipping status selection")
     assert_true("1/4 문제" in quiz and "기록 0/4" in quiz, "separate progress labels missing")
+    assert_true("type-badge practical" in quiz, "practical type badge missing")
+    assert_true("type-badge oral" in quiz, "oral type badge missing")
+    assert_true("q-meta" in quiz and "q-topic" in quiz, "topic metadata structure missing")
     for label in ("답변 순서", "실기/구술 체크포인트", "암기 포인트"):
         assert_true(label in quiz, f"guide structure missing: {label}")
+    for label in ("수행 순서 중심으로 직접 말해보기", "정의 → 기준 → 적용 → 주의사항 순서로 답변하기", "자세 / 호흡 / 안전 / 기록 순서로 점검하기"):
+        assert_true(label in quiz, f"friendly guide copy missing: {label}")
+    assert_true("추후 입력" not in quiz, "unfinished guide copy remains visible")
+    assert_true("sourceVerified" not in quiz, "internal sourceVerified state should not be visible in quiz")
+    assert_true("needsReview" not in quiz, "internal needsReview state should not be visible in quiz")
     for label in ("완료", "다시 보기", "어려움"):
         assert_true(label in quiz, f"{label} action missing")
 
     wrong = read(wrong_path)
     assert_true("어려움·다시 볼 문제" in wrong, "wrong-note meaning not converted")
     assert_true("복습노트" in wrong, "wrong-note display name not converted")
+    for label in ("전체", "다시 보기", "어려움"):
+        assert_true(f'data-filter="{label}"' in wrong, f"review-note filter missing: {label}")
+    assert_true("activeFilter" in wrong, "review-note filter state missing")
+    assert_true("sourceVerified" not in wrong, "internal sourceVerified state should not be visible in wrong-note")
+    assert_true("needsReview" not in wrong, "internal needsReview state should not be visible in wrong-note")
     assert_true("health-exercise-practical-records" in quiz, "record localStorage key missing in quiz")
     assert_true("health-exercise-practical-records" in wrong, "record localStorage key missing in wrong-note")
 

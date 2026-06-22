@@ -242,8 +242,51 @@ def safe_json(data):
     )
 
 
+def friendly_guide(item):
+    if item.get("type") == "구술":
+        return {
+            "methodGuide": "정의 → 기준 → 적용 → 주의사항 순서로 답변하기",
+            "memoryTip": "핵심어 3개를 먼저 말하고 한 문장씩 설명하기",
+            "checkPoint": "질문 의도를 확인하고, 기준과 적용 이유를 짧게 연결해 말하기",
+        }
+    if item.get("type") == "실기":
+        return {
+            "methodGuide": "수행 순서 중심으로 직접 말해보기",
+            "memoryTip": "준비 → 설명 → 시범 → 수행 → 기록 순서로 떠올리기",
+            "checkPoint": "자세 / 호흡 / 안전 / 기록 순서로 점검하기",
+        }
+    return {
+        "methodGuide": "정의 → 기준 → 적용 → 주의사항 순서로 답변하기",
+        "memoryTip": "핵심어를 먼저 정하고 짧은 문장으로 설명하기",
+        "checkPoint": "준비 / 설명 / 안전 / 마무리 순서로 점검하기",
+    }
+
+
+def public_question(item):
+    guide = friendly_guide(item)
+    return {
+        "id": item["id"],
+        "subject": item.get("subject", ""),
+        "section": item.get("section", ""),
+        "type": item.get("type", ""),
+        "year": item.get("year"),
+        "question": item.get("question", ""),
+        "methodGuide": guide["methodGuide"],
+        "memoryTip": guide["memoryTip"],
+        "checkPoint": guide["checkPoint"],
+        "answerGuide": item.get("answerGuide", ""),
+    }
+
+
+def public_quiz(quiz):
+    copy = dict(quiz)
+    copy["questions"] = [public_question(item) for item in quiz["questions"]]
+    return copy
+
+
 def render_index(quiz):
     today = html.escape(quiz["displayDate"])
+    public_daily = [public_question(item) for item in quiz["questions"]]
     return f"""<!doctype html>
 <html lang="ko">
 <head>
@@ -285,6 +328,7 @@ def render_index(quiz):
   </style>
 </head>
 <body>
+  <script id="today-question-data" type="application/json">{safe_json(public_daily)}</script>
   <main>
     <header class="dashboard-hero">
       <div class="brand-lockup">
@@ -309,8 +353,8 @@ def render_index(quiz):
       <div class="history-bar">
         <div class="history-title">학습 기록</div>
         <div class="history-summary" aria-label="학습 현황">
-          <span>오늘 <strong>4</strong></span>
-          <span>다시 보기 <strong id="reviewCount">0</strong></span>
+          <span>오늘 완료 <strong id="todayDoneCount">0</strong>/4</span>
+          <span>복습 <strong id="reviewCount">0</strong></span>
           <span>어려움 <strong id="hardCount">0</strong></span>
         </div>
       </div>
@@ -322,13 +366,18 @@ def render_index(quiz):
   <script>
     (function() {{
       const key = '{RECORD_KEY}';
+      const todayQuestions = JSON.parse(document.getElementById('today-question-data').textContent);
+      const todayIds = new Set(todayQuestions.map(item => item.id));
       let records = {{}};
       try {{ records = JSON.parse(localStorage.getItem(key) || '{{}}'); }} catch (error) {{ records = {{}}; }}
-      const values = Object.values(records);
+      const values = Object.entries(records).filter(([id, item]) => todayIds.has(id) && item).map(([, item]) => item);
+      const done = values.length;
       const review = values.filter(item => item && item.status === 'review').length;
       const hard = values.filter(item => item && item.status === 'hard').length;
+      const todayDoneCount = document.getElementById('todayDoneCount');
       const reviewCount = document.getElementById('reviewCount');
       const hardCount = document.getElementById('hardCount');
+      if (todayDoneCount) todayDoneCount.textContent = done;
       if (reviewCount) reviewCount.textContent = review;
       if (hardCount) hardCount.textContent = hard;
     }})();
@@ -339,18 +388,26 @@ def render_index(quiz):
 
 
 def question_card(item, index):
+    item = public_question(item)
     q = html.escape(item["question"])
-    meta = " / ".join(html.escape(str(value)) for value in (item["subject"], item["section"], item["type"], item["year"]) if value)
+    subject = html.escape(str(item.get("subject", "")))
+    section = html.escape(str(item.get("section", "")))
+    year = html.escape(str(item.get("year", "")))
+    type_text = html.escape(str(item.get("type", "")))
+    badge_class = "practical" if item.get("type") == "실기" else "oral" if item.get("type") == "구술" else "common"
     method = html.escape(item.get("methodGuide", ""))
     tip = html.escape(item.get("memoryTip", ""))
-    type_label = html.escape(item.get("type", "실기/구술"))
+    check_point = html.escape(item.get("checkPoint", ""))
     total = 4
     return f"""<article class="question-card" data-question-id="{html.escape(item['id'])}">
-      <div class="q-head"><span class="q-count">{index + 1}/{total}</span><span class="topic">{meta}</span></div>
+      <div class="q-head">
+        <div class="q-left"><span class="q-count">{index + 1}/{total}</span><span class="type-badge {badge_class}">{type_text}</span></div>
+        <div class="q-meta"><span class="q-topic">{subject}</span><span class="q-topic">{section}</span><span class="q-year">{year}</span></div>
+      </div>
       <p class="question">{q}</p>
       <details class="guide"><summary>수행·답변 가이드</summary>
         <div class="guide-block"><strong>답변 순서</strong><p>{method}</p></div>
-        <div class="guide-block"><strong>실기/구술 체크포인트</strong><p>{type_label} 문항으로 보고 준비, 설명, 수행 또는 구술 마무리 순서를 확인합니다.</p></div>
+        <div class="guide-block"><strong>실기/구술 체크포인트</strong><p>{check_point}</p></div>
         <div class="guide-block"><strong>암기 포인트</strong><p>{tip}</p></div>
       </details>
       <div class="actions">
@@ -363,6 +420,7 @@ def question_card(item, index):
 
 def render_quiz(quiz):
     cards = "\n".join(question_card(item, index) for index, item in enumerate(quiz["questions"]))
+    quiz_data = public_quiz(quiz)
     return f"""<!doctype html>
 <html lang="ko">
 <head>
@@ -385,9 +443,16 @@ def render_quiz(quiz):
     main {{ padding:16px 14px 26px; }}
     .question-card {{ display:none; padding:16px; border:1px solid rgba(102,115,93,.18); border-radius:14px; background:rgba(255,255,255,.78); }}
     .question-card.active {{ display:block; }}
-    .q-head {{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; }}
+    .q-head {{ display:flex; align-items:flex-start; justify-content:space-between; gap:12px; margin-bottom:14px; }}
+    .q-left {{ display:flex; align-items:center; gap:7px; flex:0 0 auto; }}
     .q-count {{ color:var(--accent-strong); font-size:13px; font-weight:900; padding:6px 10px; border-radius:999px; background:var(--accent-soft); }}
-    .topic {{ color:var(--muted); font-size:12px; font-weight:800; text-align:right; }}
+    .type-badge {{ display:inline-flex; align-items:center; min-height:28px; padding:5px 10px; border-radius:999px; font-size:12px; font-weight:950; }}
+    .type-badge.practical {{ background:#e8f0e4; color:#2f5e38; border:1px solid rgba(47,94,56,.16); }}
+    .type-badge.oral {{ background:#fff1df; color:#855013; border:1px solid rgba(133,80,19,.16); }}
+    .type-badge.common {{ background:#eef0f2; color:#4b5563; border:1px solid rgba(75,85,99,.16); }}
+    .q-meta {{ min-width:0; display:flex; flex-wrap:wrap; justify-content:flex-end; gap:4px 7px; color:var(--muted); font-size:12px; font-weight:800; text-align:right; line-height:1.35; }}
+    .q-topic {{ min-width:0; overflow-wrap:anywhere; word-break:keep-all; }}
+    .q-year {{ flex:0 0 auto; }}
     .question {{ margin:0 0 14px; font-size:20px; font-weight:900; line-height:1.48; word-break:keep-all; overflow-wrap:anywhere; white-space:pre-line; }}
     .guide {{ margin:12px 0; border:1px solid rgba(102,115,93,.16); border-radius:12px; background:#fbfcfa; padding:10px 12px; }}
     .guide summary {{ cursor:pointer; color:var(--accent-strong); font-size:13px; font-weight:950; }}
@@ -406,11 +471,11 @@ def render_quiz(quiz):
     .result.active {{ display:block; }}
     .result h2 {{ margin:0 0 8px; color:var(--accent-strong); font-size:22px; }}
     .result p {{ margin:0; color:var(--muted); font-weight:800; }}
-    @media (max-width:520px) {{ main {{ padding:12px 10px 24px; }} .question {{ font-size:18px; }} .actions {{ grid-template-columns:1fr; }} }}
+    @media (max-width:520px) {{ main {{ padding:12px 10px 24px; }} .title-row {{ align-items:flex-start; }} h1 {{ max-width:190px; }} .q-head {{ flex-direction:column; align-items:stretch; gap:9px; }} .q-meta {{ justify-content:flex-start; text-align:left; }} .question {{ font-size:18px; }} .actions {{ grid-template-columns:1fr; }} }}
   </style>
 </head>
 <body>
-  <script id="quiz-data" type="application/json">{safe_json(quiz)}</script>
+  <script id="quiz-data" type="application/json">{safe_json(quiz_data)}</script>
   <div class="app">
     <header class="topbar">
       <div class="topbar-inner">
@@ -467,6 +532,7 @@ def render_quiz(quiz):
 
 
 def render_wrong_note(questions):
+    public_questions = [public_question(item) for item in questions]
     return f"""<!doctype html>
 <html lang="ko">
 <head>
@@ -486,6 +552,9 @@ def render_wrong_note(questions):
     .stat {{ display:inline-flex; align-items:center; gap:5px; min-height:29px; padding:5px 9px; border:1px solid rgba(102,115,93,.18); border-radius:999px; background:#fbfcfa; }}
     .stat span {{ color:var(--muted); font-size:11.5px; font-weight:850; }}
     .stat strong {{ color:var(--accent-dark); font-size:12.5px; font-weight:950; }}
+    .filters {{ display:flex; gap:7px; flex-wrap:wrap; margin:0 0 14px; }}
+    .filter-btn {{ min-height:34px; padding:6px 12px; border:1px solid rgba(102,115,93,.2); border-radius:999px; background:#fff; color:var(--muted); font:inherit; font-size:12px; font-weight:950; }}
+    .filter-btn.active {{ background:var(--accent-dark); color:#fff; border-color:var(--accent-dark); }}
     .list {{ display:grid; gap:12px; }}
     .empty {{ padding:18px; border:1px solid var(--line); border-radius:13px; background:#fbfcfa; color:var(--muted); font-weight:850; }}
     .card {{ border:1px solid var(--line); border-radius:13px; background:#fff; overflow:hidden; }}
@@ -500,12 +569,17 @@ def render_wrong_note(questions):
   </style>
 </head>
 <body>
-  <script id="question-data" type="application/json">{safe_json(questions)}</script>
+  <script id="question-data" type="application/json">{safe_json(public_questions)}</script>
   <main>
     <div class="topline"><div><h1>소빵이의 복습노트</h1><p class="subtitle">어려움·다시 볼 문제</p></div><a class="back" href="index.html">DashBoard</a></div>
     <div class="stats">
       <div class="stat"><span>다시 보기</span><strong id="reviewCount">0</strong></div>
       <div class="stat"><span>어려움</span><strong id="hardCount">0</strong></div>
+    </div>
+    <div class="filters" aria-label="복습노트 필터">
+      <button type="button" class="filter-btn active" data-filter="전체">전체</button>
+      <button type="button" class="filter-btn" data-filter="다시 보기">다시 보기</button>
+      <button type="button" class="filter-btn" data-filter="어려움">어려움</button>
     </div>
     <section class="list" id="list"></section>
   </main>
@@ -517,25 +591,41 @@ def render_wrong_note(questions):
       let records = {{}};
       try {{ records = JSON.parse(localStorage.getItem(key) || '{{}}'); }} catch (error) {{ records = {{}}; }}
       const items = Object.entries(records).filter(([, record]) => record && (record.status === 'review' || record.status === 'hard'));
+      let activeFilter = '전체';
       const reviewCount = items.filter(([, record]) => record.status === 'review').length;
       const hardCount = items.filter(([, record]) => record.status === 'hard').length;
       document.getElementById('reviewCount').textContent = reviewCount;
       document.getElementById('hardCount').textContent = hardCount;
       const list = document.getElementById('list');
+      const filterButtons = Array.from(document.querySelectorAll('.filter-btn'));
       function escapeHtml(value) {{
         return String(value == null ? '' : value).replace(/[&<>"']/g, ch => ({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}}[ch]));
       }}
-      if (!items.length) {{
-        list.innerHTML = '<div class="empty">아직 다시 볼 문제로 표시한 항목이 없습니다.</div>';
-        return;
+      function labelFor(record) {{
+        return record.status === 'hard' ? '어려움' : '다시 보기';
       }}
-      list.innerHTML = items.map(([id, record]) => {{
-        const q = byId.get(id);
-        if (!q) return '';
-        const label = record.status === 'hard' ? '어려움' : '다시 보기';
-        const cls = record.status === 'hard' ? 'hard' : 'review';
-        return '<article class="card"><div class="card-head"><div class="topic">' + escapeHtml(q.subject) + ' / ' + escapeHtml(q.section) + '</div><div class="sub">' + escapeHtml(q.type) + ' · ' + escapeHtml(q.year || '') + ' · <span class="pill ' + cls + '">' + label + '</span></div></div><div class="body"><p class="question">' + escapeHtml(q.question) + '</p></div></article>';
-      }}).join('');
+      function renderList() {{
+        filterButtons.forEach(button => button.classList.toggle('active', button.dataset.filter === activeFilter));
+        const visible = items.filter(([, record]) => activeFilter === '전체' || labelFor(record) === activeFilter);
+        if (!visible.length) {{
+          list.innerHTML = '<div class="empty">표시할 복습 문제가 없습니다.</div>';
+          return;
+        }}
+        list.innerHTML = visible.map(([id, record]) => {{
+          const q = byId.get(id);
+          if (!q) return '';
+          const label = labelFor(record);
+          const cls = record.status === 'hard' ? 'hard' : 'review';
+          return '<article class="card"><div class="card-head"><div class="topic">' + escapeHtml(q.subject) + ' / ' + escapeHtml(q.section) + '</div><div class="sub">' + escapeHtml(q.type) + ' · ' + escapeHtml(q.year || '') + ' · <span class="pill ' + cls + '">' + label + '</span></div></div><div class="body"><p class="question">' + escapeHtml(q.question) + '</p></div></article>';
+        }}).join('');
+      }}
+      filterButtons.forEach(button => {{
+        button.addEventListener('click', function() {{
+          activeFilter = button.dataset.filter;
+          renderList();
+        }});
+      }});
+      renderList();
     }})();
   </script>
 </body>
