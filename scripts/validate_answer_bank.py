@@ -32,6 +32,11 @@ ALLOWED_REVIEW_TAGS = {
     "[year-standard-conflict]",
     "[needs-tier-s-check]",
     "[needs-answer-source-check]",
+    "[source-verifiable]",
+    "[guidebook-only]",
+    "[conflicting-standard]",
+    "[practical-demonstration-needed]",
+    "[specialist-source-needed]",
 }
 
 
