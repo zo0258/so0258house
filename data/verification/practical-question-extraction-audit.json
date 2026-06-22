@@ -354,5 +354,23 @@
     "conflictsFound": "기준 연도 충돌 가능 문항은 reviewNotes에 기출 당시 기준 확인 필요로 표시",
     "remainingReviewCount": 199,
     "note": "Pass 1은 199개 전체 draft 구축 단계다. verified/sourceVerified 승격은 Pass 2 이후 Tier S/A 대조를 거쳐 수행한다."
+  },
+  "answerBankFullPass2": {
+    "checkedAt": "2026-06-22",
+    "scope": "199 practical/oral questions",
+    "processedEntries": 199,
+    "modifiedEntries": 199,
+    "statusCounts": {
+      "draft": 199
+    },
+    "sourceVerifiedCounts": {
+      "False": 199
+    },
+    "needsReviewCount": 199,
+    "newlyVerified": 0,
+    "needsReviewReverted": 0,
+    "conflictMarkedCount": 20,
+    "scanIssuesRemaining": [],
+    "note": "Pass 2는 199개 전체를 대상으로 답안 압축, 채점 키워드화, 실수 포인트, 암기팁을 재정리했다. Tier S/A 대조 부족으로 verified 승격은 하지 않았다."
   }
 }

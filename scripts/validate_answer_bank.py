@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import hashlib
 import sys
 from pathlib import Path
 
@@ -7,6 +8,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS_PATH = ROOT / "data" / "practical-questions.json"
 ANSWER_BANK_PATH = ROOT / "data" / "practical-answer-bank.json"
+IOS_ANSWER_BANK_PATH = (
+    ROOT
+    / "ios"
+    / "So02HousePractical"
+    / "So02HousePractical"
+    / "Resources"
+    / "practical-answer-bank.json"
+)
 ALLOWED_STATUSES = {"draft", "verified", "needs_review"}
 ALLOWED_SOURCE_TYPES = {"official", "academic", "textbook", "trusted_web", "internal"}
 
@@ -25,6 +34,7 @@ def fail(errors):
 def main():
     questions = load_json(QUESTIONS_PATH)
     answer_bank = load_json(ANSWER_BANK_PATH)
+    ios_answer_bank = load_json(IOS_ANSWER_BANK_PATH)
     errors = []
 
     question_ids = {question["id"] for question in questions}
@@ -36,6 +46,12 @@ def main():
         errors.append(f"expected 199 questions, found {len(questions)}")
     if len(answer_bank) != len(questions):
         errors.append(f"answer bank count mismatch: {len(answer_bank)} != {len(questions)}")
+    if answer_bank != ios_answer_bank:
+        errors.append("iOS Resources practical-answer-bank.json is not identical to data/practical-answer-bank.json")
+    if ANSWER_BANK_PATH.read_bytes() != IOS_ANSWER_BANK_PATH.read_bytes():
+        data_sha = hashlib.sha256(ANSWER_BANK_PATH.read_bytes()).hexdigest()
+        ios_sha = hashlib.sha256(IOS_ANSWER_BANK_PATH.read_bytes()).hexdigest()
+        errors.append(f"answer bank SHA mismatch: data={data_sha} ios={ios_sha}")
     if len(bank_ids) != len(bank_id_set):
         errors.append("duplicate questionId in answer bank")
 
@@ -64,6 +80,14 @@ def main():
                 errors.append(
                     f"{prefix}: {status} entry needs modelAnswer, performanceSteps, or oralAnswerStructure"
                 )
+            if not entry.get("modelAnswer"):
+                errors.append(f"{prefix}: {status} entry requires modelAnswer")
+            if len(entry.get("keyPoints") or []) < 3:
+                errors.append(f"{prefix}: {status} entry requires at least 3 keyPoints")
+            if not entry.get("commonMistakes"):
+                errors.append(f"{prefix}: {status} entry requires commonMistakes")
+            if not entry.get("memoryTip"):
+                errors.append(f"{prefix}: {status} entry requires memoryTip")
         if not isinstance(entry.get("sourceRefs"), list):
             errors.append(f"{prefix}: sourceRefs must be a list")
             continue
