@@ -28,6 +28,7 @@ def main():
     errors = []
 
     question_ids = {question["id"] for question in questions}
+    year_2025_ids = {question["id"] for question in questions if question.get("year") == 2025}
     bank_ids = [entry.get("questionId") for entry in answer_bank]
     bank_id_set = set(bank_ids)
 
@@ -45,11 +46,24 @@ def main():
     if extra:
         errors.append(f"unknown answer bank entries: {', '.join(extra[:20])}")
 
+    missing_2025 = sorted(year_2025_ids - bank_id_set)
+    if missing_2025:
+        errors.append(f"missing 2025 answer bank entries: {', '.join(missing_2025)}")
+
     for index, entry in enumerate(answer_bank):
         prefix = entry.get("questionId") or f"index:{index}"
         status = entry.get("answerStatus")
         if status not in ALLOWED_STATUSES:
             errors.append(f"{prefix}: invalid answerStatus {status!r}")
+        if status in {"draft", "verified"}:
+            has_answer_content = any(
+                entry.get(field)
+                for field in ("modelAnswer", "performanceSteps", "oralAnswerStructure")
+            )
+            if not has_answer_content:
+                errors.append(
+                    f"{prefix}: {status} entry needs modelAnswer, performanceSteps, or oralAnswerStructure"
+                )
         if not isinstance(entry.get("sourceRefs"), list):
             errors.append(f"{prefix}: sourceRefs must be a list")
             continue
@@ -62,6 +76,10 @@ def main():
 
         if entry.get("sourceVerified") is True and status != "verified":
             errors.append(f"{prefix}: sourceVerified true requires answerStatus verified")
+        if status == "verified" and entry.get("sourceVerified") is not True:
+            errors.append(f"{prefix}: verified answer requires sourceVerified true")
+        if entry.get("sourceVerified") is True and not entry.get("sourceRefs"):
+            errors.append(f"{prefix}: sourceVerified true requires at least one sourceRef")
         if status == "verified" and entry.get("needsReview") is True:
             errors.append(f"{prefix}: verified answer cannot remain needsReview true")
 

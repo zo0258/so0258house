@@ -69,7 +69,9 @@
       ],
       "correctedQuestion": "아래 문진의 제시한 내용을 ACSM의 기준에 의거하여 심혈관질환의 위험요소 2개를 찾고, 위험요소의 각각의 기준을 제시하시오. 그리고 문진결과에 의거하여 위험군 분류를 하시오.(2015) 45세 남성, 병력/증상 없음, 걷기 운동을 규칙적으로 실시, 1년 이상 금연, 안정시 혈압 125/85mmHg, 혈청 총콜레스테롤 180mg/dL, 공복혈당 100mg/dL, HDL-C 60mg/dL",
       "correctionReason": "혈압 단위 오타 의심",
-      "needsReview": true
+      "needsReview": true,
+      "passOneCheckResult": "not_confirmed",
+      "evidence": "2015 source is HWP 5.x. macOS textutil and strings did not produce readable source text, so PDF/source-original confirmation remains pending."
     },
     {
       "questionId": "practical-008",
@@ -85,7 +87,9 @@
       ],
       "correctedQuestion": "PAR-Q에 대해서 설명하시오.(2020)",
       "correctionReason": "신체활동 준비 설문 약어 오타 의심",
-      "needsReview": true
+      "needsReview": true,
+      "passOneCheckResult": "confirmed_likely",
+      "evidence": "2020 A/B source PDF text contains \"신체활동준비설문지(PAR-Q+)\". Existing question text \"PAP-Q\" is likely extraction/typing error."
     }
   ],
   "needsReviewQuestionIds": [
@@ -293,5 +297,45 @@
   "notes": [
     "PDF 원문은 materials/raw/kspo 아래에 보존되어 있으나, 이번 1차에서는 자동 원문 대조 확정 판정을 하지 않았다.",
     "문제 원문 수정은 data/practical-questions.json에 직접 반영하지 않고 correctedQuestion 제안으로만 남긴다."
-  ]
+  ],
+  "question2025PassOne": {
+    "checkedAt": "2026-06-22",
+    "total2025Questions": 24,
+    "questionIds": [
+      "practical-009",
+      "practical-033",
+      "practical-034",
+      "practical-035",
+      "practical-036",
+      "practical-046",
+      "practical-047",
+      "practical-048",
+      "practical-072",
+      "practical-093",
+      "practical-094",
+      "practical-095",
+      "practical-096",
+      "practical-106",
+      "practical-132",
+      "practical-133",
+      "practical-163",
+      "practical-164",
+      "practical-165",
+      "practical-166",
+      "practical-195",
+      "practical-196",
+      "practical-197",
+      "practical-198"
+    ],
+    "answerStatus": {
+      "draft": 24,
+      "verified": 0,
+      "needs_review": 0
+    },
+    "sourceVerified": {
+      "true": 0,
+      "false": 24
+    },
+    "note": "2025년 문제 24개는 answer bank draft로 보강했지만, 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+  }
 }
