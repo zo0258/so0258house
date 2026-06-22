@@ -2337,13 +2337,17 @@
         "title": "국민체력100 체력측정 항목",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 측정항목",
+        "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
       },
       {
         "title": "국민체력100 인증기준",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 인증기준",
+        "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -2362,7 +2366,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
     ]
   },
   {
@@ -2395,13 +2400,17 @@
         "title": "국민체력100 체력측정 항목",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 측정항목",
+        "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
       },
       {
         "title": "국민체력100 인증기준",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 인증기준",
+        "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -2420,7 +2429,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
     ]
   },
   {
@@ -2453,13 +2463,17 @@
         "title": "국민체력100 체력측정 항목",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 측정항목",
+        "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
       },
       {
         "title": "국민체력100 인증기준",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 인증기준",
+        "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -2478,7 +2492,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
     ]
   },
   {
@@ -2511,13 +2526,17 @@
         "title": "국민체력100 체력측정 항목",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 측정항목",
+        "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
       },
       {
         "title": "국민체력100 인증기준",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 인증기준",
+        "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -2536,7 +2555,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
     ]
   },
   {
@@ -2569,13 +2589,17 @@
         "title": "국민체력100 체력측정 항목",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 측정항목",
+        "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
       },
       {
         "title": "국민체력100 인증기준",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 인증기준",
+        "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -2594,7 +2618,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
     ]
   },
   {
@@ -2797,13 +2822,17 @@
         "title": "학생건강체력평가제도(PAPS)의 이해",
         "url": "https://www.kacep.or.kr/new/file/PAPS%20textbook.pdf",
         "type": "trusted_web",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "PAPS 이해 자료",
+        "evidenceSummary": "PAPS 평가 영역과 제도 설명을 보강하는 교육자료 근거."
       },
       {
         "title": "ACSM's Guidelines for Exercise Testing and Prescription",
         "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+        "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -2822,7 +2851,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
     ]
   },
   {
@@ -2856,19 +2886,25 @@
         "title": "경기도교육청 - 학생건강체력평가[PAPS] 안내",
         "url": "https://www.goe.go.kr/resource/goe/na/bbs_2455/2025/06/373f4ddb-967d-40fb-9cc4-3bee46d99a24.pdf",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "학생건강체력평가 PAPS 안내",
+        "evidenceSummary": "PAPS 목적, 건강체력 중심 평가, 평가 영역과 학생 체력 관리 체계 확인 근거."
       },
       {
         "title": "학교건강정보센터 - PAPS 도움자료",
         "url": "https://www.schoolhealth.kr/web/search/selectTotalSearchList.do?bbsId=&lstnum1=3544&pageIndex=1&pageUnit=10&searchWrd=paps&sortOrder=",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "PAPS 도움자료 검색/안내",
+        "evidenceSummary": "PAPS 제도와 평가자료 접근 확인 근거. 개별 평가 항목은 자료 본문 대조가 더 강함."
       },
       {
         "title": "학생건강체력평가제도(PAPS)의 이해",
         "url": "https://www.kacep.or.kr/new/file/PAPS%20textbook.pdf",
         "type": "trusted_web",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "PAPS 이해 자료",
+        "evidenceSummary": "PAPS 평가 영역과 제도 설명을 보강하는 교육자료 근거."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -2886,7 +2922,8 @@
       "[source-verified] Pass 4 품질 판정: 출처 검증 완료 항목으로 앱에서는 검증 답안으로 표시 가능.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항.",
-      "Pass 7 Tier S hunt: PAPS 공식/교육기관 자료로 답안 근거가 유지되지만 새 Tier S 채점표 근거는 발견되지 않았다. verified 유지하되 PAPS 원문 page-level 근거 보강은 다음 Pass 후보."
+      "Pass 7 Tier S hunt: PAPS 공식/교육기관 자료로 답안 근거가 유지되지만 새 Tier S 채점표 근거는 발견되지 않았다. verified 유지하되 PAPS 원문 page-level 근거 보강은 다음 Pass 후보.",
+      "[verified-maintained] Pass 8 판정: guidebook 외 answer-source를 재확인했고 미해결 충돌이 없어 verified 유지. 추가 승격보다 근거 품질 유지가 우선."
     ]
   },
   {
@@ -2918,13 +2955,17 @@
         "title": "국민체력100 체력측정 항목",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 측정항목",
+        "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
       },
       {
         "title": "국민체력100 인증기준",
         "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "체력측정 > 국민체력인증 > 인증기준",
+        "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -2943,7 +2984,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
     ]
   },
   {
@@ -3157,13 +3199,17 @@
         "title": "ACSM Guidelines for Exercise Testing and Prescription",
         "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+        "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
       },
       {
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3182,7 +3228,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3215,13 +3262,17 @@
         "title": "ACSM Guidelines for Exercise Testing and Prescription",
         "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+        "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
       },
       {
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3240,7 +3291,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3273,13 +3325,17 @@
         "title": "ACSM Guidelines for Exercise Testing and Prescription",
         "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+        "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
       },
       {
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3298,7 +3354,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3335,13 +3392,17 @@
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "CDC High Blood Pressure",
         "url": "https://www.cdc.gov/high-blood-pressure/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "CDC high blood pressure overview",
+        "evidenceSummary": "혈압 반응과 고혈압 일반 기준의 보조 근거. 램프 프로토콜 답안 단독 근거로는 부족함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3360,7 +3421,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3393,13 +3455,17 @@
         "title": "ACSM Guidelines for Exercise Testing and Prescription",
         "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+        "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
       },
       {
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3418,7 +3484,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3451,13 +3518,17 @@
         "title": "ACSM Guidelines for Exercise Testing and Prescription",
         "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+        "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
       },
       {
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3476,7 +3547,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3568,13 +3640,17 @@
         "title": "ACSM Guidelines for Exercise Testing and Prescription",
         "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+        "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
       },
       {
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3593,7 +3669,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3626,13 +3703,17 @@
         "title": "ACSM Guidelines for Exercise Testing and Prescription",
         "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+        "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
       },
       {
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3651,7 +3732,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3685,13 +3767,17 @@
         "title": "ACSM Guidelines for Exercise Testing and Prescription",
         "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+        "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
       },
       {
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3710,7 +3796,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3743,13 +3830,17 @@
         "title": "ACSM Guidelines for Exercise Testing and Prescription",
         "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+        "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
       },
       {
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3768,7 +3859,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3801,13 +3893,17 @@
         "title": "ACSM Guidelines for Exercise Testing and Prescription",
         "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+        "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
       },
       {
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3826,7 +3922,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3859,13 +3956,17 @@
         "title": "ACSM Physical Activity Guidelines",
         "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM physical activity resources",
+        "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
       },
       {
         "title": "CDC Adult Physical Activity Guidelines",
         "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "Adult Activity: An Overview",
+        "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -3884,7 +3985,8 @@
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.33에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
     ]
   },
   {
@@ -5891,13 +5993,17 @@
         "title": "ACSM Resistance Training Guidelines Update 2026",
         "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM 2026 resistance training guidelines summary",
+        "evidenceSummary": "근력, 근비대, 파워 관련 최신 저항성 트레이닝 원칙 보조 근거. 건강운동관리사 기출 당시 표현과 충돌 가능성 주의."
       },
       {
         "title": "CDC Adult Physical Activity Guidelines",
         "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "Adult Activity: An Overview",
+        "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -5916,7 +6022,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.36에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
     ]
   },
   {
@@ -5950,13 +6057,17 @@
         "title": "ACSM Resistance Training Guidelines Update 2026",
         "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM 2026 resistance training guidelines summary",
+        "evidenceSummary": "근력, 근비대, 파워 관련 최신 저항성 트레이닝 원칙 보조 근거. 건강운동관리사 기출 당시 표현과 충돌 가능성 주의."
       },
       {
         "title": "CDC Adult Physical Activity Guidelines",
         "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "Adult Activity: An Overview",
+        "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -5975,7 +6086,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.36에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
     ]
   },
   {
@@ -6183,13 +6295,17 @@
         "title": "ACSM Resistance Training Guidelines Update 2026",
         "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM 2026 resistance training guidelines summary",
+        "evidenceSummary": "근력, 근비대, 파워 관련 최신 저항성 트레이닝 원칙 보조 근거. 건강운동관리사 기출 당시 표현과 충돌 가능성 주의."
       },
       {
         "title": "CDC Adult Physical Activity Guidelines",
         "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "Adult Activity: An Overview",
+        "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -6208,7 +6324,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.36에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
     ]
   },
   {
@@ -6300,13 +6417,17 @@
         "title": "ACSM Resistance Training Guidelines Update 2026",
         "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM 2026 resistance training guidelines summary",
+        "evidenceSummary": "근력, 근비대, 파워 관련 최신 저항성 트레이닝 원칙 보조 근거. 건강운동관리사 기출 당시 표현과 충돌 가능성 주의."
       },
       {
         "title": "CDC Adult Physical Activity Guidelines",
         "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "Adult Activity: An Overview",
+        "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -6325,7 +6446,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.36에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
     ]
   },
   {
@@ -6359,13 +6481,17 @@
         "title": "ACSM Resistance Training Guidelines Update 2026",
         "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "ACSM 2026 resistance training guidelines summary",
+        "evidenceSummary": "근력, 근비대, 파워 관련 최신 저항성 트레이닝 원칙 보조 근거. 건강운동관리사 기출 당시 표현과 충돌 가능성 주의."
       },
       {
         "title": "CDC Adult Physical Activity Guidelines",
         "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
         "type": "official",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "Adult Activity: An Overview",
+        "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -6384,7 +6510,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.36에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
-      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
     ]
   },
   {
@@ -9427,13 +9554,17 @@
         "title": "Merck Manual Professional - Sports Injuries",
         "url": "https://www.merckmanuals.com/professional/injuries-poisoning/sports-injury",
         "type": "trusted_web",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "Sports Injuries overview",
+        "evidenceSummary": "운동손상/재활 문항의 보조 의학 참고자료. 실기 채점 기준은 2025 채점표가 우선."
       },
       {
         "title": "NATA Position Statements",
         "url": "https://www.nata.org/practice-patient-care/health-issues",
         "type": "trusted_web",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "NATA position statements index",
+        "evidenceSummary": "운동손상 평가·처치의 전문단체 보조 근거. 문항별 직접 채점 기준은 아님."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -9447,7 +9578,9 @@
         "url": "internal://health-exercise-practical/2025-scoring-rubric",
         "type": "tier_s_internal",
         "checkedAt": "2026-06-22",
-        "page": 1
+        "page": 1,
+        "section": "채점표 예시",
+        "evidenceSummary": "Pivot Shift Test와 맨손 마사지 문항의 직접 채점 기준 예시. 해당 2개 verified 유지의 핵심 근거."
       }
     ],
     "sourceVerified": true,
@@ -9459,7 +9592,8 @@
       "검증 근거: 2025년도 건강운동관리사 실기구술 채점표 예시가 Pivot Shift Test의 목적, 바로누운자세, 무릎 20~30도 굽힘, 정강이 안쪽돌림, 외반력/안쪽돌림 적용, 양성 반응 설명을 평가 기준으로 제시한다.",
       "[source-verified] Pass 6 품질 판정: answer-source 근거와 modelAnswer/keyPoints/commonMistakes/memoryTip을 대조해 verified 유지 가능.",
       "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항.",
-      "Pass 7 Tier S hunt: 2025년도 건강운동관리사 실기구술 채점표가 직접 answer-source로 확인되어 verified 유지. 추가 승격보다 채점표/교재 근거 확장을 우선한다."
+      "Pass 7 Tier S hunt: 2025년도 건강운동관리사 실기구술 채점표가 직접 answer-source로 확인되어 verified 유지. 추가 승격보다 채점표/교재 근거 확장을 우선한다.",
+      "[verified-maintained] Pass 8 판정: guidebook 외 answer-source를 재확인했고 미해결 충돌이 없어 verified 유지. 추가 승격보다 근거 품질 유지가 우선."
     ]
   },
   {
@@ -11387,13 +11521,17 @@
         "title": "American Society of Hand Therapists - Joint Mobilization chapter sample",
         "url": "https://asht.org/sites/asht/files/images/Test%20Prep_3rd%20Edition%20Content/CHT%20Test%20Prep%20Book%203rd%20Edition_chapter30.pdf",
         "type": "trusted_web",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "therapy manual chapter sample",
+        "evidenceSummary": "수기치료/재활 관련 보조 근거. 맨손 마사지 문항의 직접 채점 기준은 2025 채점표가 우선."
       },
       {
         "title": "Merck Manual Professional - Sports Injuries",
         "url": "https://www.merckmanuals.com/professional/injuries-poisoning/sports-injury",
         "type": "trusted_web",
-        "checkedAt": "2026-06-22"
+        "checkedAt": "2026-06-22",
+        "section": "Sports Injuries overview",
+        "evidenceSummary": "운동손상/재활 문항의 보조 의학 참고자료. 실기 채점 기준은 2025 채점표가 우선."
       },
       {
         "title": "건강운동관리사 취득 기초 길잡이 2026",
@@ -11407,7 +11545,9 @@
         "url": "internal://health-exercise-practical/2025-scoring-rubric",
         "type": "tier_s_internal",
         "checkedAt": "2026-06-22",
-        "page": 1
+        "page": 1,
+        "section": "채점표 예시",
+        "evidenceSummary": "Pivot Shift Test와 맨손 마사지 문항의 직접 채점 기준 예시. 해당 2개 verified 유지의 핵심 근거."
       }
     ],
     "sourceVerified": true,
@@ -11419,7 +11559,8 @@
       "검증 근거: 2025년도 건강운동관리사 실기구술 채점표 예시가 맨손 마사지 생리적 효과로 순환 촉진, 조직 신장, 대사산물/부종 제거, 이완/피로회복을 제시하고 기법으로 경찰법, 유념법, 마찰법, 고타법, 진동법을 제시한다.",
       "[source-verified] Pass 6 품질 판정: answer-source 근거와 modelAnswer/keyPoints/commonMistakes/memoryTip을 대조해 verified 유지 가능.",
       "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항.",
-      "Pass 7 Tier S hunt: 2025년도 건강운동관리사 실기구술 채점표가 직접 answer-source로 확인되어 verified 유지. 추가 승격보다 채점표/교재 근거 확장을 우선한다."
+      "Pass 7 Tier S hunt: 2025년도 건강운동관리사 실기구술 채점표가 직접 answer-source로 확인되어 verified 유지. 추가 승격보다 채점표/교재 근거 확장을 우선한다.",
+      "[verified-maintained] Pass 8 판정: guidebook 외 answer-source를 재확인했고 미해결 충돌이 없어 verified 유지. 추가 승격보다 근거 품질 유지가 우선."
     ]
   },
   {

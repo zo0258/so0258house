@@ -34,10 +34,15 @@ ALLOWED_REVIEW_TAGS = {
     "[needs-tier-s-check]",
     "[needs-answer-source-check]",
     "[source-verifiable]",
+    "[source-backed-draft]",
     "[guidebook-only]",
     "[conflicting-standard]",
     "[practical-demonstration-needed]",
     "[specialist-source-needed]",
+    "[needs-specialist-check]",
+    "[verified-maintained]",
+    "[verified-candidate]",
+    "[verified-rejected]",
 }
 PRIMARY_SOURCE_CLASSIFICATION_TAGS = {
     "[source-verifiable]",
@@ -219,6 +224,27 @@ def main():
             errors.append(f"{prefix}: [exam-ready-draft] cannot be sourceVerified true")
         if "[source-verified]" in review_tags and status != "verified":
             errors.append(f"{prefix}: [source-verified] tag requires verified status")
+        if "[source-backed-draft]" in review_tags:
+            if status != "draft":
+                errors.append(f"{prefix}: [source-backed-draft] tag is only valid for draft entries")
+            if entry.get("sourceVerified") is True:
+                errors.append(f"{prefix}: [source-backed-draft] cannot be sourceVerified true")
+            answer_sources = [
+                source
+                for source in entry.get("sourceRefs", [])
+                if not (
+                    source.get("title") == GUIDEBOOK_TITLE
+                    and source.get("url") == GUIDEBOOK_URL
+                )
+            ]
+            if not answer_sources:
+                errors.append(f"{prefix}: [source-backed-draft] requires sourceRef beyond guidebook")
+        if "[verified-maintained]" in review_tags and status != "verified":
+            errors.append(f"{prefix}: [verified-maintained] tag requires verified status")
+        if "[verified-candidate]" in review_tags and status == "verified":
+            errors.append(f"{prefix}: [verified-candidate] is for non-verified entries only")
+        if "[verified-rejected]" in review_tags and status == "verified":
+            errors.append(f"{prefix}: [verified-rejected] is for non-verified entries only")
         if "[year-standard-conflict]" in review_tags and status == "verified":
             errors.append(f"{prefix}: verified entry cannot retain [year-standard-conflict]")
 
@@ -245,6 +271,11 @@ def main():
         for entry in answer_bank
         if any("[source-verifiable]" in note for note in entry.get("reviewNotes") or [])
     )
+    source_backed_draft_count = sum(
+        1
+        for entry in answer_bank
+        if any("[source-backed-draft]" in note for note in entry.get("reviewNotes") or [])
+    )
     if source_verifiable_count != EXPECTED_SOURCE_VERIFIABLE_COUNT:
         fail(
             [
@@ -259,6 +290,7 @@ def main():
     print(f"exam_ready_draft={exam_ready_count}")
     print(f"guidebook_source_refs={guidebook_ref_count}")
     print(f"source_verifiable={source_verifiable_count}")
+    print(f"source_backed_draft={source_backed_draft_count}")
 
 
 if __name__ == "__main__":

@@ -1841,5 +1841,123 @@
       "practical-050": "guidebook p.32 supports corrected table-order proposal"
     },
     "note": "Pass 7 found useful Tier S scope and rubric materials, but no new direct answer-source beyond the already used 2025 scoring-rubric examples. Added source-hunt reviewNotes to the 27 source-verifiable entries and kept verified promotion conservative."
+  },
+  "answerBankPass8TargetedSourceCapture": {
+    "checkedAt": "2026-06-22",
+    "baseCommit": "c97252e Hunt tier S sources for answer verification",
+    "processedQuestionIds": [
+      "practical-038",
+      "practical-039",
+      "practical-040",
+      "practical-041",
+      "practical-042",
+      "practical-046",
+      "practical-047",
+      "practical-048",
+      "practical-052",
+      "practical-053",
+      "practical-054",
+      "practical-055",
+      "practical-056",
+      "practical-057",
+      "practical-059",
+      "practical-060",
+      "practical-061",
+      "practical-062",
+      "practical-063",
+      "practical-064",
+      "practical-097",
+      "practical-098",
+      "practical-102",
+      "practical-104",
+      "practical-105",
+      "practical-155",
+      "practical-188"
+    ],
+    "sourceBackedDraftQuestionIds": [
+      "practical-038",
+      "practical-039",
+      "practical-040",
+      "practical-041",
+      "practical-042",
+      "practical-046",
+      "practical-048",
+      "practical-052",
+      "practical-053",
+      "practical-054",
+      "practical-055",
+      "practical-056",
+      "practical-057",
+      "practical-059",
+      "practical-060",
+      "practical-061",
+      "practical-062",
+      "practical-063",
+      "practical-064",
+      "practical-097",
+      "practical-098",
+      "practical-102",
+      "practical-104",
+      "practical-105"
+    ],
+    "verifiedMaintained": [
+      "practical-047",
+      "practical-155",
+      "practical-188"
+    ],
+    "newVerifiedPromotions": [],
+    "verifiedDowngrades": [],
+    "capturedSourceFamilies": [
+      {
+        "title": "국민체력100 체력측정 항목",
+        "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+        "section": "체력측정 > 국민체력인증 > 측정항목",
+        "supports": "age-group measurement items, body composition, health fitness, motor fitness, and adult field-test items"
+      },
+      {
+        "title": "국민체력100 인증기준",
+        "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
+        "section": "체력측정 > 국민체력인증 > 인증기준",
+        "supports": "sex/age-based health and motor fitness criteria"
+      },
+      {
+        "title": "PAPS official and education sources",
+        "section": "PAPS 안내/도움자료/이해 자료",
+        "supports": "PAPS purpose, health-fitness-centered evaluation, management/prescription, and evaluation areas"
+      },
+      {
+        "title": "ACSM Guidelines for Exercise Testing and Prescription",
+        "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+        "section": "ACSM Guidelines landing page",
+        "supports": "textbook/source-family level support for exercise testing and prescription"
+      },
+      {
+        "title": "CDC Adult Physical Activity Guidelines",
+        "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+        "section": "Adult Activity: An Overview",
+        "supports": "adult aerobic activity and muscle-strengthening frequency at public-health level"
+      },
+      {
+        "title": "ACSM Resistance Training Guidelines Update 2026",
+        "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+        "section": "ACSM 2026 resistance training guideline summary",
+        "supports": "current strength, hypertrophy, and power concepts as a modern reference"
+      },
+      {
+        "title": "2025년도 건강운동관리사 실기구술 채점표",
+        "url": "internal://health-exercise-practical/2025-scoring-rubric",
+        "section": "채점표 예시",
+        "supports": "direct scoring examples for practical-155 and practical-188"
+      }
+    ],
+    "statusSummary": {
+      "verified": 3,
+      "draft": 196,
+      "needs_review": 0,
+      "sourceVerifiedTrue": 3,
+      "sourceVerifiedFalse": 196,
+      "sourceBackedDraft": 24
+    },
+    "note": "Pass 8 captured URL-level source metadata and added [source-backed-draft] or [verified-maintained] reviewNotes. No new sourceVerified promotions were made because page-level textbook/rubric evidence is still missing for the remaining draft entries."
   }
 }
