@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02F7BB2F41CB4A5B9805A901 /* AnswerBankRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C847F6491474D31A8B11020 /* AnswerBankRepository.swift */; };
 		04C2C828DFC61481C0E15895 /* QuestionTypeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C736F477480C56F960D9532 /* QuestionTypeBadge.swift */; };
 		04C9E7BA1B3B5C80E718C15A /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B974F0D7AAFB12DED2073B /* PracticeViewModel.swift */; };
 		09A7C669BB9CA584A2A24AC7 /* KeyboardShortcutPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB263BB72C36B997538B9B13 /* KeyboardShortcutPlan.swift */; };
+		0D8F9516E5E845DFBC07C9D6 /* practical-answer-bank.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D6D095BC9B44E28A22DF9C1 /* practical-answer-bank.json */; };
 		15C9D766C8E45086EDB6B485 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F2C73CDF38E3EA587123D3 /* Foundation.framework */; };
 		1B93ADB3F5F66B748A9CDD69 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B279C598237F4F58850CA8 /* TodayView.swift */; };
 		26B78920AFB9A5A7047EA07F /* PencilNoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AE96F400CDB3133012C3DC /* PencilNoteStore.swift */; };
 		26E047799A2936C8EC5F0175 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5C16613E13D5D64F6C0F8 /* ContentView.swift */; };
 		2704180B339A0867A29400EC /* StatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E280A081D804286E50736970 /* StatsViewModel.swift */; };
+		33632A69A87A4DCDB62B5293 /* practical-answer-bank.json in Resources */ = {isa = PBXBuildFile; fileRef = B75E399752604F3CB6C9E7E1 /* practical-answer-bank.json */; };
 		53D2009610B533035EC4FCEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8F2C73CDF38E3EA587123D3 /* Foundation.framework */; };
 		577DD5C7A55C3A636E09F2BB /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833CAE38BBE96D0D1407BD57 /* PracticeView.swift */; };
+		64C1E963CB3343A987A67A0B /* AnswerBankModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A8CC39811D4785A06922B9 /* AnswerBankModels.swift */; };
 		91A89988C809FB1912426741 /* QuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EBD6E307651483D8A200AB /* QuestionRepository.swift */; };
 		A6F303A9051A9145AB140792 /* StudyRecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D3E337ED69889F468E48A4F /* StudyRecordStore.swift */; };
 		B3B017A6131374C250B0D260 /* ReviewNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA107B5EAA0AA126809EE65 /* ReviewNoteView.swift */; };
@@ -45,6 +49,7 @@
 		13373B3354249E98A7CC55E5 /* DailyQuizSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DailyQuizSelector.swift; path = So02HousePractical/Repositories/DailyQuizSelector.swift; sourceTree = SOURCE_ROOT; };
 		1C736F477480C56F960D9532 /* QuestionTypeBadge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuestionTypeBadge.swift; path = So02HousePractical/Components/QuestionTypeBadge.swift; sourceTree = SOURCE_ROOT; };
 		1D3E337ED69889F468E48A4F /* StudyRecordStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StudyRecordStore.swift; path = So02HousePractical/Stores/StudyRecordStore.swift; sourceTree = SOURCE_ROOT; };
+		2C847F6491474D31A8B11020 /* AnswerBankRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnswerBankRepository.swift; path = So02HousePractical/Repositories/AnswerBankRepository.swift; sourceTree = SOURCE_ROOT; };
 		2CA107B5EAA0AA126809EE65 /* ReviewNoteView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReviewNoteView.swift; path = So02HousePractical/Views/ReviewNoteView.swift; sourceTree = SOURCE_ROOT; };
 		3DABC87F6CBF964C38B134F4 /* QuestionModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuestionModels.swift; path = So02HousePractical/Models/QuestionModels.swift; sourceTree = SOURCE_ROOT; };
 		492C1D82B58A8E3B064688C4 /* practical-questions.json */ = {isa = PBXFileReference; includeInIndex = 1; name = "practical-questions.json"; path = "So02HousePractical/Resources/practical-questions.json"; sourceTree = SOURCE_ROOT; };
@@ -53,11 +58,14 @@
 		51EE956494B54915F919F2BB /* TodayViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TodayViewModel.swift; path = So02HousePractical/ViewModels/TodayViewModel.swift; sourceTree = SOURCE_ROOT; };
 		52B279C598237F4F58850CA8 /* TodayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TodayView.swift; path = So02HousePractical/Views/TodayView.swift; sourceTree = SOURCE_ROOT; };
 		833CAE38BBE96D0D1407BD57 /* PracticeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PracticeView.swift; path = So02HousePractical/Views/PracticeView.swift; sourceTree = SOURCE_ROOT; };
+		8D6D095BC9B44E28A22DF9C1 /* practical-answer-bank.json */ = {isa = PBXFileReference; includeInIndex = 1; name = "practical-answer-bank.json"; path = "So02HousePractical/Resources/practical-answer-bank.json"; sourceTree = SOURCE_ROOT; };
 		A3B974F0D7AAFB12DED2073B /* PracticeViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PracticeViewModel.swift; path = So02HousePractical/ViewModels/PracticeViewModel.swift; sourceTree = SOURCE_ROOT; };
+		B75E399752604F3CB6C9E7E1 /* practical-answer-bank.json */ = {isa = PBXFileReference; includeInIndex = 1; name = "practical-answer-bank.json"; path = "So02HousePractical/Resources/practical-answer-bank.json"; sourceTree = SOURCE_ROOT; };
 		C0EBD6E307651483D8A200AB /* QuestionRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuestionRepository.swift; path = So02HousePractical/Repositories/QuestionRepository.swift; sourceTree = SOURCE_ROOT; };
 		C81EA67E94962A2E9EBAA705 /* practical-questions.json */ = {isa = PBXFileReference; includeInIndex = 1; name = "practical-questions.json"; path = "So02HousePractical/Resources/practical-questions.json"; sourceTree = SOURCE_ROOT; };
 		C8F2C73CDF38E3EA587123D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CFF628330A03AF2152CAE0C2 /* So02HousePracticalApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = So02HousePracticalApp.swift; path = So02HousePractical/App/So02HousePracticalApp.swift; sourceTree = SOURCE_ROOT; };
+		D3A8CC39811D4785A06922B9 /* AnswerBankModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnswerBankModels.swift; path = So02HousePractical/Models/AnswerBankModels.swift; sourceTree = SOURCE_ROOT; };
 		D93CC911543AF3A335CA745C /* QuestionDataContractTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuestionDataContractTests.swift; path = So02HousePracticalTests/QuestionDataContractTests.swift; sourceTree = SOURCE_ROOT; };
 		E280A081D804286E50736970 /* StatsViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatsViewModel.swift; path = So02HousePractical/ViewModels/StatsViewModel.swift; sourceTree = SOURCE_ROOT; };
 		E4739C859D4562799C78D129 /* So02HousePractical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = So02HousePractical.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +106,7 @@
 			children = (
 				D93CC911543AF3A335CA745C /* QuestionDataContractTests.swift */,
 				492C1D82B58A8E3B064688C4 /* practical-questions.json */,
+				B75E399752604F3CB6C9E7E1 /* practical-answer-bank.json */,
 			);
 			name = So02HousePracticalTests;
 			path = So02HousePracticalTests;
@@ -116,6 +125,7 @@
 				8E8662A6D648E0FC6076A574 /* ViewModels */,
 				D15A683E9E9736697ADE2A9F /* Views */,
 				C81EA67E94962A2E9EBAA705 /* practical-questions.json */,
+				8D6D095BC9B44E28A22DF9C1 /* practical-answer-bank.json */,
 			);
 			name = So02HousePractical;
 			path = So02HousePractical;
@@ -182,6 +192,7 @@
 		C22357C7CB0E287B90C9D5DB /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				2C847F6491474D31A8B11020 /* AnswerBankRepository.swift */,
 				13373B3354249E98A7CC55E5 /* DailyQuizSelector.swift */,
 				C0EBD6E307651483D8A200AB /* QuestionRepository.swift */,
 			);
@@ -230,6 +241,7 @@
 		F58FA6C4A5C25F7A4AFE0F74 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D3A8CC39811D4785A06922B9 /* AnswerBankModels.swift */,
 				3DABC87F6CBF964C38B134F4 /* QuestionModels.swift */,
 			);
 			name = Models;
@@ -309,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D8F9516E5E845DFBC07C9D6 /* practical-answer-bank.json in Resources */,
 				FA41D802E634B136708F6103 /* practical-questions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33632A69A87A4DCDB62B5293 /* practical-answer-bank.json in Resources */,
 				F598314CDA1AB0A88DB5F37D /* practical-questions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,8 +345,10 @@
 				CFAEBD019035022EB167E434 /* So02HousePracticalApp.swift in Sources */,
 				04C2C828DFC61481C0E15895 /* QuestionTypeBadge.swift in Sources */,
 				09A7C669BB9CA584A2A24AC7 /* KeyboardShortcutPlan.swift in Sources */,
+				64C1E963CB3343A987A67A0B /* AnswerBankModels.swift in Sources */,
 				E92EE7A4F70E37BD556CDE0A /* QuestionModels.swift in Sources */,
 				26B78920AFB9A5A7047EA07F /* PencilNoteStore.swift in Sources */,
+				02F7BB2F41CB4A5B9805A901 /* AnswerBankRepository.swift in Sources */,
 				B981F9724EE2009638140F77 /* DailyQuizSelector.swift in Sources */,
 				91A89988C809FB1912426741 /* QuestionRepository.swift in Sources */,
 				A6F303A9051A9145AB140792 /* StudyRecordStore.swift in Sources */,

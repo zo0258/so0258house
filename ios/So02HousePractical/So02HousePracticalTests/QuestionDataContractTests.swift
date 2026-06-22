@@ -11,6 +11,19 @@ final class QuestionDataContractTests: XCTestCase {
         XCTAssertEqual(questions.filter { $0.questionType == .oral }.count, 100)
     }
 
+    func testAnswerBankLoadsAndMatchesAllQuestionIds() throws {
+        let questionRepository = QuestionRepository(bundle: Bundle(for: Self.self))
+        let answerRepository = AnswerBankRepository(bundle: Bundle(for: Self.self))
+
+        let questions = try questionRepository.loadQuestions()
+        let answerEntries = try answerRepository.loadEntries()
+
+        XCTAssertEqual(answerEntries.count, 199)
+        XCTAssertEqual(Set(answerEntries.map(\.questionId)), Set(questions.map(\.id)))
+        XCTAssertTrue(answerEntries.allSatisfy { AnswerStatus.allCases.contains($0.answerStatus) })
+        XCTAssertTrue(answerEntries.allSatisfy { !$0.sourceRefs.contains { $0.title.isEmpty || $0.url.isEmpty || $0.checkedAt.isEmpty } })
+    }
+
     func testDailyQuizSelectsTwoPracticalAndTwoOralQuestions() throws {
         let repository = QuestionRepository(bundle: Bundle(for: Self.self))
         let questions = try repository.loadQuestions()
