@@ -34,7 +34,17 @@ iOS MVP는 199개 문제 로딩, 오늘 4문제 선택, 기록 저장까지 동�
 
 ## 출처 검증 기준
 
-출처 우선순위는 공식 시험 시행기관/자격 자료, ACSM, NSCA, AHA/CDC/WHO, 국내 대학·학회·공공기관, 전문서적·교육자료 순서다. 일반 블로그/카페는 보조 참고로만 쓰고 `sourceVerified: true`로 두지 않는다.
+이 answer bank의 목적은 최신 운동생리학 지식 데이터베이스가 아니라 건강운동관리사 실기·구술 합격 데이터베이스다. 따라서 답안 작성과 검증에서는 `시험 적합성 > 최신 학술성`을 우선한다. 최신 기준과 기출 당시 기준이 충돌하면 최신 기준을 확정 답안으로 바로 채택하지 않고, `reviewNotes`에 `기출 당시 기준 확인 필요`를 남긴다.
+
+출처 우선순위는 다음 순서다.
+
+1. Tier S: 건강운동관리사 공식 교재, 기출문제 해설, 실기·구술 강의자료, 수험서, 교육과정 자료
+2. Tier A: 국민체력100, PAPS, 대한체육회, 대한운동사협회, 국내 대학 운동처방 교재, 국내 학회 자료
+3. Tier B: ACSM, NSCA, AHA, CDC, WHO
+4. Tier C: 논문, PubMed, Physiopedia, Physiotutors
+5. Tier D: 블로그, 카페, 커뮤니티
+
+Tier D는 참고만 허용하고 `sourceVerified: true` 근거로 사용하지 않는다.
 
 의학·운동처방 수치가 포함된 문제는 `checkedAt`을 남긴다. ACSM 구버전 기준과 최신 기준이 충돌하면 `reviewNotes`에 `기출 당시 기준 확인 필요`를 남긴다.
 
@@ -42,9 +52,15 @@ iOS MVP는 199개 문제 로딩, 오늘 4문제 선택, 기록 저장까지 동�
 
 1. 모든 `questionId`에 answer bank 엔트리를 먼저 만든다.
 2. 출처가 확인되지 않은 항목은 `answerStatus: needs_review`, `sourceVerified: false`로 둔다.
-3. 우선순위 문제군부터 `modelAnswer`, `performanceSteps`, `oralAnswerStructure`, `keyPoints`, `commonMistakes`를 채운다.
-4. 검증 완료 항목만 `answerStatus: verified`로 승격한다.
-5. 앱은 answer bank가 없어도 문제 로딩이 되도록 하고, answer bank가 있으면 보조 답안으로 붙인다.
+3. Pass 1에서 우선순위 문제군부터 `modelAnswer`, `performanceSteps`, `oralAnswerStructure`, `keyPoints`, `commonMistakes`, `memoryTip`을 채운다.
+4. Pass 2에서 Tier S/A 출처부터 대조한다.
+5. Pass 3에서 기출 의도와 채점자 기대 답안에 맞게 수정한다.
+6. Pass 4에서 시험장에서 떠올릴 수 있는 암기팁을 보강한다.
+7. Pass 5에서 시험 적합성을 검토한다.
+8. Pass 6에서 검증 완료 항목만 `answerStatus: verified`로 승격한다.
+9. 앱은 answer bank가 없어도 문제 로딩이 되도록 하고, answer bank가 있으면 보조 답안으로 붙인다.
+
+`verified` 승격 조건은 `modelAnswer`, 3개 이상의 `keyPoints`, `commonMistakes`, `memoryTip`, `sourceRefs`, `sourceVerified: true`, 정리된 `reviewNotes`, `needsReview: false`다. 기준 충돌이나 수동 검수 메모가 남아 있으면 `verified`로 올리지 않는다.
 
 ## 1차 우선순위 문제군
 

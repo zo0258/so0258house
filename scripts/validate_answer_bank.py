@@ -78,6 +78,28 @@ def main():
             errors.append(f"{prefix}: sourceVerified true requires answerStatus verified")
         if status == "verified" and entry.get("sourceVerified") is not True:
             errors.append(f"{prefix}: verified answer requires sourceVerified true")
+        if status == "verified" and not entry.get("modelAnswer"):
+            errors.append(f"{prefix}: verified answer requires modelAnswer")
+        if status == "verified" and len(entry.get("keyPoints") or []) < 3:
+            errors.append(f"{prefix}: verified answer requires at least 3 keyPoints")
+        if status == "verified" and not entry.get("commonMistakes"):
+            errors.append(f"{prefix}: verified answer requires commonMistakes")
+        if status == "verified" and not entry.get("memoryTip"):
+            errors.append(f"{prefix}: verified answer requires memoryTip")
+        if status == "verified" and not entry.get("sourceRefs"):
+            errors.append(f"{prefix}: verified answer requires sourceRefs")
+        if status == "verified":
+            review_notes = entry.get("reviewNotes") or []
+            if not review_notes:
+                errors.append(f"{prefix}: verified answer requires reviewNotes")
+            pending_markers = ("기출 당시 기준 확인 필요", "확인 필요", "수동 검수", "pending")
+            pending_notes = [
+                note
+                for note in review_notes
+                if any(marker in note for marker in pending_markers)
+            ]
+            if pending_notes:
+                errors.append(f"{prefix}: verified answer has unresolved reviewNotes")
         if entry.get("sourceVerified") is True and not entry.get("sourceRefs"):
             errors.append(f"{prefix}: sourceVerified true requires at least one sourceRef")
         if status == "verified" and entry.get("needsReview") is True:
