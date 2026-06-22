@@ -13,6 +13,7 @@ enum AnswerSourceType: String, Codable {
     case academic
     case textbook
     case trustedWeb = "trusted_web"
+    case tierSInternal = "tier_s_internal"
     case `internal`
 }
 
@@ -21,6 +22,7 @@ struct AnswerSourceRef: Codable, Hashable {
     let url: String
     let type: AnswerSourceType
     let checkedAt: String
+    let page: Int?
 }
 
 struct AnswerBankEntry: Identifiable, Codable, Hashable {

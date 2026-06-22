@@ -17,13 +17,21 @@ IOS_ANSWER_BANK_PATH = (
     / "practical-answer-bank.json"
 )
 ALLOWED_STATUSES = {"draft", "verified", "needs_review"}
-ALLOWED_SOURCE_TYPES = {"official", "academic", "textbook", "trusted_web", "internal"}
+ALLOWED_SOURCE_TYPES = {
+    "official",
+    "academic",
+    "textbook",
+    "trusted_web",
+    "internal",
+    "tier_s_internal",
+}
 ALLOWED_REVIEW_TAGS = {
     "[exam-ready-draft]",
     "[source-needed]",
     "[source-verified]",
     "[year-standard-conflict]",
     "[needs-tier-s-check]",
+    "[needs-answer-source-check]",
 }
 
 
@@ -104,6 +112,8 @@ def main():
                     errors.append(f"{prefix}: sourceRefs[{source_index}] missing {field}")
             if source.get("type") not in ALLOWED_SOURCE_TYPES:
                 errors.append(f"{prefix}: invalid source type {source.get('type')!r}")
+            if "page" in source and not isinstance(source.get("page"), int):
+                errors.append(f"{prefix}: sourceRefs[{source_index}] page must be an integer when present")
 
         if entry.get("sourceVerified") is True and status != "verified":
             errors.append(f"{prefix}: sourceVerified true requires answerStatus verified")
@@ -134,7 +144,7 @@ def main():
         if entry.get("sourceVerified") is True and not entry.get("sourceRefs"):
             errors.append(f"{prefix}: sourceVerified true requires at least one sourceRef")
         if entry.get("sourceVerified") is True:
-            strong_source_types = {"official", "textbook", "internal"}
+            strong_source_types = {"official", "textbook", "internal", "tier_s_internal"}
             if not any(source.get("type") in strong_source_types for source in entry.get("sourceRefs", [])):
                 errors.append(f"{prefix}: sourceVerified true requires official, textbook, or internal sourceRef")
             review_notes = entry.get("reviewNotes") or []
