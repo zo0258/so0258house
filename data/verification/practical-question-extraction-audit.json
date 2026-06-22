@@ -1959,5 +1959,52 @@
       "sourceBackedDraft": 24
     },
     "note": "Pass 8 captured URL-level source metadata and added [source-backed-draft] or [verified-maintained] reviewNotes. No new sourceVerified promotions were made because page-level textbook/rubric evidence is still missing for the remaining draft entries."
+  },
+  "answerBankPass9PageLevelSource": {
+    "checkedAt": "2026-06-22",
+    "baseCommit": "97c43f7 Capture targeted sources for answer bank",
+    "sourceCaptureArchive": "data/verification/source-capture/pass9-source-map.json",
+    "processedSourceBackedDraftCount": 24,
+    "processedVerifiedRecheckCount": 3,
+    "pageLevelSourceCapturedForSourceBackedDrafts": 0,
+    "sectionLevelSourceCapturedForSourceBackedDrafts": 7,
+    "urlOnlyMaintained": 17,
+    "partialMatch": 24,
+    "newVerifiedPromotions": [],
+    "verifiedMaintained": [
+      "practical-047",
+      "practical-155",
+      "practical-188"
+    ],
+    "verifiedDowngrades": [],
+    "sectionLevelSourceCapturedQuestionIds": [
+      "practical-038",
+      "practical-039",
+      "practical-040",
+      "practical-041",
+      "practical-042",
+      "practical-046",
+      "practical-048"
+    ],
+    "urlOnlyQuestionIds": [
+      "practical-052",
+      "practical-053",
+      "practical-054",
+      "practical-055",
+      "practical-056",
+      "practical-057",
+      "practical-059",
+      "practical-060",
+      "practical-061",
+      "practical-062",
+      "practical-063",
+      "practical-064",
+      "practical-097",
+      "practical-098",
+      "practical-102",
+      "practical-104",
+      "practical-105"
+    ],
+    "note": "Pass 9 confirms that the remaining source-backed drafts still lack true page-level answer evidence. Health/fitness measurement entries have section-level partial support; exercise testing and resistance training remain URL-only partial matches."
   }
 }

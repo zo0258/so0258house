@@ -1,0 +1,879 @@
+{
+  "checkedAt": "2026-06-22",
+  "pass": 9,
+  "baseCommit": "97c43f7 Capture targeted sources for answer bank",
+  "summary": {
+    "processed": 27,
+    "sourceBackedDraftProcessed": 24,
+    "pageLevelSourceCaptured": 0,
+    "sectionLevelSourceCaptured": 7,
+    "urlOnly": 17,
+    "partialMatch": 24,
+    "verifiedMaintained": 3,
+    "newVerifiedPromotions": 0,
+    "verifiedDowngrades": 0
+  },
+  "entries": [
+    {
+      "questionId": "practical-038",
+      "question": "체성분측정검사 결과지를 보고 설명하시오.(2018)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "국민체력100 체력측정 항목",
+      "sourceType": "official",
+      "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+      "page": null,
+      "section": "체력측정 > 국민체력인증 > 측정항목",
+      "capturedEvidence": "공식 측정항목/인증기준 section은 확인했으나 BIA, BMI, 피부두겹, 성인 필드검사 답안 전체를 직접 채점하는 page-level 근거는 부족.",
+      "captureStatus": "section_level_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "국민체력100 체력측정 항목",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 측정항목",
+          "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
+        },
+        {
+          "title": "국민체력100 인증기준",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 인증기준",
+          "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-039",
+      "question": "체지방, 제지방에 대해서 설명하고 피부두겹검사의 장단점을 설명하시오.(2019)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "국민체력100 체력측정 항목",
+      "sourceType": "official",
+      "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+      "page": null,
+      "section": "체력측정 > 국민체력인증 > 측정항목",
+      "capturedEvidence": "공식 측정항목/인증기준 section은 확인했으나 BIA, BMI, 피부두겹, 성인 필드검사 답안 전체를 직접 채점하는 page-level 근거는 부족.",
+      "captureStatus": "section_level_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "국민체력100 체력측정 항목",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 측정항목",
+          "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
+        },
+        {
+          "title": "국민체력100 인증기준",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 인증기준",
+          "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-040",
+      "question": "순발력과 민첩성의 정의를 설명하고 해당하는 운동검사에 대해 설명하시오.(2020)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "국민체력100 체력측정 항목",
+      "sourceType": "official",
+      "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+      "page": null,
+      "section": "체력측정 > 국민체력인증 > 측정항목",
+      "capturedEvidence": "공식 측정항목/인증기준 section은 확인했으나 BIA, BMI, 피부두겹, 성인 필드검사 답안 전체를 직접 채점하는 page-level 근거는 부족.",
+      "captureStatus": "section_level_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "국민체력100 체력측정 항목",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 측정항목",
+          "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
+        },
+        {
+          "title": "국민체력100 인증기준",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 인증기준",
+          "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-041",
+      "question": "BIA 검사 시, 수분 관리에 대해 설명하시오.(2022)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "국민체력100 체력측정 항목",
+      "sourceType": "official",
+      "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+      "page": null,
+      "section": "체력측정 > 국민체력인증 > 측정항목",
+      "capturedEvidence": "공식 측정항목/인증기준 section은 확인했으나 BIA, BMI, 피부두겹, 성인 필드검사 답안 전체를 직접 채점하는 page-level 근거는 부족.",
+      "captureStatus": "section_level_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "국민체력100 체력측정 항목",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 측정항목",
+          "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
+        },
+        {
+          "title": "국민체력100 인증기준",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 인증기준",
+          "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-042",
+      "question": "BMI 특성의 장단점을 설명하시오.(2022)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "국민체력100 체력측정 항목",
+      "sourceType": "official",
+      "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+      "page": null,
+      "section": "체력측정 > 국민체력인증 > 측정항목",
+      "capturedEvidence": "공식 측정항목/인증기준 section은 확인했으나 BIA, BMI, 피부두겹, 성인 필드검사 답안 전체를 직접 채점하는 page-level 근거는 부족.",
+      "captureStatus": "section_level_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "국민체력100 체력측정 항목",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 측정항목",
+          "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
+        },
+        {
+          "title": "국민체력100 인증기준",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 인증기준",
+          "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-046",
+      "question": "생체전기저항법(BIA) 측정에서 오류 요인과 측정 전 주의사항을 각각 3가지를 설명하시오.(2025)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "학생건강체력평가제도(PAPS)의 이해",
+      "sourceType": "trusted_web",
+      "url": "https://www.kacep.or.kr/new/file/PAPS%20textbook.pdf",
+      "page": null,
+      "section": "PAPS 이해 자료",
+      "capturedEvidence": "공식 측정항목/인증기준 section은 확인했으나 BIA, BMI, 피부두겹, 성인 필드검사 답안 전체를 직접 채점하는 page-level 근거는 부족.",
+      "captureStatus": "section_level_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "학생건강체력평가제도(PAPS)의 이해",
+          "type": "trusted_web",
+          "url": "https://www.kacep.or.kr/new/file/PAPS%20textbook.pdf",
+          "page": null,
+          "section": "PAPS 이해 자료",
+          "evidenceSummary": "PAPS 평가 영역과 제도 설명을 보강하는 교육자료 근거."
+        },
+        {
+          "title": "ACSM's Guidelines for Exercise Testing and Prescription",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+          "page": null,
+          "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+          "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-047",
+      "question": "학생건강체력평가 PAPS 특징과 평가 종목을 각각 3가지를 설명하시오.(2025)",
+      "answerStatus": "verified",
+      "sourceVerified": true,
+      "sourceTitle": "경기도교육청 - 학생건강체력평가[PAPS] 안내",
+      "sourceType": "official",
+      "url": "https://www.goe.go.kr/resource/goe/na/bbs_2455/2025/06/373f4ddb-967d-40fb-9cc4-3bee46d99a24.pdf",
+      "page": null,
+      "section": "학생건강체력평가 PAPS 안내",
+      "capturedEvidence": "기존 verified 유지 조건 충족. practical-155/188은 2025 채점표 page 1, practical-047은 PAPS 공식/교육 section 근거.",
+      "captureStatus": "page_or_section_level",
+      "allNonGuidebookSources": [
+        {
+          "title": "경기도교육청 - 학생건강체력평가[PAPS] 안내",
+          "type": "official",
+          "url": "https://www.goe.go.kr/resource/goe/na/bbs_2455/2025/06/373f4ddb-967d-40fb-9cc4-3bee46d99a24.pdf",
+          "page": null,
+          "section": "학생건강체력평가 PAPS 안내",
+          "evidenceSummary": "PAPS 목적, 건강체력 중심 평가, 평가 영역과 학생 체력 관리 체계 확인 근거."
+        },
+        {
+          "title": "학교건강정보센터 - PAPS 도움자료",
+          "type": "official",
+          "url": "https://www.schoolhealth.kr/web/search/selectTotalSearchList.do?bbsId=&lstnum1=3544&pageIndex=1&pageUnit=10&searchWrd=paps&sortOrder=",
+          "page": null,
+          "section": "PAPS 도움자료 검색/안내",
+          "evidenceSummary": "PAPS 제도와 평가자료 접근 확인 근거. 개별 평가 항목은 자료 본문 대조가 더 강함."
+        },
+        {
+          "title": "학생건강체력평가제도(PAPS)의 이해",
+          "type": "trusted_web",
+          "url": "https://www.kacep.or.kr/new/file/PAPS%20textbook.pdf",
+          "page": null,
+          "section": "PAPS 이해 자료",
+          "evidenceSummary": "PAPS 평가 영역과 제도 설명을 보강하는 교육자료 근거."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-048",
+      "question": "성인기 필드검사 측정 항목과 방법 3가지씩 설명하시오.(2025)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "국민체력100 체력측정 항목",
+      "sourceType": "official",
+      "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+      "page": null,
+      "section": "체력측정 > 국민체력인증 > 측정항목",
+      "capturedEvidence": "공식 측정항목/인증기준 section은 확인했으나 BIA, BMI, 피부두겹, 성인 필드검사 답안 전체를 직접 채점하는 page-level 근거는 부족.",
+      "captureStatus": "section_level_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "국민체력100 체력측정 항목",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 측정항목",
+          "evidenceSummary": "연령대별 신체조성, 건강체력, 운동체력 측정 항목과 성인기 필드검사 항목 확인 근거."
+        },
+        {
+          "title": "국민체력100 인증기준",
+          "type": "official",
+          "url": "https://nfa.kspo.or.kr/reserve/0/selectMeasureGradeItemListByAgeSe.kspo",
+          "page": null,
+          "section": "체력측정 > 국민체력인증 > 인증기준",
+          "evidenceSummary": "성별/연령별 건강체력 및 운동체력 항목과 인증 기준 확인 근거. 수치 해석은 page-level 캡처가 더 필요함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-052",
+      "question": "체질량지수(BMI)가 35이고, 무릎 퇴행성관절염을 가진 환자에게 적합한 운동부하검사를 설명하시오.(2016)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Guidelines for Exercise Testing and Prescription",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+      "page": null,
+      "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 GXT 세부 변인, 금기사항, 종료 기준, Bruce/Ramp protocol의 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+          "page": null,
+          "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+          "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-053",
+      "question": "운동부하검사 중 (트레드밀, 자전거에르고미터, 암에르고미터, 스텝박스) 두 가지를 선택하고 장단점에 대해 구술하시오.(2017)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Guidelines for Exercise Testing and Prescription",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+      "page": null,
+      "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 GXT 세부 변인, 금기사항, 종료 기준, Bruce/Ramp protocol의 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+          "page": null,
+          "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+          "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-054",
+      "question": "점증운동부하검사(GXT)에서 측정 해야하는 변인에 대해 설명하시오.(2020)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Guidelines for Exercise Testing and Prescription",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+      "page": null,
+      "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 GXT 세부 변인, 금기사항, 종료 기준, Bruce/Ramp protocol의 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+          "page": null,
+          "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+          "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-055",
+      "question": "램프 프로토콜 검사 방법에 대해 설명하시오.(2021)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Physical Activity Guidelines",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+      "page": null,
+      "section": "ACSM physical activity resources",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 GXT 세부 변인, 금기사항, 종료 기준, Bruce/Ramp protocol의 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        },
+        {
+          "title": "CDC High Blood Pressure",
+          "type": "official",
+          "url": "https://www.cdc.gov/high-blood-pressure/",
+          "page": null,
+          "section": "CDC high blood pressure overview",
+          "evidenceSummary": "혈압 반응과 고혈압 일반 기준의 보조 근거. 램프 프로토콜 답안 단독 근거로는 부족함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-056",
+      "question": "심근산소요구량에 대해 설명하시오.(2021)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Guidelines for Exercise Testing and Prescription",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+      "page": null,
+      "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 GXT 세부 변인, 금기사항, 종료 기준, Bruce/Ramp protocol의 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+          "page": null,
+          "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+          "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-057",
+      "question": "최대 운동 상태에 이르는 시점에 대해 설명하시오.(2021)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Guidelines for Exercise Testing and Prescription",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+      "page": null,
+      "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 GXT 세부 변인, 금기사항, 종료 기준, Bruce/Ramp protocol의 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+          "page": null,
+          "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+          "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-059",
+      "question": "운동부하검사의 절대적 금기사항에 대해 구술하시오.(2023)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Guidelines for Exercise Testing and Prescription",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+      "page": null,
+      "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 GXT 세부 변인, 금기사항, 종료 기준, Bruce/Ramp protocol의 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+          "page": null,
+          "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+          "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-060",
+      "question": "브루스 프로토콜 4단계에 대해 설명하시오.(2023)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Guidelines for Exercise Testing and Prescription",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+      "page": null,
+      "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 GXT 세부 변인, 금기사항, 종료 기준, Bruce/Ramp protocol의 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+          "page": null,
+          "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+          "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-061",
+      "question": "운동부하검사 목적과 측정 변인을 각각 3가지씩 설명하시오.(2024)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Guidelines for Exercise Testing and Prescription",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+      "page": null,
+      "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 GXT 세부 변인, 금기사항, 종료 기준, Bruce/Ramp protocol의 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+          "page": null,
+          "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+          "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-062",
+      "question": "증상 제한 운동부하검사 상대적/절대적 종료 기준 3가지씩 설명하시오.(2024)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Guidelines for Exercise Testing and Prescription",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+      "page": null,
+      "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 GXT 세부 변인, 금기사항, 종료 기준, Bruce/Ramp protocol의 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+          "page": null,
+          "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+          "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-063",
+      "question": "점증 운동부하검사 시, 혈역학적 변인 3가지와 가스 변인에 대해 3가지씩 설명하시오.(2024)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Guidelines for Exercise Testing and Prescription",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+      "page": null,
+      "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 GXT 세부 변인, 금기사항, 종료 기준, Bruce/Ramp protocol의 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/books/guidelines-exercise-testing-prescription/",
+          "page": null,
+          "section": "ACSM Guidelines for Exercise Testing and Prescription landing page",
+          "evidenceSummary": "운동검사와 운동처방 절차의 교재성 기준 확인 근거. 실제 verified 승격에는 11판/12판 본문 page-level 대조가 필요함."
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-064",
+      "question": "체지방 감소를 위한 운동방법(유산소성 에너지시스템 강화)을 설명하시오.(2016)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Physical Activity Guidelines",
+      "sourceType": "official",
+      "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+      "page": null,
+      "section": "ACSM physical activity resources",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 건강운동관리사 시험형 강도, 반복, 세트, 휴식, 운동순서, 1RM 절차는 NSCA/NASM/ACSM 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/",
+          "page": null,
+          "section": "ACSM physical activity resources",
+          "evidenceSummary": "유산소 운동량, 운동강도, 운동처방 일반 원칙을 보강하는 공식 자료. 운동부하검사 세부 답안 단독 근거로는 부족함."
+        },
+        {
+          "title": "CDC Adult Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+          "page": null,
+          "section": "Adult Activity: An Overview",
+          "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-097",
+      "question": "근지구력 향상을 위한 저항성 트레이닝방법에 대해서 설명하시오.(2016)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Resistance Training Guidelines Update 2026",
+      "sourceType": "official",
+      "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+      "page": null,
+      "section": "ACSM 2026 resistance training guidelines summary",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 건강운동관리사 시험형 강도, 반복, 세트, 휴식, 운동순서, 1RM 절차는 NSCA/NASM/ACSM 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Resistance Training Guidelines Update 2026",
+          "type": "official",
+          "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+          "page": null,
+          "section": "ACSM 2026 resistance training guidelines summary",
+          "evidenceSummary": "근력, 근비대, 파워 관련 최신 저항성 트레이닝 원칙 보조 근거. 건강운동관리사 기출 당시 표현과 충돌 가능성 주의."
+        },
+        {
+          "title": "CDC Adult Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+          "page": null,
+          "section": "Adult Activity: An Overview",
+          "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-098",
+      "question": "근파워 향상에 대한 저항성 트레이닝 방법을 설명하시오.(2016)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Resistance Training Guidelines Update 2026",
+      "sourceType": "official",
+      "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+      "page": null,
+      "section": "ACSM 2026 resistance training guidelines summary",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 건강운동관리사 시험형 강도, 반복, 세트, 휴식, 운동순서, 1RM 절차는 NSCA/NASM/ACSM 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Resistance Training Guidelines Update 2026",
+          "type": "official",
+          "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+          "page": null,
+          "section": "ACSM 2026 resistance training guidelines summary",
+          "evidenceSummary": "근력, 근비대, 파워 관련 최신 저항성 트레이닝 원칙 보조 근거. 건강운동관리사 기출 당시 표현과 충돌 가능성 주의."
+        },
+        {
+          "title": "CDC Adult Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+          "page": null,
+          "section": "Adult Activity: An Overview",
+          "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-102",
+      "question": "1RM 검사절차를 설명하시오.(2020)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Resistance Training Guidelines Update 2026",
+      "sourceType": "official",
+      "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+      "page": null,
+      "section": "ACSM 2026 resistance training guidelines summary",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 건강운동관리사 시험형 강도, 반복, 세트, 휴식, 운동순서, 1RM 절차는 NSCA/NASM/ACSM 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Resistance Training Guidelines Update 2026",
+          "type": "official",
+          "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+          "page": null,
+          "section": "ACSM 2026 resistance training guidelines summary",
+          "evidenceSummary": "근력, 근비대, 파워 관련 최신 저항성 트레이닝 원칙 보조 근거. 건강운동관리사 기출 당시 표현과 충돌 가능성 주의."
+        },
+        {
+          "title": "CDC Adult Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+          "page": null,
+          "section": "Adult Activity: An Overview",
+          "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-104",
+      "question": "운동의 원리 3가지 설명 후, 근력 운동의 생리학적 이점 3가지를 설명하시오.(2024)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Resistance Training Guidelines Update 2026",
+      "sourceType": "official",
+      "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+      "page": null,
+      "section": "ACSM 2026 resistance training guidelines summary",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 건강운동관리사 시험형 강도, 반복, 세트, 휴식, 운동순서, 1RM 절차는 NSCA/NASM/ACSM 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Resistance Training Guidelines Update 2026",
+          "type": "official",
+          "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+          "page": null,
+          "section": "ACSM 2026 resistance training guidelines summary",
+          "evidenceSummary": "근력, 근비대, 파워 관련 최신 저항성 트레이닝 원칙 보조 근거. 건강운동관리사 기출 당시 표현과 충돌 가능성 주의."
+        },
+        {
+          "title": "CDC Adult Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+          "page": null,
+          "section": "Adult Activity: An Overview",
+          "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-105",
+      "question": "‘ACSM 기준’ 근력과 근지구력을 강화하기 위한 1RM 기준 강도, 반복 횟수, 쉬는 시간 등 비교하여 설명하시오.(2024)",
+      "answerStatus": "draft",
+      "sourceVerified": false,
+      "sourceTitle": "ACSM Resistance Training Guidelines Update 2026",
+      "sourceType": "official",
+      "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+      "page": null,
+      "section": "ACSM 2026 resistance training guidelines summary",
+      "capturedEvidence": "ACSM/CDC URL-level source family는 있으나 건강운동관리사 시험형 강도, 반복, 세트, 휴식, 운동순서, 1RM 절차는 NSCA/NASM/ACSM 교재 page-level 근거가 필요.",
+      "captureStatus": "url_only_partial",
+      "allNonGuidebookSources": [
+        {
+          "title": "ACSM Resistance Training Guidelines Update 2026",
+          "type": "official",
+          "url": "https://acsm.org/resistance-training-guidelines-update-2026/",
+          "page": null,
+          "section": "ACSM 2026 resistance training guidelines summary",
+          "evidenceSummary": "근력, 근비대, 파워 관련 최신 저항성 트레이닝 원칙 보조 근거. 건강운동관리사 기출 당시 표현과 충돌 가능성 주의."
+        },
+        {
+          "title": "CDC Adult Physical Activity Guidelines",
+          "type": "official",
+          "url": "https://www.cdc.gov/physical-activity-basics/guidelines/adults.html",
+          "page": null,
+          "section": "Adult Activity: An Overview",
+          "evidenceSummary": "성인 유산소 활동량과 주 2일 이상 근력운동 권고 확인 근거. 시험형 세트/반복/휴식 기준은 교재 대조 필요."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-155",
+      "question": "무릎 피봇시프트 테스트(Pivot Shift Test)를 실시하시오.(2023)",
+      "answerStatus": "verified",
+      "sourceVerified": true,
+      "sourceTitle": "Merck Manual Professional - Sports Injuries",
+      "sourceType": "trusted_web",
+      "url": "https://www.merckmanuals.com/professional/injuries-poisoning/sports-injury",
+      "page": null,
+      "section": "Sports Injuries overview",
+      "capturedEvidence": "기존 verified 유지 조건 충족. practical-155/188은 2025 채점표 page 1, practical-047은 PAPS 공식/교육 section 근거.",
+      "captureStatus": "page_or_section_level",
+      "allNonGuidebookSources": [
+        {
+          "title": "Merck Manual Professional - Sports Injuries",
+          "type": "trusted_web",
+          "url": "https://www.merckmanuals.com/professional/injuries-poisoning/sports-injury",
+          "page": null,
+          "section": "Sports Injuries overview",
+          "evidenceSummary": "운동손상/재활 문항의 보조 의학 참고자료. 실기 채점 기준은 2025 채점표가 우선."
+        },
+        {
+          "title": "NATA Position Statements",
+          "type": "trusted_web",
+          "url": "https://www.nata.org/practice-patient-care/health-issues",
+          "page": null,
+          "section": "NATA position statements index",
+          "evidenceSummary": "운동손상 평가·처치의 전문단체 보조 근거. 문항별 직접 채점 기준은 아님."
+        },
+        {
+          "title": "2025년도 건강운동관리사 실기구술 채점표",
+          "type": "tier_s_internal",
+          "url": "internal://health-exercise-practical/2025-scoring-rubric",
+          "page": 1,
+          "section": "채점표 예시",
+          "evidenceSummary": "Pivot Shift Test와 맨손 마사지 문항의 직접 채점 기준 예시. 해당 2개 verified 유지의 핵심 근거."
+        }
+      ]
+    },
+    {
+      "questionId": "practical-188",
+      "question": "맨손 마사지 기법 3개와 생리학적 효과에 대해 설명하시오.(2023)",
+      "answerStatus": "verified",
+      "sourceVerified": true,
+      "sourceTitle": "American Society of Hand Therapists - Joint Mobilization chapter sample",
+      "sourceType": "trusted_web",
+      "url": "https://asht.org/sites/asht/files/images/Test%20Prep_3rd%20Edition%20Content/CHT%20Test%20Prep%20Book%203rd%20Edition_chapter30.pdf",
+      "page": null,
+      "section": "therapy manual chapter sample",
+      "capturedEvidence": "기존 verified 유지 조건 충족. practical-155/188은 2025 채점표 page 1, practical-047은 PAPS 공식/교육 section 근거.",
+      "captureStatus": "page_or_section_level",
+      "allNonGuidebookSources": [
+        {
+          "title": "American Society of Hand Therapists - Joint Mobilization chapter sample",
+          "type": "trusted_web",
+          "url": "https://asht.org/sites/asht/files/images/Test%20Prep_3rd%20Edition%20Content/CHT%20Test%20Prep%20Book%203rd%20Edition_chapter30.pdf",
+          "page": null,
+          "section": "therapy manual chapter sample",
+          "evidenceSummary": "수기치료/재활 관련 보조 근거. 맨손 마사지 문항의 직접 채점 기준은 2025 채점표가 우선."
+        },
+        {
+          "title": "Merck Manual Professional - Sports Injuries",
+          "type": "trusted_web",
+          "url": "https://www.merckmanuals.com/professional/injuries-poisoning/sports-injury",
+          "page": null,
+          "section": "Sports Injuries overview",
+          "evidenceSummary": "운동손상/재활 문항의 보조 의학 참고자료. 실기 채점 기준은 2025 채점표가 우선."
+        },
+        {
+          "title": "2025년도 건강운동관리사 실기구술 채점표",
+          "type": "tier_s_internal",
+          "url": "internal://health-exercise-practical/2025-scoring-rubric",
+          "page": 1,
+          "section": "채점표 예시",
+          "evidenceSummary": "Pivot Shift Test와 맨손 마사지 문항의 직접 채점 기준 예시. 해당 2개 verified 유지의 핵심 근거."
+        }
+      ]
+    }
+  ]
+}

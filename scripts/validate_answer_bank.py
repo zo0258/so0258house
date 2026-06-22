@@ -43,6 +43,9 @@ ALLOWED_REVIEW_TAGS = {
     "[verified-maintained]",
     "[verified-candidate]",
     "[verified-rejected]",
+    "[page-level-source-captured]",
+    "[url-level-source-only]",
+    "[partial-source-match]",
 }
 PRIMARY_SOURCE_CLASSIFICATION_TAGS = {
     "[source-verifiable]",
@@ -245,6 +248,23 @@ def main():
             errors.append(f"{prefix}: [verified-candidate] is for non-verified entries only")
         if "[verified-rejected]" in review_tags and status == "verified":
             errors.append(f"{prefix}: [verified-rejected] is for non-verified entries only")
+        if "[page-level-source-captured]" in review_tags:
+            answer_sources = [
+                source
+                for source in entry.get("sourceRefs", [])
+                if not (
+                    source.get("title") == GUIDEBOOK_TITLE
+                    and source.get("url") == GUIDEBOOK_URL
+                )
+            ]
+            if not answer_sources:
+                errors.append(f"{prefix}: [page-level-source-captured] requires sourceRef beyond guidebook")
+            if not any(source.get("page") or source.get("section") for source in answer_sources):
+                errors.append(f"{prefix}: [page-level-source-captured] requires page or section on answer sourceRef")
+        if "[url-level-source-only]" in review_tags and status != "draft":
+            errors.append(f"{prefix}: [url-level-source-only] is only valid for draft entries")
+        if "[partial-source-match]" in review_tags and status != "draft":
+            errors.append(f"{prefix}: [partial-source-match] is only valid for draft entries")
         if "[year-standard-conflict]" in review_tags and status == "verified":
             errors.append(f"{prefix}: verified entry cannot retain [year-standard-conflict]")
 
@@ -276,6 +296,21 @@ def main():
         for entry in answer_bank
         if any("[source-backed-draft]" in note for note in entry.get("reviewNotes") or [])
     )
+    page_level_count = sum(
+        1
+        for entry in answer_bank
+        if any("[page-level-source-captured]" in note for note in entry.get("reviewNotes") or [])
+    )
+    url_only_count = sum(
+        1
+        for entry in answer_bank
+        if any("[url-level-source-only]" in note for note in entry.get("reviewNotes") or [])
+    )
+    partial_match_count = sum(
+        1
+        for entry in answer_bank
+        if any("[partial-source-match]" in note for note in entry.get("reviewNotes") or [])
+    )
     if source_verifiable_count != EXPECTED_SOURCE_VERIFIABLE_COUNT:
         fail(
             [
@@ -291,6 +326,9 @@ def main():
     print(f"guidebook_source_refs={guidebook_ref_count}")
     print(f"source_verifiable={source_verifiable_count}")
     print(f"source_backed_draft={source_backed_draft_count}")
+    print(f"page_level_source_captured={page_level_count}")
+    print(f"url_level_source_only={url_only_count}")
+    print(f"partial_source_match={partial_match_count}")
 
 
 if __name__ == "__main__":

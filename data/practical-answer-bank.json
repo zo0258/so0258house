@@ -2367,7 +2367,8 @@
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지.",
+      "[partial-source-match] Pass 9 판정: 국민체력100/PAPS 계열 공식 section 근거는 있으나 문항별 답안 요소 전체를 page-level로 직접 확인하지 못해 source-backed draft 유지."
     ]
   },
   {
@@ -2430,7 +2431,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지.",
+      "[partial-source-match] Pass 9 판정: 국민체력100/PAPS 계열 공식 section 근거는 있으나 문항별 답안 요소 전체를 page-level로 직접 확인하지 못해 source-backed draft 유지."
     ]
   },
   {
@@ -2493,7 +2495,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지.",
+      "[partial-source-match] Pass 9 판정: 국민체력100/PAPS 계열 공식 section 근거는 있으나 문항별 답안 요소 전체를 page-level로 직접 확인하지 못해 source-backed draft 유지."
     ]
   },
   {
@@ -2556,7 +2559,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지.",
+      "[partial-source-match] Pass 9 판정: 국민체력100/PAPS 계열 공식 section 근거는 있으나 문항별 답안 요소 전체를 page-level로 직접 확인하지 못해 source-backed draft 유지."
     ]
   },
   {
@@ -2619,7 +2623,8 @@
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지.",
+      "[partial-source-match] Pass 9 판정: 국민체력100/PAPS 계열 공식 section 근거는 있으나 문항별 답안 요소 전체를 page-level로 직접 확인하지 못해 source-backed draft 유지."
     ]
   },
   {
@@ -2852,7 +2857,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지.",
+      "[partial-source-match] Pass 9 판정: 국민체력100/PAPS 계열 공식 section 근거는 있으나 문항별 답안 요소 전체를 page-level로 직접 확인하지 못해 source-backed draft 유지."
     ]
   },
   {
@@ -2923,7 +2929,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항.",
       "Pass 7 Tier S hunt: PAPS 공식/교육기관 자료로 답안 근거가 유지되지만 새 Tier S 채점표 근거는 발견되지 않았다. verified 유지하되 PAPS 원문 page-level 근거 보강은 다음 Pass 후보.",
-      "[verified-maintained] Pass 8 판정: guidebook 외 answer-source를 재확인했고 미해결 충돌이 없어 verified 유지. 추가 승격보다 근거 품질 유지가 우선."
+      "[verified-maintained] Pass 8 판정: guidebook 외 answer-source를 재확인했고 미해결 충돌이 없어 verified 유지. 추가 승격보다 근거 품질 유지가 우선.",
+      "[page-level-source-captured] Pass 9 판정: guidebook 외 answer-source에 page 또는 section 근거가 있어 verified 유지 조건을 재확인했다."
     ]
   },
   {
@@ -2985,7 +2992,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지."
+      "[source-backed-draft] Pass 8 판정: 국민체력100/PAPS/ACSM 등 URL-level 근거는 확보했으나 수험서·채점표 수준의 page-level 답안 대조가 부족해 draft 유지.",
+      "[partial-source-match] Pass 9 판정: 국민체력100/PAPS 계열 공식 section 근거는 있으나 문항별 답안 요소 전체를 page-level로 직접 확인하지 못해 source-backed draft 유지."
     ]
   },
   {
@@ -3229,7 +3237,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 운동부하검사 세부 답안의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 운동부하검사 source-family는 맞지만 목적·변인·금기·종료기준·프로토콜 답안 요소 전체 직접 대조는 미완료."
     ]
   },
   {
@@ -3292,7 +3302,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 운동부하검사 세부 답안의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 운동부하검사 source-family는 맞지만 목적·변인·금기·종료기준·프로토콜 답안 요소 전체 직접 대조는 미완료."
     ]
   },
   {
@@ -3355,7 +3367,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 운동부하검사 세부 답안의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 운동부하검사 source-family는 맞지만 목적·변인·금기·종료기준·프로토콜 답안 요소 전체 직접 대조는 미완료."
     ]
   },
   {
@@ -3422,7 +3436,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 운동부하검사 세부 답안의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 운동부하검사 source-family는 맞지만 목적·변인·금기·종료기준·프로토콜 답안 요소 전체 직접 대조는 미완료."
     ]
   },
   {
@@ -3485,7 +3501,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 운동부하검사 세부 답안의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 운동부하검사 source-family는 맞지만 목적·변인·금기·종료기준·프로토콜 답안 요소 전체 직접 대조는 미완료."
     ]
   },
   {
@@ -3548,7 +3566,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 운동부하검사 세부 답안의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 운동부하검사 source-family는 맞지만 목적·변인·금기·종료기준·프로토콜 답안 요소 전체 직접 대조는 미완료."
     ]
   },
   {
@@ -3670,7 +3690,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 운동부하검사 세부 답안의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 운동부하검사 source-family는 맞지만 목적·변인·금기·종료기준·프로토콜 답안 요소 전체 직접 대조는 미완료."
     ]
   },
   {
@@ -3733,7 +3755,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 운동부하검사 세부 답안의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 운동부하검사 source-family는 맞지만 목적·변인·금기·종료기준·프로토콜 답안 요소 전체 직접 대조는 미완료."
     ]
   },
   {
@@ -3797,7 +3821,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 운동부하검사 세부 답안의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 운동부하검사 source-family는 맞지만 목적·변인·금기·종료기준·프로토콜 답안 요소 전체 직접 대조는 미완료."
     ]
   },
   {
@@ -3860,7 +3886,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 운동부하검사 세부 답안의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 운동부하검사 source-family는 맞지만 목적·변인·금기·종료기준·프로토콜 답안 요소 전체 직접 대조는 미완료."
     ]
   },
   {
@@ -3923,7 +3951,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC/guidebook 근거는 있으나 운동부하검사 세부 변인·금기·종료 기준은 교재 page-level 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 운동부하검사 세부 답안의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 운동부하검사 source-family는 맞지만 목적·변인·금기·종료기준·프로토콜 답안 요소 전체 직접 대조는 미완료."
     ]
   },
   {
@@ -3986,7 +4016,9 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.33에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 저항성 트레이닝 세부 기준의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 최신 저항성 트레이닝 원칙은 확인했으나 강도·반복·세트·휴식·운동순서의 시험형 기준 직접 대조는 미완료."
     ]
   },
   {
@@ -6023,7 +6055,9 @@
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 저항성 트레이닝 세부 기준의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 최신 저항성 트레이닝 원칙은 확인했으나 강도·반복·세트·휴식·운동순서의 시험형 기준 직접 대조는 미완료."
     ]
   },
   {
@@ -6087,7 +6121,9 @@
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 저항성 트레이닝 세부 기준의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 최신 저항성 트레이닝 원칙은 확인했으나 강도·반복·세트·휴식·운동순서의 시험형 기준 직접 대조는 미완료."
     ]
   },
   {
@@ -6325,7 +6361,9 @@
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 저항성 트레이닝 세부 기준의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 최신 저항성 트레이닝 원칙은 확인했으나 강도·반복·세트·휴식·운동순서의 시험형 기준 직접 대조는 미완료."
     ]
   },
   {
@@ -6447,7 +6485,9 @@
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 저항성 트레이닝 세부 기준의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 최신 저항성 트레이닝 원칙은 확인했으나 강도·반복·세트·휴식·운동순서의 시험형 기준 직접 대조는 미완료."
     ]
   },
   {
@@ -6511,7 +6551,9 @@
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
       "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
       "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지.",
-      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지."
+      "[source-backed-draft] Pass 8 판정: ACSM/CDC 근거는 있으나 저항성 트레이닝 강도·반복·휴식은 최신 기준과 시험 기준 차이가 있어 교재 대조 전까지 draft 유지.",
+      "[url-level-source-only] Pass 9 판정: ACSM/CDC URL-level 근거만 확보되어 저항성 트레이닝 세부 기준의 page-level 근거는 미확보.",
+      "[partial-source-match] Pass 9 판정: 최신 저항성 트레이닝 원칙은 확인했으나 강도·반복·세트·휴식·운동순서의 시험형 기준 직접 대조는 미완료."
     ]
   },
   {
@@ -9593,7 +9635,8 @@
       "[source-verified] Pass 6 품질 판정: answer-source 근거와 modelAnswer/keyPoints/commonMistakes/memoryTip을 대조해 verified 유지 가능.",
       "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항.",
       "Pass 7 Tier S hunt: 2025년도 건강운동관리사 실기구술 채점표가 직접 answer-source로 확인되어 verified 유지. 추가 승격보다 채점표/교재 근거 확장을 우선한다.",
-      "[verified-maintained] Pass 8 판정: guidebook 외 answer-source를 재확인했고 미해결 충돌이 없어 verified 유지. 추가 승격보다 근거 품질 유지가 우선."
+      "[verified-maintained] Pass 8 판정: guidebook 외 answer-source를 재확인했고 미해결 충돌이 없어 verified 유지. 추가 승격보다 근거 품질 유지가 우선.",
+      "[page-level-source-captured] Pass 9 판정: guidebook 외 answer-source에 page 또는 section 근거가 있어 verified 유지 조건을 재확인했다."
     ]
   },
   {
@@ -11560,7 +11603,8 @@
       "[source-verified] Pass 6 품질 판정: answer-source 근거와 modelAnswer/keyPoints/commonMistakes/memoryTip을 대조해 verified 유지 가능.",
       "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항.",
       "Pass 7 Tier S hunt: 2025년도 건강운동관리사 실기구술 채점표가 직접 answer-source로 확인되어 verified 유지. 추가 승격보다 채점표/교재 근거 확장을 우선한다.",
-      "[verified-maintained] Pass 8 판정: guidebook 외 answer-source를 재확인했고 미해결 충돌이 없어 verified 유지. 추가 승격보다 근거 품질 유지가 우선."
+      "[verified-maintained] Pass 8 판정: guidebook 외 answer-source를 재확인했고 미해결 충돌이 없어 verified 유지. 추가 승격보다 근거 품질 유지가 우선.",
+      "[page-level-source-captured] Pass 9 판정: guidebook 외 answer-source에 page 또는 section 근거가 있어 verified 유지 조건을 재확인했다."
     ]
   },
   {
