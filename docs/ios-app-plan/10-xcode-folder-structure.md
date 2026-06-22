@@ -46,10 +46,9 @@ So02HousePractical/
 
 ## ViewModels
 - `PracticeViewModel.swift`
-- 후속 생성 파일:
-  - `TodayViewModel.swift`
-  - `ReviewNoteViewModel.swift`
-  - `StatsViewModel.swift`
+- `TodayViewModel.swift`
+- `ReviewNoteViewModel.swift`
+- `StatsViewModel.swift`
 - 화면 상태와 사용자 action을 관리한다.
 
 ## Views
@@ -98,8 +97,12 @@ So02HousePractical/
 | DailyQuizSelector.swift | Repositories | 날짜 선택 로직 유지 |
 | StudyRecordStore.swift | Stores | UserDefaults key 유지 |
 | PracticeViewModel.swift | ViewModels | View 연결 시 확장 |
+| TodayViewModel.swift | ViewModels | TodayView 요약 |
+| ReviewNoteViewModel.swift | ViewModels | 복습노트 필터 |
+| StatsViewModel.swift | ViewModels | 과목별 집계 |
 | PencilNoteStore.swift | Pencil | PencilKit import 확인 |
 | KeyboardShortcutPlan.swift | Keyboard | 실제 Button에 적용 |
+| QuestionDataContractTests.swift | Tests | Xcode 테스트 타깃으로 이동 |
 
 ## practical-questions.json 배치 기준
 - `Resources/practical-questions.json`으로 추가한다.

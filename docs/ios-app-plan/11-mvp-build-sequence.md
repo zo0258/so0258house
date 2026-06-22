@@ -37,6 +37,7 @@ Mac에서는 화면부터 만들지 말고 데이터 로딩과 선택 로직을 
 완료 기준:
 - `QuestionRepository.loadQuestions()` 결과가 199개다.
 - 실기 99개, 구술 100개가 확인된다.
+- `QuestionDataContractTests.testQuestionJSONLoadsExpectedCounts()`가 통과한다.
 
 실패 시 확인:
 - Bundle URL이 nil인지 확인.
@@ -48,6 +49,7 @@ Mac에서는 화면부터 만들지 말고 데이터 로딩과 선택 로직을 
 - 오늘 날짜 기준 4문제가 선택된다.
 - 실기 2문제 + 구술 2문제다.
 - 같은 날짜에 다시 실행해도 같은 결과다.
+- `QuestionDataContractTests.testDailyQuizSelectsTwoPracticalAndTwoOralQuestions()`가 통과한다.
 
 실패 시 확인:
 - Date와 Calendar timezone 차이 확인.
@@ -59,6 +61,7 @@ Mac에서는 화면부터 만들지 말고 데이터 로딩과 선택 로직을 
 - 오늘 완료 0/4, 복습 0, 어려움 0이 표시된다.
 - 오늘 문제 요약이 표시된다.
 - PracticeView로 이동할 수 있다.
+- TodayViewModel의 `completedText`, `reviewCount`, `hardCount`가 기록과 일치한다.
 
 실패 시 확인:
 - ViewModel이 quiz와 records를 제대로 받는지 확인.
@@ -89,6 +92,7 @@ Mac에서는 화면부터 만들지 말고 데이터 로딩과 선택 로직을 
 - 전체 / 다시 보기 / 어려움 필터가 동작한다.
 - 다시 보기와 어려움 문제만 목록에 나온다.
 - 문제 선택 시 상세 화면으로 이동한다.
+- ReviewNoteViewModel의 `filteredItems`가 필터별로 일치한다.
 
 실패 시 확인:
 - StudyRecord.status와 필터 값 매핑 확인.

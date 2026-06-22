@@ -8,6 +8,7 @@
 - Xcode 프로젝트는 생성하지 않았다.
 - iPhone 14 Pro, iPad 11인치 시뮬레이터 실행은 하지 않았다.
 - Apple Pencil 기능은 실제 iPad에서만 최종 확인한다.
+- Windows에서는 `validate_ios_plan.py`로 문서, JSON 계약, Swift 초안의 정적 조건만 확인한다.
 
 ## Xcode에서 확인할 import
 - `Foundation`: 모델, JSON 디코딩, Date, UserDefaults, FileManager.
@@ -22,8 +23,12 @@
 | DailyQuizSelector.swift | Foundation | 날짜 계산과 4문제 선택 |
 | StudyRecordStore.swift | Foundation | UserDefaults 저장/복원 |
 | PracticeViewModel.swift | Foundation | ObservableObject 컴파일 |
+| TodayViewModel.swift | Foundation | 오늘 완료/복습/어려움 집계 |
+| ReviewNoteViewModel.swift | Foundation | 복습노트 필터 |
+| StatsViewModel.swift | Foundation | 과목별 집계 |
 | PencilNoteStore.swift | Foundation, PencilKit | PKDrawing 저장/복원 |
 | KeyboardShortcutPlan.swift | SwiftUI | keyboardShortcut 적용 |
+| QuestionDataContractTests.swift | XCTest | JSON 계약 테스트 |
 
 ## QuestionModels.swift
 - `Question`이 현재 JSON 필드를 모두 디코딩하는지 확인한다.
@@ -54,6 +59,21 @@
 - 상태 선택 전에는 다음 문제로 넘어가지 않는 흐름을 유지한다.
 - 마지막 문제 기록 후 완료 상태가 되는지 확인한다.
 
+## TodayViewModel.swift
+- 오늘 문제 4개 기준 완료 수가 계산되는지 확인한다.
+- 복습과 어려움 수가 StudyRecordStore 기록과 일치하는지 확인한다.
+- TodayView가 다시 나타날 때 `refresh()`가 호출되는지 확인한다.
+
+## ReviewNoteViewModel.swift
+- 전체 / 다시 보기 / 어려움 필터가 기록 상태와 맞는지 확인한다.
+- records에는 있으나 JSON에 없는 questionID를 무시하는지 확인한다.
+- 최신 기록이 위에 오도록 정렬되는지 확인한다.
+
+## StatsViewModel.swift
+- 과목별 totalCount가 JSON 원본 집계와 일치하는지 확인한다.
+- 완료 / 다시 보기 / 어려움 수가 중복 계산되지 않는지 확인한다.
+- 실기/구술 수가 `QuestionType` 변환 기준과 일치하는지 확인한다.
+
 ## PencilNoteStore.swift
 - `#if canImport(PencilKit)` 분기가 Xcode iOS 타깃에서 정상 컴파일되는지 확인한다.
 - `PKDrawing.dataRepresentation()` 저장이 되는지 확인한다.
@@ -65,6 +85,11 @@
 - Command + 1, Command + 2, Command + 3이 상태 기록과 연결되는지 확인한다.
 - Command + R, Command + T, Command + M은 실제 Navigation 구현 후 연결한다.
 - 시스템 단축키와 충돌하는 조합은 추가하지 않는다.
+
+## QuestionDataContractTests.swift
+- 테스트 타깃 이름의 `@testable import So02HousePractical`가 실제 프로젝트명과 맞는지 확인한다.
+- JSON 199문제 로딩 테스트가 통과하는지 확인한다.
+- 오늘 4문제 선택 테스트가 통과하는지 확인한다.
 
 ## iPhone 14 Pro 시뮬레이터
 - TodayView 첫 화면이 세로 기준으로 잘리는 곳 없이 표시되는지 확인한다.

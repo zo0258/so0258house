@@ -18,6 +18,7 @@ So02House/
     PracticeViewModel.swift
     TodayViewModel.swift
     ReviewNoteViewModel.swift
+    StatsViewModel.swift
   Views/
     TodayView.swift
     PracticeView.swift
@@ -56,6 +57,7 @@ So02House/
 - PracticeViewModel: 현재 문제 index, 기록 수, 상태 저장, 다음 문제 이동.
 - TodayViewModel: 오늘 문제와 오늘 기록 요약.
 - ReviewNoteViewModel: 복습 문제 필터와 목록.
+- StatsViewModel: 과목별 완료, 복습, 어려움 집계.
 
 ## TodayView
 - iPhone: 세로 카드형.
