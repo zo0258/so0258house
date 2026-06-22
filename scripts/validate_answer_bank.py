@@ -126,6 +126,13 @@ def main():
                 errors.append(f"{prefix}: verified answer has unresolved reviewNotes")
         if entry.get("sourceVerified") is True and not entry.get("sourceRefs"):
             errors.append(f"{prefix}: sourceVerified true requires at least one sourceRef")
+        if entry.get("sourceVerified") is True:
+            strong_source_types = {"official", "textbook", "internal"}
+            if not any(source.get("type") in strong_source_types for source in entry.get("sourceRefs", [])):
+                errors.append(f"{prefix}: sourceVerified true requires official, textbook, or internal sourceRef")
+            review_notes = entry.get("reviewNotes") or []
+            if not any("검증 근거" in note for note in review_notes):
+                errors.append(f"{prefix}: sourceVerified true requires reviewNotes with verification basis")
         if status == "verified" and entry.get("needsReview") is True:
             errors.append(f"{prefix}: verified answer cannot remain needsReview true")
 

@@ -43,8 +43,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -91,8 +91,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -139,8 +139,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -187,8 +187,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -235,8 +235,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -280,8 +280,9 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "기출 당시 기준 확인 필요",
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -327,8 +328,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -374,8 +375,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -420,8 +421,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -470,8 +471,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -730,8 +731,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 검사명 또는 국민체력100 계열 근거는 있으나 세부 시행/채점표 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -834,8 +835,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 검사명 또는 국민체력100 계열 근거는 있으나 세부 시행/채점표 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -990,8 +991,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -1146,8 +1147,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 검사명 또는 국민체력100 계열 근거는 있으나 세부 시행/채점표 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -1198,8 +1199,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 검사명 또는 국민체력100 계열 근거는 있으나 세부 시행/채점표 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -1354,8 +1355,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -1615,8 +1616,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -1665,8 +1666,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 검사명 또는 국민체력100 계열 근거는 있으나 세부 시행/채점표 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -2283,48 +2284,55 @@
   },
   {
     "questionId": "practical-047",
-    "answerStatus": "draft",
-    "modelAnswer": "PAPS는 학생건강체력평가로, 단순 기록 중심의 신체능력검사를 건강체력 중심 평가와 맞춤형 신체활동 처방으로 확장한 제도다. 특징은 온라인 관리, 건강체력 중심 평가, 평가 결과에 따른 처방/후속관리이며, 종목은 심폐지구력, 근력·근지구력, 유연성, 순발력, 체지방/비만 영역에서 선택 또는 필수 종목으로 구성된다.",
+    "answerStatus": "verified",
+    "modelAnswer": "PAPS는 학생건강체력평가로, 건강체력 중심 평가와 온라인 관리, 결과 기반 운동처방을 특징으로 한다. 평가 영역은 심폐지구력, 근력·근지구력, 유연성, 순발력, 체지방/비만으로 정리한다.",
     "performanceSteps": [],
     "oralAnswerStructure": [
-      "정의",
-      "기준",
-      "적용",
-      "주의사항"
+      "정의: 학생건강체력평가",
+      "특징: 온라인 관리·건강체력 중심·운동처방",
+      "종목/영역: 심폐지구력·근력/근지구력·유연성·순발력·체지방",
+      "주의: 학교급/연도별 세부 종목 차이"
     ],
     "keyPoints": [
       "학생건강체력평가",
       "온라인 관리",
       "건강체력 중심",
       "운동처방",
-      "심폐지구력/근력·근지구력/유연성/순발력/체지방"
+      "심폐지구력",
+      "근력·근지구력",
+      "유연성/순발력/체지방"
     ],
     "commonMistakes": [
-      "정의만 말하고 기준/예시 누락",
-      "수치·단위 또는 금기사항 누락",
-      "문제 요구 순서와 답변 순서 불일치"
+      "PAPS를 단순 체력장으로만 설명",
+      "특징 3가지와 평가 영역 3가지를 구분하지 않음",
+      "학교급·연도별 세부 종목 차이를 단정"
     ],
-    "memoryTip": "PAPS: 학생건강체력평가-온라인관리-건강체력중심",
+    "memoryTip": "PAPS: 온라인-건강체력-처방 / 심근유순체",
     "sourceRefs": [
-      {
-        "title": "학생건강체력평가제도(PAPS)의 이해",
-        "url": "https://www.kacep.or.kr/new/file/PAPS%20textbook.pdf",
-        "type": "trusted_web",
-        "checkedAt": "2026-06-22"
-      },
       {
         "title": "경기도교육청 - 학생건강체력평가[PAPS] 안내",
         "url": "https://www.goe.go.kr/resource/goe/na/bbs_2455/2025/06/373f4ddb-967d-40fb-9cc4-3bee46d99a24.pdf",
         "type": "official",
         "checkedAt": "2026-06-22"
+      },
+      {
+        "title": "학교건강정보센터 - PAPS 도움자료",
+        "url": "https://www.schoolhealth.kr/web/search/selectTotalSearchList.do?bbsId=&lstnum1=3544&pageIndex=1&pageUnit=10&searchWrd=paps&sortOrder=",
+        "type": "official",
+        "checkedAt": "2026-06-22"
+      },
+      {
+        "title": "학생건강체력평가제도(PAPS)의 이해",
+        "url": "https://www.kacep.or.kr/new/file/PAPS%20textbook.pdf",
+        "type": "trusted_web",
+        "checkedAt": "2026-06-22"
       }
     ],
-    "sourceVerified": false,
-    "needsReview": true,
+    "sourceVerified": true,
+    "needsReview": false,
     "reviewNotes": [
-      "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "검증 근거: Tier A 교육기관 PAPS 안내 자료와 학교건강정보센터 PAPS 도움자료가 PAPS의 평가 목적, 건강체력 중심 평가, 온라인 관리/처방, 평가 영역을 뒷받침한다.",
+      "Pass 3에서 시험 답변형으로 압축 후 verified 승격."
     ]
   },
   {
@@ -2466,8 +2474,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -2838,8 +2846,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -3540,8 +3548,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -3592,8 +3600,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -3644,8 +3652,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -3696,8 +3704,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -3748,8 +3756,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -3800,8 +3808,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -3852,8 +3860,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -3904,8 +3912,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -3956,8 +3964,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4008,8 +4016,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4060,8 +4068,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4112,8 +4120,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4164,8 +4172,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4216,8 +4224,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4268,8 +4276,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4320,8 +4328,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4372,8 +4380,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4424,8 +4432,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4476,8 +4484,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4528,8 +4536,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4579,8 +4587,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4630,8 +4638,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4681,8 +4689,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4732,8 +4740,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4779,8 +4787,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4826,8 +4834,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4873,8 +4881,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4920,8 +4928,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -4967,8 +4975,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -5014,9 +5022,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -5062,8 +5069,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -5109,8 +5116,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -5156,9 +5163,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -5208,8 +5214,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -5931,8 +5937,8 @@
     "needsReview": true,
     "reviewNotes": [
       "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 기준 연도 충돌 가능성이 있어 Tier S/A 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -6578,8 +6584,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -6630,8 +6636,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -6682,8 +6688,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -6734,8 +6740,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -6786,8 +6792,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -6838,8 +6844,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -6890,8 +6896,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -6942,8 +6948,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -6994,8 +7000,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7044,8 +7050,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7096,8 +7102,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7148,8 +7154,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7200,8 +7206,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7252,8 +7258,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7304,8 +7310,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7356,8 +7362,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7408,8 +7414,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7460,8 +7466,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7512,8 +7518,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7564,8 +7570,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7616,8 +7622,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7668,8 +7674,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7720,8 +7726,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7772,8 +7778,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7824,8 +7830,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7876,8 +7882,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7928,8 +7934,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -7980,8 +7986,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8032,8 +8038,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8083,8 +8089,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8134,8 +8140,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8185,8 +8191,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8236,8 +8242,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8282,8 +8288,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8328,8 +8334,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8374,8 +8380,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8426,8 +8432,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: ACSM/CDC 등 Tier B 참고 출처는 있으나 건강운동관리사 수험서 표현 대조가 부족해 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8472,8 +8478,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8518,8 +8524,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8564,8 +8570,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8610,8 +8616,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8656,8 +8662,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8702,8 +8708,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8748,8 +8754,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8794,8 +8800,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8840,8 +8846,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8886,8 +8892,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8932,8 +8938,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -8978,8 +8984,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9024,9 +9030,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "기출 당시 기준 확인 필요",
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9071,8 +9076,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9117,8 +9122,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9163,8 +9168,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9209,8 +9214,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9255,8 +9260,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9301,8 +9306,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9347,8 +9352,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9393,8 +9398,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9439,8 +9444,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9485,8 +9490,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9531,8 +9536,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9576,8 +9581,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9621,8 +9626,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9666,8 +9671,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
@@ -9711,8 +9716,8 @@
     "sourceVerified": false,
     "needsReview": true,
     "reviewNotes": [
-      "Pass 2 전체 스캔: 답안을 시험장에서 말할 수 있는 구조로 압축하고 채점 키워드/실수 포인트/암기팁을 재정리했다.",
-      "Tier S/A 자료 또는 공식 채점 기준 대조 전까지 sourceVerified=false 및 needsReview=true를 유지한다."
+      "Pass 3 출처 판정: 재활/특수검사 참고 출처는 Tier C 중심이므로 공식 수험 자료 대조 전까지 draft 유지.",
+      "Tier S/A 대조가 끝나면 verified 후보로 재검토한다."
     ]
   },
   {
