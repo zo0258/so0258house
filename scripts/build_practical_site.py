@@ -192,33 +192,44 @@ def pick_from(pool, start, used):
     return pool[start % len(pool)]
 
 
+def pick_diverse(pool, seed, selected, used):
+    candidates = [item for item in pool if item["id"] not in used]
+    if not candidates:
+        return None
+    subjects = {item["subject"] for item in selected}
+    sections = {item["section"] for item in selected}
+    scored = []
+    for index, item in enumerate(candidates):
+        duplicate_subject = item["subject"] in subjects
+        duplicate_section = item["section"] in sections
+        rotation = (index - seed) % len(candidates)
+        score = (10 if duplicate_subject else 0) + (4 if duplicate_section else 0) + rotation / max(len(candidates), 1)
+        scored.append((score, item))
+    scored.sort(key=lambda pair: pair[0])
+    return scored[0][1]
+
+
 def select_daily_questions(questions, day):
-    by_subject = defaultdict(list)
-    for item in questions:
-        by_subject[item["subject"]].append(item)
-    subjects = sorted(by_subject)
     seed = date_index(day)
-    subject = subjects[seed % len(subjects)]
-    subject_pool = by_subject[subject]
+    practical = [item for item in questions if item["type"] == "실기"]
+    oral = [item for item in questions if item["type"] == "구술"]
     used = set()
-    practical = [item for item in subject_pool if item["type"] == "실기"]
-    oral = [item for item in subject_pool if item["type"] == "구술"]
     selected = []
-    first = pick_from(practical, seed, used) or pick_from(subject_pool, seed, used)
-    if first:
-        selected.append(first)
-        used.add(first["id"])
-    second = pick_from(oral, seed // 7, used) or pick_from(subject_pool, seed // 7, used)
-    if second:
-        selected.append(second)
-        used.add(second["id"])
-    while len(selected) < 2:
+
+    pools = [practical, oral, practical, oral]
+    for offset, pool in enumerate(pools):
+        item = pick_diverse(pool, seed + offset * 17, selected, used)
+        if item:
+            selected.append(item)
+            used.add(item["id"])
+
+    while len(selected) < 4:
         fallback = pick_from(questions, seed + len(selected), used)
         if not fallback:
             break
         selected.append(fallback)
         used.add(fallback["id"])
-    return selected[:2]
+    return selected[:4]
 
 
 def safe_json(data):
@@ -285,26 +296,26 @@ def render_index(quiz):
     <section class="module">
       <div class="section-head"><h2>건강운동관리사 실기 대비</h2></div>
       <section class="quick" aria-label="빠른 이동">
-        <a href="quizzes/quiz-today.html"><strong>오늘 실기 2문제</strong><small>미풀이 · 2문항 남음</small></a>
-        <a href="wrong-note.html"><strong>오답노트 보기</strong><small>어려움·다시 볼 문제</small></a>
+        <a href="quizzes/quiz-today.html"><strong>오늘 실기·구술 4문제</strong><small>미풀이 · 4문항 남음</small></a>
+        <a href="wrong-note.html"><strong>복습노트 보기</strong><small>어려움·다시 볼 문제</small></a>
       </section>
       <div class="trust-note"><strong>출제 기준</strong> 기출문제 분석 자료 기준 과목별 순환 출제</div>
     </section>
     <section class="daily-word" aria-label="오늘의 한 문장">
       <div class="daily-word-title">오늘의 한 문장</div>
-      <p>동작은 말로 정리하고, 말은 순서로 기억한다. 오늘은 두 문제만 정확히 끝낸다.</p>
+      <p>동작은 말로 정리하고, 말은 순서로 기억한다. 오늘은 네 문제를 정확히 끝낸다.</p>
     </section>
     <div class="history-wrap">
       <div class="history-bar">
         <div class="history-title">학습 기록</div>
         <div class="history-summary" aria-label="학습 현황">
-          <span>오늘 <strong>2</strong></span>
+          <span>오늘 <strong>4</strong></span>
           <span>다시 보기 <strong id="reviewCount">0</strong></span>
           <span>어려움 <strong id="hardCount">0</strong></span>
         </div>
       </div>
       <ul>
-        <li><a class="quiz-row" href="quizzes/quiz-today.html"><span class="date">{today}</span><span class="row-meta"><span class="badge pending">미풀이 · 2문항</span></span></a></li>
+        <li><a class="quiz-row" href="quizzes/quiz-today.html"><span class="date">{today}</span><span class="row-meta"><span class="badge pending">미풀이 · 4문항</span></span></a></li>
       </ul>
     </div>
   </main>
@@ -332,10 +343,16 @@ def question_card(item, index):
     meta = " / ".join(html.escape(str(value)) for value in (item["subject"], item["section"], item["type"], item["year"]) if value)
     method = html.escape(item.get("methodGuide", ""))
     tip = html.escape(item.get("memoryTip", ""))
+    type_label = html.escape(item.get("type", "실기/구술"))
+    total = 4
     return f"""<article class="question-card" data-question-id="{html.escape(item['id'])}">
-      <div class="q-head"><span class="q-count">{index + 1}/2</span><span class="topic">{meta}</span></div>
+      <div class="q-head"><span class="q-count">{index + 1}/{total}</span><span class="topic">{meta}</span></div>
       <p class="question">{q}</p>
-      <details class="guide"><summary>수행·답변 가이드</summary><p>{method}</p><p>{tip}</p></details>
+      <details class="guide"><summary>수행·답변 가이드</summary>
+        <div class="guide-block"><strong>답변 순서</strong><p>{method}</p></div>
+        <div class="guide-block"><strong>실기/구술 체크포인트</strong><p>{type_label} 문항으로 보고 준비, 설명, 수행 또는 구술 마무리 순서를 확인합니다.</p></div>
+        <div class="guide-block"><strong>암기 포인트</strong><p>{tip}</p></div>
+      </details>
       <div class="actions">
         <button type="button" data-status="done">완료</button>
         <button type="button" data-status="review">다시 보기</button>
@@ -351,7 +368,7 @@ def render_quiz(quiz):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>건강운동관리사 실기 대비 | 오늘 실기 2문제</title>
+  <title>건강운동관리사 실기 대비 | 오늘 실기·구술 4문제</title>
   <style>
     :root {{ --bg:#f8f4f1; --surface:#fff; --ink:#242522; --muted:#6e746d; --line:#ddd7ca; --accent:#66735d; --accent-strong:#2f3d32; --accent-soft:#e9eee4; --danger:#b64032; --warn:#a16b18; --ok:#287a4b; }}
     * {{ box-sizing:border-box; }}
@@ -360,6 +377,7 @@ def render_quiz(quiz):
     .topbar {{ position:sticky; top:0; z-index:10; background:rgba(248,244,241,.94); border-bottom:1px solid rgba(102,115,93,.16); backdrop-filter:blur(14px); }}
     .topbar-inner {{ padding:14px 14px 10px; }}
     .title-row {{ display:flex; align-items:center; justify-content:space-between; gap:12px; }}
+    .progress-status {{ display:flex; align-items:center; gap:7px; flex-wrap:wrap; justify-content:flex-end; }}
     h1 {{ margin:0; color:var(--accent-strong); font-size:21px; font-weight:950; }}
     .progress-chip {{ min-width:58px; padding:8px 11px; border-radius:999px; background:var(--accent-soft); color:var(--accent-strong); text-align:center; font-size:12px; font-weight:950; }}
     .progress-track {{ height:5px; margin-top:10px; overflow:hidden; border-radius:999px; background:#e8ece6; }}
@@ -373,14 +391,16 @@ def render_quiz(quiz):
     .question {{ margin:0 0 14px; font-size:20px; font-weight:900; line-height:1.48; word-break:keep-all; overflow-wrap:anywhere; white-space:pre-line; }}
     .guide {{ margin:12px 0; border:1px solid rgba(102,115,93,.16); border-radius:12px; background:#fbfcfa; padding:10px 12px; }}
     .guide summary {{ cursor:pointer; color:var(--accent-strong); font-size:13px; font-weight:950; }}
-    .guide p {{ margin:8px 0 0; color:var(--muted); font-size:13px; font-weight:750; }}
+    .guide-block {{ margin-top:10px; }}
+    .guide-block strong {{ display:block; color:var(--accent-strong); font-size:12.5px; font-weight:950; }}
+    .guide p {{ margin:4px 0 0; color:var(--muted); font-size:13px; font-weight:750; }}
     .actions {{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-top:15px; }}
     button {{ min-height:46px; border:1px solid rgba(102,115,93,.2); border-radius:12px; background:#fff; color:var(--accent-strong); font:inherit; font-size:14px; font-weight:950; }}
     button[data-status="done"] {{ background:var(--accent); color:#fff; }}
     button[data-status="review"] {{ background:#fff8e8; color:#7d5113; }}
     button[data-status="hard"] {{ background:#fff0ed; color:#953428; }}
     .nav {{ display:flex; justify-content:space-between; gap:8px; margin-top:13px; }}
-    .nav a,.nav button {{ display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:8px 12px; border-radius:999px; text-decoration:none; }}
+    .nav a {{ display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:8px 12px; border-radius:999px; text-decoration:none; }}
     .nav a {{ color:var(--accent-strong); background:var(--accent-soft); font-size:13px; font-weight:950; }}
     .result {{ display:none; padding:16px; border:1px solid rgba(102,115,93,.18); border-radius:14px; background:#fff; }}
     .result.active {{ display:block; }}
@@ -394,14 +414,14 @@ def render_quiz(quiz):
   <div class="app">
     <header class="topbar">
       <div class="topbar-inner">
-        <div class="title-row"><h1>건강운동관리사 실기 대비</h1><div class="progress-chip" id="position">1/2</div></div>
+        <div class="title-row"><h1>건강운동관리사 실기 대비</h1><div class="progress-status"><div class="progress-chip" id="position">1/4 문제</div><div class="progress-chip" id="recorded">기록 0/4</div></div></div>
         <div class="progress-track"><div class="progress-bar" id="progress"></div></div>
       </div>
     </header>
     <main>
       <section id="cards">{cards}</section>
-      <section id="result" class="result"><h2>오늘 2문제 기록 완료</h2><p>다시 보기와 어려움으로 표시한 문제는 오답노트에서 확인할 수 있습니다.</p></section>
-      <div class="nav"><a href="../index.html">DashBoard</a><a href="../wrong-note.html">오답노트 보기</a><button type="button" id="nextBtn">다음</button></div>
+      <section id="result" class="result"><h2>오늘 4문제 기록 완료</h2><p>다시 보기와 어려움으로 표시한 문제는 복습노트에서 확인할 수 있습니다.</p></section>
+      <div class="nav"><a href="../index.html">DashBoard</a><a href="../wrong-note.html">복습노트 보기</a></div>
     </main>
   </div>
   <script>
@@ -410,10 +430,11 @@ def render_quiz(quiz):
       const quiz = JSON.parse(document.getElementById('quiz-data').textContent);
       const cards = Array.from(document.querySelectorAll('.question-card'));
       const position = document.getElementById('position');
+      const recorded = document.getElementById('recorded');
       const progress = document.getElementById('progress');
       const result = document.getElementById('result');
-      const nextBtn = document.getElementById('nextBtn');
       let current = 0;
+      let recordedCount = 0;
       let records = {{}};
       try {{ records = JSON.parse(localStorage.getItem(key) || '{{}}'); }} catch (error) {{ records = {{}}; }}
       function save(id, status) {{
@@ -422,23 +443,20 @@ def render_quiz(quiz):
       }}
       function render() {{
         cards.forEach((card, index) => card.classList.toggle('active', index === current));
-        const done = Math.min(current + 1, cards.length);
-        position.textContent = current < cards.length ? done + '/' + cards.length : '완료';
-        progress.style.width = Math.min(current, cards.length) / cards.length * 100 + '%';
+        const positionCount = Math.min(current + 1, cards.length);
+        position.textContent = current < cards.length ? positionCount + '/' + cards.length + ' 문제' : '완료';
+        recorded.textContent = '기록 ' + recordedCount + '/' + cards.length;
+        progress.style.width = recordedCount / cards.length * 100 + '%';
         result.classList.toggle('active', current >= cards.length);
-        nextBtn.textContent = current >= cards.length - 1 ? '완료 보기' : '다음';
       }}
       document.querySelectorAll('.actions button').forEach(button => {{
         button.addEventListener('click', function() {{
           const card = button.closest('.question-card');
           save(card.dataset.questionId, button.dataset.status);
+          recordedCount = Math.min(recordedCount + 1, cards.length);
           current = Math.min(current + 1, cards.length);
           render();
         }});
-      }});
-      nextBtn.addEventListener('click', function() {{
-        current = Math.min(current + 1, cards.length);
-        render();
       }});
       render();
     }})();
@@ -454,7 +472,7 @@ def render_wrong_note(questions):
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>소빵이의 오답노트</title>
+  <title>소빵이의 복습노트</title>
   <style>
     :root {{ --bg:#f3f5f0; --surface:#fff; --ink:#17201a; --muted:#69736c; --line:#dfe5dc; --accent:#2f6b4f; --accent-dark:#214735; --danger:#b64032; --warn:#a16b18; --sage:#e9eee4; }}
     * {{ box-sizing:border-box; }}
@@ -484,7 +502,7 @@ def render_wrong_note(questions):
 <body>
   <script id="question-data" type="application/json">{safe_json(questions)}</script>
   <main>
-    <div class="topline"><div><h1>소빵이의 오답노트</h1><p class="subtitle">어려움·다시 볼 문제</p></div><a class="back" href="index.html">DashBoard</a></div>
+    <div class="topline"><div><h1>소빵이의 복습노트</h1><p class="subtitle">어려움·다시 볼 문제</p></div><a class="back" href="index.html">DashBoard</a></div>
     <div class="stats">
       <div class="stat"><span>다시 보기</span><strong id="reviewCount">0</strong></div>
       <div class="stat"><span>어려움</span><strong id="hardCount">0</strong></div>
@@ -576,7 +594,7 @@ def main():
         "date": args.date,
         "displayDate": args.date,
         "title": "건강운동관리사 실기 대비",
-        "questionCount": 2,
+        "questionCount": 4,
         "questions": select_daily_questions(questions, args.date),
     }
     if not args.keep_old:

@@ -3,15 +3,15 @@
   "date": "2026-06-22",
   "displayDate": "2026-06-22",
   "title": "건강운동관리사 실기 대비",
-  "questionCount": 2,
+  "questionCount": 4,
   "questions": [
     {
-      "id": "practical-087",
-      "subject": "트레이닝방법론",
-      "section": "저항성 트레이닝 방법",
+      "id": "practical-143",
+      "subject": "운동손상평가 및 재활",
+      "section": "운동손상평가",
       "type": "실기",
-      "year": 2022,
-      "question": "런지 투암 덤벨프레스 5회 실시하시오.(2022)",
+      "year": 2018,
+      "question": "페트릭 테스트를 피험자의 오른쪽에 실시하시오.(2018)",
       "methodGuide": "추후 입력: 실제 수행 순서, 검사 환경, 대상자 안내 멘트, 안전 확인 순서까지 확인 후 작성",
       "memoryTip": "동작은 준비-설명-시범-수행-기록 순서로 떠올리기",
       "answerGuide": "",
@@ -32,12 +32,64 @@
       ]
     },
     {
-      "id": "practical-098",
+      "id": "practical-068",
       "subject": "트레이닝방법론",
-      "section": "저항성 트레이닝 방법",
+      "section": "유·무산소 트레이닝 방법",
       "type": "구술",
+      "year": 2023,
+      "question": "장시간 유산소 운동 중 최대산소섭취량이 증가하는 원인 3가지를 구술하시오.(2023)",
+      "methodGuide": "추후 입력: 정의, 기준, 적용 대상, 주의사항 순서로 답변 구성",
+      "memoryTip": "답변은 핵심어 3개를 먼저 말하고 한 문장씩 설명하기",
+      "answerGuide": "",
+      "sourceRefs": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/"
+        }
+      ],
+      "sourceVerified": false,
+      "needsReview": true,
+      "reviewReasons": [
+        "methodGuide 추후 입력"
+      ]
+    },
+    {
+      "id": "practical-010",
+      "subject": "건강·체력측정평가",
+      "section": "건강/체력 측정 평가 및 해석",
+      "type": "실기",
       "year": 2016,
-      "question": "근파워 향상에 대한 저항성 트레이닝 방법을 설명하시오.(2016)",
+      "question": "노인에게 근지구력 테스트를 위한 의자 앉았다 일어서기 30초를 시범 후, 지도하시오.(2016)",
+      "methodGuide": "추후 입력: 실제 수행 순서, 검사 환경, 대상자 안내 멘트, 안전 확인 순서까지 확인 후 작성",
+      "memoryTip": "동작은 준비-설명-시범-수행-기록 순서로 떠올리기",
+      "answerGuide": "",
+      "sourceRefs": [
+        {
+          "title": "ACSM Guidelines for Exercise Testing and Prescription",
+          "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"
+        },
+        {
+          "title": "ACSM Physical Activity Guidelines",
+          "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/"
+        }
+      ],
+      "sourceVerified": false,
+      "needsReview": true,
+      "reviewReasons": [
+        "methodGuide 추후 입력"
+      ]
+    },
+    {
+      "id": "practical-055",
+      "subject": "건강·체력측정평가",
+      "section": "운동부하검사 및 해석",
+      "type": "구술",
+      "year": 2021,
+      "question": "램프 프로토콜 검사 방법에 대해 설명하시오.(2021)",
       "methodGuide": "추후 입력: 정의, 기준, 적용 대상, 주의사항 순서로 답변 구성",
       "memoryTip": "답변은 핵심어 3개를 먼저 말하고 한 문장씩 설명하기",
       "answerGuide": "",

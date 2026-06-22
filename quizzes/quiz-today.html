@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>건강운동관리사 실기 대비 | 오늘 실기 2문제</title>
+  <title>건강운동관리사 실기 대비 | 오늘 실기·구술 4문제</title>
   <style>
     :root { --bg:#f8f4f1; --surface:#fff; --ink:#242522; --muted:#6e746d; --line:#ddd7ca; --accent:#66735d; --accent-strong:#2f3d32; --accent-soft:#e9eee4; --danger:#b64032; --warn:#a16b18; --ok:#287a4b; }
     * { box-sizing:border-box; }
@@ -12,6 +12,7 @@
     .topbar { position:sticky; top:0; z-index:10; background:rgba(248,244,241,.94); border-bottom:1px solid rgba(102,115,93,.16); backdrop-filter:blur(14px); }
     .topbar-inner { padding:14px 14px 10px; }
     .title-row { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .progress-status { display:flex; align-items:center; gap:7px; flex-wrap:wrap; justify-content:flex-end; }
     h1 { margin:0; color:var(--accent-strong); font-size:21px; font-weight:950; }
     .progress-chip { min-width:58px; padding:8px 11px; border-radius:999px; background:var(--accent-soft); color:var(--accent-strong); text-align:center; font-size:12px; font-weight:950; }
     .progress-track { height:5px; margin-top:10px; overflow:hidden; border-radius:999px; background:#e8ece6; }
@@ -25,14 +26,16 @@
     .question { margin:0 0 14px; font-size:20px; font-weight:900; line-height:1.48; word-break:keep-all; overflow-wrap:anywhere; white-space:pre-line; }
     .guide { margin:12px 0; border:1px solid rgba(102,115,93,.16); border-radius:12px; background:#fbfcfa; padding:10px 12px; }
     .guide summary { cursor:pointer; color:var(--accent-strong); font-size:13px; font-weight:950; }
-    .guide p { margin:8px 0 0; color:var(--muted); font-size:13px; font-weight:750; }
+    .guide-block { margin-top:10px; }
+    .guide-block strong { display:block; color:var(--accent-strong); font-size:12.5px; font-weight:950; }
+    .guide p { margin:4px 0 0; color:var(--muted); font-size:13px; font-weight:750; }
     .actions { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-top:15px; }
     button { min-height:46px; border:1px solid rgba(102,115,93,.2); border-radius:12px; background:#fff; color:var(--accent-strong); font:inherit; font-size:14px; font-weight:950; }
     button[data-status="done"] { background:var(--accent); color:#fff; }
     button[data-status="review"] { background:#fff8e8; color:#7d5113; }
     button[data-status="hard"] { background:#fff0ed; color:#953428; }
     .nav { display:flex; justify-content:space-between; gap:8px; margin-top:13px; }
-    .nav a,.nav button { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:8px 12px; border-radius:999px; text-decoration:none; }
+    .nav a { display:inline-flex; align-items:center; justify-content:center; min-height:42px; padding:8px 12px; border-radius:999px; text-decoration:none; }
     .nav a { color:var(--accent-strong); background:var(--accent-soft); font-size:13px; font-weight:950; }
     .result { display:none; padding:16px; border:1px solid rgba(102,115,93,.18); border-radius:14px; background:#fff; }
     .result.active { display:block; }
@@ -42,37 +45,73 @@
   </style>
 </head>
 <body>
-  <script id="quiz-data" type="application/json">{"quizId": "2026-06-22-practical-daily", "date": "2026-06-22", "displayDate": "2026-06-22", "title": "건강운동관리사 실기 대비", "questionCount": 2, "questions": [{"id": "practical-087", "subject": "트레이닝방법론", "section": "저항성 트레이닝 방법", "type": "실기", "year": 2022, "question": "런지 투암 덤벨프레스 5회 실시하시오.(2022)", "methodGuide": "추후 입력: 실제 수행 순서, 검사 환경, 대상자 안내 멘트, 안전 확인 순서까지 확인 후 작성", "memoryTip": "동작은 준비-설명-시범-수행-기록 순서로 떠올리기", "answerGuide": "", "sourceRefs": [{"title": "ACSM Guidelines for Exercise Testing and Prescription", "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"}, {"title": "ACSM Physical Activity Guidelines", "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/"}], "sourceVerified": false, "needsReview": true, "reviewReasons": ["methodGuide 추후 입력"]}, {"id": "practical-098", "subject": "트레이닝방법론", "section": "저항성 트레이닝 방법", "type": "구술", "year": 2016, "question": "근파워 향상에 대한 저항성 트레이닝 방법을 설명하시오.(2016)", "methodGuide": "추후 입력: 정의, 기준, 적용 대상, 주의사항 순서로 답변 구성", "memoryTip": "답변은 핵심어 3개를 먼저 말하고 한 문장씩 설명하기", "answerGuide": "", "sourceRefs": [{"title": "ACSM Guidelines for Exercise Testing and Prescription", "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"}, {"title": "ACSM Physical Activity Guidelines", "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/"}], "sourceVerified": false, "needsReview": true, "reviewReasons": ["methodGuide 추후 입력"]}]}</script>
+  <script id="quiz-data" type="application/json">{"quizId": "2026-06-22-practical-daily", "date": "2026-06-22", "displayDate": "2026-06-22", "title": "건강운동관리사 실기 대비", "questionCount": 4, "questions": [{"id": "practical-143", "subject": "운동손상평가 및 재활", "section": "운동손상평가", "type": "실기", "year": 2018, "question": "페트릭 테스트를 피험자의 오른쪽에 실시하시오.(2018)", "methodGuide": "추후 입력: 실제 수행 순서, 검사 환경, 대상자 안내 멘트, 안전 확인 순서까지 확인 후 작성", "memoryTip": "동작은 준비-설명-시범-수행-기록 순서로 떠올리기", "answerGuide": "", "sourceRefs": [{"title": "ACSM Guidelines for Exercise Testing and Prescription", "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"}, {"title": "ACSM Physical Activity Guidelines", "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/"}], "sourceVerified": false, "needsReview": true, "reviewReasons": ["methodGuide 추후 입력"]}, {"id": "practical-068", "subject": "트레이닝방법론", "section": "유·무산소 트레이닝 방법", "type": "구술", "year": 2023, "question": "장시간 유산소 운동 중 최대산소섭취량이 증가하는 원인 3가지를 구술하시오.(2023)", "methodGuide": "추후 입력: 정의, 기준, 적용 대상, 주의사항 순서로 답변 구성", "memoryTip": "답변은 핵심어 3개를 먼저 말하고 한 문장씩 설명하기", "answerGuide": "", "sourceRefs": [{"title": "ACSM Guidelines for Exercise Testing and Prescription", "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"}, {"title": "ACSM Physical Activity Guidelines", "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/"}], "sourceVerified": false, "needsReview": true, "reviewReasons": ["methodGuide 추후 입력"]}, {"id": "practical-010", "subject": "건강·체력측정평가", "section": "건강/체력 측정 평가 및 해석", "type": "실기", "year": 2016, "question": "노인에게 근지구력 테스트를 위한 의자 앉았다 일어서기 30초를 시범 후, 지도하시오.(2016)", "methodGuide": "추후 입력: 실제 수행 순서, 검사 환경, 대상자 안내 멘트, 안전 확인 순서까지 확인 후 작성", "memoryTip": "동작은 준비-설명-시범-수행-기록 순서로 떠올리기", "answerGuide": "", "sourceRefs": [{"title": "ACSM Guidelines for Exercise Testing and Prescription", "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"}, {"title": "ACSM Physical Activity Guidelines", "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/"}], "sourceVerified": false, "needsReview": true, "reviewReasons": ["methodGuide 추후 입력"]}, {"id": "practical-055", "subject": "건강·체력측정평가", "section": "운동부하검사 및 해석", "type": "구술", "year": 2021, "question": "램프 프로토콜 검사 방법에 대해 설명하시오.(2021)", "methodGuide": "추후 입력: 정의, 기준, 적용 대상, 주의사항 순서로 답변 구성", "memoryTip": "답변은 핵심어 3개를 먼저 말하고 한 문장씩 설명하기", "answerGuide": "", "sourceRefs": [{"title": "ACSM Guidelines for Exercise Testing and Prescription", "url": "https://www.acsm.org/education-resources/books/guidelines-exercise-testing-prescription"}, {"title": "ACSM Physical Activity Guidelines", "url": "https://acsm.org/education-resources/trending-topics-resources/physical-activity-guidelines/"}], "sourceVerified": false, "needsReview": true, "reviewReasons": ["methodGuide 추후 입력"]}]}</script>
   <div class="app">
     <header class="topbar">
       <div class="topbar-inner">
-        <div class="title-row"><h1>건강운동관리사 실기 대비</h1><div class="progress-chip" id="position">1/2</div></div>
+        <div class="title-row"><h1>건강운동관리사 실기 대비</h1><div class="progress-status"><div class="progress-chip" id="position">1/4 문제</div><div class="progress-chip" id="recorded">기록 0/4</div></div></div>
         <div class="progress-track"><div class="progress-bar" id="progress"></div></div>
       </div>
     </header>
     <main>
-      <section id="cards"><article class="question-card" data-question-id="practical-087">
-      <div class="q-head"><span class="q-count">1/2</span><span class="topic">트레이닝방법론 / 저항성 트레이닝 방법 / 실기 / 2022</span></div>
-      <p class="question">런지 투암 덤벨프레스 5회 실시하시오.(2022)</p>
-      <details class="guide"><summary>수행·답변 가이드</summary><p>추후 입력: 실제 수행 순서, 검사 환경, 대상자 안내 멘트, 안전 확인 순서까지 확인 후 작성</p><p>동작은 준비-설명-시범-수행-기록 순서로 떠올리기</p></details>
+      <section id="cards"><article class="question-card" data-question-id="practical-143">
+      <div class="q-head"><span class="q-count">1/4</span><span class="topic">운동손상평가 및 재활 / 운동손상평가 / 실기 / 2018</span></div>
+      <p class="question">페트릭 테스트를 피험자의 오른쪽에 실시하시오.(2018)</p>
+      <details class="guide"><summary>수행·답변 가이드</summary>
+        <div class="guide-block"><strong>답변 순서</strong><p>추후 입력: 실제 수행 순서, 검사 환경, 대상자 안내 멘트, 안전 확인 순서까지 확인 후 작성</p></div>
+        <div class="guide-block"><strong>실기/구술 체크포인트</strong><p>실기 문항으로 보고 준비, 설명, 수행 또는 구술 마무리 순서를 확인합니다.</p></div>
+        <div class="guide-block"><strong>암기 포인트</strong><p>동작은 준비-설명-시범-수행-기록 순서로 떠올리기</p></div>
+      </details>
       <div class="actions">
         <button type="button" data-status="done">완료</button>
         <button type="button" data-status="review">다시 보기</button>
         <button type="button" data-status="hard">어려움</button>
       </div>
     </article>
-<article class="question-card" data-question-id="practical-098">
-      <div class="q-head"><span class="q-count">2/2</span><span class="topic">트레이닝방법론 / 저항성 트레이닝 방법 / 구술 / 2016</span></div>
-      <p class="question">근파워 향상에 대한 저항성 트레이닝 방법을 설명하시오.(2016)</p>
-      <details class="guide"><summary>수행·답변 가이드</summary><p>추후 입력: 정의, 기준, 적용 대상, 주의사항 순서로 답변 구성</p><p>답변은 핵심어 3개를 먼저 말하고 한 문장씩 설명하기</p></details>
+<article class="question-card" data-question-id="practical-068">
+      <div class="q-head"><span class="q-count">2/4</span><span class="topic">트레이닝방법론 / 유·무산소 트레이닝 방법 / 구술 / 2023</span></div>
+      <p class="question">장시간 유산소 운동 중 최대산소섭취량이 증가하는 원인 3가지를 구술하시오.(2023)</p>
+      <details class="guide"><summary>수행·답변 가이드</summary>
+        <div class="guide-block"><strong>답변 순서</strong><p>추후 입력: 정의, 기준, 적용 대상, 주의사항 순서로 답변 구성</p></div>
+        <div class="guide-block"><strong>실기/구술 체크포인트</strong><p>구술 문항으로 보고 준비, 설명, 수행 또는 구술 마무리 순서를 확인합니다.</p></div>
+        <div class="guide-block"><strong>암기 포인트</strong><p>답변은 핵심어 3개를 먼저 말하고 한 문장씩 설명하기</p></div>
+      </details>
+      <div class="actions">
+        <button type="button" data-status="done">완료</button>
+        <button type="button" data-status="review">다시 보기</button>
+        <button type="button" data-status="hard">어려움</button>
+      </div>
+    </article>
+<article class="question-card" data-question-id="practical-010">
+      <div class="q-head"><span class="q-count">3/4</span><span class="topic">건강·체력측정평가 / 건강/체력 측정 평가 및 해석 / 실기 / 2016</span></div>
+      <p class="question">노인에게 근지구력 테스트를 위한 의자 앉았다 일어서기 30초를 시범 후, 지도하시오.(2016)</p>
+      <details class="guide"><summary>수행·답변 가이드</summary>
+        <div class="guide-block"><strong>답변 순서</strong><p>추후 입력: 실제 수행 순서, 검사 환경, 대상자 안내 멘트, 안전 확인 순서까지 확인 후 작성</p></div>
+        <div class="guide-block"><strong>실기/구술 체크포인트</strong><p>실기 문항으로 보고 준비, 설명, 수행 또는 구술 마무리 순서를 확인합니다.</p></div>
+        <div class="guide-block"><strong>암기 포인트</strong><p>동작은 준비-설명-시범-수행-기록 순서로 떠올리기</p></div>
+      </details>
+      <div class="actions">
+        <button type="button" data-status="done">완료</button>
+        <button type="button" data-status="review">다시 보기</button>
+        <button type="button" data-status="hard">어려움</button>
+      </div>
+    </article>
+<article class="question-card" data-question-id="practical-055">
+      <div class="q-head"><span class="q-count">4/4</span><span class="topic">건강·체력측정평가 / 운동부하검사 및 해석 / 구술 / 2021</span></div>
+      <p class="question">램프 프로토콜 검사 방법에 대해 설명하시오.(2021)</p>
+      <details class="guide"><summary>수행·답변 가이드</summary>
+        <div class="guide-block"><strong>답변 순서</strong><p>추후 입력: 정의, 기준, 적용 대상, 주의사항 순서로 답변 구성</p></div>
+        <div class="guide-block"><strong>실기/구술 체크포인트</strong><p>구술 문항으로 보고 준비, 설명, 수행 또는 구술 마무리 순서를 확인합니다.</p></div>
+        <div class="guide-block"><strong>암기 포인트</strong><p>답변은 핵심어 3개를 먼저 말하고 한 문장씩 설명하기</p></div>
+      </details>
       <div class="actions">
         <button type="button" data-status="done">완료</button>
         <button type="button" data-status="review">다시 보기</button>
         <button type="button" data-status="hard">어려움</button>
       </div>
     </article></section>
-      <section id="result" class="result"><h2>오늘 2문제 기록 완료</h2><p>다시 보기와 어려움으로 표시한 문제는 오답노트에서 확인할 수 있습니다.</p></section>
-      <div class="nav"><a href="../index.html">DashBoard</a><a href="../wrong-note.html">오답노트 보기</a><button type="button" id="nextBtn">다음</button></div>
+      <section id="result" class="result"><h2>오늘 4문제 기록 완료</h2><p>다시 보기와 어려움으로 표시한 문제는 복습노트에서 확인할 수 있습니다.</p></section>
+      <div class="nav"><a href="../index.html">DashBoard</a><a href="../wrong-note.html">복습노트 보기</a></div>
     </main>
   </div>
   <script>
@@ -81,10 +120,11 @@
       const quiz = JSON.parse(document.getElementById('quiz-data').textContent);
       const cards = Array.from(document.querySelectorAll('.question-card'));
       const position = document.getElementById('position');
+      const recorded = document.getElementById('recorded');
       const progress = document.getElementById('progress');
       const result = document.getElementById('result');
-      const nextBtn = document.getElementById('nextBtn');
       let current = 0;
+      let recordedCount = 0;
       let records = {};
       try { records = JSON.parse(localStorage.getItem(key) || '{}'); } catch (error) { records = {}; }
       function save(id, status) {
@@ -93,23 +133,20 @@
       }
       function render() {
         cards.forEach((card, index) => card.classList.toggle('active', index === current));
-        const done = Math.min(current + 1, cards.length);
-        position.textContent = current < cards.length ? done + '/' + cards.length : '완료';
-        progress.style.width = Math.min(current, cards.length) / cards.length * 100 + '%';
+        const positionCount = Math.min(current + 1, cards.length);
+        position.textContent = current < cards.length ? positionCount + '/' + cards.length + ' 문제' : '완료';
+        recorded.textContent = '기록 ' + recordedCount + '/' + cards.length;
+        progress.style.width = recordedCount / cards.length * 100 + '%';
         result.classList.toggle('active', current >= cards.length);
-        nextBtn.textContent = current >= cards.length - 1 ? '완료 보기' : '다음';
       }
       document.querySelectorAll('.actions button').forEach(button => {
         button.addEventListener('click', function() {
           const card = button.closest('.question-card');
           save(card.dataset.questionId, button.dataset.status);
+          recordedCount = Math.min(recordedCount + 1, cards.length);
           current = Math.min(current + 1, cards.length);
           render();
         });
-      });
-      nextBtn.addEventListener('click', function() {
-        current = Math.min(current + 1, cards.length);
-        render();
       });
       render();
     })();

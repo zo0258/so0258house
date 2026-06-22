@@ -35,23 +35,33 @@ def main():
 
     index = read(index_path)
     assert_true("건강운동관리사 실기 대비" in index, "index title text not converted")
-    assert_true("오늘 실기 2문제" in index, "today CTA text not converted")
-    assert_true("미풀이 · 2문항 남음" in index, "2-question pending copy missing")
+    assert_true("오늘 실기·구술 4문제" in index, "today CTA text not converted")
+    assert_true("미풀이 · 4문항 남음" in index, "4-question pending copy missing")
+    assert_true("복습노트 보기" in index, "review-note copy missing")
     assert_true("10문항" not in index, "old 10-question copy remains in index")
 
     quiz = read(quiz_path)
     match = re.search(r'<script id="quiz-data" type="application/json">(.*?)</script>', quiz, re.S)
     assert_true(match, "quiz data script missing")
     payload = json.loads(match.group(1))
-    assert_true(len(payload["questions"]) == 2, "today quiz does not contain exactly 2 questions")
-    types = {item["type"] for item in payload["questions"]}
-    assert_true("실기" in types and "구술" in types, "today quiz is not practical + oral")
+    assert_true(len(payload["questions"]) == 4, "today quiz does not contain exactly 4 questions")
+    type_counts = {}
+    for item in payload["questions"]:
+        type_counts[item["type"]] = type_counts.get(item["type"], 0) + 1
+    assert_true(type_counts.get("실기") == 2 and type_counts.get("구술") == 2, "today quiz is not practical 2 + oral 2")
+    assert_true(len({item["subject"] for item in payload["questions"]}) >= 2, "today quiz is concentrated in one subject")
+    assert_true(len({item["section"] for item in payload["questions"]}) >= 3, "today quiz sections are not sufficiently distributed")
     assert_true("data-choice" not in quiz, "choice buttons remain in quiz page")
+    assert_true('id="nextBtn"' not in quiz, "next button should not allow skipping status selection")
+    assert_true("1/4 문제" in quiz and "기록 0/4" in quiz, "separate progress labels missing")
+    for label in ("답변 순서", "실기/구술 체크포인트", "암기 포인트"):
+        assert_true(label in quiz, f"guide structure missing: {label}")
     for label in ("완료", "다시 보기", "어려움"):
         assert_true(label in quiz, f"{label} action missing")
 
     wrong = read(wrong_path)
     assert_true("어려움·다시 볼 문제" in wrong, "wrong-note meaning not converted")
+    assert_true("복습노트" in wrong, "wrong-note display name not converted")
     assert_true("health-exercise-practical-records" in quiz, "record localStorage key missing in quiz")
     assert_true("health-exercise-practical-records" in wrong, "record localStorage key missing in wrong-note")
 
