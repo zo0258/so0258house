@@ -18,6 +18,13 @@ IOS_ANSWER_BANK_PATH = (
 )
 ALLOWED_STATUSES = {"draft", "verified", "needs_review"}
 ALLOWED_SOURCE_TYPES = {"official", "academic", "textbook", "trusted_web", "internal"}
+ALLOWED_REVIEW_TAGS = {
+    "[exam-ready-draft]",
+    "[source-needed]",
+    "[source-verified]",
+    "[year-standard-conflict]",
+    "[needs-tier-s-check]",
+}
 
 
 def load_json(path):
@@ -136,13 +143,39 @@ def main():
         if status == "verified" and entry.get("needsReview") is True:
             errors.append(f"{prefix}: verified answer cannot remain needsReview true")
 
+        review_notes = entry.get("reviewNotes") or []
+        review_tags = {
+            token
+            for note in review_notes
+            for token in ALLOWED_REVIEW_TAGS
+            if token in note
+        }
+        for note in review_notes:
+            for token in [part for part in note.split() if part.startswith("[") and part.endswith("]")]:
+                if token not in ALLOWED_REVIEW_TAGS:
+                    errors.append(f"{prefix}: unknown reviewNotes quality tag {token}")
+        if "[exam-ready-draft]" in review_tags and status != "draft":
+            errors.append(f"{prefix}: [exam-ready-draft] tag is only valid for draft entries")
+        if "[exam-ready-draft]" in review_tags and entry.get("sourceVerified") is True:
+            errors.append(f"{prefix}: [exam-ready-draft] cannot be sourceVerified true")
+        if "[source-verified]" in review_tags and status != "verified":
+            errors.append(f"{prefix}: [source-verified] tag requires verified status")
+        if "[year-standard-conflict]" in review_tags and status == "verified":
+            errors.append(f"{prefix}: verified entry cannot retain [year-standard-conflict]")
+
     if errors:
         fail(errors)
 
+    exam_ready_count = sum(
+        1
+        for entry in answer_bank
+        if any("[exam-ready-draft]" in note for note in entry.get("reviewNotes") or [])
+    )
     print("answer bank validation passed")
     print(f"questions={len(questions)}")
     print(f"answer_bank_entries={len(answer_bank)}")
     print(f"needs_review={sum(1 for entry in answer_bank if entry.get('needsReview'))}")
+    print(f"exam_ready_draft={exam_ready_count}")
 
 
 if __name__ == "__main__":
