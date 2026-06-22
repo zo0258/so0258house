@@ -17,6 +17,8 @@ Core principle: exam fit is more important than newest academic standards.
 - Original `data/practical-questions.json` modified: no
 - Existing web app files modified: no
 - iOS answer bank resource synced: yes
+- Guidebook sourceRef retained on all 199 entries: yes
+- Validation now enforces allowed reviewNotes tags, exactly one Pass 6 source classification tag per entry, and at least one non-guidebook answer source for verified entries.
 
 ## Source Materials Found
 

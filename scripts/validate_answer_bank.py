@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import hashlib
+import re
 import sys
 from pathlib import Path
 
@@ -38,6 +39,15 @@ ALLOWED_REVIEW_TAGS = {
     "[practical-demonstration-needed]",
     "[specialist-source-needed]",
 }
+PRIMARY_SOURCE_CLASSIFICATION_TAGS = {
+    "[source-verifiable]",
+    "[guidebook-only]",
+    "[conflicting-standard]",
+    "[practical-demonstration-needed]",
+    "[specialist-source-needed]",
+}
+GUIDEBOOK_TITLE = "건강운동관리사 취득 기초 길잡이 2026"
+GUIDEBOOK_URL = "internal://guidebook/2026"
 
 
 def load_json(path):
@@ -111,6 +121,20 @@ def main():
         if not isinstance(entry.get("sourceRefs"), list):
             errors.append(f"{prefix}: sourceRefs must be a list")
             continue
+        guidebook_refs = [
+            source
+            for source in entry["sourceRefs"]
+            if source.get("title") == GUIDEBOOK_TITLE
+            and source.get("url") == GUIDEBOOK_URL
+            and source.get("type") == "tier_s_internal"
+        ]
+        if not guidebook_refs:
+            errors.append(f"{prefix}: missing guidebook sourceRef")
+        elif len(guidebook_refs) > 1:
+            errors.append(f"{prefix}: duplicate guidebook sourceRef")
+        elif not isinstance(guidebook_refs[0].get("page"), int):
+            errors.append(f"{prefix}: guidebook sourceRef requires integer page")
+
         for source_index, source in enumerate(entry["sourceRefs"]):
             for field in ("title", "url", "type", "checkedAt"):
                 if not source.get(field):
@@ -134,6 +158,19 @@ def main():
             errors.append(f"{prefix}: verified answer requires memoryTip")
         if status == "verified" and not entry.get("sourceRefs"):
             errors.append(f"{prefix}: verified answer requires sourceRefs")
+        if status == "verified":
+            answer_sources = [
+                source
+                for source in entry.get("sourceRefs", [])
+                if not (
+                    source.get("title") == GUIDEBOOK_TITLE
+                    and source.get("url") == GUIDEBOOK_URL
+                )
+            ]
+            if not answer_sources:
+                errors.append(
+                    f"{prefix}: verified answer requires at least one answer source beyond guidebook"
+                )
         if status == "verified":
             review_notes = entry.get("reviewNotes") or []
             if not review_notes:
@@ -166,9 +203,15 @@ def main():
             if token in note
         }
         for note in review_notes:
-            for token in [part for part in note.split() if part.startswith("[") and part.endswith("]")]:
+            for token in re.findall(r"\[[A-Za-z0-9_-]+\]", note):
                 if token not in ALLOWED_REVIEW_TAGS:
                     errors.append(f"{prefix}: unknown reviewNotes quality tag {token}")
+        classification_tags = review_tags & PRIMARY_SOURCE_CLASSIFICATION_TAGS
+        if len(classification_tags) != 1:
+            errors.append(
+                f"{prefix}: requires exactly one Pass 6 source classification tag, found "
+                f"{sorted(classification_tags)}"
+            )
         if "[exam-ready-draft]" in review_tags and status != "draft":
             errors.append(f"{prefix}: [exam-ready-draft] tag is only valid for draft entries")
         if "[exam-ready-draft]" in review_tags and entry.get("sourceVerified") is True:
@@ -186,11 +229,22 @@ def main():
         for entry in answer_bank
         if any("[exam-ready-draft]" in note for note in entry.get("reviewNotes") or [])
     )
+    guidebook_ref_count = sum(
+        1
+        for entry in answer_bank
+        if any(
+            source.get("title") == GUIDEBOOK_TITLE
+            and source.get("url") == GUIDEBOOK_URL
+            and source.get("type") == "tier_s_internal"
+            for source in entry.get("sourceRefs", [])
+        )
+    )
     print("answer bank validation passed")
     print(f"questions={len(questions)}")
     print(f"answer_bank_entries={len(answer_bank)}")
     print(f"needs_review={sum(1 for entry in answer_bank if entry.get('needsReview'))}")
     print(f"exam_ready_draft={exam_ready_count}")
+    print(f"guidebook_source_refs={guidebook_ref_count}")
 
 
 if __name__ == "__main__":
