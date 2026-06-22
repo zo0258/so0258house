@@ -48,6 +48,7 @@ PRIMARY_SOURCE_CLASSIFICATION_TAGS = {
 }
 GUIDEBOOK_TITLE = "건강운동관리사 취득 기초 길잡이 2026"
 GUIDEBOOK_URL = "internal://guidebook/2026"
+EXPECTED_SOURCE_VERIFIABLE_COUNT = 27
 
 
 def load_json(path):
@@ -239,12 +240,25 @@ def main():
             for source in entry.get("sourceRefs", [])
         )
     )
+    source_verifiable_count = sum(
+        1
+        for entry in answer_bank
+        if any("[source-verifiable]" in note for note in entry.get("reviewNotes") or [])
+    )
+    if source_verifiable_count != EXPECTED_SOURCE_VERIFIABLE_COUNT:
+        fail(
+            [
+                "source-verifiable count mismatch: "
+                f"{source_verifiable_count} != {EXPECTED_SOURCE_VERIFIABLE_COUNT}"
+            ]
+        )
     print("answer bank validation passed")
     print(f"questions={len(questions)}")
     print(f"answer_bank_entries={len(answer_bank)}")
     print(f"needs_review={sum(1 for entry in answer_bank if entry.get('needsReview'))}")
     print(f"exam_ready_draft={exam_ready_count}")
     print(f"guidebook_source_refs={guidebook_ref_count}")
+    print(f"source_verifiable={source_verifiable_count}")
 
 
 if __name__ == "__main__":

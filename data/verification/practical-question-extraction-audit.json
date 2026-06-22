@@ -1712,5 +1712,134 @@
       "practical-199"
     ],
     "note": "Pass 6 classifies all entries by answer-source verification feasibility and promotes only scoring-rubric-backed entries. Guidebook-only provenance is not enough for verified promotion."
+  },
+  "answerBankPass7TierSHunt": {
+    "checkedAt": "2026-06-22",
+    "baseCommit": "27b2d8b Classify answer bank source verification",
+    "sourceVerifiableCount": 27,
+    "sourceVerifiableQuestionIds": [
+      "practical-038",
+      "practical-039",
+      "practical-040",
+      "practical-041",
+      "practical-042",
+      "practical-046",
+      "practical-047",
+      "practical-048",
+      "practical-052",
+      "practical-053",
+      "practical-054",
+      "practical-055",
+      "practical-056",
+      "practical-057",
+      "practical-059",
+      "practical-060",
+      "practical-061",
+      "practical-062",
+      "practical-063",
+      "practical-064",
+      "practical-097",
+      "practical-098",
+      "practical-102",
+      "practical-104",
+      "practical-105",
+      "practical-155",
+      "practical-188"
+    ],
+    "searchScope": [
+      "/Users/zo0258/Desktop",
+      "/Users/zo0258/Desktop/openclaw",
+      "/Users/zo0258/Desktop/건강운동관리사_web",
+      "/Users/zo0258/0258",
+      "/Users/zo0258/Downloads",
+      "/Users/zo0258/Documents",
+      "/Users/zo0258/Library/Mobile Documents/com~apple~CloudDocs/Downloads",
+      "Google Drive connector"
+    ],
+    "googleDriveResult": "No related files found for 건강운동관리사, 건운사, or 실기 구술.",
+    "discoveredSourceFamilies": [
+      {
+        "tier": "Tier S",
+        "title": "건강운동관리사 취득 기초 길잡이 2026",
+        "use": "question provenance and scope, not standalone answer verification"
+      },
+      {
+        "tier": "Tier S",
+        "title": "2025년도 건강운동관리사 실기구술 채점표",
+        "use": "direct answer-source only for practical-155 and practical-188 scoring-rubric examples"
+      },
+      {
+        "tier": "Tier S",
+        "title": "2025년도 건강운동관리사 실기구술 출제영역",
+        "use": "scope check, not detailed model answers"
+      },
+      {
+        "tier": "Tier S",
+        "title": "2025년도 건강운동관리사 실기구술 시행 공고문",
+        "use": "exam procedure/context, not detailed model answers"
+      },
+      {
+        "tier": "Tier S",
+        "title": "2016-2024 건강운동관리사 실기구술 기출정리표",
+        "use": "question history cross-check, not scoring detail"
+      },
+      {
+        "tier": "Tier A",
+        "title": "국민체력100 측정 항목/인증 기준",
+        "use": "candidate answer-source for measurement entries; needs page-level capture"
+      },
+      {
+        "tier": "Tier A",
+        "title": "PAPS official/education resources",
+        "use": "supports practical-047"
+      },
+      {
+        "tier": "Tier A",
+        "title": "KSPO 필기 기출/정답 PDFs",
+        "use": "terminology conflict checks, weak for practical/oral answer verification"
+      },
+      {
+        "tier": "Tier B",
+        "title": "ACSM/CDC public pages",
+        "use": "supporting references, not enough alone for older exam-fit wording"
+      },
+      {
+        "tier": "Tier C",
+        "title": "Desktop health-exercise HTML notes and web app quizzes",
+        "use": "study recall only, not verified evidence"
+      }
+    ],
+    "newVerifiedPromotions": [],
+    "verifiedMaintained": [
+      "practical-047",
+      "practical-155",
+      "practical-188"
+    ],
+    "draftMaintainedCount": 196,
+    "conflictHeldQuestionIds": [
+      "practical-001",
+      "practical-002",
+      "practical-003",
+      "practical-004",
+      "practical-005",
+      "practical-006",
+      "practical-007",
+      "practical-008",
+      "practical-009",
+      "practical-032",
+      "practical-037",
+      "practical-050",
+      "practical-051",
+      "practical-058",
+      "practical-066",
+      "practical-068",
+      "practical-120"
+    ],
+    "correctedQuestionStatus": {
+      "practical-001": "guidebook also shows mmg; source typo suspicion remains",
+      "practical-008": "guidebook also shows PAP-Q; official PAR-Q+ conflict remains",
+      "practical-050": "guidebook p.32 supports corrected table-order proposal"
+    },
+    "note": "Pass 7 found useful Tier S scope and rubric materials, but no new direct answer-source beyond the already used 2025 scoring-rubric examples. Added source-hunt reviewNotes to the 27 source-verifiable entries and kept verified promotion conservative."
   }
 }

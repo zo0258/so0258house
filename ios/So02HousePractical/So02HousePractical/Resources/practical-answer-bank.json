@@ -2361,7 +2361,8 @@
       "[source-needed] Pass 4 품질 판정: 출처 또는 수험서 표현 대조가 부족해 draft 유지.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -2418,7 +2419,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -2475,7 +2477,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -2532,7 +2535,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -2589,7 +2593,8 @@
       "[source-needed] Pass 4 품질 판정: 출처 또는 수험서 표현 대조가 부족해 draft 유지.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -2816,7 +2821,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -2879,7 +2885,8 @@
       "Pass 3에서 시험 답변형으로 압축 후 verified 승격.",
       "[source-verified] Pass 4 품질 판정: 출처 검증 완료 항목으로 앱에서는 검증 답안으로 표시 가능.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항."
+      "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항.",
+      "Pass 7 Tier S hunt: PAPS 공식/교육기관 자료로 답안 근거가 유지되지만 새 Tier S 채점표 근거는 발견되지 않았다. verified 유지하되 PAPS 원문 page-level 근거 보강은 다음 Pass 후보."
     ]
   },
   {
@@ -2935,7 +2942,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.31에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3173,7 +3181,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3230,7 +3239,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3287,7 +3297,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3348,7 +3359,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3405,7 +3417,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3462,7 +3475,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3578,7 +3592,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3635,7 +3650,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3693,7 +3709,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3750,7 +3767,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3807,7 +3825,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.32에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -3864,7 +3883,8 @@
       "[exam-ready-draft] Pass 4 품질 판정: 30~60초 구술 또는 실기 설명으로 재현 가능한 시험형 초안. sourceVerified는 false 유지.",
       "[source-needed] Pass 4 품질 판정: Tier S/A 수험 자료 또는 채점표 대조 전이므로 verified 승격 보류.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.33에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -5895,7 +5915,8 @@
       "[source-needed] Pass 4 품질 판정: 출처 또는 수험서 표현 대조가 부족해 draft 유지.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.36에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -5953,7 +5974,8 @@
       "[source-needed] Pass 4 품질 판정: 출처 또는 수험서 표현 대조가 부족해 draft 유지.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.36에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -6185,7 +6207,8 @@
       "[source-needed] Pass 4 품질 판정: 출처 또는 수험서 표현 대조가 부족해 draft 유지.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.36에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -6301,7 +6324,8 @@
       "[source-needed] Pass 4 품질 판정: 출처 또는 수험서 표현 대조가 부족해 draft 유지.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.36에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -6359,7 +6383,8 @@
       "[source-needed] Pass 4 품질 판정: 출처 또는 수험서 표현 대조가 부족해 draft 유지.",
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.36에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "[needs-answer-source-check] 시험형 초안 품질 또는 채점표/수험서 답안 표현 추가 대조 필요.",
-      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보."
+      "[source-verifiable] Pass 6 분류: 공공자료 또는 guidebook 추천교재로 답안 대조가 가능한 후보.",
+      "Pass 7 Tier S hunt: 로컬/iCloud/Google Drive/Obsidian 탐색에서 이 문항을 직접 채점하는 Tier S answer-source는 추가 발견되지 않았다. 공공자료/교재로 검증 가능한 후보이나 수험서·채점표·교재 page 대조 전까지 draft 유지."
     ]
   },
   {
@@ -9433,7 +9458,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.40에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "검증 근거: 2025년도 건강운동관리사 실기구술 채점표 예시가 Pivot Shift Test의 목적, 바로누운자세, 무릎 20~30도 굽힘, 정강이 안쪽돌림, 외반력/안쪽돌림 적용, 양성 반응 설명을 평가 기준으로 제시한다.",
       "[source-verified] Pass 6 품질 판정: answer-source 근거와 modelAnswer/keyPoints/commonMistakes/memoryTip을 대조해 verified 유지 가능.",
-      "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항."
+      "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항.",
+      "Pass 7 Tier S hunt: 2025년도 건강운동관리사 실기구술 채점표가 직접 answer-source로 확인되어 verified 유지. 추가 승격보다 채점표/교재 근거 확장을 우선한다."
     ]
   },
   {
@@ -11392,7 +11418,8 @@
       "Tier S guidebook check: 건강운동관리사 취득 기초 길잡이 2026 PDF p.43에서 기출 원문/과목/section/type/year 대조 완료. 이 근거는 문제 원문과 출제범위 확인용이며 세부 모범답안 검증은 별도 answer-source 대조 필요.",
       "검증 근거: 2025년도 건강운동관리사 실기구술 채점표 예시가 맨손 마사지 생리적 효과로 순환 촉진, 조직 신장, 대사산물/부종 제거, 이완/피로회복을 제시하고 기법으로 경찰법, 유념법, 마찰법, 고타법, 진동법을 제시한다.",
       "[source-verified] Pass 6 품질 판정: answer-source 근거와 modelAnswer/keyPoints/commonMistakes/memoryTip을 대조해 verified 유지 가능.",
-      "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항."
+      "[source-verifiable] Pass 6 분류: 채점표/공공자료/교재성 자료로 답안 대조가 가능한 문항.",
+      "Pass 7 Tier S hunt: 2025년도 건강운동관리사 실기구술 채점표가 직접 answer-source로 확인되어 verified 유지. 추가 승격보다 채점표/교재 근거 확장을 우선한다."
     ]
   },
   {
